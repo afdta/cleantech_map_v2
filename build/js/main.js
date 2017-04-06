@@ -20,6 +20,23 @@ var height = 500;
 var aspect = 9/16;
 var pi2 = Math.PI*2;
 
+var technodes = [
+	{name:"Wind", var:"V10"},
+	{name:"Air", var:"V11"},
+	{name:"Bioenergy", var:"V12"},
+	{name:"Green materials", var:"V13"},
+	{name:"Conventional fuel", var:"V14"},
+	{name:"Efficiency", var:"V15"},
+	{name:"Recycling", var:"V16"},
+	{name:"Solar", var:"V17"},
+	{name:"Water/wastewater", var:"V18"},
+	{name:"Geothermal", var:"V19"},
+	{name:"Nuclear", var:"V20"},
+	{name:"Transportation", var:"V21"},
+	{name:"Energy storage", var:"V22"},
+	{name:"Hydro power", var:"V23"}
+]
+
 
 function main(){
 
@@ -65,9 +82,9 @@ function main(){
 			});
 
 			var sorted = data.nodes.slice(0).sort(function(a, b){
-				if(a.index==0){
+				if(a.index==0 || b.hasOwnProperty("name")){
 					return -1;
-				} else if(b.index==0){
+				} else if(b.index==0 || a.hasOwnProperty("name")){
 					return 1;
 				}
 				else{
@@ -98,10 +115,13 @@ function main(){
 
 			forceSim.force("collision", d3.forceCollide(function(node, index){
 				var buffer = 5;
-				return (node.rad) + buffer;
+				var rad = node.hasOwnProperty("rad") ? node.rad : 10;
+				return rad + buffer;
 			} ).strength(0.5) );
 
-			//forceSim.force("repel", d3.forceManyBody().strength(-30));
+			forceSim.force("repel", d3.forceManyBody().strength(function(node){
+				return node.hasOwnProperty("name") ? -50 : 1;
+			}));
 			//forceSim.force("attract", d3.forceManyBody().strength(2));
 
 
@@ -112,8 +132,8 @@ function main(){
 
 			function dragStart() {
 			  if (!d3.event.active) forceSim.alphaTarget(0.1).restart();
-				forceSim.force("collision").strength(0.2);
-				forceSim.force("centerLink").strength(0);
+				//forceSim.force("collision").strength(0.2);
+				//forceSim.force("centerLink").strength(0);
 			  d3.event.subject.fx = d3.event.subject.x;
 			  d3.event.subject.fy = d3.event.subject.y;
 			}
@@ -127,8 +147,8 @@ function main(){
 			  if (!d3.event.active) forceSim.alphaTarget(0);
 			  d3.event.subject.fx = null;
 			  d3.event.subject.fy = null;
-				forceSim.force("collision").strength(0.5);
-				forceSim.force("centerLink").strength(0.25);
+				//forceSim.force("collision").strength(0.5);
+				//forceSim.force("centerLink").strength(0.25);
 			}
 
 
@@ -231,14 +251,18 @@ function main(){
 
 					//console.log(target);
 
-					if(target != null){
+					//only use if a tech node
+					if(target != null && node.hasOwnProperty("name")){
 						var vx = target[0]-node.x;
 						var vy = target[1]-node.y;
 
-						//node.x = target[0];
-						//node.y = target[1];
-						node.vx = node.vx + vx*k;
-						node.vy = node.vy + vy*k;
+						//enforce strictly
+						node.x = target[0];
+						node.y = target[1];
+
+						//alter velocity
+						//node.vx = node.vx + vx*k;
+						//node.vy = node.vy + vy*k;
 					}
 
 			  }
@@ -252,15 +276,37 @@ function main(){
 					context.clearRect(0, 0, width, height);
 
 					context.beginPath();
-					data.nodes.forEach(function(d,i){
+
+					context.fillStyle = "#ee5555";
+					context.strokeStyle = "#dddddd";
+
+					//metro nodes
+					var mn = data.nodes.filter(function(d){return !d.hasOwnProperty("name")});
+					var tn = data.nodes.filter(function(d){return d.hasOwnProperty("name")});
+
+					mn.forEach(function(d,i){
 						context.moveTo(d.x+d.rad, d.y);
 						context.arc(d.x, d.y, d.rad, 0, pi2);
 					});
 
-					context.fillStyle = "#ee5555";
 					context.fill();
-					context.strokeStyle = "#dddddd";
 					context.stroke();
+
+					//tech nodes
+					tn.forEach(function(d,i){
+						console.log(d);
+						var rad = 15;
+						context.moveTo(d.x+rad, d.y);
+						context.arc(d.x, d.y, rad, 0, pi2);
+					});
+
+					context.fillStyle = "#666666";
+					context.fill();
+
+
+					context.stroke();
+
+
 				}
 				catch(e){
 					console.log(e);
@@ -298,6 +344,9 @@ function main(){
 				rad: 1*20
 			});
 
+			data.nodes = data.nodes.concat(technodes);
+
+			console.log(data);
 
 			useTheForce();
 

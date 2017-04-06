@@ -1,0 +1,4580 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg5840"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="chart.svg"
+   width="1000"
+   height="3500">
+  <metadata
+     id="metadata7504">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7502" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1861"
+     inkscape:window-height="1050"
+     id="namedview7500"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.78754018"
+     inkscape:cx="340.2813"
+     inkscape:cy="990.79386"
+     inkscape:window-x="59"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5840" />
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 98,3808.1404 0,15"
+     id="path5862"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="98"
+     cy="3808.1404"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5866" />
+  <text
+     class="highlight"
+     y="3834.1404"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5870"
+     x="98">Tucson, AZ (-2.2%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5872"
+     x="98">Tucson, AZ (-2.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 735,3734.4925 0,5"
+     id="path5878"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="735"
+     cy="3663.196"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5882" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text5886"
+     x="735">Seattle-Tacoma-Bellevue, WA (+2.1%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text5888"
+     x="735">Seattle-Tacoma-Bellevue, WA (+2.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 111,3800.7498 0,15"
+     id="path5894"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="111"
+     cy="3800.7498"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5898" />
+  <text
+     class="highlight"
+     y="3826.7498"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5902"
+     x="111">Bakersfield, CA (-1.9%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5904"
+     x="111">Bakersfield, CA (-1.9%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 124,3779.9987 0,15"
+     id="path5910"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="124"
+     cy="3779.9985"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5914" />
+  <text
+     class="highlight"
+     y="3805.9985"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5918"
+     x="124">Little Rock-North Little Rock-Conway, AR (-1.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5920"
+     x="124">Little Rock-North Little Rock-Conway, AR (-1.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 137,3776.0433 0,15"
+     id="path5926"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="137"
+     cy="3776.0435"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5930" />
+  <text
+     class="highlight"
+     y="3802.0435"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5934"
+     x="137">Scranton-Wilkes-Barre-Hazleton, PA (-1.2%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5936"
+     x="137">Scranton-Wilkes-Barre-Hazleton, PA (-1.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 150,3775.7889 0,15"
+     id="path5942"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="150"
+     cy="3775.7891"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5946" />
+  <text
+     class="highlight"
+     y="3801.7891"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5950"
+     x="150">El Paso, TX (-1.2%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5952"
+     x="150">El Paso, TX (-1.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 163,3768.1566 0,15"
+     id="path5958"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="163"
+     cy="3768.1567"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5962" />
+  <text
+     class="highlight"
+     y="3794.1567"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5966"
+     x="163">Wichita, KS (-1.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5968"
+     x="163">Wichita, KS (-1.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 176,3767.6795 0,15"
+     id="path5974"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="176"
+     cy="3767.6797"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5978" />
+  <text
+     class="highlight"
+     y="3793.6797"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5982"
+     x="176">Fresno, CA (-1.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5984"
+     x="176">Fresno, CA (-1.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 189,3767.4316 0,15"
+     id="path5990"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="189"
+     cy="3767.4316"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle5994" />
+  <text
+     class="highlight"
+     y="3793.4316"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text5998"
+     x="189">Springfield, MA (-1.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6000"
+     x="189">Springfield, MA (-1.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 202,3765.9077 0,15"
+     id="path6006"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="202"
+     cy="3765.9077"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6010" />
+  <text
+     class="highlight"
+     y="3791.9077"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6014"
+     x="202">Oxnard-Thousand Oaks-Ventura, CA (-0.9%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6016"
+     x="202">Oxnard-Thousand Oaks-Ventura, CA (-0.9%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 215,3755.4369 0,15"
+     id="path6022"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="215"
+     cy="3755.437"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6026" />
+  <text
+     class="highlight"
+     y="3781.437"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6030"
+     x="215">Virginia Beach-Norfolk-Newport News, VA-NC (-0.6%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6032"
+     x="215">Virginia Beach-Norfolk-Newport News, VA-NC (-0.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 228,3752.6544 0,15"
+     id="path6038"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="228"
+     cy="3752.6543"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6042" />
+  <text
+     class="highlight"
+     y="3778.6543"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6046"
+     x="228">Greensboro-High Point, NC (-0.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6048"
+     x="228">Greensboro-High Point, NC (-0.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 241,3749.611 0,15"
+     id="path6054"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="241"
+     cy="3749.6111"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6058" />
+  <text
+     class="highlight"
+     y="3775.6111"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6062"
+     x="241">New Orleans-Metairie, LA (-0.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6064"
+     x="241">New Orleans-Metairie, LA (-0.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 254,3738.8195 0,15"
+     id="path6070"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="254"
+     cy="3738.8196"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6074" />
+  <text
+     class="highlight"
+     y="3764.8196"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6078"
+     x="254">Cleveland-Elyria, OH (-0.1%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6080"
+     x="254">Cleveland-Elyria, OH (-0.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 267,3737.5936 0,15"
+     id="path6086"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="267"
+     cy="3737.5935"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6090" />
+  <text
+     class="highlight"
+     y="3763.5935"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6094"
+     x="267">Bridgeport-Stamford-Norwalk, CT (-0.1%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6096"
+     x="267">Bridgeport-Stamford-Norwalk, CT (-0.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 280,3734.4925 0,5"
+     id="path6102"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="280"
+     cy="3733.2937"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6106" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6110"
+     x="280">Albuquerque, NM (+0.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6112"
+     x="280">Albuquerque, NM (+0.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 293,3734.4925 0,5"
+     id="path6118"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="293"
+     cy="3729.7336"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6122" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6126"
+     x="293">Chattanooga, TN-GA (+0.1%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6128"
+     x="293">Chattanooga, TN-GA (+0.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 306,3734.4925 0,5"
+     id="path6134"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="306"
+     cy="3727.7456"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6138" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6142"
+     x="306">Syracuse, NY (+0.2%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6144"
+     x="306">Syracuse, NY (+0.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 319,3734.4925 0,5"
+     id="path6150"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="319"
+     cy="3725.0881"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6154" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6158"
+     x="319">Richmond, VA (+0.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6160"
+     x="319">Richmond, VA (+0.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 332,3734.4925 0,5"
+     id="path6166"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="332"
+     cy="3723.8547"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6170" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6174"
+     x="332">Birmingham-Hoover, AL (+0.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6176"
+     x="332">Birmingham-Hoover, AL (+0.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 345,3734.4925 0,5"
+     id="path6182"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="345"
+     cy="3721.7407"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6186" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6190"
+     x="345">Houston-The Woodlands-Sugar Land, TX (+0.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6192"
+     x="345">Houston-The Woodlands-Sugar Land, TX (+0.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 358,3734.4925 0,5"
+     id="path6198"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="358"
+     cy="3721.1978"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6202" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6206"
+     x="358">Rochester, NY (+0.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6208"
+     x="358">Rochester, NY (+0.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 371,3734.4925 0,5"
+     id="path6214"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="371"
+     cy="3720.9321"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6218" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6222"
+     x="371">Philadelphia-Camden-Wilmington, PA-NJ-DE-MD (+0.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6224"
+     x="371">Philadelphia-Camden-Wilmington, PA-NJ-DE-MD (+0.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 384,3734.4925 0,5"
+     id="path6230"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="384"
+     cy="3720.292"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6234" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6238"
+     x="384">Urban Honolulu, HI (+0.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6240"
+     x="384">Urban Honolulu, HI (+0.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 397,3734.4925 0,5"
+     id="path6246"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="397"
+     cy="3718.7935"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6250" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6254"
+     x="397">Columbus, OH (+0.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6256"
+     x="397">Columbus, OH (+0.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 410,3734.4925 0,5"
+     id="path6262"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="410"
+     cy="3718.2144"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6266" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6270"
+     x="410">Stockton-Lodi, CA (+0.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6272"
+     x="410">Stockton-Lodi, CA (+0.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 423,3734.4925 0,5"
+     id="path6278"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="423"
+     cy="3717.6504"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6282" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6286"
+     x="423">Oklahoma City, OK (+0.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6288"
+     x="423">Oklahoma City, OK (+0.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 436,3734.4925 0,5"
+     id="path6294"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="436"
+     cy="3716.2959"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6298" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6302"
+     x="436">Spokane-Spokane Valley, WA (+0.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6304"
+     x="436">Spokane-Spokane Valley, WA (+0.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 449,3734.4925 0,5"
+     id="path6310"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="449"
+     cy="3716.175"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6314" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6318"
+     x="449">Sacramento-Roseville-Arden-Arcade, CA (+0.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6320"
+     x="449">Sacramento-Roseville-Arden-Arcade, CA (+0.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 462,3734.4925 0,5"
+     id="path6326"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="462"
+     cy="3714.1895"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6330" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6334"
+     x="462">Tulsa, OK (+0.6%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6336"
+     x="462">Tulsa, OK (+0.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 475,3734.4925 0,5"
+     id="path6342"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="475"
+     cy="3712.7532"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6346" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6350"
+     x="475">Baltimore-Columbia-Towson, MD (+0.6%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6352"
+     x="475">Baltimore-Columbia-Towson, MD (+0.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 488,3734.4925 0,5"
+     id="path6358"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="488"
+     cy="3712.1001"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6362" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6366"
+     x="488">Milwaukee-Waukesha-West Allis, WI (+0.7%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6368"
+     x="488">Milwaukee-Waukesha-West Allis, WI (+0.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 501,3734.4925 0,5"
+     id="path6374"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="501"
+     cy="3708.6174"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6378" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6382"
+     x="501">Colorado Springs, CO (+0.8%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6384"
+     x="501">Colorado Springs, CO (+0.8%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 514,3734.4925 0,5"
+     id="path6390"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="514"
+     cy="3708.1631"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6394" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6398"
+     x="514">Buffalo-Cheektowaga-Niagara Falls, NY (+0.8%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6400"
+     x="514">Buffalo-Cheektowaga-Niagara Falls, NY (+0.8%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 527,3734.4925 0,5"
+     id="path6406"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="527"
+     cy="3707.3469"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6410" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6414"
+     x="527">Los Angeles-Long Beach-Anaheim, CA (+0.8%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6416"
+     x="527">Los Angeles-Long Beach-Anaheim, CA (+0.8%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 540,3734.4925 0,5"
+     id="path6422"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="540"
+     cy="3704.3484"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6426" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6430"
+     x="540">Washington-Arlington-Alexandria, DC-VA-MD-WV (+0.9%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6432"
+     x="540">Washington-Arlington-Alexandria, DC-VA-MD-WV (+0.9%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 553,3734.4925 0,5"
+     id="path6438"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="553"
+     cy="3700.5874"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6442" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6446"
+     x="553">Lakeland-Winter Haven, FL (+1.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6448"
+     x="553">Lakeland-Winter Haven, FL (+1.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 566,3734.4925 0,5"
+     id="path6454"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="566"
+     cy="3695.3284"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6458" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6462"
+     x="566">Knoxville, TN (+1.1%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6464"
+     x="566">Knoxville, TN (+1.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 579,3734.4925 0,5"
+     id="path6470"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="579"
+     cy="3695.3179"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6474" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6478"
+     x="579">Omaha-Council Bluffs, NE-IA (+1.1%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6480"
+     x="579">Omaha-Council Bluffs, NE-IA (+1.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 592,3734.4925 0,5"
+     id="path6486"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="592"
+     cy="3691.7944"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6490" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6494"
+     x="592">Youngstown-Warren-Boardman, OH-PA (+1.3%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6496"
+     x="592">Youngstown-Warren-Boardman, OH-PA (+1.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 605,3734.4925 0,5"
+     id="path6502"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="605"
+     cy="3691.064"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6506" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6510"
+     x="605">San Antonio-New Braunfels, TX (+1.3%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6512"
+     x="605">San Antonio-New Braunfels, TX (+1.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 618,3734.4925 0,5"
+     id="path6518"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="618"
+     cy="3686.5002"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6522" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6526"
+     x="618">Allentown-Bethlehem-Easton, PA-NJ (+1.4%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6528"
+     x="618">Allentown-Bethlehem-Easton, PA-NJ (+1.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 631,3734.4925 0,5"
+     id="path6534"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="631"
+     cy="3685.5059"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6538" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6542"
+     x="631">Dayton, OH (+1.4%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6544"
+     x="631">Dayton, OH (+1.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 644,3734.4925 0,5"
+     id="path6550"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="644"
+     cy="3683.0356"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6554" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6558"
+     x="644">Augusta-Richmond County, GA-SC (+1.5%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6560"
+     x="644">Augusta-Richmond County, GA-SC (+1.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 657,3734.4925 0,5"
+     id="path6566"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="657"
+     cy="3678.6946"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6570" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6574"
+     x="657">Providence-Warwick, RI-MA (+1.6%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6576"
+     x="657">Providence-Warwick, RI-MA (+1.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 670,3734.4925 0,5"
+     id="path6582"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="670"
+     cy="3677.5034"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6586" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6590"
+     x="670">St. Louis, MO-IL (+1.7%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6592"
+     x="670">St. Louis, MO-IL (+1.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 683,3734.4925 0,5"
+     id="path6598"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="683"
+     cy="3676.0957"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6602" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6606"
+     x="683">Columbia, SC (+1.7%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6608"
+     x="683">Columbia, SC (+1.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 696,3734.4925 0,5"
+     id="path6614"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="696"
+     cy="3671.4783"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6618" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6622"
+     x="696">Des Moines-West Des Moines, IA (+1.8%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6624"
+     x="696">Des Moines-West Des Moines, IA (+1.8%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 709,3734.4925 0,5"
+     id="path6630"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="709"
+     cy="3667.2422"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6634" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6638"
+     x="709">Hartford-West Hartford-East Hartford, CT (+2.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6640"
+     x="709">Hartford-West Hartford-East Hartford, CT (+2.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 722,3734.4925 0,5"
+     id="path6646"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="722"
+     cy="3666.0527"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6650" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6654"
+     x="722">Phoenix-Mesa-Scottsdale, AZ (+2.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6656"
+     x="722">Phoenix-Mesa-Scottsdale, AZ (+2.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 85,3818.9255 0,15"
+     id="path6662"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="85"
+     cy="3818.9255"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6666" />
+  <text
+     class="highlight"
+     y="3844.9255"
+     dx="-4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6670"
+     x="85">New Haven-Milford, CT (-2.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="-10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:start;display:none"
+     id="text6672"
+     x="85">New Haven-Milford, CT (-2.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 748,3734.4925 0,5"
+     id="path6678"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="748"
+     cy="3655.375"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6682" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6686"
+     x="748">Palm Bay-Melbourne-Titusville, FL (+2.3%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6688"
+     x="748">Palm Bay-Melbourne-Titusville, FL (+2.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1372,3734.4925 0,5"
+     id="path6694"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1372"
+     cy="3463.4109"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6698" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6702"
+     x="1372">Nashville-Davidson-Murfreesboro-Franklin, TN (+7.9%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6704"
+     x="1372">Nashville-Davidson-Murfreesboro-Franklin, TN (+7.9%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 774,3734.4925 0,5"
+     id="path6710"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="774"
+     cy="3652.2427"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6714" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6718"
+     x="774">Pittsburgh, PA (+2.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6720"
+     x="774">Pittsburgh, PA (+2.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 787,3734.4925 0,5"
+     id="path6726"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="787"
+     cy="3652.1218"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6730" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6734"
+     x="787">San Diego-Carlsbad, CA (+2.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6736"
+     x="787">San Diego-Carlsbad, CA (+2.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 800,3734.4925 0,5"
+     id="path6742"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="800"
+     cy="3651.4546"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6746" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6750"
+     x="800">Baton Rouge, LA (+2.4%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6752"
+     x="800">Baton Rouge, LA (+2.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 813,3734.4925 0,5"
+     id="path6758"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="813"
+     cy="3650.9827"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6762" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6766"
+     x="813">Chicago-Naperville-Elgin, IL-IN-WI (+2.4%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6768"
+     x="813">Chicago-Naperville-Elgin, IL-IN-WI (+2.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 826,3734.4925 0,5"
+     id="path6774"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="826"
+     cy="3648.7441"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6778" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6782"
+     x="826">Dallas-Fort Worth-Arlington, TX (+2.5%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6784"
+     x="826">Dallas-Fort Worth-Arlington, TX (+2.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 839,3734.4925 0,5"
+     id="path6790"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="839"
+     cy="3647.7136"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6794" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6798"
+     x="839">Salt Lake City, UT (+2.5%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6800"
+     x="839">Salt Lake City, UT (+2.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 852,3734.4925 0,5"
+     id="path6806"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="852"
+     cy="3646.8008"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6810" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6814"
+     x="852">Boston-Cambridge-Newton, MA-NH (+2.6%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6816"
+     x="852">Boston-Cambridge-Newton, MA-NH (+2.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 865,3734.4925 0,5"
+     id="path6822"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="865"
+     cy="3646.3762"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6826" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6830"
+     x="865">Riverside-San Bernardino-Ontario, CA (+2.6%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6832"
+     x="865">Riverside-San Bernardino-Ontario, CA (+2.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 878,3734.4925 0,5"
+     id="path6838"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="878"
+     cy="3640.6604"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6842" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6846"
+     x="878">Harrisburg-Carlisle, PA (+2.8%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6848"
+     x="878">Harrisburg-Carlisle, PA (+2.8%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 891,3734.4925 0,5"
+     id="path6854"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="891"
+     cy="3633.3882"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6858" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6862"
+     x="891">Greenville-Anderson-Mauldin, SC (+3.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6864"
+     x="891">Greenville-Anderson-Mauldin, SC (+3.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 904,3734.4925 0,5"
+     id="path6870"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="904"
+     cy="3632.0513"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6874" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6878"
+     x="904">New York-Newark-Jersey City, NY-NJ-PA (+3.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6880"
+     x="904">New York-Newark-Jersey City, NY-NJ-PA (+3.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 917,3734.4925 0,5"
+     id="path6886"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="917"
+     cy="3628.6167"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6890" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6894"
+     x="917">Albany-Schenectady-Troy, NY (+3.1%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6896"
+     x="917">Albany-Schenectady-Troy, NY (+3.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 930,3734.4925 0,5"
+     id="path6902"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="930"
+     cy="3625.9263"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6906" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6910"
+     x="930">Cincinnati, OH-KY-IN (+3.2%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6912"
+     x="930">Cincinnati, OH-KY-IN (+3.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 943,3734.4925 0,5"
+     id="path6918"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="943"
+     cy="3624.0757"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6922" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6926"
+     x="943">Charleston-North Charleston, SC (+3.2%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6928"
+     x="943">Charleston-North Charleston, SC (+3.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 956,3734.4925 0,5"
+     id="path6934"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="956"
+     cy="3619.2119"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6938" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6942"
+     x="956">Boise City, ID (+3.4%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6944"
+     x="956">Boise City, ID (+3.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 969,3734.4925 0,5"
+     id="path6950"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="969"
+     cy="3618.166"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6954" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6958"
+     x="969">Las Vegas-Henderson-Paradise, NV (+3.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6960"
+     x="969">Las Vegas-Henderson-Paradise, NV (+3.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 982,3734.4925 0,5"
+     id="path6966"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="982"
+     cy="3617.9534"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6970" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6974"
+     x="982">Louisville/Jefferson County, KY-IN (+3.4%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6976"
+     x="982">Louisville/Jefferson County, KY-IN (+3.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 995,3734.4925 0,5"
+     id="path6982"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="995"
+     cy="3615.4856"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle6986" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6990"
+     x="995">Winston-Salem, NC (+3.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text6992"
+     x="995">Winston-Salem, NC (+3.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1008,3734.4925 0,5"
+     id="path6998"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1008"
+     cy="3612.8779"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7002" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7006"
+     x="1008">Orlando-Kissimmee-Sanford, FL (+3.6%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7008"
+     x="1008">Orlando-Kissimmee-Sanford, FL (+3.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1021,3734.4925 0,5"
+     id="path7014"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1021"
+     cy="3611.8633"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7018" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7022"
+     x="1021">Portland-Vancouver-Hillsboro, OR-WA (+3.6%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7024"
+     x="1021">Portland-Vancouver-Hillsboro, OR-WA (+3.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1034,3734.4925 0,5"
+     id="path7030"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1034"
+     cy="3608.6257"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7034" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7038"
+     x="1034">Deltona-Daytona Beach-Ormond Beach, FL (+3.7%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7040"
+     x="1034">Deltona-Daytona Beach-Ormond Beach, FL (+3.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1047,3734.4925 0,5"
+     id="path7046"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1047"
+     cy="3607.927"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7050" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7054"
+     x="1047">Tampa-St. Petersburg-Clearwater, FL (+3.7%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7056"
+     x="1047">Tampa-St. Petersburg-Clearwater, FL (+3.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1060,3734.4925 0,5"
+     id="path7062"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1060"
+     cy="3607.3137"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7066" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7070"
+     x="1060">Ogden-Clearfield, UT (+3.7%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7072"
+     x="1060">Ogden-Clearfield, UT (+3.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1073,3734.4925 0,5"
+     id="path7078"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1073"
+     cy="3605.0508"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7082" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7086"
+     x="1073">Worcester, MA-CT (+3.8%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7088"
+     x="1073">Worcester, MA-CT (+3.8%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1359,3734.4925 0,5"
+     id="path7094"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1359"
+     cy="3464.5208"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7098" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7102"
+     x="1359">San Francisco-Oakland-Hayward, CA (+7.9%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7104"
+     x="1359">San Francisco-Oakland-Hayward, CA (+7.9%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1099,3734.4925 0,5"
+     id="path7110"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1099"
+     cy="3594.2683"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7114" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7118"
+     x="1099">Jacksonville, FL (+4.1%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7120"
+     x="1099">Jacksonville, FL (+4.1%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1112,3734.4925 0,5"
+     id="path7126"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1112"
+     cy="3589.0618"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7130" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7134"
+     x="1112">Denver-Aurora-Lakewood, CO (+4.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7136"
+     x="1112">Denver-Aurora-Lakewood, CO (+4.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1125,3734.4925 0,5"
+     id="path7142"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1125"
+     cy="3588.8479"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7146" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7150"
+     x="1125">Indianapolis-Carmel-Anderson, IN (+4.3%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7152"
+     x="1125">Indianapolis-Carmel-Anderson, IN (+4.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1138,3734.4925 0,5"
+     id="path7158"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1138"
+     cy="3587.813"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7162" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7166"
+     x="1138">Detroit-Warren-Dearborn, MI (+4.3%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7168"
+     x="1138">Detroit-Warren-Dearborn, MI (+4.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1151,3734.4925 0,5"
+     id="path7174"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1151"
+     cy="3581.2581"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7178" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7182"
+     x="1151">Miami-Fort Lauderdale-West Palm Beach, FL (+4.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7184"
+     x="1151">Miami-Fort Lauderdale-West Palm Beach, FL (+4.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1164,3734.4925 0,5"
+     id="path7190"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1164"
+     cy="3580.147"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7194" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7198"
+     x="1164">Atlanta-Sandy Springs-Roswell, GA (+4.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7200"
+     x="1164">Atlanta-Sandy Springs-Roswell, GA (+4.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1177,3734.4925 0,5"
+     id="path7206"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1177"
+     cy="3564.3525"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7210" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7214"
+     x="1177">North Port-Sarasota-Bradenton, FL (+5.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7216"
+     x="1177">North Port-Sarasota-Bradenton, FL (+5.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1190,3734.4925 0,5"
+     id="path7222"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1190"
+     cy="3549.2898"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7226" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7230"
+     x="1190">McAllen-Edinburg-Mission, TX (+5.4%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7232"
+     x="1190">McAllen-Edinburg-Mission, TX (+5.4%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1203,3734.4925 0,5"
+     id="path7238"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1203"
+     cy="3545.3574"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7242" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7246"
+     x="1203">Grand Rapids-Wyoming, MI (+5.5%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7248"
+     x="1203">Grand Rapids-Wyoming, MI (+5.5%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1216,3734.4925 0,5"
+     id="path7254"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1216"
+     cy="3533.387"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7258" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7262"
+     x="1216">San Jose-Sunnyvale-Santa Clara, CA (+5.9%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7264"
+     x="1216">San Jose-Sunnyvale-Santa Clara, CA (+5.9%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1229,3734.4925 0,5"
+     id="path7270"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1229"
+     cy="3530.6252"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7274" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7278"
+     x="1229">Austin-Round Rock, TX (+6.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7280"
+     x="1229">Austin-Round Rock, TX (+6.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1242,3734.4925 0,5"
+     id="path7286"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1242"
+     cy="3528.4907"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7290" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7294"
+     x="1242">Madison, WI (+6.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7296"
+     x="1242">Madison, WI (+6.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1255,3734.4925 0,5"
+     id="path7302"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1255"
+     cy="3519.1367"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7306" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7310"
+     x="1255">Provo-Orem, UT (+6.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7312"
+     x="1255">Provo-Orem, UT (+6.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1268,3734.4925 0,5"
+     id="path7318"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1268"
+     cy="3518.5203"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7322" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7326"
+     x="1268">Toledo, OH (+6.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7328"
+     x="1268">Toledo, OH (+6.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1281,3734.4925 0,5"
+     id="path7334"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1281"
+     cy="3518.0811"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7338" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7342"
+     x="1281">Memphis, TN-MS-AR (+6.3%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7344"
+     x="1281">Memphis, TN-MS-AR (+6.3%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1294,3734.4925 0,5"
+     id="path7350"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1294"
+     cy="3504.6162"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7354" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7358"
+     x="1294">Charlotte-Concord-Gastonia, NC-SC (+6.7%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7360"
+     x="1294">Charlotte-Concord-Gastonia, NC-SC (+6.7%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1307,3734.4925 0,5"
+     id="path7366"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1307"
+     cy="3496.1836"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7370" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7374"
+     x="1307">Raleigh, NC (+7.0%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7376"
+     x="1307">Raleigh, NC (+7.0%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1320,3734.4925 0,5"
+     id="path7382"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1320"
+     cy="3490.0898"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7386" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7390"
+     x="1320">Kansas City, MO-KS (+7.2%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7392"
+     x="1320">Kansas City, MO-KS (+7.2%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1333,3734.4925 0,5"
+     id="path7398"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1333"
+     cy="3476.1104"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7402" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7406"
+     x="1333">Cape Coral-Fort Myers, FL (+7.6%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7408"
+     x="1333">Cape Coral-Fort Myers, FL (+7.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1346,3734.4925 0,5"
+     id="path7414"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1346"
+     cy="3475.7629"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7418" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7422"
+     x="1346">Jackson, MS (+7.6%)</text>
+  <text
+     class="marker"
+     y="3400"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7424"
+     x="1346">Jackson, MS (+7.6%)</text>
+  <path
+     style="display:none;fill:none;stroke:#555555;stroke-width:3px;shape-rendering:crispEdges"
+     d="m 1086,3734.4925 0,5"
+     id="path7430"
+     inkscape:connector-curvature="0" />
+  <circle
+     class="highlight"
+     r="9"
+     cx="1086"
+     cy="3597.1511"
+     style="display:none;fill:#ffcf1a;stroke:#ffcf1a;stroke-width:1"
+     id="circle7434" />
+  <text
+     class="highlight"
+     y="3750.4924"
+     dx="4"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7438"
+     x="1086">Akron, OH (+4.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7440"
+     x="1086">Akron, OH (+4.0%)</text>
+  <text
+     class="marker"
+     y="3422"
+     dx="10"
+     style="color:#666666;font-size:9.60000038px;text-anchor:end;display:none"
+     id="text7456"
+     x="761">Minneapolis-St. Paul-Bloomington, MN-WI (+2.4%)</text>
+  <g
+     class="axis-group"
+     style="display:none"
+     id="g7458"
+     transform="translate(0,3400)" />
+  <g
+     id="g10607"
+     transform="translate(29.204859,-13.74441)">
+    <g
+       transform="translate(0,534)"
+       id="g10074">
+      <line
+         style="fill:#e6e6e6;stroke:#b3b3b3;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="41.025269"
+         y1="192.11151"
+         x2="360.3558"
+         x1="360.3558"
+         id="line7048-4" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="154.21103"
+         y1="192.11151"
+         x2="544.18445"
+         x1="544.18445"
+         id="line5880" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="191.47424"
+         y1="192.11148"
+         x2="801.54456"
+         x1="801.54456"
+         id="line6104" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="189.58173"
+         y1="192.11148"
+         x2="794.19141"
+         x1="794.19141"
+         id="line6120" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="188.52481"
+         y1="192.11148"
+         x2="786.83826"
+         x1="786.83826"
+         id="line6136" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="187.11218"
+         y1="192.11148"
+         x2="779.48511"
+         x1="779.48511"
+         id="line6152" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="186.45654"
+         y1="192.11148"
+         x2="772.13196"
+         x1="772.13196"
+         id="line6168" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="185.33279"
+         y1="192.11148"
+         x2="764.77881"
+         x1="764.77881"
+         id="line6184" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="185.04422"
+         y1="192.11148"
+         x2="757.42566"
+         x1="757.42566"
+         id="line6200" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="184.90295"
+         y1="192.11148"
+         x2="750.07251"
+         x1="750.07251"
+         id="line6216" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="184.56265"
+         y1="192.11148"
+         x2="742.71936"
+         x1="742.71936"
+         id="line6232" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="183.76596"
+         y1="192.11148"
+         x2="735.36621"
+         x1="735.36621"
+         id="line6248" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="183.45816"
+         y1="192.11148"
+         x2="728.01306"
+         x1="728.01306"
+         id="line6264" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="183.15845"
+         y1="192.11148"
+         x2="720.65991"
+         x1="720.65991"
+         id="line6280" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="182.43832"
+         y1="192.11148"
+         x2="713.30682"
+         x1="713.30682"
+         id="line6296" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="182.37415"
+         y1="192.11148"
+         x2="705.95367"
+         x1="705.95367"
+         id="line6312" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="181.31863"
+         y1="192.11148"
+         x2="698.60052"
+         x1="698.60052"
+         id="line6328" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="180.55508"
+         y1="192.11148"
+         x2="691.24738"
+         x1="691.24738"
+         id="line6344" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="180.20795"
+         y1="192.11148"
+         x2="683.89423"
+         x1="683.89423"
+         id="line6360" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="178.35654"
+         y1="192.11148"
+         x2="676.54108"
+         x1="676.54108"
+         id="line6376" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="178.11505"
+         y1="192.11148"
+         x2="669.18793"
+         x1="669.18793"
+         id="line6392" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="177.68112"
+         y1="192.11148"
+         x2="661.83478"
+         x1="661.83478"
+         id="line6408" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="176.08716"
+         y1="192.11148"
+         x2="654.48163"
+         x1="654.48163"
+         id="line6424" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="174.08792"
+         y1="192.11148"
+         x2="647.12848"
+         x1="647.12848"
+         id="line6440" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="171.29224"
+         y1="192.11148"
+         x2="639.77533"
+         x1="639.77533"
+         id="line6456" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="171.28659"
+         y1="192.11148"
+         x2="632.42218"
+         x1="632.42218"
+         id="line6472" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="169.41364"
+         y1="192.11148"
+         x2="625.06903"
+         x1="625.06903"
+         id="line6488" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="169.02524"
+         y1="192.11148"
+         x2="617.71594"
+         x1="617.71594"
+         id="line6504" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="166.59924"
+         y1="192.11148"
+         x2="610.36279"
+         x1="610.36279"
+         id="line6520" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="166.07065"
+         y1="192.11148"
+         x2="603.00964"
+         x1="603.00964"
+         id="line6536" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="164.75748"
+         y1="192.11148"
+         x2="595.65649"
+         x1="595.65649"
+         id="line6552" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="162.44983"
+         y1="192.11148"
+         x2="588.30334"
+         x1="588.30334"
+         id="line6568" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="161.81668"
+         y1="192.11148"
+         x2="580.9502"
+         x1="580.9502"
+         id="line6584" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="161.06842"
+         y1="192.11148"
+         x2="573.59705"
+         x1="573.59705"
+         id="line6600" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="158.61377"
+         y1="192.11148"
+         x2="566.2439"
+         x1="566.2439"
+         id="line6616" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="156.36194"
+         y1="192.11148"
+         x2="558.89075"
+         x1="558.89075"
+         id="line6632" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="155.72964"
+         y1="192.11151"
+         x2="551.5376"
+         x1="551.5376"
+         id="line6648" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="150.05334"
+         y1="192.11151"
+         x2="536.8313"
+         x1="536.8313"
+         id="line6680" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="48.007233"
+         y1="192.11157"
+         x2="183.88031"
+         x1="183.88031"
+         id="line6696" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="148.38824"
+         y1="192.11151"
+         x2="522.125"
+         x1="522.125"
+         id="line6712" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="148.32407"
+         y1="192.11151"
+         x2="514.77185"
+         x1="514.77185"
+         id="line6728" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="147.96936"
+         y1="192.11151"
+         x2="507.4187"
+         x1="507.4187"
+         id="line6744" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="147.71851"
+         y1="192.11151"
+         x2="500.06558"
+         x1="500.06558"
+         id="line6760" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="146.52859"
+         y1="192.11151"
+         x2="492.71243"
+         x1="492.71243"
+         id="line6776" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="145.98068"
+         y1="192.11151"
+         x2="485.35928"
+         x1="485.35928"
+         id="line6792" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="145.49548"
+         y1="192.11151"
+         x2="478.00613"
+         x1="478.00613"
+         id="line6808" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="145.26971"
+         y1="192.11151"
+         x2="470.65298"
+         x1="470.65298"
+         id="line6824" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="142.23125"
+         y1="192.11151"
+         x2="463.29984"
+         x1="463.29984"
+         id="line6840" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="138.36545"
+         y1="192.11151"
+         x2="455.94669"
+         x1="455.94669"
+         id="line6856" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="137.65474"
+         y1="192.11151"
+         x2="448.59357"
+         x1="448.59357"
+         id="line6872" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="135.82906"
+         y1="192.11151"
+         x2="441.24042"
+         x1="441.24042"
+         id="line6888" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="134.39882"
+         y1="192.11151"
+         x2="433.88727"
+         x1="433.88727"
+         id="line6904" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="133.41498"
+         y1="192.11151"
+         x2="426.53412"
+         x1="426.53412"
+         id="line6920" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="130.82948"
+         y1="192.11151"
+         x2="419.18097"
+         x1="419.18097"
+         id="line6936" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="130.27356"
+         y1="192.11151"
+         x2="411.82782"
+         x1="411.82782"
+         id="line6952" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="130.16049"
+         y1="192.11151"
+         x2="404.47467"
+         x1="404.47467"
+         id="line6968" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="128.84863"
+         y1="192.11151"
+         x2="397.12155"
+         x1="397.12155"
+         id="line6984" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="127.46248"
+         y1="192.11151"
+         x2="389.7684"
+         x1="389.7684"
+         id="line7000" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="126.92303"
+         y1="192.11151"
+         x2="382.41525"
+         x1="382.41525"
+         id="line7016" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="125.20197"
+         y1="192.11151"
+         x2="375.0621"
+         x1="375.0621"
+         id="line7032" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="124.83051"
+         y1="192.11151"
+         x2="367.70895"
+         x1="367.70895"
+         id="line7048" />
+      <line
+         style="fill:#ff6600;stroke:#ff6600;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="124.5045"
+         y1="192.11151"
+         x2="360.3558"
+         x1="360.3558"
+         id="line7064" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="123.30159"
+         y1="192.11151"
+         x2="353.00266"
+         x1="353.00266"
+         id="line7080" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="48.597229"
+         y1="192.11157"
+         x2="191.23346"
+         x1="191.23346"
+         id="line7096" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="117.5697"
+         y1="192.11151"
+         x2="338.29639"
+         x1="338.29639"
+         id="line7112" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="114.80194"
+         y1="192.11151"
+         x2="330.94324"
+         x1="330.94324"
+         id="line7128" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="114.68825"
+         y1="192.11151"
+         x2="323.59009"
+         x1="323.59009"
+         id="line7144" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="114.1382"
+         y1="192.11151"
+         x2="316.23694"
+         x1="316.23694"
+         id="line7160" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="110.65355"
+         y1="192.11151"
+         x2="308.88379"
+         x1="308.88379"
+         id="line7176" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="110.06296"
+         y1="192.11151"
+         x2="301.53064"
+         x1="301.53064"
+         id="line7192" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="101.66684"
+         y1="192.11154"
+         x2="294.17749"
+         x1="294.17749"
+         id="line7208" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="93.659592"
+         y1="192.11154"
+         x2="286.82437"
+         x1="286.82437"
+         id="line7224" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="91.569237"
+         y1="192.11154"
+         x2="279.47119"
+         x1="279.47119"
+         id="line7240" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="85.205803"
+         y1="192.11154"
+         x2="272.11804"
+         x1="272.11804"
+         id="line7256" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="83.737671"
+         y1="192.11154"
+         x2="264.76492"
+         x1="264.76492"
+         id="line7272" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="82.603058"
+         y1="192.11154"
+         x2="257.41177"
+         x1="257.41177"
+         id="line7288" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="77.630524"
+         y1="192.11154"
+         x2="250.05862"
+         x1="250.05862"
+         id="line7304" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="77.302856"
+         y1="192.11154"
+         x2="242.70547"
+         x1="242.70547"
+         id="line7320" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="77.069382"
+         y1="192.11154"
+         x2="235.35234"
+         x1="235.35234"
+         id="line7336" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="69.911621"
+         y1="192.11154"
+         x2="227.99919"
+         x1="227.99919"
+         id="line7352" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="65.428833"
+         y1="192.11154"
+         x2="220.64604"
+         x1="220.64604"
+         id="line7368" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="62.189537"
+         y1="192.11154"
+         x2="213.29291"
+         x1="213.29291"
+         id="line7384" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="54.758186"
+         y1="192.11157"
+         x2="205.93976"
+         x1="205.93976"
+         id="line7400" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="54.573463"
+         y1="192.11157"
+         x2="198.58661"
+         x1="198.58661"
+         id="line7416" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="119.1022"
+         y1="192.11151"
+         x2="345.64951"
+         x1="345.64951"
+         id="line7432" />
+      <line
+         style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges"
+         y2="149.16232"
+         y1="192.11151"
+         x2="529.47815"
+         x1="529.47815"
+         id="line7448" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10521"
+       y="609.62292"
+       x="369.3143"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="609.62292"
+         x="369.3143"
+         id="tspan10523"
+         sodipodi:role="line">Highlighted metro</tspan></text>
+  </g>
+  <g
+     id="g10698"
+     transform="translate(29.204859,-41.6795)">
+    <line
+       id="line7048-4-0"
+       x1="529.47815"
+       x2="529.47815"
+       y1="936.16803"
+       y2="785.08179"
+       style="fill:#e6e6e6;stroke:#b3b3b3;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line5880-4"
+       x1="544.18445"
+       x2="544.18445"
+       y1="936.16803"
+       y2="914.96558"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6104-6"
+       x1="801.54456"
+       x2="801.54456"
+       y1="936.16803"
+       y2="935.81152"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6120-2"
+       x1="794.19141"
+       x2="794.19141"
+       y1="936.16803"
+       y2="934.75281"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6136-6"
+       x1="786.83826"
+       x2="786.83826"
+       y1="936.16803"
+       y2="934.1615"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6152-7"
+       x1="779.48511"
+       x2="779.48511"
+       y1="936.16803"
+       y2="933.37122"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6168-5"
+       x1="772.13196"
+       x2="772.13196"
+       y1="936.16803"
+       y2="933.00439"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6184-6"
+       x1="764.77881"
+       x2="764.77881"
+       y1="936.16803"
+       y2="932.37592"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6200-9"
+       x1="757.42566"
+       x2="757.42566"
+       y1="936.16803"
+       y2="932.21442"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6216-8"
+       x1="750.07251"
+       x2="750.07251"
+       y1="936.16803"
+       y2="932.13538"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6232-7"
+       x1="742.71936"
+       x2="742.71936"
+       y1="936.16803"
+       y2="931.94489"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6248-2"
+       x1="735.36621"
+       x2="735.36621"
+       y1="936.16803"
+       y2="931.49933"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6264-8"
+       x1="728.01306"
+       x2="728.01306"
+       y1="936.16803"
+       y2="931.32709"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6280-2"
+       x1="720.65991"
+       x2="720.65991"
+       y1="936.16803"
+       y2="931.15942"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6296-9"
+       x1="713.30682"
+       x2="713.30682"
+       y1="936.16803"
+       y2="930.75659"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6312-9"
+       x1="705.95367"
+       x2="705.95367"
+       y1="936.16803"
+       y2="930.7207"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6328-6"
+       x1="698.60052"
+       x2="698.60052"
+       y1="936.16803"
+       y2="930.13013"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6344-0"
+       x1="691.24738"
+       x2="691.24738"
+       y1="936.16803"
+       y2="929.703"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6360-2"
+       x1="683.89423"
+       x2="683.89423"
+       y1="936.16803"
+       y2="929.50879"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6376-7"
+       x1="676.54108"
+       x2="676.54108"
+       y1="936.16803"
+       y2="928.47308"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6392-6"
+       x1="669.18793"
+       x2="669.18793"
+       y1="936.16803"
+       y2="928.33801"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6408-1"
+       x1="661.83478"
+       x2="661.83478"
+       y1="936.16803"
+       y2="928.09521"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6424-3"
+       x1="654.48163"
+       x2="654.48163"
+       y1="936.16803"
+       y2="927.20361"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6440-2"
+       x1="647.12848"
+       x2="647.12848"
+       y1="936.16803"
+       y2="926.08521"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6456-1"
+       x1="639.77533"
+       x2="639.77533"
+       y1="936.16803"
+       y2="924.52118"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6472-5"
+       x1="632.42218"
+       x2="632.42218"
+       y1="936.16803"
+       y2="924.51813"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6488-9"
+       x1="625.06903"
+       x2="625.06903"
+       y1="936.16803"
+       y2="923.47021"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6504-9"
+       x1="617.71594"
+       x2="617.71594"
+       y1="936.16803"
+       y2="923.25293"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6520-1"
+       x1="610.36279"
+       x2="610.36279"
+       y1="936.16803"
+       y2="921.89581"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6536-4"
+       x1="603.00964"
+       x2="603.00964"
+       y1="936.16803"
+       y2="921.6001"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6552-9"
+       x1="595.65649"
+       x2="595.65649"
+       y1="936.16803"
+       y2="920.86548"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6568-1"
+       x1="588.30334"
+       x2="588.30334"
+       y1="936.16803"
+       y2="919.57452"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6584-0"
+       x1="580.9502"
+       x2="580.9502"
+       y1="936.16803"
+       y2="919.22028"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6600-7"
+       x1="573.59705"
+       x2="573.59705"
+       y1="936.16803"
+       y2="918.80182"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6616-5"
+       x1="566.2439"
+       x2="566.2439"
+       y1="936.16803"
+       y2="917.42853"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6632-8"
+       x1="558.89075"
+       x2="558.89075"
+       y1="936.16803"
+       y2="916.16882"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6648-7"
+       x1="551.5376"
+       x2="551.5376"
+       y1="936.16803"
+       y2="915.81512"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6680-0"
+       x1="536.8313"
+       x2="536.8313"
+       y1="936.16803"
+       y2="912.63959"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6696-4"
+       x1="183.88031"
+       x2="183.88031"
+       y1="936.16803"
+       y2="799.68237"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6712-8"
+       x1="522.125"
+       x2="522.125"
+       y1="936.16803"
+       y2="911.70813"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6728-0"
+       x1="514.77185"
+       x2="514.77185"
+       y1="936.16803"
+       y2="911.67218"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6744-4"
+       x1="507.4187"
+       x2="507.4187"
+       y1="936.16803"
+       y2="911.47382"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6760-2"
+       x1="500.06558"
+       x2="500.06558"
+       y1="936.16803"
+       y2="911.3335"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6776-9"
+       x1="492.71243"
+       x2="492.71243"
+       y1="936.16803"
+       y2="910.66772"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6792-6"
+       x1="485.35928"
+       x2="485.35928"
+       y1="936.16803"
+       y2="910.36133"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6808-1"
+       x1="478.00613"
+       x2="478.00613"
+       y1="936.16803"
+       y2="910.08978"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6824-0"
+       x1="470.65298"
+       x2="470.65298"
+       y1="936.16803"
+       y2="909.9635"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6840-4"
+       x1="463.29984"
+       x2="463.29984"
+       y1="936.16803"
+       y2="908.26379"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6856-2"
+       x1="455.94669"
+       x2="455.94669"
+       y1="936.16803"
+       y2="906.10107"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6872-2"
+       x1="448.59357"
+       x2="448.59357"
+       y1="936.16803"
+       y2="905.70361"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6888-2"
+       x1="441.24042"
+       x2="441.24042"
+       y1="936.16803"
+       y2="904.68231"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6904-0"
+       x1="433.88727"
+       x2="433.88727"
+       y1="936.16803"
+       y2="903.88208"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6920-5"
+       x1="426.53412"
+       x2="426.53412"
+       y1="936.16803"
+       y2="903.33173"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6936-5"
+       x1="419.18097"
+       x2="419.18097"
+       y1="936.16803"
+       y2="901.88531"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6952-2"
+       x1="411.82782"
+       x2="411.82782"
+       y1="936.16803"
+       y2="901.57428"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6968-9"
+       x1="404.47467"
+       x2="404.47467"
+       y1="936.16803"
+       y2="901.51111"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line6984-0"
+       x1="397.12155"
+       x2="397.12155"
+       y1="936.16803"
+       y2="900.77722"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7000-2"
+       x1="389.7684"
+       x2="389.7684"
+       y1="936.16803"
+       y2="900.00171"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7016-8"
+       x1="382.41525"
+       x2="382.41525"
+       y1="936.16803"
+       y2="899.70001"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7032-3"
+       x1="375.0621"
+       x2="375.0621"
+       y1="936.16803"
+       y2="898.73718"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7048-8"
+       x1="367.70895"
+       x2="367.70895"
+       y1="936.16803"
+       y2="898.5293"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7064-0"
+       x1="360.3558"
+       x2="360.3558"
+       y1="936.16803"
+       y2="898.34692"
+       style="fill:#ff6600;stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;shape-rendering:crispEdges" />
+    <line
+       id="line7080-4"
+       x1="353.00266"
+       x2="353.00266"
+       y1="936.16803"
+       y2="897.67407"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7096-0"
+       x1="191.23346"
+       x2="191.23346"
+       y1="936.16803"
+       y2="800.24121"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7112-9"
+       x1="338.29639"
+       x2="338.29639"
+       y1="936.16803"
+       y2="894.46753"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7128-1"
+       x1="330.94324"
+       x2="330.94324"
+       y1="936.16803"
+       y2="892.91919"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7144-9"
+       x1="323.59009"
+       x2="323.59009"
+       y1="936.16803"
+       y2="892.85553"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7160-6"
+       x1="316.23694"
+       x2="316.23694"
+       y1="936.16803"
+       y2="892.54791"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7176-2"
+       x1="308.88379"
+       x2="308.88379"
+       y1="936.16803"
+       y2="890.59839"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7192-5"
+       x1="301.53064"
+       x2="301.53064"
+       y1="936.16803"
+       y2="890.26813"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7208-4"
+       x1="294.17749"
+       x2="294.17749"
+       y1="936.16803"
+       y2="885.57098"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7224-4"
+       x1="286.82437"
+       x2="286.82437"
+       y1="936.16803"
+       y2="881.09161"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7240-9"
+       x1="279.47119"
+       x2="279.47119"
+       y1="936.16803"
+       y2="879.92212"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7256-9"
+       x1="272.11804"
+       x2="272.11804"
+       y1="936.16803"
+       y2="876.3623"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7272-3"
+       x1="264.76492"
+       x2="264.76492"
+       y1="936.16803"
+       y2="875.54102"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7288-6"
+       x1="257.41177"
+       x2="257.41177"
+       y1="936.16803"
+       y2="874.90619"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7304-0"
+       x1="250.05862"
+       x2="250.05862"
+       y1="936.16803"
+       y2="872.12451"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7320-5"
+       x1="242.70547"
+       x2="242.70547"
+       y1="936.16803"
+       y2="871.94122"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7336-0"
+       x1="235.35234"
+       x2="235.35234"
+       y1="936.16803"
+       y2="871.81049"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7352-2"
+       x1="227.99919"
+       x2="227.99919"
+       y1="936.16803"
+       y2="820.42871"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7368-9"
+       x1="220.64604"
+       x2="220.64604"
+       y1="936.16803"
+       y2="816.18292"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7384-4"
+       x1="213.29291"
+       x2="213.29291"
+       y1="936.16803"
+       y2="813.11493"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7400-3"
+       x1="205.93976"
+       x2="205.93976"
+       y1="936.16803"
+       y2="806.07642"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7416-5"
+       x1="198.58661"
+       x2="198.58661"
+       y1="936.16803"
+       y2="805.90143"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7432-1"
+       x1="345.64951"
+       x2="345.64951"
+       y1="936.16803"
+       y2="895.32483"
+       style="stroke:#0d73d6;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;shape-rendering:crispEdges" />
+    <line
+       id="line7448-7"
+       x1="529.47815"
+       x2="529.47815"
+       y1="936.16803"
+       y2="912.14111"
+       style="stroke:#ff6600;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;shape-rendering:crispEdges" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10525"
+       y="822.21509"
+       x="540.73413"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="822.21509"
+         x="540.73413"
+         id="tspan10527"
+         sodipodi:role="line">Highlighted metro</tspan></text>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="210.7829"
+     y="501.46472"
+     id="text10529"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10531"
+       x="210.7829"
+       y="501.46472">Metrics: [a] patents/year, 2011-16, [b] patenting intensity, and</tspan><tspan
+       sodipodi:role="line"
+       x="210.7829"
+       y="524.90222"
+       id="tspan10788">[c] patenting by technology category  </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="23.853817"
+     y="43.166496"
+     id="text10529-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10531-3"
+       x="23.853817"
+       y="43.166496">Cleantech patenting interactive </tspan><tspan
+       sodipodi:role="line"
+       x="23.853817"
+       y="66.603996"
+       id="tspan11509">Wireframe v.2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="839.76294"
+     y="43.054077"
+     id="text10529-4-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10531-3-4"
+       x="839.76294"
+       y="43.054077">March 23, 2017</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="175.22916"
+     y="182.00848"
+     id="text10569"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10571"
+       x="175.22916"
+       y="182.00848">This document presents three concepts for enhanced graphics in the </tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="205.44598"
+       id="tspan10575">cleantech patent paper. These sketches are not meant to convey the final</tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="228.88348"
+       id="tspan10579">look and feel of the interactive(s), rather their purpose is to </tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="252.32098"
+       id="tspan10581">facilitate thinking around product goals. We can choose to do any/all</tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="275.75848"
+       id="tspan10589">of these or scrap them and move in a different direction. In terms of </tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="299.19598"
+       id="tspan10593">interactive structure, think of the items below as independent modules. We</tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="322.63348"
+       id="tspan10595">can place them anywhere in the final web page to facilitate the flow</tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="346.07098"
+       id="tspan10597">of the narrative, or we can place them all together in a dashboard-like</tspan><tspan
+       sodipodi:role="line"
+       x="175.22916"
+       y="369.50848"
+       id="tspan10599">view.</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="179.70164"
+     y="438.88879"
+     id="text10585"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10587"
+       x="179.70164"
+       y="438.88879">I. Convey a sense for the distributions of key indicators and</tspan><tspan
+       sodipodi:role="line"
+       x="179.70164"
+       y="462.32629"
+       id="tspan10605">   highlight leading metro areas</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="176.49893"
+     y="136.89697"
+     id="text10601"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10603"
+       x="176.49893"
+       y="136.89697">Overview</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="210.9704"
+     y="959.23749"
+     id="text10790"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10792"
+       x="210.9704"
+       y="959.23749">In the charts above, the user can hover over a bar to reveal a place</tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="982.67499"
+       id="tspan10794">name and the underlying value. Sometimes this type of interaction can</tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1006.1125"
+       id="tspan10798">be tedious, especially when there are 381 bars, so we can add a metro</tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1029.55"
+       id="tspan10802">dropdown menu as a second way to highlight a metro area.</tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1052.9875"
+       id="tspan10806" /><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1076.425"
+       id="tspan10832">Note that the marginal cost of adding new bar charts like </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1099.8625"
+       id="tspan10856">these to the final web page is low. So we could stamp one out lots of </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1123.3"
+       id="tspan10844">these and place them throughout the page. E.g. we could have one for </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1146.7375"
+       id="tspan10846">the number of patents in Hydro/Marine power and we could build in a way </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1170.175"
+       id="tspan10848">for the charts to annotate, say, up to 5 metros. This could facilitate a </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1193.6125"
+       id="tspan10850">more fluid narrative because you could write something like, &quot;In the </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1217.05"
+       id="tspan10852">niche category of Hydro/Marine power, Houston, Los Angeles, and Boulder </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1240.4875"
+       id="tspan10854">lead the way... ,&quot; and the chart would already have those places labeled. </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1263.925"
+       id="tspan10884">The user could of course interact with the chart, but they wouldn't </tspan><tspan
+       sodipodi:role="line"
+       x="210.9704"
+       y="1287.3625"
+       id="tspan10886">need to in order to see the main point.    </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="670.44196"
+     y="729.69189"
+     id="text10808"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10810"
+       x="670.44196"
+       y="729.69189">Note: Not real data</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="669.48169"
+     y="911.69531"
+     id="text10808-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10810-4"
+       x="669.48169"
+       y="911.69531">Note: Not real data</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="160.53471"
+     y="1374.1521"
+     id="text10585-2"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="160.53471"
+       y="1374.1521"
+       id="tspan10605-6">II.  Provide a quick read out of place-specific metrics</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot10943"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-5.7713989,26)"><flowRegion
+       id="flowRegion10945"><rect
+         id="rect10947"
+         width="666.63263"
+         height="247.60641"
+         x="214.59222"
+         y="1381.3269" /></flowRegion><flowPara
+       id="flowPara10949">I think we settled on providing values and ranks (out of 381) for: [a] patents per year (interchangeable with total patents), [b] patenting intensity, and maybe [c] share of U.S. patents. </flowPara><flowPara
+       id="flowPara10951" /><flowPara
+       id="flowPara10953">In addition, we would provide lists of the top technology categories and patent owners. We have yet to decide on how these lists would be created but two options are to either pick an arbitrary number, say 3 or 5, or select based on thresholds, say, at least 5 patents and at least 10% of total patents. This is yet to be determined, but we should strive to provide highlights rather than exhaustive lists.</flowPara></flowRoot>  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#4d4d4d;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect10955"
+     width="206.97357"
+     height="39.363071"
+     x="28.600391"
+     y="1693.5662" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="46.377266"
+     y="1718.9617"
+     id="text10957"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan10959"
+       x="46.377266"
+       y="1718.9617">Metro select</tspan></text>
+  <path
+     sodipodi:type="star"
+     style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:11.23898888;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path10961"
+     sodipodi:sides="3"
+     sodipodi:cx="391.09116"
+     sodipodi:cy="1679.7244"
+     sodipodi:r1="11.357226"
+     sodipodi:r2="5.6786132"
+     sodipodi:arg1="-0.52359878"
+     sodipodi:arg2="0.52359878"
+     inkscape:flatsided="false"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="m 400.9268,1674.0458 -4.91782,8.5179 -4.91782,8.5179 -4.91783,-8.5179 -4.91782,-8.5179 9.83565,0 z"
+     inkscape:transform-center-y="1.2081645"
+     transform="matrix(0.46512434,0,0,0.42551661,29.149319,996.9428)" />
+  <rect
+     style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#ffffff;stroke-width:4.99999952;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect10963"
+     width="952.33221"
+     height="162.53139"
+     x="27.33061"
+     y="1765.9434" />
+  <rect
+     style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect10965"
+     width="199.3549"
+     height="104.12167"
+     x="60.344795"
+     y="1795.1484" />
+  <rect
+     style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect10965-4"
+     width="210.78288"
+     height="104.12167"
+     x="286.99991"
+     y="1795.1484" />
+  <g
+     id="g11032"
+     transform="translate(-164.91273,31.6187)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text10967"
+       y="1787.6554"
+       x="251.81819"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1787.6554"
+         x="251.81819"
+         id="tspan10969"
+         sodipodi:role="line">Patents per year</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10971"
+       y="1829.558"
+       x="343.3107"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1829.558"
+         x="343.3107"
+         id="tspan10973"
+         sodipodi:role="line">100</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11002"
+       y="1857.2755"
+       x="308.55569"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1857.2755"
+         x="308.55569"
+         id="tspan11004"
+         sodipodi:role="line">Rank: 10th</tspan></text>
+  </g>
+  <g
+     id="g11024"
+     transform="translate(-168.91273,31.6187)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text10967-1"
+       y="1787.7866"
+       x="482.66986"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1787.7866"
+         x="482.66986"
+         id="tspan10969-2"
+         sodipodi:role="line">Patents per person</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10971-8"
+       y="1829.558"
+       x="632.32611"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1829.558"
+         x="632.32611"
+         id="tspan10973-8"
+         sodipodi:role="line">5</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11002-9"
+       y="1857.2755"
+       x="557.65112"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1857.2755"
+         x="557.65112"
+         id="tspan11004-2"
+         sodipodi:role="line">Rank: 10th</tspan></text>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="544.70172"
+     y="1812.7344"
+     id="text11040"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan11042"
+       x="544.70172"
+       y="1812.7344">Top technologies</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="760.78485"
+     y="1812.697"
+     id="text11040-8"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan11042-8"
+       x="760.78485"
+       y="1812.697">Major patent owners</tspan></text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 535.84568,1833.0509 171.41982,0"
+     id="path11062"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 535.21079,1862.2558 172.6896,0"
+     id="path11064"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 537.11545,1891.4606 168.88028,0"
+     id="path11066"
+     inkscape:connector-curvature="0" />
+  <g
+     id="g11089"
+     transform="matrix(1.0735294,0,0,1,-75.233309,28.8884)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path11062-8"
+       d="m 779.00788,1804.1625 171.41982,0"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.96514601px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path11064-6"
+       d="m 778.37299,1833.3674 172.6896,0"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.96514601px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path11066-8"
+       d="m 780.27765,1862.5722 168.88028,0"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.96514601px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="160.53471"
+     y="2030.5466"
+     id="text10585-2-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="160.53471"
+       y="2030.5466"
+       id="tspan11112">III. Provide a comprehensive illustration of the metro universe according </tspan><tspan
+       sodipodi:role="line"
+       x="160.53471"
+       y="2053.9841"
+       id="tspan11116">     to patenting category</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot10943-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-6.8451423,706.5165)"><flowRegion
+       id="flowRegion10945-3"><rect
+         id="rect10947-3"
+         width="666.63263"
+         height="247.60641"
+         x="214.59222"
+         y="1381.3269" /></flowRegion><flowPara
+       id="flowPara10953-4">Imagine a diagram with 1 node per technology category:</flowPara><flowPara
+       id="flowPara11153" /><flowPara
+       id="flowPara11155" /></flowRoot>  <g
+     id="g11218"
+     transform="translate(-111.36307,21.2698)"
+     style="fill:#ff5555">
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2162.9636"
+       cx="566.32562"
+       id="path11159"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2186.7642"
+       cx="392.55661"
+       id="path11159-7"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2250.7583"
+       cx="663.8468"
+       id="path11159-6"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2178.0049"
+       cx="636.81451"
+       id="path11159-8"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2327.1365"
+       cx="523.5636"
+       id="path11159-9"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2142.8413"
+       cx="473.21936"
+       id="path11159-0"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2339.9734"
+       cx="437.51077"
+       id="path11159-68"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2270.1194"
+       cx="390.05682"
+       id="path11159-79"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <ellipse
+       ry="8.5678549"
+       rx="8.5633545"
+       cy="2289.3643"
+       cx="610.30267"
+       id="path11159-03"
+       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot10943-3-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-6.8451423,1029.8655)"><flowRegion
+       id="flowRegion10945-3-3"><rect
+         id="rect10947-3-7"
+         width="666.63263"
+         height="247.60641"
+         x="214.59222"
+         y="1381.3269" /></flowRegion><flowPara
+       id="flowPara10953-4-3">Next, imagine that these nodes possess a kind of &quot;gravity&quot; and</flowPara><flowPara
+       id="flowPara11259">that metro areas are attracted to each node based on the share</flowPara><flowPara
+       id="flowPara11423">of its patents that come from the associated technology category. Furthermore, size the metro dots based on their number of patents: </flowPara><flowPara
+       id="flowPara11153-2" /><flowPara
+       id="flowPara11155-6" /></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     id="path11159-2"
+     d="m 459.72201,2597.7388 a 8.5633545,8.5678549 0 0 1 -8.56336,8.5679 8.5633545,8.5678549 0 0 1 -8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56336,8.5678 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-7-6"
+     d="m 285.95299,2621.5394 a 8.5633545,8.5678549 0 0 1 -8.56335,8.5678 8.5633545,8.5678549 0 0 1 -8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56335,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-6-5"
+     d="m 557.24319,2685.5335 a 8.5633545,8.5678549 0 0 1 -8.56336,8.5679 8.5633545,8.5678549 0 0 1 -8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56336,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-8-8"
+     d="m 530.2109,2612.7801 a 8.5633545,8.5678549 0 0 1 -8.56336,8.5678 8.5633545,8.5678549 0 0 1 -8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56336,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-9-7"
+     d="m 416.95998,2761.9117 a 8.5633545,8.5678549 0 0 1 -8.56335,8.5678 8.5633545,8.5678549 0 0 1 -8.56336,-8.5678 8.5633545,8.5678549 0 0 1 8.56336,-8.5679 8.5633545,8.5678549 0 0 1 8.56335,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-0-9"
+     d="m 366.61574,2577.6165 a 8.5633545,8.5678549 0 0 1 -8.56335,8.5679 8.5633545,8.5678549 0 0 1 -8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56335,8.5678 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-68-6"
+     d="m 330.90716,2774.7486 a 8.5633545,8.5678549 0 0 1 -8.56336,8.5678 8.5633545,8.5678549 0 0 1 -8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56336,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-79-0"
+     d="m 283.45321,2704.8946 a 8.5633545,8.5678549 0 0 1 -8.56336,8.5678 8.5633545,8.5678549 0 0 1 -8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56336,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11159-03-4"
+     d="m 503.69906,2724.1395 a 8.5633545,8.5678549 0 0 1 -8.56336,8.5678 8.5633545,8.5678549 0 0 1 -8.56335,-8.5678 8.5633545,8.5678549 0 0 1 8.56335,-8.5679 8.5633545,8.5678549 0 0 1 8.56336,8.5679 z"
+     style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 607.33041,2611.4238 a 30.474636,30.474636 0 0 1 -30.47464,30.4747 30.474636,30.474636 0 0 1 -30.47463,-30.4747 30.474636,30.474636 0 0 1 30.47463,-30.4746 30.474636,30.474636 0 0 1 30.47464,30.4746 z"
+     id="path11305"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 457.49679,2786.6531 a 24.125753,24.125753 0 0 1 -24.12576,24.1257 24.125753,24.125753 0 0 1 -24.12575,-24.1257 24.125753,24.125753 0 0 1 24.12575,-24.1258 24.125753,24.125753 0 0 1 24.12576,24.1258 z"
+     id="path11307"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 400.99174,2749.8296 a 13.332653,13.332653 0 0 1 -13.33265,13.3326 13.332653,13.332653 0 0 1 -13.33265,-13.3326 13.332653,13.332653 0 0 1 13.33265,-13.3327 13.332653,13.332653 0 0 1 13.33265,13.3327 z"
+     id="path11309-1"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 512.73207,2746.655 a 11.427988,11.427988 0 0 1 -11.42799,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,11.428 z"
+     id="path11311-0"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 430.19661,2734.5923 a 13.332653,13.332653 0 0 1 -13.33266,13.3326 13.332653,13.332653 0 0 1 -13.33265,-13.3326 13.332653,13.332653 0 0 1 13.33265,-13.3327 13.332653,13.332653 0 0 1 13.33266,13.3327 z"
+     id="path11309-4"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 483.52723,2585.3933 a 11.427988,11.427988 0 0 1 -11.42799,11.428 11.427988,11.427988 0 0 1 -11.42798,-11.428 11.427988,11.427988 0 0 1 11.42798,-11.428 11.427988,11.427988 0 0 1 11.42799,11.428 z"
+     id="path11311-8"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 441.62458,2611.4238 a 13.332653,13.332653 0 0 1 -13.33265,13.3327 13.332653,13.332653 0 0 1 -13.33265,-13.3327 13.332653,13.332653 0 0 1 13.33265,-13.3326 13.332653,13.332653 0 0 1 13.33265,13.3326 z"
+     id="path11309-7"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 477.17835,2614.5981 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 365.438,2730.783 a 13.332653,13.332653 0 0 1 -13.33265,13.3326 13.332653,13.332653 0 0 1 -13.33266,-13.3326 13.332653,13.332653 0 0 1 13.33266,-13.3327 13.332653,13.332653 0 0 1 13.33265,13.3327 z"
+     id="path11309-6"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 535.58802,2723.7991 a 11.427988,11.427988 0 0 1 -11.42799,11.428 11.427988,11.427988 0 0 1 -11.42798,-11.428 11.427988,11.427988 0 0 1 11.42798,-11.428 11.427988,11.427988 0 0 1 11.42799,11.428 z"
+     id="path11311-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 326.07493,2795.5415 a 13.332653,13.332653 0 0 1 -13.33265,13.3327 13.332653,13.332653 0 0 1 -13.33265,-13.3327 13.332653,13.332653 0 0 1 13.33265,-13.3326 13.332653,13.332653 0 0 1 13.33265,13.3326 z"
+     id="path11309-47"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 461.94099,2642.5334 a 11.427988,11.427988 0 0 1 -11.42799,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42799,11.4279 z"
+     id="path11311-9"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 314.64695,2768.2412 a 11.427988,11.427988 0 0 1 -11.42799,11.428 11.427988,11.427988 0 0 1 -11.42798,-11.428 11.427988,11.427988 0 0 1 11.42798,-11.428 11.427988,11.427988 0 0 1 11.42799,11.428 z"
+     id="path11311-92"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 420.67329,2662.8501 a 15.872207,15.872207 0 0 1 -15.8722,15.8722 15.872207,15.872207 0 0 1 -15.87221,-15.8722 15.872207,15.872207 0 0 1 15.87221,-15.8722 15.872207,15.872207 0 0 1 15.8722,15.8722 z"
+     id="path11305-8"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 360.99377,2649.5173 a 30.474636,30.474636 0 0 1 -30.47464,30.4747 30.474636,30.474636 0 0 1 -30.47463,-30.4747 30.474636,30.474636 0 0 1 30.47463,-30.4746 30.474636,30.474636 0 0 1 30.47464,30.4746 z"
+     id="path11305-3"
+     inkscape:connector-curvature="0" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot10943-3-3-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-6.8451423,1469.0297)"><flowRegion
+       id="flowRegion10945-3-3-1"><rect
+         id="rect10947-3-7-7"
+         width="666.63263"
+         height="410.13785"
+         x="214.59222"
+         y="1381.3269" /></flowRegion><flowPara
+       id="flowPara11423-5">These diagrams are often fun and engaging. Users can drag them around and they react according to the &quot;gravitational forces&quot; we assign. More importantly, they can be illustrative of a set of complex relationships without burdening the user with a bunch of methodological details like trying to explain a clustering algorithm. Here's are a couple examples to give you a general sense of how you can interact with them:</flowPara><flowPara
+       id="flowPara11501">  &gt; https://bl.ocks.org/mbostock/1804919</flowPara><flowPara
+       id="flowPara11503">  &gt; https://bl.ocks.org/mbostock/4600693</flowPara><flowPara
+       id="flowPara11505"></flowPara><flowPara
+       id="flowPara11507">Alternatively, we could do something very similar to what we did for energy decoupling: small multiple graphics, sortable by share of patents from a each technology category. We'd need to determine the form of each small multiple (perhaps stacked bar) and we would have to limit the interface to, say, 25 small charts for each technology category. The energy decoupling graphic had 50 small multiples, one for each state, and I think that is about the maximum we should do. </flowPara><flowPara
+       id="flowPara11153-2-4" /><flowPara
+       id="flowPara11155-6-9" /></flowRoot>  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 354.26764,2588.3004 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 344.10942,2561.6351 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-5"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 378.39339,2555.2862 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-7"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 408.86802,2574.3329 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-4"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 321.25345,2571.7933 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-9"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 354.26764,2540.0489 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-94"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 399.97959,2545.128 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-59"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 582.8274,2680.9941 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-3"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 596.79494,2714.0083 a 11.427988,11.427988 0 0 1 -11.42798,11.428 11.427988,11.427988 0 0 1 -11.42799,-11.428 11.427988,11.427988 0 0 1 11.42799,-11.4279 11.427988,11.427988 0 0 1 11.42798,11.4279 z"
+     id="path11311-08-57"
+     inkscape:connector-curvature="0" />
+</svg>

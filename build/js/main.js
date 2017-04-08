@@ -20,23 +20,6 @@ var height = 500;
 var aspect = 9/16;
 var pi2 = Math.PI*2;
 
-var technodes = [
-	{name:"Wind", var:"V10"},
-	{name:"Air", var:"V11"},
-	{name:"Bioenergy", var:"V12"},
-	{name:"Green materials", var:"V13"},
-	{name:"Conventional fuel", var:"V14"},
-	{name:"Efficiency", var:"V15"},
-	{name:"Recycling", var:"V16"},
-	{name:"Solar", var:"V17"},
-	{name:"Water/wastewater", var:"V18"},
-	{name:"Geothermal", var:"V19"},
-	{name:"Nuclear", var:"V20"},
-	{name:"Transportation", var:"V21"},
-	{name:"Energy storage", var:"V22"},
-	{name:"Hydro power", var:"V23"}
-]
-
 
 function main(){
 
@@ -57,47 +40,56 @@ function main(){
 			}
 			height = width*aspect;
 
-			data.nodes[0].fx = width/2;
-			data.nodes[0].fy = height/2;
-
 			canvas.attr("width",width)
 			.attr("height",height)
 
 			var forceSim = d3.forceSimulation(data.nodes);
 
+			console.log(JSON.stringify(data.nodes));
+
 			forceSim.alphaDecay(1-Math.pow(0.001, 1 / 100));
 			forceSim.force("center", d3.forceCenter(width/2,height/2));
 
-			forceSim.nodes().forEach(function(d,i){
-				d.x = width/2;
-				d.y = height/2;
-			});
+			forceSim.force("link", d3.forceLink(data.links)
+				.distance(20)
+				.strength(function(link){
+					return 1;
+					//if(link.strength > 1){console.log(link.strength)}
+					return link.strength*5 + 1;
+				})
+			);
+
+			console.log(data.links)
 
 			//links
-			var links2center = d3.range(1, data.nodes.length).map(function(i){
-				return {
-					source: 0,
-					target: i
-				};
-			});
+			//data.nodes[0].fx = width/2;
+			//data.nodes[0].fy = height/2;
+			//var links2center = d3.range(1, data.nodes.length).map(function(i){
+			//	return {
+			//		source: 0,
+			//		target: i
+			//	};
+			//});
 
-			var sorted = data.nodes.slice(0).sort(function(a, b){
-				if(a.index==0 || b.hasOwnProperty("name")){
-					return -1;
-				} else if(b.index==0 || a.hasOwnProperty("name")){
-					return 1;
-				}
-				else{
-					return b.val - a.val;
-				}
-			});
+			//var sorted = data.nodes.slice(0).sort(function(a, b){
+			//	if(a.index==0 || b.hasOwnProperty("name")){
+			//		return -1;
+			//	} else if(b.index==0 || a.hasOwnProperty("name")){
+			// 	return 1;
+			//	}
+			//	else{
+			//		return b.val - a.val;
+			//	}
+			//});
 
+			/*
 			var links = d3.range(1, data.nodes.length).map(function(i){
 				return {
 					source: sorted[i-1].index,
 					target: sorted[i].index
 				}
 			});
+			*/
 
 
 			/*forceSim.force("link", d3.forceLink(links)
@@ -113,17 +105,13 @@ function main(){
 				} )
 			);*/
 
-			forceSim.force("collision", d3.forceCollide(function(node, index){
+			forceSim.force("collision", d3.forceCollide(function(node){
 				var buffer = 5;
-				var rad = node.hasOwnProperty("rad") ? node.rad : 10;
+				var rad = node.hasOwnProperty("val") ? node.val*20 : 10;
 				return rad + buffer;
 			} ).strength(0.5) );
 
-			forceSim.force("repel", d3.forceManyBody().strength(function(node){
-				return node.hasOwnProperty("name") ? -50 : 1;
-			}));
-			//forceSim.force("attract", d3.forceManyBody().strength(2));
-
+			forceSim.force("repel", d3.forceManyBody().strength(-30));
 
 			/*CREDIT M. BOSTOCK*/
 			function findSubject() {
@@ -133,7 +121,6 @@ function main(){
 			function dragStart() {
 			  if (!d3.event.active) forceSim.alphaTarget(0.1).restart();
 				//forceSim.force("collision").strength(0.2);
-				//forceSim.force("centerLink").strength(0);
 			  d3.event.subject.fx = d3.event.subject.x;
 			  d3.event.subject.fy = d3.event.subject.y;
 			}
@@ -148,7 +135,6 @@ function main(){
 			  d3.event.subject.fx = null;
 			  d3.event.subject.fy = null;
 				//forceSim.force("collision").strength(0.5);
-				//forceSim.force("centerLink").strength(0.25);
 			}
 
 
@@ -160,14 +146,6 @@ function main(){
 			        .on("end", dragEnd));
 
 			/*END BOSTOCK CREDIT*/
-
-			/*forceSim.force("x", d3.forceX(width/2).strength(function(node, index){
-				return node.val*0.1;
-			}));*/
-
-			/*forceSim.force("y", d3.forceY(height/2).strength(function(node, index){
-				return node.val*0.1;
-			}));*/
 
 			/*
 			forceSim.force("bounds", function(alpha){
@@ -203,22 +181,6 @@ function main(){
 			});
 			*/
 
-			/*
-			forceSim.force("one", function(alpha){
-				var n = data.nodes.length;
-				var i = -1;
-				var k = alpha*0.1;
-				var node;
-				while(++i < n){
-					node = data.nodes[i];
-					if(i==10){
-						console.log("before force 1 - x: " + node.x + " vx: " + node.vx);
-						node.vx = node.vx*k;
-					}
-				}
-			});
-			*/
-
 			function pointOnCircle(cx, cy, r, px, py){
 				var vy = py - cy;
 				var vx = px - cx;
@@ -236,7 +198,7 @@ function main(){
 			}
 
 
-			forceSim.force("circle", function(alpha){
+			/*forceSim.force("circle", function(alpha){
 
 				var n = data.nodes.length;
 				var i = -1;
@@ -257,20 +219,23 @@ function main(){
 						var vy = target[1]-node.y;
 
 						//enforce strictly
-						node.x = target[0];
-						node.y = target[1];
+						//node.x = target[0];
+						//node.y = target[1];
 
 						//alter velocity
-						//node.vx = node.vx + vx*k;
-						//node.vy = node.vy + vy*k;
+						node.vx = node.vx + vx*k;
+						node.vy = node.vy + vy*k;
 					}
 
 			  }
 
-			})
+			})*/
 
-
+var ticked = false;
 			function tick(){
+				if(!ticked){
+					ticked = true;
+				}
 
 				try{
 					context.clearRect(0, 0, width, height);
@@ -285,8 +250,8 @@ function main(){
 					var tn = data.nodes.filter(function(d){return d.hasOwnProperty("name")});
 
 					mn.forEach(function(d,i){
-						context.moveTo(d.x+d.rad, d.y);
-						context.arc(d.x, d.y, d.rad, 0, pi2);
+						context.moveTo(d.x+(d.val*20), d.y);
+						context.arc(d.x, d.y, d.val*20, 0, pi2);
 					});
 
 					context.fill();
@@ -294,11 +259,13 @@ function main(){
 
 					//tech nodes
 					tn.forEach(function(d,i){
-						console.log(d);
-						var rad = 15;
+						var rad = 2;
 						context.moveTo(d.x+rad, d.y);
 						context.arc(d.x, d.y, rad, 0, pi2);
+						d.fx = width/2;
+						d.fy = height/2;
 					});
+
 
 					context.fillStyle = "#666666";
 					context.fill();
@@ -309,7 +276,7 @@ function main(){
 
 				}
 				catch(e){
-					console.log(e);
+					//console.log(e);
 				}
 
 				//context.restore();
@@ -326,34 +293,68 @@ function main(){
 
 		} else{
 			data = dat;
-			data.nodes = dat.obs.map(function(d,i,a){
+			var nodes = dat.obs.map(function(d,i,a){
 				var r = {};
-				r.x = 100;
-				r.y = 0;
+				console.log(width);
+				r.x = width/2;
+				r.y = height/2;
 				r.data = d;
-				r.val = Math.pow(Math.random(),2);
-				r.rad = r.val*20;
+				r.val = d.V10/172;
+				r.rad = 5;
 				return r;
 			});
 
-			data.nodes.unshift({
-				x: 0,
-				y: 0,
-				data: null,
-				val: 1,
-				rad: 1*20
-			});
+			var technodes = [
+				{name:"Wind", var:"V10", i:0},
+				{name:"Air", var:"V11", i:1},
+				{name:"Bioenergy", var:"V12", i:2},
+				{name:"Green materials", var:"V13", i:3},
+				{name:"Conventional fuel", var:"V14", i:4},
+				{name:"Efficiency", var:"V15", i:5},
+				{name:"Recycling", var:"V16", i:6},
+				{name:"Solar", var:"V17", i:7},
+				{name:"Water/wastewater", var:"V18", i:8},
+				{name:"Geothermal", var:"V19", i:9},
+				{name:"Nuclear", var:"V20", i:10},
+				{name:"Transportation", var:"V21", i:11},
+				{name:"Energy storage", var:"V22", i:12},
+				{name:"Hydro power", var:"V23", i:13}
+			]
 
-			data.nodes = data.nodes.concat(technodes);
+			technodes = technodes.slice(0,1);
 
-			console.log(data);
+			//build links to technodes
+			var links = [];
+			var i = -1;
+			var node;
+			while(++i < nodes.length){
+				node = nodes[i];
+				technodes.forEach(function(d,j){
+					var strength = node.data["V3"]==0 ? 0 : node.data[d.var]/node.data["V3"];
+
+					if(!(strength>0 && strength <= 1)){
+						console.log(strength);
+					}
+
+					links.push({
+						source:i+technodes.length,
+						target:d.i,
+						strength: node.val
+					})
+				})
+			}
+
+			data.nodes = technodes.concat(nodes);
+
+			data.links = links;
+
 
 			useTheForce();
 
 			var resizeTimer;
 			window.addEventListener("resize", function(){
 				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(useTheForce, 500);
+				//resizeTimer = setTimeout(useTheForce, 500);
 			});
 		}
 	});

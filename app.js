@@ -178,348 +178,264 @@ dir.local("./").add("data");
 var width = 960;
 var height = 500;
 var aspect = 9/16;
+aspect = 0.4;
 var pi2 = Math.PI*2;
 
+var technodes = [
+	{name:"Wind", var:"V10", i:0},
+	{name:"Air", var:"V11", i:1},
+	{name:"Bioenergy", var:"V12", i:2},
+	{name:"Green materials", var:"V13", i:3},
+	{name:"Conventional fuel", var:"V14", i:4},
+	{name:"Efficiency", var:"V15", i:5},
+	{name:"Recycling", var:"V16", i:6},
+	{name:"Solar", var:"V17", i:7},
+	{name:"Water/wastewater", var:"V18", i:8},
+	{name:"Geothermal", var:"V19", i:9},
+	{name:"Nuclear", var:"V20", i:10},
+	{name:"Transportation", var:"V21", i:11},
+	{name:"Energy storage", var:"V22", i:12},
+	{name:"Hydro power", var:"V23", i:13}
+];
 
 function main(){
 
 	var wrap = d3.select("#met-dash").style("width","100%");
-	var canvas = wrap.append("canvas");
+	var title = wrap.append("p").style("text-align","center");
 
-	var context = canvas.node().getContext("2d");
 
 	var data = null;
 
-	function useTheForce(){
+	function useTheForce(_){
 		if(data !== null){
 
-			var rect = wrap.node().getBoundingClientRect();
-			width = rect.right - rect.left;
-			if(width < 320){
-				width = 320;
-			}
-			height = width*aspect;
-
-			canvas.attr("width",width)
-			.attr("height",height);
-
-			var forceSim = d3.forceSimulation(data.nodes);
-
-			console.log(JSON.stringify(data.nodes));
-
-			forceSim.alphaDecay(1-Math.pow(0.001, 1 / 100));
-			forceSim.force("center", d3.forceCenter(width/2,height/2));
-
-			forceSim.force("link", d3.forceLink(data.links)
-				.distance(20)
-				.strength(function(link){
-					return 1;
-					//if(link.strength > 1){console.log(link.strength)}
-					return link.strength*5 + 1;
-				})
-			);
-
-			console.log(data.links);
-
-			//links
-			//data.nodes[0].fx = width/2;
-			//data.nodes[0].fy = height/2;
-			//var links2center = d3.range(1, data.nodes.length).map(function(i){
-			//	return {
-			//		source: 0,
-			//		target: i
-			//	};
-			//});
-
-			//var sorted = data.nodes.slice(0).sort(function(a, b){
-			//	if(a.index==0 || b.hasOwnProperty("name")){
-			//		return -1;
-			//	} else if(b.index==0 || a.hasOwnProperty("name")){
-			// 	return 1;
-			//	}
-			//	else{
-			//		return b.val - a.val;
-			//	}
-			//});
-
-			/*
-			var links = d3.range(1, data.nodes.length).map(function(i){
-				return {
-					source: sorted[i-1].index,
-					target: sorted[i].index
-				}
-			});
-			*/
 
 
-			/*forceSim.force("link", d3.forceLink(links)
-				.distance(5)
-				.strength(0.5)
-			);*/
+			var canvas = wrap.append("canvas");
+			var context = canvas.node().getContext("2d");
 
-			/*forceSim.force("centerLink", d3.forceLink(links2center)
-				.distance(30)
-				.strength(function(link){
-					return 0.25;
-					//return Math.pow(link.target.val/1,1.25);
-				} )
-			);*/
+			var current_vn = arguments.length > 0 ? _ : null;
 
-			forceSim.force("collision", d3.forceCollide(function(node){
-				var buffer = 5;
-				var rad = node.hasOwnProperty("val") ? node.val*20 : 10;
-				return rad + buffer;
-			} ).strength(0.5) );
+			function build(vn){
 
-			forceSim.force("repel", d3.forceManyBody().strength(-30));
+				//set dimensions of layout
+				var rect = wrap.node().getBoundingClientRect();
+				width = rect.right - rect.left;
+				height = width*aspect;
 
-			/*CREDIT M. BOSTOCK*/
-			function findSubject() {
-			  return forceSim.find(d3.event.x, d3.event.y);
-			}
+				canvas.attr("width", width > 320 ? width : 320)
+							.attr("height",height);
 
-			function dragStart() {
-			  if (!d3.event.active) forceSim.alphaTarget(0.1).restart();
-				//forceSim.force("collision").strength(0.2);
-			  d3.event.subject.fx = d3.event.subject.x;
-			  d3.event.subject.fy = d3.event.subject.y;
-			}
-
-			function drag() {
-			  d3.event.subject.fx = d3.event.x;
-			  d3.event.subject.fy = d3.event.y;
-			}
-
-			function dragEnd() {
-			  if (!d3.event.active) forceSim.alphaTarget(0);
-			  d3.event.subject.fx = null;
-			  d3.event.subject.fy = null;
-				//forceSim.force("collision").strength(0.5);
-			}
-
-
-			canvas.call(d3.drag()
-			        .container(canvas.node())
-			        .subject(findSubject)
-			        .on("start", dragStart)
-			        .on("drag", drag)
-			        .on("end", dragEnd));
-
-			/*END BOSTOCK CREDIT*/
-
-			/*
-			forceSim.force("bounds", function(alpha){
-				var n = data.nodes.length;
-				var i = -1;
-				var k = alpha*0.1;
-				var node;
-				//console.log(alpha);
-
-				while(++i < n){
-			    node = data.nodes[i];
-
-					var nextX = node.x + node.vx;
-					var nextY = node.y + node.vy;
-
-					if(node.x < node.rad + 5){
-						node.x = node.rad + 5;
-					}
-					else if(node.x > width - node.rad - 5){
-						node.x = width - node.rad - 5;
-					}
-
-					if(node.y < node.rad+5){
-						node.y = node.rad+5;
-					}
-					else if(node.y > height - node.rad - 5){
-						node.y = height - node.rad - 5;
-					}
-
-			    //node.vx -= node.x * k;
-			    //node.vy -= node.y * k;
-			  }
-			});
-			*/
-
-			function pointOnCircle(cx, cy, r, px, py){
-				var vy = py - cy;
-				var vx = px - cx;
-				var len = Math.sqrt(vx*vx + vy*vy);
-
-				if(len==0){
-					var target = null;
+				if(arguments.length===0){
+					vn = current_vn;
 				}
 				else{
-					var tx = (r*(vx/len)) + cx;
-		      var ty = (r*(vy/len)) + cy;
-					var target = [tx, ty];
+					current_vn = vn;
 				}
-				return target;
-			}
 
+				//maximum across all patent categories
+				var maxmax = d3.max(data.obs, function(d){
+					return d3.max(technodes, function(t){
+						return d[t.var];
+					})
+				});
 
-			/*forceSim.force("circle", function(alpha){
+				var extent = d3.extent(data.obs, function(d){return d[vn]});
+				var scale = d3.scaleSqrt().domain([0,maxmax]).range([1,30]);
 
-				var n = data.nodes.length;
-				var i = -1;
-				var k = alpha*0.1;
-				var node;
-				//console.log(alpha);
+				var center = technodes.filter(function(d,i){
+					return vn==d.var;
+				});
 
-				while(++i < n){
-			    node = data.nodes[i];
+				//if vn === null, center.length === 0
+				if(center.length != 1 || vn===null){
+					canvas.style("visibility","hidden");
+					return null;
+				}
+				else{
+					canvas.style("visibility","visible");
+					title.text(center[0].name);
+				}
 
-					var target = pointOnCircle(width/2, height/2, Math.min(width/3, height/3), node.x, node.y)
+				var nrays = 10;
+				var ray_len = 5;
+				var ray_increment = ray_len/nrays;
+				var val_nodes = data.obs.slice(0).sort(function(a,b){return b[vn]-a[vn]});
+						val_nodes.unshift(center[0]);
 
-					//console.log(target);
+				var nodes = val_nodes.map(function(d,i,a){
 
-					//only use if a tech node
-					if(target != null && node.hasOwnProperty("name")){
-						var vx = target[0]-node.x;
-						var vy = target[1]-node.y;
+															var val = d[vn];
+															var share = val/extent[1];
 
-						//enforce strictly
-						//node.x = target[0];
-						//node.y = target[1];
+															var r = {center:[width/2, height/2]};
 
-						//alter velocity
-						node.vx = node.vx + vx*k;
-						node.vy = node.vy + vy*k;
+															var ray = (i%25);
+
+															if(i>0){
+																r.data = d;
+																r.val = val;
+																r.share = share;
+																r.rad = scale(val);
+
+																//initalize placement of nodes to avoid unstable start to
+																//simulation that could cause instability
+																//eliminate forces to see how this initial placement looks
+																if(ray==1){
+																	ray_len = ray_len + r.rad;
+																	ray_increment = (r.rad*2)/nrays;
+																}
+																else{
+																	ray_len = ray_len + ray_increment;
+																}
+
+																var radians = 2*Math.PI*(ray/nrays);
+																r.x = r.center[0] + (ray_len+r.rad)*Math.cos(radians);
+																r.y = r.center[1] + (ray_len+r.rad)*Math.sin(radians);
+
+																r.sun = false; //node is in orbit
+															}
+															else{
+																r.x = r.center[0];
+																r.y = r.center[1];
+																r.rad = 5;
+																r.sun = true; //node is the "sun"
+															}
+
+															//r.rad = 5;
+
+															return r;
+														});
+
+					//build links to first node
+					//to do -- only link top 50 or so?
+					//skip the first element of nodes (it's the center node)
+					var links = nodes.slice(1).map(function(d,i,a){
+						return {source:0, target:i+1, strength:d.share}
+					});
+
+					var forceSim = d3.forceSimulation(nodes);
+
+					forceSim.force("center", d3.forceCenter(width/2,height/2))
+									.force("link", d3.forceLink(links)
+										.distance(function(link){
+											return 40;
+											//return 15*(2-link.strength);
+										}).strength(function(link){
+											return 2*link.strength + 0.05;
+										}))
+									.force("x", d3.forceX(width/2).strength(function(node){
+											return node.index==0 ? 1 : 0;
+										}))
+									.force("y", d3.forceY(height/2).strength(function(node){
+											return node.index==0 ? 1 : 0;
+										}))
+									.force("collision", d3.forceCollide(function(node){
+											var buffer = 3;
+											return node.rad + buffer;
+										} ).strength(0.3) )
+									.force("gravity", d3.forceManyBody().strength(-5))
+									;
+
+					/*ADAPTED FROM EXAMPLE BY M. BOSTOCK*/
+					function findSubject() {
+					  return forceSim.find(d3.event.x, d3.event.y);
 					}
 
-			  }
+					function dragStart() {
+					  if (!d3.event.active) forceSim.alphaTarget(0.4).restart();
+						//forceSim.force("collision").strength(1);
+						//forceSim.force("link").strength(3);
+					  d3.event.subject.fx = d3.event.subject.x;
+					  d3.event.subject.fy = d3.event.subject.y;
+					}
 
-			})*/
+					function drag() {
+					  d3.event.subject.fx = d3.event.x;
+					  d3.event.subject.fy = d3.event.y;
+					}
 
-var ticked = false;
-			function tick(){
-				if(!ticked){
-					ticked = true;
-				}
+					function dragEnd() {
+					  if (!d3.event.active) forceSim.alphaTarget(0);
+					  d3.event.subject.fx = null;
+					  d3.event.subject.fy = null;
+						//console.log(d3.event.subject);
+						//forceSim.force("collision").strength(0.5);
+					}
 
-				try{
-					context.clearRect(0, 0, width, height);
+					canvas.call(d3.drag()
+					        .container(canvas.node())
+					        .subject(findSubject)
+					        .on("start", dragStart)
+					        .on("drag", drag)
+					        .on("end", dragEnd));
 
-					context.beginPath();
+					/*END BOSTOCK CREDIT*/
 
-					context.fillStyle = "#ee5555";
-					context.strokeStyle = "#dddddd";
+					//tick function
+					function tick(){
+						try{
+							context.clearRect(0, 0, width, height);
+							context.beginPath();
+							context.fillStyle = "#ee5555";
+							context.strokeStyle = "#dddddd";
 
-					//metro nodes
-					var mn = data.nodes.filter(function(d){return !d.hasOwnProperty("name")});
-					var tn = data.nodes.filter(function(d){return d.hasOwnProperty("name")});
+							nodes.forEach(function(d,i){
+								context.moveTo(d.x+d.rad, d.y);
+								context.arc(d.x, d.y, d.rad, 0, pi2);
+							});
 
-					mn.forEach(function(d,i){
-						context.moveTo(d.x+(d.val*20), d.y);
-						context.arc(d.x, d.y, d.val*20, 0, pi2);
-					});
+							context.fill();
+							context.stroke();
+						}
+						catch(e){
+							//console.log(e);
+						}
+						//context.restore();
+					}
 
-					context.fill();
-					context.stroke();
+					forceSim.on("tick", tick);
 
-					//tech nodes
-					tn.forEach(function(d,i){
-						var rad = 2;
-						context.moveTo(d.x+rad, d.y);
-						context.arc(d.x, d.y, rad, 0, pi2);
-						d.fx = width/2;
-						d.fy = height/2;
-					});
+			} //end build function
 
-
-					context.fillStyle = "#666666";
-					context.fill();
-
-
-					context.stroke();
-
-
-				}
-				catch(e){
-					//console.log(e);
-				}
-
-				//context.restore();
-
+			if(current_vn !== null){
+				build(current_vn);
 			}
 
-			forceSim.on("tick", tick);
+			var resizeTimer;
+			window.addEventListener("resize", function(){
+				clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(function(){build(current_vn);}, 500);
+			});
 
-		}
-	}
+			return build;
+
+		} //close massive if-data-loaded block
+
+		return null;
+
+	} //close useTheForce()
 
 	d3.json(dir.url("data", "energy_innovation.json"), function(err, dat){
 		if(!!err){
 
 		} else{
 			data = dat;
-			var nodes = dat.obs.map(function(d,i,a){
-				var r = {};
-				console.log(width);
-				r.x = width/2;
-				r.y = height/2;
-				r.data = d;
-				r.val = d.V10/172;
-				r.rad = 5;
-				return r;
-			});
 
-			var technodes = [
-				{name:"Wind", var:"V10", i:0},
-				{name:"Air", var:"V11", i:1},
-				{name:"Bioenergy", var:"V12", i:2},
-				{name:"Green materials", var:"V13", i:3},
-				{name:"Conventional fuel", var:"V14", i:4},
-				{name:"Efficiency", var:"V15", i:5},
-				{name:"Recycling", var:"V16", i:6},
-				{name:"Solar", var:"V17", i:7},
-				{name:"Water/wastewater", var:"V18", i:8},
-				{name:"Geothermal", var:"V19", i:9},
-				{name:"Nuclear", var:"V20", i:10},
-				{name:"Transportation", var:"V21", i:11},
-				{name:"Energy storage", var:"V22", i:12},
-				{name:"Hydro power", var:"V23", i:13}
-			];
+			var update = useTheForce("V10");
 
-			technodes = technodes.slice(0,1);
-
-			//build links to technodes
-			var links = [];
-			var i = -1;
-			var node;
-			while(++i < nodes.length){
-				node = nodes[i];
-				technodes.forEach(function(d,j){
-					var strength = node.data["V3"]==0 ? 0 : node.data[d.var]/node.data["V3"];
-
-					if(!(strength>0 && strength <= 1)){
-						console.log(strength);
-					}
-
-					links.push({
-						source:i+technodes.length,
-						target:d.i,
-						strength: node.val
-					});
-				});
+			var ci = 0;
+			function sequence(){
+				var next = technodes[++ci].var;
+				update(next);
+				setTimeout(sequence,5000);
 			}
+			setTimeout(sequence,5000);
 
-			data.nodes = technodes.concat(nodes);
-
-			data.links = links;
-
-
-			useTheForce();
-
-			var resizeTimer;
-			window.addEventListener("resize", function(){
-				clearTimeout(resizeTimer);
-				//resizeTimer = setTimeout(useTheForce, 500);
-			});
 		}
 	});
 
-}
+} //close main()
 
 document.addEventListener("DOMContentLoaded", main);
 

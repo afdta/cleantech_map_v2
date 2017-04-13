@@ -18,7 +18,7 @@ dir.local("./").add("data")
 var width = 960;
 var height = 500;
 var aspect = 9/16;
-aspect = 0.4
+aspect = 0.4;
 var pi2 = Math.PI*2;
 
 var technodes = [
@@ -129,7 +129,7 @@ function main(){
 																	ray_len = ray_len + ray_increment;
 																}
 
-																var radians = 2*Math.PI*(ray/nrays);
+																var radians = 2*Math.PI*(ray/nrays) + Math.random();
 																r.x = r.center[0] + (ray_len+r.rad)*Math.cos(radians);
 																r.y = r.center[1] + (ray_len+r.rad)*Math.sin(radians);
 

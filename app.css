@@ -1,0 +1,48 @@
+p{
+  line-height:1.6em;
+}
+
+
+h1{
+  font-size:2em;
+  margin-bottom:1.5em;
+}
+
+.section-header{
+  font-size:1.5em;
+  font-weight:bold;
+  line-height:normal;
+  margin-top:2em;
+}
+
+.reading-box{
+  max-width:780px;
+  margin:0px auto;
+}
+
+img{
+  margin: 2em 0em;
+}
+
+.button-wrap{
+  margin:3em auto 0em auto;
+  border-top:1px solid #aaaaaa;
+  padding:1em;
+  max-width:900px;
+}
+
+.button-wrap > *{
+  display:inline-block;
+  padding:0.25em 0.5em;
+  margin:0.25em;
+  background-color:#dddddd;
+  cursor:pointer;
+
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button-wrap *.selected{
+  background-color:#31a354;
+  color:#ffffff;
+}

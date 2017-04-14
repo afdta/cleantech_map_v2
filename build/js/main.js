@@ -18,29 +18,29 @@ dir.local("./").add("data")
 var width = 960;
 var height = 500;
 var aspect = 9/16;
-aspect = 0.4;
 var pi2 = Math.PI*2;
 
 var technodes = [
-	{name:"Wind", var:"V10", i:0},
-	{name:"Air", var:"V11", i:1},
-	{name:"Bioenergy", var:"V12", i:2},
 	{name:"Green materials", var:"V13", i:3},
-	{name:"Conventional fuel", var:"V14", i:4},
 	{name:"Efficiency", var:"V15", i:5},
-	{name:"Recycling", var:"V16", i:6},
-	{name:"Solar", var:"V17", i:7},
-	{name:"Water/wastewater", var:"V18", i:8},
-	{name:"Geothermal", var:"V19", i:9},
-	{name:"Nuclear", var:"V20", i:10},
 	{name:"Transportation", var:"V21", i:11},
 	{name:"Energy storage", var:"V22", i:12},
-	{name:"Hydro power", var:"V23", i:13}
+	{name:"Solar", var:"V17", i:7},
+	{name:"Air", var:"V11", i:1},
+	{name:"Water/wastewater", var:"V18", i:8},
+	{name:"Bioenergy", var:"V12", i:2},
+	{name:"Wind", var:"V10", i:0},
+	{name:"Conventional fuel", var:"V14", i:4},
+	{name:"Recycling", var:"V16", i:6},
+	{name:"Nuclear", var:"V20", i:10},
+	{name:"Hydro power", var:"V23", i:13},
+	{name:"Geothermal", var:"V19", i:9}
 ]
 
 function main(){
 
 	var wrap = d3.select("#met-dash").style("width","100%");
+	var button_wrap = wrap.append("div").classed("button-wrap",true);
 	var title = wrap.append("p").style("text-align","center");
 
 
@@ -63,8 +63,11 @@ function main(){
 				width = rect.right - rect.left;
 				height = width*aspect;
 
-				canvas.attr("width", width > 320 ? width : 320)
-							.attr("height",height);
+				if(width < 320){width = 320}
+				if(height < 320){height = 320}
+				else if(height > 600){height = 600}
+
+				canvas.attr("width", width).attr("height", height);
 
 				if(arguments.length===0){
 					vn = current_vn;
@@ -81,7 +84,7 @@ function main(){
 				});
 
 				var extent = d3.extent(data.obs, function(d){return d[vn]});
-				var scale = d3.scaleSqrt().domain([0,maxmax]).range([1,30]);
+				var scale = d3.scaleSqrt().domain([0,maxmax]).range([1,40]);
 
 				var center = technodes.filter(function(d,i){
 					return vn==d.var;
@@ -94,11 +97,11 @@ function main(){
 				}
 				else{
 					canvas.style("visibility","visible");
-					title.text(center[0].name);
+					//title.text(center[0].name);
 				}
 
-				var nrays = 10;
-				var ray_len = 5;
+				var nrays = 5;
+				var ray_len = 1;
 				var ray_increment = ray_len/nrays;
 				var val_nodes = data.obs.slice(0).sort(function(a,b){return b[vn]-a[vn]});
 						val_nodes.unshift(center[0]);
@@ -159,7 +162,7 @@ function main(){
 					forceSim.force("center", d3.forceCenter(width/2,height/2))
 									.force("link", d3.forceLink(links)
 										.distance(function(link){
-											return 40;
+											return 50;
 											//return 15*(2-link.strength);
 										}).strength(function(link){
 											return 2*link.strength + 0.05;
@@ -262,15 +265,50 @@ function main(){
 		} else{
 			data = dat;
 
-			var update = useTheForce("V10");
+			var current_var = "V13";
 
-			var ci = 0;
-			function sequence(){
-				var next = technodes[++ci].var;
-				update(next);
-				setTimeout(sequence,5000);
+			var update = useTheForce(current_var);
+
+			var buttons = button_wrap.selectAll("p").data(technodes)
+				.enter()
+				.append("p")
+				.text(function(d,i){return d.name})
+				;
+
+			function syncbuttons(){
+				buttons.classed("selected", function(d,i){
+									return d.var == current_var;
+								});
 			}
-			setTimeout(sequence,5000);
+
+			syncbuttons();
+
+			var cycling = true;
+
+			function total_update(variable){
+				update(variable);
+				current_var = variable;
+				syncbuttons();
+			}
+
+			buttons.on("mousedown", function(d,i){
+				cycling = false;
+				total_update(d.var);
+			})
+
+			//run as a sequence
+			var ci = 0;
+			var timer;
+			function cycle(){
+				clearTimeout(timer);
+				if(cycling){
+					var n = ++ci % technodes.length;
+					var next = technodes[n].var;
+					total_update(next);
+					timer = setTimeout(cycle,2000);
+				}
+			}
+			//timer = setTimeout(cycle,2000);
 
 		}
 	});

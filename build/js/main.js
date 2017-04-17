@@ -319,7 +319,7 @@ function main(){
 		});
 
 		views.each(function(d,i){
-			d3.select(this).append("p").text(d.name).classed("view-name",true).style("position","relative").style("z-index","100");
+			d3.select(this).append("p").html(d.name + "<br /> Say something unique about this category" + "<br/>" + "Are there aspects of the distribution we want to describe?" + "<br />Or metros worth calling out?" ).classed("view-name",true).style("position","relative").style("z-index","100");
 			waypoint(this)
 			.activate(function(){
 				if(d.var != current_vn){build(d.var)};

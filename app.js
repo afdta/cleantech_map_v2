@@ -178,299 +178,300 @@ dir.local("./").add("data");
 var width = 960;
 var height = 500;
 var aspect = 9/16;
-var pi2 = Math.PI*2;
-
-var technodes = [
-	{name:"Green materials", var:"V13", i:3},
-	{name:"Efficiency", var:"V15", i:5},
-	{name:"Transportation", var:"V21", i:11},
-	{name:"Energy storage", var:"V22", i:12},
-	{name:"Solar", var:"V17", i:7},
-	{name:"Air", var:"V11", i:1},
-	{name:"Water/wastewater", var:"V18", i:8},
-	{name:"Bioenergy", var:"V12", i:2},
-	{name:"Wind", var:"V10", i:0},
-	{name:"Conventional fuel", var:"V14", i:4},
-	{name:"Recycling", var:"V16", i:6},
-	{name:"Nuclear", var:"V20", i:10},
-	{name:"Hydro power", var:"V23", i:13},
-	{name:"Geothermal", var:"V19", i:9}
-];
-
 function main(){
 
 	var wrap = d3.select("#met-dash").style("width","100%");
 	var button_wrap = wrap.append("div").classed("button-wrap",true);
+	var svg = wrap.append("svg");
 	var title = wrap.append("p").style("text-align","center");
 
+	d3.json(dir.url("data", "energy_innovation.json"), function(err, data){
 
-	var data = null;
-
-	function useTheForce(_){
-		if(data !== null){
-
-
-
-			var canvas = wrap.append("canvas");
-			var context = canvas.node().getContext("2d");
-
-			var current_vn = arguments.length > 0 ? _ : null;
-
-			function build(vn){
-
-				//set dimensions of layout
-				var rect = wrap.node().getBoundingClientRect();
-				width = rect.right - rect.left;
-				height = width*aspect;
-
-				if(width < 320){width = 320;}
-				if(height < 320){height = 320;}
-				else if(height > 600){height = 600;}
-
-				canvas.attr("width", width).attr("height", height);
-
-				if(arguments.length===0){
-					vn = current_vn;
-				}
-				else{
-					current_vn = vn;
-				}
-
-				//maximum across all patent categories
-				var maxmax = d3.max(data.obs, function(d){
-					return d3.max(technodes, function(t){
-						return d[t.var];
-					})
-				});
-
-				var extent = d3.extent(data.obs, function(d){return d[vn]});
-				var scale = d3.scaleSqrt().domain([0,maxmax]).range([1,40]);
-
-				var center = technodes.filter(function(d,i){
-					return vn==d.var;
-				});
-
-				//if vn === null, center.length === 0
-				if(center.length != 1 || vn===null){
-					canvas.style("visibility","hidden");
-					return null;
-				}
-				else{
-					canvas.style("visibility","visible");
-					//title.text(center[0].name);
-				}
-
-				var nrays = 5;
-				var ray_len = 1;
-				var ray_increment = ray_len/nrays;
-				var val_nodes = data.obs.slice(0).sort(function(a,b){return b[vn]-a[vn]});
-						val_nodes.unshift(center[0]);
-
-				var nodes = val_nodes.map(function(d,i,a){
-
-															var val = d[vn];
-															var share = val/extent[1];
-
-															var r = {center:[width/2, height/2]};
-
-															var ray = (i%25);
-
-															if(i>0){
-																r.data = d;
-																r.val = val;
-																r.share = share;
-																r.rad = scale(val);
-
-																//initalize placement of nodes to avoid unstable start to
-																//simulation that could cause instability
-																//eliminate forces to see how this initial placement looks
-																if(ray==1){
-																	ray_len = ray_len + r.rad;
-																	ray_increment = (r.rad*2)/nrays;
-																}
-																else{
-																	ray_len = ray_len + ray_increment;
-																}
-
-																var radians = 2*Math.PI*(ray/nrays) + Math.random();
-																r.x = r.center[0] + (ray_len+r.rad)*Math.cos(radians);
-																r.y = r.center[1] + (ray_len+r.rad)*Math.sin(radians);
-
-																r.sun = false; //node is in orbit
-															}
-															else{
-																r.x = r.center[0];
-																r.y = r.center[1];
-																r.rad = 5;
-																r.sun = true; //node is the "sun"
-															}
-
-															//r.rad = 5;
-
-															return r;
-														});
-
-					//build links to first node
-					//to do -- only link top 50 or so?
-					//skip the first element of nodes (it's the center node)
-					var links = nodes.slice(1).map(function(d,i,a){
-						return {source:0, target:i+1, strength:d.share}
-					});
-
-					var forceSim = d3.forceSimulation(nodes);
-
-					forceSim.force("center", d3.forceCenter(width/2,height/2))
-									.force("link", d3.forceLink(links)
-										.distance(function(link){
-											return 50;
-											//return 15*(2-link.strength);
-										}).strength(function(link){
-											return 2*link.strength + 0.05;
-										}))
-									.force("x", d3.forceX(width/2).strength(function(node){
-											return node.index==0 ? 1 : 0;
-										}))
-									.force("y", d3.forceY(height/2).strength(function(node){
-											return node.index==0 ? 1 : 0;
-										}))
-									.force("collision", d3.forceCollide(function(node){
-											var buffer = 3;
-											return node.rad + buffer;
-										} ).strength(0.3) )
-									.force("gravity", d3.forceManyBody().strength(-5))
-									;
-
-					/*ADAPTED FROM EXAMPLE BY M. BOSTOCK*/
-					function findSubject() {
-					  return forceSim.find(d3.event.x, d3.event.y);
-					}
-
-					function dragStart() {
-					  if (!d3.event.active) forceSim.alphaTarget(0.4).restart();
-						//forceSim.force("collision").strength(1);
-						//forceSim.force("link").strength(3);
-					  d3.event.subject.fx = d3.event.subject.x;
-					  d3.event.subject.fy = d3.event.subject.y;
-					}
-
-					function drag() {
-					  d3.event.subject.fx = d3.event.x;
-					  d3.event.subject.fy = d3.event.y;
-					}
-
-					function dragEnd() {
-					  if (!d3.event.active) forceSim.alphaTarget(0);
-					  d3.event.subject.fx = null;
-					  d3.event.subject.fy = null;
-						//console.log(d3.event.subject);
-						//forceSim.force("collision").strength(0.5);
-					}
-
-					canvas.call(d3.drag()
-					        .container(canvas.node())
-					        .subject(findSubject)
-					        .on("start", dragStart)
-					        .on("drag", drag)
-					        .on("end", dragEnd));
-
-					/*END BOSTOCK CREDIT*/
-
-					//tick function
-					function tick(){
-						try{
-							context.clearRect(0, 0, width, height);
-							context.beginPath();
-							context.fillStyle = "#ee5555";
-							context.strokeStyle = "#dddddd";
-
-							nodes.forEach(function(d,i){
-								context.moveTo(d.x+d.rad, d.y);
-								context.arc(d.x, d.y, d.rad, 0, pi2);
-							});
-
-							context.fill();
-							context.stroke();
-						}
-						catch(e){
-							//console.log(e);
-						}
-						//context.restore();
-					}
-
-					forceSim.on("tick", tick);
-
-			} //end build function
-
-			if(current_vn !== null){
-				build(current_vn);
-			}
-
-			var resizeTimer;
-			window.addEventListener("resize", function(){
-				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(function(){build(current_vn);}, 500);
-			});
-
-			return build;
-
-		} //close massive if-data-loaded block
-
-		return null;
-
-	} //close useTheForce()
-
-	d3.json(dir.url("data", "energy_innovation.json"), function(err, dat){
 		if(!!err){
+			svg.style("visibility", "hidden");
+			return null;
+		}
 
-		} else{
-			data = dat;
+		var forceSim = d3.forceSimulation().stop();
 
-			var current_var = "V13";
+		/*ADAPTED FROM EXAMPLE BY M. BOSTOCK*/
+		function findSubject() {
+			return forceSim.find(d3.event.x, d3.event.y);
+		}
 
-			var update = useTheForce(current_var);
+		function dragStart() {
+			if (!d3.event.active) forceSim.alphaTarget(0.4).restart();
+			//forceSim.force("collision").strength(1);
+			//forceSim.force("link").strength(3);
+			d3.event.subject.fx = d3.event.subject.x;
+			d3.event.subject.fy = d3.event.subject.y;
+		}
 
-			var buttons = button_wrap.selectAll("p").data(technodes)
-				.enter()
-				.append("p")
-				.text(function(d,i){return d.name});
+		function drag() {
+			d3.event.subject.fx = d3.event.x;
+			d3.event.subject.fy = d3.event.y;
+		}
 
-			function syncbuttons(){
-				buttons.classed("selected", function(d,i){
-									return d.var == current_var;
-								});
+		function dragEnd() {
+			if (!d3.event.active) forceSim.alphaTarget(0);
+			d3.event.subject.fx = null;
+			d3.event.subject.fy = null;
+			//console.log(d3.event.subject);
+			//forceSim.force("collision").strength(0.5);
+		}
+
+		svg.call(d3.drag()
+						.container(svg.node())
+						.subject(findSubject)
+						.on("start", dragStart)
+						.on("drag", drag)
+						.on("end", dragEnd));
+		/*END BOSTOCK CREDIT*/
+
+		var technodes = [
+			{name:"Green materials", var:"V13", i:3},
+			{name:"Efficiency", var:"V15", i:5},
+			{name:"Transportation", var:"V21", i:11},
+			{name:"Energy storage", var:"V22", i:12},
+			{name:"Solar", var:"V17", i:7},
+			{name:"Air", var:"V11", i:1},
+			{name:"Water/wastewater", var:"V18", i:8},
+			{name:"Bioenergy", var:"V12", i:2},
+			{name:"Wind", var:"V10", i:0},
+			{name:"Conventional fuel", var:"V14", i:4},
+			{name:"Recycling", var:"V16", i:6},
+			{name:"Nuclear", var:"V20", i:10},
+			{name:"Hydro power", var:"V23", i:13},
+			{name:"Geothermal", var:"V19", i:9}
+		];
+
+		var techlookup = {};
+		for(var tl=0; tl<technodes.length; tl++){
+			techlookup[technodes[tl].var] = technodes[tl].name;
+		}
+
+		//maximum across all patent categories
+		var maxmax = d3.max(data.obs, function(d){
+			return d3.max(technodes, function(t){
+				return d[t.var];
+			})
+		});
+
+		var scale = d3.scaleSqrt().domain([0,maxmax]).range([1,40]);
+
+		var current_vn = "V13";
+
+		//take a variable name code (vn), return a function to map node data to starting state
+		function data_mapper(vn, nrays){
+			var extent = d3.extent(data.obs, function(d){return d[vn]});
+
+			if(arguments.length < 2){nrays = 10;}
+			var ray_len = 1;
+			var ray_increment = ray_len/nrays;
+
+			//actual data array mapper
+			function dmap(d, i, a){
+				var val = d[vn];
+				var share = val/extent[1];
+
+				var r = {center:[width/2, height/2]};
+				r.name = d.V1;
+
+				var ray = (i%nrays);
+
+				r.data = d;
+				r.val = val;
+				r.share = share;
+				r.rad = scale(val);
+				r.planet = true;
+
+				//initalize placement of nodes to avoid unstable start to
+				//simulation that could cause instability
+				//eliminate forces to see how this initial placement looks
+				if(ray==0){
+					ray_len = ray_len + r.rad;
+					ray_increment = (r.rad*2)/nrays;
+				}
+				else{
+					ray_len = ray_len + ray_increment;
+				}
+
+				var radians = 2*Math.PI*(ray/nrays) + Math.random()/3;
+				r.x = r.center[0] + (ray_len+r.rad)*Math.cos(radians);
+				r.y = r.center[1] + (ray_len+r.rad)*Math.sin(radians);
+
+				return r;
+			}
+			return dmap;
+		} //end data mapper closure
+
+
+		function build(vn){
+			if(arguments.length > 0){
+				current_vn = vn;
+			}
+			else{
+				vn = current_vn;
 			}
 
-			syncbuttons();
+			//set dimensions of layout
+			var rect = wrap.node().getBoundingClientRect();
+			width = rect.right - rect.left;
+			height = width*aspect;
 
-			var cycling = true;
+			if(width < 320){width = 320;}
+			if(height < 320){height = 320;}
+			else if(height > 600){height = 600;}
 
-			function total_update(variable){
-				update(variable);
-				current_var = variable;
-				syncbuttons();
-			}
+			svg.attr("width", width+"px").attr("height", height+"px");
 
-			buttons.on("mousedown", function(d,i){
-				cycling = false;
-				total_update(d.var);
+			var center = {};
+			center.name = techlookup[vn];
+			center.x = width/2;
+			center.y = height/2;
+			center.rad = 15;
+			center.planet = false; //it's the sun (center)
+			center.share = 0;
+			center.val = 0;
+
+			var nodes = data.obs.slice(0)
+													.sort(function(a,b){
+														return b[vn]-a[vn];
+													})
+													.map(data_mapper(vn, 20));
+
+
+			nodes.unshift(center);
+
+			//build links to first node
+			//to do -- only link top 50 or so?
+			//skip the first element of nodes (it's the center node)
+			var links = nodes.slice(1).map(function(d,i,a){
+				return {source:0, target:i+1, strength:d.share}
 			});
 
-			//run as a sequence
-			var ci = 0;
-			var timer;
-			function cycle(){
-				clearTimeout(timer);
-				if(cycling){
-					var n = ++ci % technodes.length;
-					var next = technodes[n].var;
-					total_update(next);
-					timer = setTimeout(cycle,2000);
-				}
-			}
-			//timer = setTimeout(cycle,2000);
+			forceSim.nodes(nodes)
+							.force("center", d3.forceCenter(width/2,height/2))
+							.force("link", d3.forceLink(links)
+								.distance(function(link){
+									return 55;
+									//return 15*(2-link.strength);
+								}).strength(function(link){
+									return 1.5*link.strength + 0.05;
+								}))
+							.force("x", d3.forceX(width/2).strength(function(node){
+									return !node.planet ? 0.75 : 0;
+								}))
+							.force("y", d3.forceY(height/2).strength(function(node){
+									return !node.planet ? 0.75 : 0;
+								}))
+							.force("collision", d3.forceCollide(function(node){
+									var buffer = 3;
+									return node.rad + buffer;
+								} ).strength(0.3) )
+							.force("gravity", d3.forceManyBody().strength(-5))
+							.alpha(0.8)
+							.restart()
+							;
 
+							//tick function
+							function tick(){
+								try{
+									bubbles.attr("cx", function(d){return d.x})
+												 .attr("cy", function(d){return d.y})
+												 ;
+								}
+								catch(e){
+									console.log(e);
+								}
+							}
+
+				forceSim.on("tick", tick);
+
+				var bub_update = svg.selectAll("circle")
+												 .data(nodes, function(d){
+													 return d.name;
+												 });
+
+				bub_update.exit().remove();
+
+				var nupdate = 0;
+				var bubbles = bub_update.enter()
+																.append("circle")
+																.merge(bub_update)
+																.attr("fill", function(d){return d.planet ? "#31a354" : "#84c899"})
+																.attr("stroke", function(d){return d.planet ? "#eeeeee" : "#31a354"})
+																.attr("stroke-width", "1px");
+
+																bubbles.transition()
+																			 .duration(1000)
+																				.attr("r", function(d){return d.rad+"px"})
+																				.on("end", function(){
+																					nupdate = nupdate + 1;
+																					if(nupdate == nodes.length){
+																						//forceSim.alpha(0.7)
+																						//				.restart();
+																						//console.log(nupdate);
+																					}
+																				})
+																				;
+
+
+
+
+
+		} //end build function
+
+
+		build(current_vn);
+
+		var resizeTimer;
+		window.addEventListener("resize", function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function(){build(current_vn);}, 500);
+		});
+
+
+		var buttons = button_wrap.selectAll("p").data(technodes)
+			.enter()
+			.append("p")
+			.text(function(d,i){return d.name});
+
+		function syncbuttons(){
+			buttons.classed("selected", function(d,i){
+								return d.var == current_vn;
+							});
 		}
-	});
+
+		syncbuttons();
+
+		var cycling = true;
+
+		function total_update(variable){
+			build(variable);
+			syncbuttons();
+		}
+
+		buttons.on("mousedown", function(d,i){
+			cycling = false;
+			total_update(d.var);
+		});
+
+		//run as a sequence
+		var ci = 0;
+		var timer;
+		function cycle(){
+			clearTimeout(timer);
+			if(cycling){
+				var n = ++ci % technodes.length;
+				var next = technodes[n].var;
+				total_update(next);
+				timer = setTimeout(cycle,2000);
+			}
+		}
+		//timer = setTimeout(cycle,2000);
+
+	}); //end d3.json callback
 
 } //close main()
 

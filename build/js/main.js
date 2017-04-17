@@ -15,19 +15,47 @@ import waypoint from '../../../js-modules/on-scroll2.js';
 dir.local("./").add("data")
 //dir.add("json17", "metro-monitor/data/2017/json")
 
-var width = 960;
-var height = 500;
-var aspect = 9/16;
-var pi2 = Math.PI*2;
-
-
 
 function main(){
 
-	var wrap = d3.select("#met-dash").style("width","100%");
-	var button_wrap = wrap.append("div").classed("button-wrap",true);
-	var svg = wrap.append("svg");
-	var title = wrap.append("p").style("text-align","center");
+	var width = 960;
+	var height = 500;
+	var aspect = 9/16;
+	var pi2 = Math.PI*2;
+
+	var technodes = [
+		{name:"Green materials", var:"V13", i:3},
+		{name:"Efficiency", var:"V15", i:5},
+		{name:"Transportation", var:"V21", i:11},
+		{name:"Energy storage", var:"V22", i:12},
+		{name:"Solar", var:"V17", i:7},
+		{name:"Air", var:"V11", i:1},
+		{name:"Water/wastewater", var:"V18", i:8},
+		{name:"Bioenergy", var:"V12", i:2},
+		{name:"Wind", var:"V10", i:0},
+		{name:"Conventional fuel", var:"V14", i:4},
+		{name:"Recycling", var:"V16", i:6},
+		{name:"Nuclear", var:"V20", i:10},
+		{name:"Hydro power", var:"V23", i:13},
+		{name:"Geothermal", var:"V19", i:9}
+	]
+
+	var techlookup = {};
+	for(var tl=0; tl<technodes.length; tl++){
+		techlookup[technodes[tl].var] = technodes[tl].name;
+	}
+
+	var wrap = d3.select("#met-dash").style("width","100%").style("overflow","hidden");
+
+	var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
+	var svg = svg_wrap.append("svg");
+
+	var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
+	var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true)
+
+	var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
+	
+	//var title = wrap.append("p").style("text-align","center");
 
 	d3.json(dir.url("data", "energy_innovation.json"), function(err, data){
 
@@ -72,27 +100,9 @@ function main(){
 						.on("end", dragEnd));
 		/*END BOSTOCK CREDIT*/
 
-		var technodes = [
-			{name:"Green materials", var:"V13", i:3},
-			{name:"Efficiency", var:"V15", i:5},
-			{name:"Transportation", var:"V21", i:11},
-			{name:"Energy storage", var:"V22", i:12},
-			{name:"Solar", var:"V17", i:7},
-			{name:"Air", var:"V11", i:1},
-			{name:"Water/wastewater", var:"V18", i:8},
-			{name:"Bioenergy", var:"V12", i:2},
-			{name:"Wind", var:"V10", i:0},
-			{name:"Conventional fuel", var:"V14", i:4},
-			{name:"Recycling", var:"V16", i:6},
-			{name:"Nuclear", var:"V20", i:10},
-			{name:"Hydro power", var:"V23", i:13},
-			{name:"Geothermal", var:"V19", i:9}
-		]
 
-		var techlookup = {};
-		for(var tl=0; tl<technodes.length; tl++){
-			techlookup[technodes[tl].var] = technodes[tl].name;
-		}
+
+
 
 		//maximum across all patent categories
 		var maxmax = d3.max(data.obs, function(d){
@@ -159,13 +169,14 @@ function main(){
 			}
 
 			//set dimensions of layout
-			var rect = wrap.node().getBoundingClientRect();
+			var rect = svg_wrap.node().getBoundingClientRect();
 			width = rect.right - rect.left;
-			height = width*aspect;
+			//height = width*aspect;
+			height = rect.bottom - rect.top;
 
 			if(width < 320){width = 320}
-			if(height < 320){height = 320}
-			else if(height > 600){height = 600}
+			if(height < 600){height = 600}
+			//else if(height > 600){height = 600}
 
 			svg.attr("width", width+"px").attr("height", height+"px");
 
@@ -183,6 +194,8 @@ function main(){
 												})
 												.map(data_mapper(vn, 20))
 												;
+
+			cat_label.text(techlookup[vn]);
 
 
 			nodes.unshift(center);
@@ -292,6 +305,29 @@ function main(){
 		}
 
 		syncbuttons();
+
+		window.addEventListener("scroll", function(){
+			var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));
+			var box = wrap.node().getBoundingClientRect();
+
+			if((box.top < 0 && box.bottom > 0)){
+				svg_wrap.style("position","fixed").style("top","0px").style("left","0px");
+			} 
+			else{
+				svg_wrap.style("position","relative");
+			}
+		});
+
+		views.each(function(d,i){
+			d3.select(this).append("p").text(d.name).classed("view-name",true).style("position","relative").style("z-index","100");
+			waypoint(this)
+			.activate(function(){
+				if(d.var != current_vn){build(d.var)};
+			})
+			.scroll(function(box){
+				if(d.var != current_vn && box.top > 0){build(d.var)};
+			}).buffer(0.15);
+		});
 
 		var cycling = true;
 

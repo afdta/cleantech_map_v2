@@ -50,3 +50,19 @@ img{
   background-color:#31a354;
   color:#ffffff;
 }
+
+#met-dash .views{
+  width:100vw;
+  height:100vh;
+}
+
+
+
+#met-dash .view-name, svg text{
+  font-family: arial, helvetica, sans;
+  font-size:1.5em;
+  font-weight:bold;
+  text-align: center;
+  color:#111111;
+  fill:#111111;
+}

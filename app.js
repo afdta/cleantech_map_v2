@@ -164,6 +164,141 @@ function dimensions(el, maxwidth, maxheight){
 //consider appending a note to each container element, but should we change positioning of parent element?
 
 //scroll collection constructor
+function onScroll(element){
+	if(arguments.length > 0){
+		this.element = element;
+	}
+	this.on_activate = null;
+	this.on_scroll = null;
+
+	this.activated = false;
+
+	//determines activation zone. the default, 0.2, implies the middle 60% of the page is the "activation zone" 
+	//the activate method will not be called when the top of element is 
+	this.top_bot_buffer = 0.2;
+
+	var self = this;
+	var decorated_scroll_listener = function(){
+		self.scroll_listener();
+
+		//remove the scroll event if it is no longer necessary
+		try{
+			if(self.on_scroll === null && self.activated){
+				window.removeEventListener("scroll", decorated_scroll_listener);
+			}
+		}
+		catch(e){
+			//ho-op
+		}
+	};
+
+	//attach scroll listener with setTimeout 0 so that synchronous code, like registering activate/viewing listeners can execute first
+	setTimeout(function(){
+		window.addEventListener("scroll", decorated_scroll_listener);
+	}, 0);
+}
+
+onScroll.prototype.buffer = function(buffer){
+	if(arguments.length > 0){
+		this.top_bot_buffer = buffer;
+		return this;
+	}
+	else{
+		return this.top_bot_buffer;
+	}
+};
+
+onScroll.prototype.element = function(element){
+	if(arguments.length > 0){
+		this.element = element;
+		return this;
+	}
+	else{
+		return this.element;
+	}
+};
+
+onScroll.prototype.get_box = function(){
+	try{
+		var box = this.element.getBoundingClientRect();
+
+		var top = box.top;
+		var bottom = box.bottom;
+		var middle = top + ((bottom-top)/2);
+
+		var pos = {top:top, middle:middle, bottom:bottom};
+	}
+	catch(e){
+		var pos = null;
+	}
+	return pos;
+};
+
+//register activation function
+onScroll.prototype.activate = function(fn){
+	if(arguments.length > 0){
+		this.on_activate = fn;
+			var self = this;
+			setTimeout(function(){self.scroll_listener();}, 0); //try to immediately activate
+		return this;
+	}
+	else{
+		return this.on_activate;
+	}
+};
+
+//register scrolling function
+onScroll.prototype.scroll = function(fn, call_when_out_of_view){
+	if(arguments.length > 0){
+		this.on_scroll = fn;
+		this.call_scroll_when_out_of_view = !!call_when_out_of_view;
+		return this;
+	}
+	else{
+		return this.on_scroll;
+	}
+};
+onScroll.prototype.scrolling = onScroll.prototype.scroll;
+
+onScroll.prototype.scroll_listener = function(){
+	var box = this.get_box();
+	var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));
+	
+	//first, attempt to execute activate method, then scroll method--never at the same time
+	if(!this.activated && this.on_activate !== null){
+		if(box==null || window_height==0){
+			this.on_activate({top:0, middle:0, bottom:0}, window_height);
+			this.activated = true;
+		}
+		else{
+			var activate_zone = [window_height*this.top_bot_buffer, window_height*(1-this.top_bot_buffer)];	
+			if(!(box.bottom < activate_zone[0] || box.top > activate_zone[1]) ){
+				//console.log(box);
+				this.on_activate(box, window_height);
+				this.activated = true;
+			}
+		}
+	}
+	else if((this.on_scroll !== null) && !(box.bottom < 0 || box.top > window_height)){
+		this.on_scroll(box, window_height);
+	}
+	else if((this.on_scroll !== null) && this.call_scroll_when_out_of_view){
+		this.on_scroll(null, window_height);		
+	}
+};
+
+//simulate a croll event
+onScroll.prototype.tick = function(duration){
+	var self = this;
+	var dur = arguments.length > 0 ? duration : 0;
+	setTimeout(function(){self.scroll_listener();},0);
+	return this;
+};
+
+function waypoint(element){
+	var os = new onScroll(element);
+	return os;
+}
 
 //add browser compat message: test for svg, array.filter and map
 
@@ -175,15 +310,47 @@ function dimensions(el, maxwidth, maxheight){
 dir.local("./").add("data");
 //dir.add("json17", "metro-monitor/data/2017/json")
 
-var width = 960;
-var height = 500;
-var aspect = 9/16;
+
 function main(){
 
-	var wrap = d3.select("#met-dash").style("width","100%");
-	var button_wrap = wrap.append("div").classed("button-wrap",true);
-	var svg = wrap.append("svg");
-	var title = wrap.append("p").style("text-align","center");
+	var width = 960;
+	var height = 500;
+	var aspect = 9/16;
+	var pi2 = Math.PI*2;
+
+	var technodes = [
+		{name:"Green materials", var:"V13", i:3},
+		{name:"Efficiency", var:"V15", i:5},
+		{name:"Transportation", var:"V21", i:11},
+		{name:"Energy storage", var:"V22", i:12},
+		{name:"Solar", var:"V17", i:7},
+		{name:"Air", var:"V11", i:1},
+		{name:"Water/wastewater", var:"V18", i:8},
+		{name:"Bioenergy", var:"V12", i:2},
+		{name:"Wind", var:"V10", i:0},
+		{name:"Conventional fuel", var:"V14", i:4},
+		{name:"Recycling", var:"V16", i:6},
+		{name:"Nuclear", var:"V20", i:10},
+		{name:"Hydro power", var:"V23", i:13},
+		{name:"Geothermal", var:"V19", i:9}
+	];
+
+	var techlookup = {};
+	for(var tl=0; tl<technodes.length; tl++){
+		techlookup[technodes[tl].var] = technodes[tl].name;
+	}
+
+	var wrap = d3.select("#met-dash").style("width","100%").style("overflow","hidden");
+
+	var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
+	var svg = svg_wrap.append("svg");
+
+	var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
+	var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true);
+
+	var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
+	
+	//var title = wrap.append("p").style("text-align","center");
 
 	d3.json(dir.url("data", "energy_innovation.json"), function(err, data){
 
@@ -228,27 +395,9 @@ function main(){
 						.on("end", dragEnd));
 		/*END BOSTOCK CREDIT*/
 
-		var technodes = [
-			{name:"Green materials", var:"V13", i:3},
-			{name:"Efficiency", var:"V15", i:5},
-			{name:"Transportation", var:"V21", i:11},
-			{name:"Energy storage", var:"V22", i:12},
-			{name:"Solar", var:"V17", i:7},
-			{name:"Air", var:"V11", i:1},
-			{name:"Water/wastewater", var:"V18", i:8},
-			{name:"Bioenergy", var:"V12", i:2},
-			{name:"Wind", var:"V10", i:0},
-			{name:"Conventional fuel", var:"V14", i:4},
-			{name:"Recycling", var:"V16", i:6},
-			{name:"Nuclear", var:"V20", i:10},
-			{name:"Hydro power", var:"V23", i:13},
-			{name:"Geothermal", var:"V19", i:9}
-		];
 
-		var techlookup = {};
-		for(var tl=0; tl<technodes.length; tl++){
-			techlookup[technodes[tl].var] = technodes[tl].name;
-		}
+
+
 
 		//maximum across all patent categories
 		var maxmax = d3.max(data.obs, function(d){
@@ -315,13 +464,14 @@ function main(){
 			}
 
 			//set dimensions of layout
-			var rect = wrap.node().getBoundingClientRect();
+			var rect = svg_wrap.node().getBoundingClientRect();
 			width = rect.right - rect.left;
-			height = width*aspect;
+			//height = width*aspect;
+			height = rect.bottom - rect.top;
 
 			if(width < 320){width = 320;}
-			if(height < 320){height = 320;}
-			else if(height > 600){height = 600;}
+			if(height < 600){height = 600;}
+			//else if(height > 600){height = 600}
 
 			svg.attr("width", width+"px").attr("height", height+"px");
 
@@ -334,11 +484,12 @@ function main(){
 			center.share = 0;
 			center.val = 0;
 
-			var nodes = data.obs.slice(0)
-													.sort(function(a,b){
+			var nodes = data.obs.slice(0).sort(function(a,b){
 														return b[vn]-a[vn];
-													})
-													.map(data_mapper(vn, 20));
+												})
+												.map(data_mapper(vn, 20));
+
+			cat_label.text(techlookup[vn]);
 
 
 			nodes.unshift(center);
@@ -444,6 +595,29 @@ function main(){
 		}
 
 		syncbuttons();
+
+		window.addEventListener("scroll", function(){
+			var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));
+			var box = wrap.node().getBoundingClientRect();
+
+			if((box.top < 0 && box.bottom > 0)){
+				svg_wrap.style("position","fixed").style("top","0px").style("left","0px");
+			} 
+			else{
+				svg_wrap.style("position","relative");
+			}
+		});
+
+		views.each(function(d,i){
+			d3.select(this).append("p").text(d.name).classed("view-name",true).style("position","relative").style("z-index","100");
+			waypoint(this)
+			.activate(function(){
+				if(d.var != current_vn){build(d.var);}
+			})
+			.scroll(function(box){
+				if(d.var != current_vn && box.top > 0){build(d.var);}
+			}).buffer(0.15);
+		});
 
 		var cycling = true;
 

@@ -9,6 +9,7 @@ import dir from '../../../js-modules/rackspace.js';
 import table from '../../../js-modules/table.js';
 //import dimensions from '../../../js-modules/dimensions.js';
 import metro_select from '../../../js-modules/metro-select.js';
+import met_map from '../../../js-modules/met-map.js';
 //import metro_map from '../../../js-modules/metro-maps.js';
 import waypoint from '../../../js-modules/on-scroll2.js';
 
@@ -24,20 +25,21 @@ function main(){
 	var pi2 = Math.PI*2;
 
 	var technodes = [
-		{name:"Green materials", var:"V13", i:3},
-		{name:"Efficiency", var:"V15", i:5},
-		{name:"Transportation", var:"V21", i:11},
-		{name:"Energy storage", var:"V22", i:12},
-		{name:"Solar", var:"V17", i:7},
-		{name:"Air", var:"V11", i:1},
-		{name:"Water/wastewater", var:"V18", i:8},
-		{name:"Bioenergy", var:"V12", i:2},
-		{name:"Wind", var:"V10", i:0},
-		{name:"Conventional fuel", var:"V14", i:4},
-		{name:"Recycling", var:"V16", i:6},
-		{name:"Nuclear", var:"V20", i:10},
-		{name:"Hydro power", var:"V23", i:13},
-		{name:"Geothermal", var:"V19", i:9}
+		{name:"Total cleantech patents", var:"V5", i:3},
+		{name:"Green materials", var:"V15", i:3},
+		{name:"Efficiency", var:"V17", i:5},
+		{name:"Transportation", var:"V23", i:11},
+		{name:"Energy storage", var:"V24", i:12},
+		{name:"Solar", var:"V19", i:7},
+		{name:"Air", var:"V13", i:1},
+		{name:"Water/wastewater", var:"V20", i:8},
+		{name:"Bioenergy", var:"V14", i:2},
+		{name:"Wind", var:"V12", i:0},
+		{name:"Conventional fuel", var:"V16", i:4},
+		{name:"Recycling", var:"V18", i:6},
+		{name:"Nuclear", var:"V22", i:10},
+		{name:"Hydro power", var:"V25", i:13},
+		{name:"Geothermal", var:"V21", i:9}
 	]
 
 	var techlookup = {};
@@ -47,13 +49,13 @@ function main(){
 
 	var wrap = d3.select("#met-dash").style("width","100%").style("overflow","hidden");
 
-	var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
-	var svg = svg_wrap.append("svg");
+	//var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
+	//var svg = svg_wrap.append("svg");
 
-	var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
-	var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true)
+	//var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
+	//var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true)
 
-	var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
+	//var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
 	
 	//var title = wrap.append("p").style("text-align","center");
 
@@ -63,6 +65,194 @@ function main(){
 			svg.style("visibility", "hidden");
 			return null;
 		}
+
+		var maxmax = d3.max(data.obs, function(d){
+			return d3.max(technodes.slice(1), function(t){
+				return d[t.var];
+			})
+		});
+
+		//build a metmap
+
+		var map_titlebox = wrap.append("div").style("padding","0em 1em");
+		var mapwrap = wrap.append("div").style("padding","0em 1em")
+										.append("div")
+										.style("margin","0em auto")
+										.style("max-width","1600px")
+										.style("min-width","400px")
+										.classed("c-fix",true);
+
+		var button_wrap = mapwrap.append("div").classed("button-wrap",true);
+		button_wrap.append("div").style("padding","4em 0em 0.25em 0em")
+								 .style("border-bottom","1px solid #aaaaaa")
+								 .style("margin-bottom","1em")
+								 .append("p")
+								 .text("Make a selection")
+								 .style("text-align","center")
+
+		var map_main = mapwrap.append("div").classed("map-wrap", true);
+
+		var map = met_map(map_main.node());
+
+		map.responsive().states();
+
+		map.store(data.obs, "all_data");
+		map.data(data.obs, "V2");
+
+		//title.html("Map: 100 largest metro areas" + '<br /><span style="font-size:0.8em">' + ind.title + ", " + periods[state.period] + '</span>') ;
+
+		var current_indicator = technodes[0].var;
+
+		map.format("num1")
+			.bubble(current_indicator, current_indicator, 30, 1);
+
+		var buttons = button_wrap.append("div").classed("buttons",true).selectAll("p.cleancat").data(technodes)
+			.enter()
+			.append("p")
+			.classed("cleancat",true)
+			.text(function(d,i){return d.name})
+			;
+
+		function syncbuttons(){
+			buttons.classed("selected", function(d,i){return d.var == current_indicator});
+
+		}
+
+
+		syncbuttons();
+
+		buttons.on("mousedown", function(d, i){
+			if(d.var == "V5"){
+				map.maxval(null);
+			}
+			else{
+				map.maxval(maxmax);
+			}
+			current_indicator = d.var;
+			map.bubble(d.var, d.var);
+			syncbuttons();
+		});
+
+		console.log(current_indicator);
+
+		return;
+
+		//basic card creation, registration of methods
+		function met_map_deprecated(container, url, state, indicators){
+
+			//indicators should contain map titles and indicator keys
+			//e.g. [{key:"employment", title:string OR function}, {...}, ...]
+			
+			//setup
+			var outer_wrap = d3.select(container).classed("makesans",true);
+			var header_wrap = outer_wrap.append("div")
+				.style("border-bottom","1px solid #aaaaaa")
+				.append("div").classed("as-table",true)
+				.append("div").classed("row-of three-two", true);
+
+			var title_wrap = header_wrap.append("div").style("vertical-align","bottom");
+			var button_wrap = header_wrap.append("div")
+									.style("vertical-align","bottom")
+									.classed("c-fix","true")
+									.append("div")
+									.style("float","right")
+									.classed("c-fix",true)
+									.style("margin","0em 0em 1em 0em");;
+
+			var title = title_wrap.append("div").style("margin","0em 0em 0.5em 0em").append("p").style("margin","0em").classed("chart-title",true);
+
+
+
+			button_wrap.append("p").style("font-size","0.8em").text("SELECT AN INDICATOR TO MAP").style("margin","0em 5px 0.25em 5px");
+			var select = button_wrap.append("select").style("display","block")
+											  .style("margin","0px 0px 0px 0px")
+											  .style("line-height","1.65em")
+											  .style("font-size","1em")
+											  .style("padding","2px 5px 2px 5px")
+											  .style("background","transparent")
+											  .style("max-width","100%")
+											  .style("outline","none");
+
+			var options = select.selectAll("option").data(indicators);
+
+			options.enter().append("option").merge(options)
+				.attr("value", function(d,i){
+					return d.key;
+				})
+				.text(function(d,i){
+					return d.title;
+				})
+
+			select.on("change", function(d,i){
+				var key = this.value;
+				var ind = {key:null, title:null};
+				var j = -1;
+				while(++j < indicators.length){
+					if(indicators[j].key==key){
+						ind = indicators[j];
+						break;
+					}
+				}
+
+				try{
+					var ind_test = indicators[this.selectedIndex].key;
+
+					if(ind_test!==key){
+						throw "ERROR";
+					}
+				}
+				catch(e){
+					//revert back
+					ind = indicators[0];
+					this.value = ind.key;
+				}
+				finally{
+					drawIndicator(ind);
+				}
+			});
+
+
+
+			function activate(){
+				d3.json(url, function(error, data){
+					if(!!error){
+
+					}
+					else{
+
+						init = true;
+
+						drawIndicator(indicators[0]);
+					}
+				});
+			}
+
+			function updateMetro(){
+
+			}
+
+			function updatePeriod(){
+				if(init){
+					var data = map.store("all_data");
+					map.data(data[state.period], "cbsa");
+					drawIndicator(current_indicator);
+				}
+			}
+
+			return {activate:activate, updateMetro:updateMetro, updatePeriod:updatePeriod}
+
+
+		}
+
+
+
+
+
+
+
+		return;
+
+		//old unused code
 
 		var forceSim = d3.forceSimulation().stop();
 
@@ -298,13 +488,9 @@ function main(){
 			.text(function(d,i){return d.name})
 			;
 
-		function syncbuttons(){
-			buttons.classed("selected", function(d,i){
-								return d.var == current_vn;
-							});
-		}
 
-		syncbuttons();
+
+
 
 		window.addEventListener("scroll", function(){
 			var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));

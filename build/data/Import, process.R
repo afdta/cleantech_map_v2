@@ -5,8 +5,13 @@ library("tidyr")
 library("dplyr")
 library("metromonitor")
 
-pat_in <- read_excel("~/Projects/Brookings/energy-innovation/build/data/Cleantech Patent By All Metro Areas.xlsx") 
-pat_in <- pat_in[!is.na(pat_in$MSA), ]
+pat_in0 <- read_excel("~/Projects/Brookings/energy-innovation/build/data/Cleantech Patent By All Metro Areas.xlsx") 
+pat_in0 <- pat_in0[!is.na(pat_in0$MSA), ]
+pat_in0$MSA <- gsub("^\\s*|\\s*$", "", pat_in0$MSA)
+
+metpops <- metropops(t100 = FALSE, vintage = "2013")[c(1:2,4)]
+
+pat_in <- merge(metpops, pat_in0, by.x="CBSA_Title", by.y="MSA", all=TRUE)
 
 cumul <- pat_in[order(-pat_in$`Total Number of Cleantech Patents, 2011-2016`), ]
 cumul$ns <- nameshort(cumul$MSA)

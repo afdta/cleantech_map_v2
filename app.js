@@ -154,6 +154,1019 @@ function dimensions(el, maxwidth, maxheight){
 
 //the table function takes a container and an array of associative array objects.
 
+function metro_select(){
+	var sel = {};
+	sel.metros = {"large":[{"CBSA_Code":"10420","CBSA_Title":"Akron, OH","POP2010":703200,"lon":-81.3497,"lat":41.1482},{"CBSA_Code":"10580","CBSA_Title":"Albany-Schenectady-Troy, NY","POP2010":870716,"lon":-73.9377,"lat":42.7891},{"CBSA_Code":"10740","CBSA_Title":"Albuquerque, NM","POP2010":887077,"lon":-106.4708,"lat":35.1212},{"CBSA_Code":"10900","CBSA_Title":"Allentown-Bethlehem-Easton, PA-NJ","POP2010":821173,"lon":-75.4018,"lat":40.7883},{"CBSA_Code":"12060","CBSA_Title":"Atlanta-Sandy Springs-Roswell, GA","POP2010":5286728,"lon":-84.3966,"lat":33.6959},{"CBSA_Code":"12260","CBSA_Title":"Augusta-Richmond County, GA-SC","POP2010":564873,"lon":-81.9804,"lat":33.4571},{"CBSA_Code":"12420","CBSA_Title":"Austin-Round Rock, TX","POP2010":1716289,"lon":-97.655,"lat":30.2628},{"CBSA_Code":"12540","CBSA_Title":"Bakersfield, CA","POP2010":839631,"lon":-118.7278,"lat":35.3433},{"CBSA_Code":"12580","CBSA_Title":"Baltimore-Columbia-Towson, MD","POP2010":2710489,"lon":-76.6722,"lat":39.3838},{"CBSA_Code":"12940","CBSA_Title":"Baton Rouge, LA","POP2010":802484,"lon":-91.1324,"lat":30.5709},{"CBSA_Code":"13820","CBSA_Title":"Birmingham-Hoover, AL","POP2010":1128047,"lon":-86.8144,"lat":33.464},{"CBSA_Code":"14260","CBSA_Title":"Boise City, ID","POP2010":616561,"lon":-116.1417,"lat":43.0153},{"CBSA_Code":"14460","CBSA_Title":"Boston-Cambridge-Newton, MA-NH","POP2010":4552402,"lon":-71.1034,"lat":42.5538},{"CBSA_Code":"14860","CBSA_Title":"Bridgeport-Stamford-Norwalk, CT","POP2010":916829,"lon":-73.3891,"lat":41.2683},{"CBSA_Code":"15380","CBSA_Title":"Buffalo-Cheektowaga-Niagara Falls, NY","POP2010":1135509,"lon":-78.7384,"lat":42.9121},{"CBSA_Code":"15980","CBSA_Title":"Cape Coral-Fort Myers, FL","POP2010":618754,"lon":-81.8207,"lat":26.5787},{"CBSA_Code":"16700","CBSA_Title":"Charleston-North Charleston, SC","POP2010":664607,"lon":-80.0441,"lat":33.0416},{"CBSA_Code":"16740","CBSA_Title":"Charlotte-Concord-Gastonia, NC-SC","POP2010":2217012,"lon":-80.8689,"lat":35.1871},{"CBSA_Code":"16860","CBSA_Title":"Chattanooga, TN-GA","POP2010":528143,"lon":-85.3589,"lat":35.0505},{"CBSA_Code":"16980","CBSA_Title":"Chicago-Naperville-Elgin, IL-IN-WI","POP2010":9461105,"lon":-87.964,"lat":41.7035},{"CBSA_Code":"17140","CBSA_Title":"Cincinnati, OH-KY-IN","POP2010":2114580,"lon":-84.4279,"lat":39.0708},{"CBSA_Code":"17460","CBSA_Title":"Cleveland-Elyria, OH","POP2010":2077240,"lon":-81.6839,"lat":41.3755},{"CBSA_Code":"17820","CBSA_Title":"Colorado Springs, CO","POP2010":645613,"lon":-104.6585,"lat":38.8427},{"CBSA_Code":"17900","CBSA_Title":"Columbia, SC","POP2010":767598,"lon":-81.0434,"lat":34.0902},{"CBSA_Code":"18140","CBSA_Title":"Columbus, OH","POP2010":1901974,"lon":-82.8385,"lat":39.9669},{"CBSA_Code":"19100","CBSA_Title":"Dallas-Fort Worth-Arlington, TX","POP2010":6426214,"lon":-97.0252,"lat":32.8182},{"CBSA_Code":"19380","CBSA_Title":"Dayton, OH","POP2010":799232,"lon":-84.14,"lat":39.8295},{"CBSA_Code":"19660","CBSA_Title":"Deltona-Daytona Beach-Ormond Beach, FL","POP2010":590289,"lon":-81.2182,"lat":29.1699},{"CBSA_Code":"19740","CBSA_Title":"Denver-Aurora-Lakewood, CO","POP2010":2543482,"lon":-104.8942,"lat":39.4342},{"CBSA_Code":"19780","CBSA_Title":"Des Moines-West Des Moines, IA","POP2010":569633,"lon":-93.9431,"lat":41.5479},{"CBSA_Code":"19820","CBSA_Title":"Detroit-Warren-Dearborn, MI","POP2010":4296250,"lon":-83.2333,"lat":42.7203},{"CBSA_Code":"21340","CBSA_Title":"El Paso, TX","POP2010":804123,"lon":-105.5386,"lat":31.5118},{"CBSA_Code":"23420","CBSA_Title":"Fresno, CA","POP2010":930450,"lon":-119.6492,"lat":36.7566},{"CBSA_Code":"24340","CBSA_Title":"Grand Rapids-Wyoming, MI","POP2010":988938,"lon":-85.4883,"lat":42.9988},{"CBSA_Code":"24660","CBSA_Title":"Greensboro-High Point, NC","POP2010":723801,"lon":-79.7913,"lat":36.0264},{"CBSA_Code":"24860","CBSA_Title":"Greenville-Anderson-Mauldin, SC","POP2010":824112,"lon":-82.4168,"lat":34.6889},{"CBSA_Code":"25420","CBSA_Title":"Harrisburg-Carlisle, PA","POP2010":549475,"lon":-77.0945,"lat":40.3278},{"CBSA_Code":"25540","CBSA_Title":"Hartford-West Hartford-East Hartford, CT","POP2010":1212381,"lon":-72.5789,"lat":41.7326},{"CBSA_Code":"26420","CBSA_Title":"Houston-The Woodlands-Sugar Land, TX","POP2010":5920416,"lon":-95.3965,"lat":29.7819},{"CBSA_Code":"26900","CBSA_Title":"Indianapolis-Carmel-Anderson, IN","POP2010":1887877,"lon":-86.2069,"lat":39.7468},{"CBSA_Code":"27140","CBSA_Title":"Jackson, MS","POP2010":567122,"lon":-90.2216,"lat":32.3171},{"CBSA_Code":"27260","CBSA_Title":"Jacksonville, FL","POP2010":1345596,"lon":-81.7926,"lat":30.2365},{"CBSA_Code":"28140","CBSA_Title":"Kansas City, MO-KS","POP2010":2009342,"lon":-94.4464,"lat":38.9368},{"CBSA_Code":"28940","CBSA_Title":"Knoxville, TN","POP2010":837571,"lon":-84.1358,"lat":36.0434},{"CBSA_Code":"29460","CBSA_Title":"Lakeland-Winter Haven, FL","POP2010":602095,"lon":-81.6991,"lat":27.9503},{"CBSA_Code":"29820","CBSA_Title":"Las Vegas-Henderson-Paradise, NV","POP2010":1951269,"lon":-115.0156,"lat":36.2149},{"CBSA_Code":"30780","CBSA_Title":"Little Rock-North Little Rock-Conway, AR","POP2010":699757,"lon":-92.396,"lat":34.7559},{"CBSA_Code":"31080","CBSA_Title":"Los Angeles-Long Beach-Anaheim, CA","POP2010":12828837,"lon":-118.1388,"lat":34.2474},{"CBSA_Code":"31140","CBSA_Title":"Louisville/Jefferson County, KY-IN","POP2010":1235708,"lon":-85.67,"lat":38.3371},{"CBSA_Code":"31540","CBSA_Title":"Madison, WI","POP2010":605435,"lon":-89.591,"lat":43.0794},{"CBSA_Code":"32580","CBSA_Title":"McAllen-Edinburg-Mission, TX","POP2010":774769,"lon":-98.1806,"lat":26.3964},{"CBSA_Code":"32820","CBSA_Title":"Memphis, TN-MS-AR","POP2010":1324829,"lon":-89.8152,"lat":35.0076},{"CBSA_Code":"33100","CBSA_Title":"Miami-Fort Lauderdale-West Palm Beach, FL","POP2010":5564635,"lon":-80.5059,"lat":26.1607},{"CBSA_Code":"33340","CBSA_Title":"Milwaukee-Waukesha-West Allis, WI","POP2010":1555908,"lon":-88.1734,"lat":43.1773},{"CBSA_Code":"33460","CBSA_Title":"Minneapolis-St. Paul-Bloomington, MN-WI","POP2010":3348859,"lon":-93.3463,"lat":45.0657},{"CBSA_Code":"34980","CBSA_Title":"Nashville-Davidson--Murfreesboro--Franklin, TN","POP2010":1670890,"lon":-86.7249,"lat":36.0881},{"CBSA_Code":"35300","CBSA_Title":"New Haven-Milford, CT","POP2010":862477,"lon":-72.9377,"lat":41.412},{"CBSA_Code":"35380","CBSA_Title":"New Orleans-Metairie, LA","POP2010":1189866,"lon":-89.9602,"lat":29.9184},{"CBSA_Code":"35620","CBSA_Title":"New York-Newark-Jersey City, NY-NJ-PA","POP2010":19567410,"lon":-74.0892,"lat":40.9223},{"CBSA_Code":"35840","CBSA_Title":"North Port-Sarasota-Bradenton, FL","POP2010":702281,"lon":-82.3224,"lat":27.3478},{"CBSA_Code":"36260","CBSA_Title":"Ogden-Clearfield, UT","POP2010":597159,"lon":-112.8181,"lat":41.4327},{"CBSA_Code":"36420","CBSA_Title":"Oklahoma City, OK","POP2010":1252987,"lon":-97.5049,"lat":35.4287},{"CBSA_Code":"36540","CBSA_Title":"Omaha-Council Bluffs, NE-IA","POP2010":865350,"lon":-95.9998,"lat":41.2904},{"CBSA_Code":"36740","CBSA_Title":"Orlando-Kissimmee-Sanford, FL","POP2010":2134411,"lon":-81.3636,"lat":28.4335},{"CBSA_Code":"37100","CBSA_Title":"Oxnard-Thousand Oaks-Ventura, CA","POP2010":823318,"lon":-119.0789,"lat":34.4731},{"CBSA_Code":"37340","CBSA_Title":"Palm Bay-Melbourne-Titusville, FL","POP2010":543376,"lon":-80.7325,"lat":28.2938},{"CBSA_Code":"37980","CBSA_Title":"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","POP2010":5965343,"lon":-75.3032,"lat":39.9046},{"CBSA_Code":"38060","CBSA_Title":"Phoenix-Mesa-Scottsdale, AZ","POP2010":4192887,"lon":-112.0707,"lat":33.1858},{"CBSA_Code":"38300","CBSA_Title":"Pittsburgh, PA","POP2010":2356285,"lon":-79.8309,"lat":40.4394},{"CBSA_Code":"38900","CBSA_Title":"Portland-Vancouver-Hillsboro, OR-WA","POP2010":2226009,"lon":-122.4783,"lat":45.5976},{"CBSA_Code":"39300","CBSA_Title":"Providence-Warwick, RI-MA","POP2010":1600852,"lon":-71.3998,"lat":41.7242},{"CBSA_Code":"39340","CBSA_Title":"Provo-Orem, UT","POP2010":526810,"lon":-112.3536,"lat":39.8642},{"CBSA_Code":"39580","CBSA_Title":"Raleigh, NC","POP2010":1130490,"lon":-78.4617,"lat":35.7539},{"CBSA_Code":"40060","CBSA_Title":"Richmond, VA","POP2010":1208101,"lon":-77.4725,"lat":37.4604},{"CBSA_Code":"40140","CBSA_Title":"Riverside-San Bernardino-Ontario, CA","POP2010":4224851,"lon":-116.1282,"lat":34.5522},{"CBSA_Code":"40380","CBSA_Title":"Rochester, NY","POP2010":1079671,"lon":-77.5095,"lat":42.9688},{"CBSA_Code":"40900","CBSA_Title":"Sacramento--Roseville--Arden-Arcade, CA","POP2010":2149127,"lon":-120.9985,"lat":38.7812},{"CBSA_Code":"41180","CBSA_Title":"St. Louis, MO-IL","POP2010":2787701,"lon":-90.3499,"lat":38.7336},{"CBSA_Code":"41620","CBSA_Title":"Salt Lake City, UT","POP2010":1087873,"lon":-113.0109,"lat":40.4709},{"CBSA_Code":"41700","CBSA_Title":"San Antonio-New Braunfels, TX","POP2010":2142508,"lon":-98.6015,"lat":29.4283},{"CBSA_Code":"41740","CBSA_Title":"San Diego-Carlsbad, CA","POP2010":3095313,"lon":-116.7319,"lat":33.0335},{"CBSA_Code":"41860","CBSA_Title":"San Francisco-Oakland-Hayward, CA","POP2010":4335391,"lon":-122.0149,"lat":37.7021},{"CBSA_Code":"41940","CBSA_Title":"San Jose-Sunnyvale-Santa Clara, CA","POP2010":1836911,"lon":-121.3745,"lat":36.909},{"CBSA_Code":"42540","CBSA_Title":"Scranton--Wilkes-Barre--Hazleton, PA","POP2010":563631,"lon":-75.8945,"lat":41.3231},{"CBSA_Code":"42660","CBSA_Title":"Seattle-Tacoma-Bellevue, WA","POP2010":3439809,"lon":-121.8656,"lat":47.5534},{"CBSA_Code":"44060","CBSA_Title":"Spokane-Spokane Valley, WA","POP2010":527753,"lon":-117.5722,"lat":48.1934},{"CBSA_Code":"44140","CBSA_Title":"Springfield, MA","POP2010":621570,"lon":-72.6448,"lat":42.2292},{"CBSA_Code":"44700","CBSA_Title":"Stockton-Lodi, CA","POP2010":685306,"lon":-121.2723,"lat":37.9323},{"CBSA_Code":"45060","CBSA_Title":"Syracuse, NY","POP2010":662577,"lon":-76.0338,"lat":43.1568},{"CBSA_Code":"45300","CBSA_Title":"Tampa-St. Petersburg-Clearwater, FL","POP2010":2783243,"lon":-82.4056,"lat":28.1543},{"CBSA_Code":"45780","CBSA_Title":"Toledo, OH","POP2010":610001,"lon":-83.7804,"lat":41.4986},{"CBSA_Code":"46060","CBSA_Title":"Tucson, AZ","POP2010":980263,"lon":-111.79,"lat":32.0974},{"CBSA_Code":"46140","CBSA_Title":"Tulsa, OK","POP2010":937478,"lon":-96.1654,"lat":36.2496},{"CBSA_Code":"46520","CBSA_Title":"Urban Honolulu, HI","POP2010":953207,"lon":-157.9757,"lat":21.4604},{"CBSA_Code":"47260","CBSA_Title":"Virginia Beach-Norfolk-Newport News, VA-NC","POP2010":1676822,"lon":-76.4147,"lat":36.6557},{"CBSA_Code":"47900","CBSA_Title":"Washington-Arlington-Alexandria, DC-VA-MD-WV","POP2010":5636232,"lon":-77.4724,"lat":38.8319},{"CBSA_Code":"48620","CBSA_Title":"Wichita, KS","POP2010":630919,"lon":-97.3981,"lat":37.625},{"CBSA_Code":"49180","CBSA_Title":"Winston-Salem, NC","POP2010":640595,"lon":-80.3451,"lat":36.0724},{"CBSA_Code":"49340","CBSA_Title":"Worcester, MA-CT","POP2010":916980,"lon":-71.9287,"lat":42.2188},{"CBSA_Code":"49660","CBSA_Title":"Youngstown-Warren-Boardman, OH-PA","POP2010":565773,"lon":-80.5642,"lat":41.2417}],"small":[{"CBSA_Code":"10180","CBSA_Title":"Abilene, TX","POP2010":165252,"lon":-99.7176,"lat":32.4498},{"CBSA_Code":"10500","CBSA_Title":"Albany, GA","POP2010":157308,"lon":-84.1702,"lat":31.5866},{"CBSA_Code":"10540","CBSA_Title":"Albany, OR","POP2010":116672,"lon":-122.5384,"lat":44.4886},{"CBSA_Code":"10780","CBSA_Title":"Alexandria, LA","POP2010":153922,"lon":-92.5438,"lat":31.3346},{"CBSA_Code":"11020","CBSA_Title":"Altoona, PA","POP2010":127089,"lon":-78.3472,"lat":40.4834},{"CBSA_Code":"11100","CBSA_Title":"Amarillo, TX","POP2010":251933,"lon":-101.9104,"lat":35.2488},{"CBSA_Code":"11180","CBSA_Title":"Ames, IA","POP2010":89542,"lon":-93.465,"lat":42.0362},{"CBSA_Code":"11260","CBSA_Title":"Anchorage, AK","POP2010":380821,"lon":-149.5429,"lat":62.237},{"CBSA_Code":"11460","CBSA_Title":"Ann Arbor, MI","POP2010":344791,"lon":-83.8385,"lat":42.2531},{"CBSA_Code":"11500","CBSA_Title":"Anniston-Oxford-Jacksonville, AL","POP2010":118572,"lon":-85.8243,"lat":33.7738},{"CBSA_Code":"11540","CBSA_Title":"Appleton, WI","POP2010":225666,"lon":-88.3714,"lat":44.2887},{"CBSA_Code":"11700","CBSA_Title":"Asheville, NC","POP2010":424858,"lon":-82.6853,"lat":35.6016},{"CBSA_Code":"12020","CBSA_Title":"Athens-Clarke County, GA","POP2010":192541,"lon":-83.2169,"lat":33.9503},{"CBSA_Code":"12100","CBSA_Title":"Atlantic City-Hammonton, NJ","POP2010":274549,"lon":-74.6609,"lat":39.4777},{"CBSA_Code":"12220","CBSA_Title":"Auburn-Opelika, AL","POP2010":140247,"lon":-85.3593,"lat":32.6077},{"CBSA_Code":"12620","CBSA_Title":"Bangor, ME","POP2010":153923,"lon":-68.6504,"lat":45.4015},{"CBSA_Code":"12700","CBSA_Title":"Barnstable Town, MA","POP2010":215888,"lon":-70.2921,"lat":41.7237},{"CBSA_Code":"12980","CBSA_Title":"Battle Creek, MI","POP2010":136146,"lon":-85.0049,"lat":42.2463},{"CBSA_Code":"13020","CBSA_Title":"Bay City, MI","POP2010":107771,"lon":-83.9916,"lat":43.7014},{"CBSA_Code":"13140","CBSA_Title":"Beaumont-Port Arthur, TX","POP2010":403190,"lon":-94.0707,"lat":30.305},{"CBSA_Code":"13220","CBSA_Title":"Beckley, WV","POP2010":124898,"lon":-81.1611,"lat":37.9103},{"CBSA_Code":"13380","CBSA_Title":"Bellingham, WA","POP2010":201140,"lon":-121.7125,"lat":48.8258},{"CBSA_Code":"13460","CBSA_Title":"Bend-Redmond, OR","POP2010":157733,"lon":-121.2277,"lat":43.9145},{"CBSA_Code":"13740","CBSA_Title":"Billings, MT","POP2010":158934,"lon":-108.7152,"lat":45.7811},{"CBSA_Code":"13780","CBSA_Title":"Binghamton, NY","POP2010":251725,"lon":-76.0265,"lat":42.1623},{"CBSA_Code":"13900","CBSA_Title":"Bismarck, ND","POP2010":114778,"lon":-100.9905,"lat":46.7286},{"CBSA_Code":"13980","CBSA_Title":"Blacksburg-Christiansburg-Radford, VA","POP2010":178237,"lon":-80.5332,"lat":37.1201},{"CBSA_Code":"14010","CBSA_Title":"Bloomington, IL","POP2010":186133,"lon":-88.8634,"lat":40.4122},{"CBSA_Code":"14020","CBSA_Title":"Bloomington, IN","POP2010":159549,"lon":-86.6768,"lat":39.2341},{"CBSA_Code":"14100","CBSA_Title":"Bloomsburg-Berwick, PA","POP2010":85562,"lon":-76.457,"lat":41.0392},{"CBSA_Code":"14500","CBSA_Title":"Boulder, CO","POP2010":294567,"lon":-105.3586,"lat":40.0934},{"CBSA_Code":"14540","CBSA_Title":"Bowling Green, KY","POP2010":158599,"lon":-86.4092,"lat":37.0426},{"CBSA_Code":"14740","CBSA_Title":"Bremerton-Silverdale, WA","POP2010":251133,"lon":-122.6769,"lat":47.6121},{"CBSA_Code":"15180","CBSA_Title":"Brownsville-Harlingen, TX","POP2010":406220,"lon":-97.5333,"lat":26.128},{"CBSA_Code":"15260","CBSA_Title":"Brunswick, GA","POP2010":112370,"lon":-81.6329,"lat":31.3194},{"CBSA_Code":"15500","CBSA_Title":"Burlington, NC","POP2010":151131,"lon":-79.3989,"lat":36.0436},{"CBSA_Code":"15540","CBSA_Title":"Burlington-South Burlington, VT","POP2010":211261,"lon":-73.0301,"lat":44.6905},{"CBSA_Code":"15680","CBSA_Title":"California-Lexington Park, MD","POP2010":105151,"lon":-76.609,"lat":38.3027},{"CBSA_Code":"15940","CBSA_Title":"Canton-Massillon, OH","POP2010":404422,"lon":-81.2498,"lat":40.7179},{"CBSA_Code":"16020","CBSA_Title":"Cape Girardeau, MO-IL","POP2010":96275,"lon":-89.7715,"lat":37.3235},{"CBSA_Code":"16060","CBSA_Title":"Carbondale-Marion, IL","POP2010":126575,"lon":-89.1905,"lat":37.7622},{"CBSA_Code":"16180","CBSA_Title":"Carson City, NV","POP2010":55274,"lon":-119.7423,"lat":39.1584},{"CBSA_Code":"16220","CBSA_Title":"Casper, WY","POP2010":75450,"lon":-106.798,"lat":42.9624},{"CBSA_Code":"16300","CBSA_Title":"Cedar Rapids, IA","POP2010":257940,"lon":-91.6314,"lat":42.0915},{"CBSA_Code":"16540","CBSA_Title":"Chambersburg-Waynesboro, PA","POP2010":149618,"lon":-77.7185,"lat":39.9289},{"CBSA_Code":"16580","CBSA_Title":"Champaign-Urbana, IL","POP2010":231891,"lon":-88.2963,"lat":40.226},{"CBSA_Code":"16620","CBSA_Title":"Charleston, WV","POP2010":227078,"lon":-81.495,"lat":38.2708},{"CBSA_Code":"16820","CBSA_Title":"Charlottesville, VA","POP2010":218705,"lon":-78.5765,"lat":37.8507},{"CBSA_Code":"16940","CBSA_Title":"Cheyenne, WY","POP2010":91738,"lon":-104.6888,"lat":41.3071},{"CBSA_Code":"17020","CBSA_Title":"Chico, CA","POP2010":220000,"lon":-121.5987,"lat":39.6692},{"CBSA_Code":"17300","CBSA_Title":"Clarksville, TN-KY","POP2010":260625,"lon":-87.5642,"lat":36.7475},{"CBSA_Code":"17420","CBSA_Title":"Cleveland, TN","POP2010":115788,"lon":-84.6643,"lat":35.1362},{"CBSA_Code":"17660","CBSA_Title":"Coeur d'Alene, ID","POP2010":138494,"lon":-116.7006,"lat":47.6732},{"CBSA_Code":"17780","CBSA_Title":"College Station-Bryan, TX","POP2010":228660,"lon":-96.491,"lat":30.7573},{"CBSA_Code":"17860","CBSA_Title":"Columbia, MO","POP2010":162642,"lon":-92.3056,"lat":38.9881},{"CBSA_Code":"17980","CBSA_Title":"Columbus, GA-AL","POP2010":294865,"lon":-84.9134,"lat":32.4419},{"CBSA_Code":"18020","CBSA_Title":"Columbus, IN","POP2010":76794,"lon":-85.8967,"lat":39.2091},{"CBSA_Code":"18580","CBSA_Title":"Corpus Christi, TX","POP2010":428185,"lon":-97.4954,"lat":27.9026},{"CBSA_Code":"18700","CBSA_Title":"Corvallis, OR","POP2010":85579,"lon":-123.4291,"lat":44.4911},{"CBSA_Code":"18880","CBSA_Title":"Crestview-Fort Walton Beach-Destin, FL","POP2010":235865,"lon":-86.3655,"lat":30.6655},{"CBSA_Code":"19060","CBSA_Title":"Cumberland, MD-WV","POP2010":103299,"lon":-78.8059,"lat":39.5294},{"CBSA_Code":"19140","CBSA_Title":"Dalton, GA","POP2010":142227,"lon":-84.8458,"lat":34.8014},{"CBSA_Code":"19180","CBSA_Title":"Danville, IL","POP2010":81625,"lon":-87.732,"lat":40.1818},{"CBSA_Code":"19300","CBSA_Title":"Daphne-Fairhope-Foley, AL","POP2010":182265,"lon":-87.7227,"lat":30.7294},{"CBSA_Code":"19340","CBSA_Title":"Davenport-Moline-Rock Island, IA-IL","POP2010":379690,"lon":-90.4685,"lat":41.3966},{"CBSA_Code":"19460","CBSA_Title":"Decatur, AL","POP2010":153829,"lon":-87.1009,"lat":34.4885},{"CBSA_Code":"19500","CBSA_Title":"Decatur, IL","POP2010":110768,"lon":-88.9634,"lat":39.8606},{"CBSA_Code":"20020","CBSA_Title":"Dothan, AL","POP2010":145639,"lon":-85.4551,"lat":31.2583},{"CBSA_Code":"20100","CBSA_Title":"Dover, DE","POP2010":162310,"lon":-75.5683,"lat":39.0857},{"CBSA_Code":"20220","CBSA_Title":"Dubuque, IA","POP2010":93653,"lon":-90.8809,"lat":42.4687},{"CBSA_Code":"20260","CBSA_Title":"Duluth, MN-WI","POP2010":279771,"lon":-92.407,"lat":47.3334},{"CBSA_Code":"20500","CBSA_Title":"Durham-Chapel Hill, NC","POP2010":504357,"lon":-79.1005,"lat":35.994},{"CBSA_Code":"20700","CBSA_Title":"East Stroudsburg, PA","POP2010":169842,"lon":-75.3433,"lat":41.0587},{"CBSA_Code":"20740","CBSA_Title":"Eau Claire, WI","POP2010":161151,"lon":-91.2827,"lat":44.9392},{"CBSA_Code":"20940","CBSA_Title":"El Centro, CA","POP2010":174528,"lon":-115.3627,"lat":33.0405},{"CBSA_Code":"21060","CBSA_Title":"Elizabethtown-Fort Knox, KY","POP2010":148338,"lon":-85.9718,"lat":37.7352},{"CBSA_Code":"21140","CBSA_Title":"Elkhart-Goshen, IN","POP2010":197559,"lon":-85.8588,"lat":41.5977},{"CBSA_Code":"21300","CBSA_Title":"Elmira, NY","POP2010":88830,"lon":-76.7638,"lat":42.1393},{"CBSA_Code":"21500","CBSA_Title":"Erie, PA","POP2010":280566,"lon":-80.033,"lat":41.9925},{"CBSA_Code":"21660","CBSA_Title":"Eugene, OR","POP2010":351715,"lon":-122.8454,"lat":43.938},{"CBSA_Code":"21780","CBSA_Title":"Evansville, IN-KY","POP2010":311552,"lon":-87.5767,"lat":37.9678},{"CBSA_Code":"21820","CBSA_Title":"Fairbanks, AK","POP2010":97581,"lon":-146.5673,"lat":64.8071},{"CBSA_Code":"22020","CBSA_Title":"Fargo, ND-MN","POP2010":208777,"lon":-96.9612,"lat":46.9175},{"CBSA_Code":"22140","CBSA_Title":"Farmington, NM","POP2010":130044,"lon":-108.3204,"lat":36.5082},{"CBSA_Code":"22180","CBSA_Title":"Fayetteville, NC","POP2010":366383,"lon":-78.9786,"lat":35.0347},{"CBSA_Code":"22220","CBSA_Title":"Fayetteville-Springdale-Rogers, AR-MO","POP2010":463204,"lon":-94.1206,"lat":36.1954},{"CBSA_Code":"22380","CBSA_Title":"Flagstaff, AZ","POP2010":134421,"lon":-111.7711,"lat":35.8392},{"CBSA_Code":"22420","CBSA_Title":"Flint, MI","POP2010":425790,"lon":-83.7059,"lat":43.0224},{"CBSA_Code":"22500","CBSA_Title":"Florence, SC","POP2010":205566,"lon":-79.8073,"lat":34.1537},{"CBSA_Code":"22520","CBSA_Title":"Florence-Muscle Shoals, AL","POP2010":147137,"lon":-87.7207,"lat":34.8082},{"CBSA_Code":"22540","CBSA_Title":"Fond du Lac, WI","POP2010":101633,"lon":-88.4889,"lat":43.7535},{"CBSA_Code":"22660","CBSA_Title":"Fort Collins, CO","POP2010":299630,"lon":-105.4614,"lat":40.6664},{"CBSA_Code":"22900","CBSA_Title":"Fort Smith, AR-OK","POP2010":280467,"lon":-94.5662,"lat":35.1873},{"CBSA_Code":"23060","CBSA_Title":"Fort Wayne, IN","POP2010":416257,"lon":-85.2165,"lat":41.0055},{"CBSA_Code":"23460","CBSA_Title":"Gadsden, AL","POP2010":104430,"lon":-86.0365,"lat":34.0425},{"CBSA_Code":"23540","CBSA_Title":"Gainesville, FL","POP2010":264275,"lon":-82.4723,"lat":29.6891},{"CBSA_Code":"23580","CBSA_Title":"Gainesville, GA","POP2010":179684,"lon":-83.8197,"lat":34.3217},{"CBSA_Code":"23900","CBSA_Title":"Gettysburg, PA","POP2010":101407,"lon":-77.2204,"lat":39.8677},{"CBSA_Code":"24020","CBSA_Title":"Glens Falls, NY","POP2010":128923,"lon":-73.6492,"lat":43.4454},{"CBSA_Code":"24140","CBSA_Title":"Goldsboro, NC","POP2010":122623,"lon":-77.9985,"lat":35.3583},{"CBSA_Code":"24220","CBSA_Title":"Grand Forks, ND-MN","POP2010":98461,"lon":-96.8452,"lat":47.8362},{"CBSA_Code":"24260","CBSA_Title":"Grand Island, NE","POP2010":81850,"lon":-98.2761,"lat":41.0339},{"CBSA_Code":"24300","CBSA_Title":"Grand Junction, CO","POP2010":146723,"lon":-108.4687,"lat":39.0175},{"CBSA_Code":"24420","CBSA_Title":"Grants Pass, OR","POP2010":82713,"lon":-123.5563,"lat":42.3642},{"CBSA_Code":"24500","CBSA_Title":"Great Falls, MT","POP2010":81327,"lon":-111.3472,"lat":47.3087},{"CBSA_Code":"24540","CBSA_Title":"Greeley, CO","POP2010":252825,"lon":-104.393,"lat":40.5551},{"CBSA_Code":"24580","CBSA_Title":"Green Bay, WI","POP2010":306241,"lon":-88.0775,"lat":44.7753},{"CBSA_Code":"24780","CBSA_Title":"Greenville, NC","POP2010":168148,"lon":-77.3716,"lat":35.5907},{"CBSA_Code":"25060","CBSA_Title":"Gulfport-Biloxi-Pascagoula, MS","POP2010":370702,"lon":-89.0197,"lat":30.5005},{"CBSA_Code":"25180","CBSA_Title":"Hagerstown-Martinsburg, MD-WV","POP2010":251599,"lon":-77.8997,"lat":39.5465},{"CBSA_Code":"25220","CBSA_Title":"Hammond, LA","POP2010":121097,"lon":-90.4062,"lat":30.629},{"CBSA_Code":"25260","CBSA_Title":"Hanford-Corcoran, CA","POP2010":152982,"lon":-119.8139,"lat":36.0761},{"CBSA_Code":"25500","CBSA_Title":"Harrisonburg, VA","POP2010":125228,"lon":-78.8717,"lat":38.5116},{"CBSA_Code":"25620","CBSA_Title":"Hattiesburg, MS","POP2010":142842,"lon":-89.2307,"lat":31.186},{"CBSA_Code":"25860","CBSA_Title":"Hickory-Lenoir-Morganton, NC","POP2010":365497,"lon":-81.4572,"lat":35.8141},{"CBSA_Code":"25940","CBSA_Title":"Hilton Head Island-Bluffton-Beaufort, SC","POP2010":187010,"lon":-80.8718,"lat":32.4067},{"CBSA_Code":"25980","CBSA_Title":"Hinesville, GA","POP2010":77917,"lon":-81.6045,"lat":31.798},{"CBSA_Code":"26140","CBSA_Title":"Homosassa Springs, FL","POP2010":141236,"lon":-82.4596,"lat":28.8547},{"CBSA_Code":"26300","CBSA_Title":"Hot Springs, AR","POP2010":96024,"lon":-93.1492,"lat":34.5769},{"CBSA_Code":"26380","CBSA_Title":"Houma-Thibodaux, LA","POP2010":208178,"lon":-90.662,"lat":29.4694},{"CBSA_Code":"26580","CBSA_Title":"Huntington-Ashland, WV-KY-OH","POP2010":364908,"lon":-82.3832,"lat":38.3789},{"CBSA_Code":"26620","CBSA_Title":"Huntsville, AL","POP2010":417593,"lon":-86.7352,"lat":34.7831},{"CBSA_Code":"26820","CBSA_Title":"Idaho Falls, ID","POP2010":133265,"lon":-112.4338,"lat":43.6242},{"CBSA_Code":"26980","CBSA_Title":"Iowa City, IA","POP2010":152586,"lon":-91.6495,"lat":41.5112},{"CBSA_Code":"27060","CBSA_Title":"Ithaca, NY","POP2010":101564,"lon":-76.4705,"lat":42.4487},{"CBSA_Code":"27100","CBSA_Title":"Jackson, MI","POP2010":160248,"lon":-84.4226,"lat":42.2481},{"CBSA_Code":"27180","CBSA_Title":"Jackson, TN","POP2010":130011,"lon":-88.8467,"lat":35.609},{"CBSA_Code":"27340","CBSA_Title":"Jacksonville, NC","POP2010":177772,"lon":-77.4262,"lat":34.7271},{"CBSA_Code":"27500","CBSA_Title":"Janesville-Beloit, WI","POP2010":160331,"lon":-89.0715,"lat":42.6713},{"CBSA_Code":"27620","CBSA_Title":"Jefferson City, MO","POP2010":149807,"lon":-92.0909,"lat":38.6398},{"CBSA_Code":"27740","CBSA_Title":"Johnson City, TN","POP2010":198716,"lon":-82.3373,"lat":36.2518},{"CBSA_Code":"27780","CBSA_Title":"Johnstown, PA","POP2010":143679,"lon":-78.7205,"lat":40.4911},{"CBSA_Code":"27860","CBSA_Title":"Jonesboro, AR","POP2010":121026,"lon":-90.648,"lat":35.6986},{"CBSA_Code":"27900","CBSA_Title":"Joplin, MO","POP2010":175518,"lon":-94.34,"lat":37.0568},{"CBSA_Code":"27980","CBSA_Title":"Kahului-Wailuku-Lahaina, HI","POP2010":154924,"lon":-156.3397,"lat":20.7937},{"CBSA_Code":"28020","CBSA_Title":"Kalamazoo-Portage, MI","POP2010":326589,"lon":-85.7836,"lat":42.2486},{"CBSA_Code":"28100","CBSA_Title":"Kankakee, IL","POP2010":113449,"lon":-87.8621,"lat":41.1375},{"CBSA_Code":"28420","CBSA_Title":"Kennewick-Richland, WA","POP2010":253340,"lon":-119.2565,"lat":46.3638},{"CBSA_Code":"28660","CBSA_Title":"Killeen-Temple, TX","POP2010":405300,"lon":-97.7876,"lat":31.2079},{"CBSA_Code":"28700","CBSA_Title":"Kingsport-Bristol-Bristol, TN-VA","POP2010":309544,"lon":-82.4389,"lat":36.6113},{"CBSA_Code":"28740","CBSA_Title":"Kingston, NY","POP2010":182493,"lon":-74.2626,"lat":41.8888},{"CBSA_Code":"29020","CBSA_Title":"Kokomo, IN","POP2010":82752,"lon":-86.1135,"lat":40.4853},{"CBSA_Code":"29100","CBSA_Title":"La Crosse-Onalaska, WI-MN","POP2010":133665,"lon":-91.32,"lat":43.7797},{"CBSA_Code":"29180","CBSA_Title":"Lafayette, LA","POP2010":466750,"lon":-92.0602,"lat":30.021},{"CBSA_Code":"29200","CBSA_Title":"Lafayette-West Lafayette, IN","POP2010":201789,"lon":-86.9275,"lat":40.5151},{"CBSA_Code":"29340","CBSA_Title":"Lake Charles, LA","POP2010":199607,"lon":-93.2577,"lat":30.0169},{"CBSA_Code":"29420","CBSA_Title":"Lake Havasu City-Kingman, AZ","POP2010":200186,"lon":-113.7596,"lat":35.7057},{"CBSA_Code":"29540","CBSA_Title":"Lancaster, PA","POP2010":519445,"lon":-76.2445,"lat":40.0401},{"CBSA_Code":"29620","CBSA_Title":"Lansing-East Lansing, MI","POP2010":464036,"lon":-84.6075,"lat":42.7137},{"CBSA_Code":"29700","CBSA_Title":"Laredo, TX","POP2010":250304,"lon":-99.3331,"lat":27.7619},{"CBSA_Code":"29740","CBSA_Title":"Las Cruces, NM","POP2010":209233,"lon":-106.8324,"lat":32.3518},{"CBSA_Code":"29940","CBSA_Title":"Lawrence, KS","POP2010":110826,"lon":-95.2907,"lat":38.8822},{"CBSA_Code":"30020","CBSA_Title":"Lawton, OK","POP2010":130291,"lon":-98.4339,"lat":34.5253},{"CBSA_Code":"30140","CBSA_Title":"Lebanon, PA","POP2010":133568,"lon":-76.4565,"lat":40.3668},{"CBSA_Code":"30300","CBSA_Title":"Lewiston, ID-WA","POP2010":60888,"lon":-116.9405,"lat":46.267},{"CBSA_Code":"30340","CBSA_Title":"Lewiston-Auburn, ME","POP2010":107702,"lon":-70.2029,"lat":44.1664},{"CBSA_Code":"30460","CBSA_Title":"Lexington-Fayette, KY","POP2010":472099,"lon":-84.4314,"lat":38.0925},{"CBSA_Code":"30620","CBSA_Title":"Lima, OH","POP2010":106331,"lon":-84.1124,"lat":40.7696},{"CBSA_Code":"30700","CBSA_Title":"Lincoln, NE","POP2010":302157,"lon":-96.8708,"lat":40.8199},{"CBSA_Code":"30860","CBSA_Title":"Logan, UT-ID","POP2010":125442,"lon":-111.7689,"lat":41.8869},{"CBSA_Code":"30980","CBSA_Title":"Longview, TX","POP2010":214369,"lon":-94.829,"lat":32.3731},{"CBSA_Code":"31020","CBSA_Title":"Longview, WA","POP2010":102410,"lon":-122.6795,"lat":46.193},{"CBSA_Code":"31180","CBSA_Title":"Lubbock, TX","POP2010":290805,"lon":-101.6448,"lat":33.4683},{"CBSA_Code":"31340","CBSA_Title":"Lynchburg, VA","POP2010":246412,"lon":-79.2213,"lat":37.3664},{"CBSA_Code":"31420","CBSA_Title":"Macon, GA","POP2010":232293,"lon":-83.7131,"lat":32.8605},{"CBSA_Code":"31460","CBSA_Title":"Madera, CA","POP2010":150865,"lon":-119.7598,"lat":37.2176},{"CBSA_Code":"31700","CBSA_Title":"Manchester-Nashua, NH","POP2010":400721,"lon":-71.7209,"lat":42.9174},{"CBSA_Code":"31740","CBSA_Title":"Manhattan, KS","POP2010":92719,"lon":-96.5088,"lat":39.341},{"CBSA_Code":"31860","CBSA_Title":"Mankato-North Mankato, MN","POP2010":96740,"lon":-94.1354,"lat":44.1542},{"CBSA_Code":"31900","CBSA_Title":"Mansfield, OH","POP2010":124475,"lon":-82.5425,"lat":40.7731},{"CBSA_Code":"32780","CBSA_Title":"Medford, OR","POP2010":203206,"lon":-122.7291,"lat":42.4314},{"CBSA_Code":"32900","CBSA_Title":"Merced, CA","POP2010":255793,"lon":-120.7137,"lat":37.1929},{"CBSA_Code":"33140","CBSA_Title":"Michigan City-La Porte, IN","POP2010":111467,"lon":-86.7376,"lat":41.5471},{"CBSA_Code":"33220","CBSA_Title":"Midland, MI","POP2010":83629,"lon":-84.388,"lat":43.6433},{"CBSA_Code":"33260","CBSA_Title":"Midland, TX","POP2010":141671,"lon":-101.9911,"lat":32.0897},{"CBSA_Code":"33540","CBSA_Title":"Missoula, MT","POP2010":109299,"lon":-113.9216,"lat":47.0375},{"CBSA_Code":"33660","CBSA_Title":"Mobile, AL","POP2010":412992,"lon":-88.2071,"lat":30.7944},{"CBSA_Code":"33700","CBSA_Title":"Modesto, CA","POP2010":514453,"lon":-120.9952,"lat":37.5581},{"CBSA_Code":"33740","CBSA_Title":"Monroe, LA","POP2010":176441,"lon":-92.2879,"lat":32.6831},{"CBSA_Code":"33780","CBSA_Title":"Monroe, MI","POP2010":152021,"lon":-83.5374,"lat":41.9285},{"CBSA_Code":"33860","CBSA_Title":"Montgomery, AL","POP2010":374536,"lon":-86.4015,"lat":32.3632},{"CBSA_Code":"34060","CBSA_Title":"Morgantown, WV","POP2010":129709,"lon":-79.8035,"lat":39.5264},{"CBSA_Code":"34100","CBSA_Title":"Morristown, TN","POP2010":113951,"lon":-83.3837,"lat":36.1079},{"CBSA_Code":"34580","CBSA_Title":"Mount Vernon-Anacortes, WA","POP2010":116901,"lon":-121.7224,"lat":48.4782},{"CBSA_Code":"34620","CBSA_Title":"Muncie, IN","POP2010":117671,"lon":-85.3973,"lat":40.2279},{"CBSA_Code":"34740","CBSA_Title":"Muskegon, MI","POP2010":172188,"lon":-86.152,"lat":43.2914},{"CBSA_Code":"34820","CBSA_Title":"Myrtle Beach-Conway-North Myrtle Beach, SC-NC","POP2010":376722,"lon":-78.6622,"lat":33.9876},{"CBSA_Code":"34900","CBSA_Title":"Napa, CA","POP2010":136484,"lon":-122.3324,"lat":38.5107},{"CBSA_Code":"34940","CBSA_Title":"Naples-Immokalee-Marco Island, FL","POP2010":321520,"lon":-81.3445,"lat":26.1169},{"CBSA_Code":"35100","CBSA_Title":"New Bern, NC","POP2010":126802,"lon":-77.0782,"lat":35.0938},{"CBSA_Code":"35660","CBSA_Title":"Niles-Benton Harbor, MI","POP2010":156813,"lon":-86.4125,"lat":41.9547},{"CBSA_Code":"35980","CBSA_Title":"Norwich-New London, CT","POP2010":274055,"lon":-72.1029,"lat":41.4876},{"CBSA_Code":"36100","CBSA_Title":"Ocala, FL","POP2010":331298,"lon":-82.0583,"lat":29.2076},{"CBSA_Code":"36140","CBSA_Title":"Ocean City, NJ","POP2010":97265,"lon":-74.8002,"lat":39.1482},{"CBSA_Code":"36220","CBSA_Title":"Odessa, TX","POP2010":137130,"lon":-102.5429,"lat":31.869},{"CBSA_Code":"36500","CBSA_Title":"Olympia-Tumwater, WA","POP2010":252264,"lon":-122.8298,"lat":46.9287},{"CBSA_Code":"36780","CBSA_Title":"Oshkosh-Neenah, WI","POP2010":166994,"lon":-88.6448,"lat":44.0689},{"CBSA_Code":"36980","CBSA_Title":"Owensboro, KY","POP2010":114752,"lon":-87.059,"lat":37.6992},{"CBSA_Code":"37460","CBSA_Title":"Panama City, FL","POP2010":184715,"lon":-85.4665,"lat":30.1439},{"CBSA_Code":"37620","CBSA_Title":"Parkersburg-Vienna, WV","POP2010":92673,"lon":-81.4635,"lat":39.1449},{"CBSA_Code":"37860","CBSA_Title":"Pensacola-Ferry Pass-Brent, FL","POP2010":448991,"lon":-87.1566,"lat":30.6879},{"CBSA_Code":"37900","CBSA_Title":"Peoria, IL","POP2010":379186,"lon":-89.5159,"lat":40.7889},{"CBSA_Code":"38220","CBSA_Title":"Pine Bluff, AR","POP2010":100258,"lon":-91.9476,"lat":34.0778},{"CBSA_Code":"38340","CBSA_Title":"Pittsfield, MA","POP2010":131219,"lon":-73.2062,"lat":42.3711},{"CBSA_Code":"38540","CBSA_Title":"Pocatello, ID","POP2010":82839,"lon":-112.226,"lat":42.6691},{"CBSA_Code":"38860","CBSA_Title":"Portland-South Portland, ME","POP2010":514098,"lon":-70.4695,"lat":43.694},{"CBSA_Code":"38940","CBSA_Title":"Port St. Lucie, FL","POP2010":424107,"lon":-80.4498,"lat":27.2198},{"CBSA_Code":"39140","CBSA_Title":"Prescott, AZ","POP2010":211033,"lon":-112.5548,"lat":34.5995},{"CBSA_Code":"39380","CBSA_Title":"Pueblo, CO","POP2010":159063,"lon":-104.5127,"lat":38.1736},{"CBSA_Code":"39460","CBSA_Title":"Punta Gorda, FL","POP2010":159978,"lon":-81.9139,"lat":26.9051},{"CBSA_Code":"39540","CBSA_Title":"Racine, WI","POP2010":195408,"lon":-88.0611,"lat":42.7473},{"CBSA_Code":"39660","CBSA_Title":"Rapid City, SD","POP2010":134598,"lon":-102.8997,"lat":44.1917},{"CBSA_Code":"39740","CBSA_Title":"Reading, PA","POP2010":411442,"lon":-75.9268,"lat":40.4142},{"CBSA_Code":"39820","CBSA_Title":"Redding, CA","POP2010":177223,"lon":-122.0423,"lat":40.7637},{"CBSA_Code":"39900","CBSA_Title":"Reno, NV","POP2010":425417,"lon":-119.6575,"lat":40.6182},{"CBSA_Code":"40220","CBSA_Title":"Roanoke, VA","POP2010":308707,"lon":-79.9461,"lat":37.2903},{"CBSA_Code":"40340","CBSA_Title":"Rochester, MN","POP2010":206877,"lon":-92.3378,"lat":43.9561},{"CBSA_Code":"40420","CBSA_Title":"Rockford, IL","POP2010":349431,"lon":-89.0413,"lat":42.3334},{"CBSA_Code":"40580","CBSA_Title":"Rocky Mount, NC","POP2010":152392,"lon":-77.7956,"lat":35.9407},{"CBSA_Code":"40660","CBSA_Title":"Rome, GA","POP2010":96317,"lon":-85.2122,"lat":34.2747},{"CBSA_Code":"40980","CBSA_Title":"Saginaw, MI","POP2010":200169,"lon":-84.0528,"lat":43.3303},{"CBSA_Code":"41060","CBSA_Title":"St. Cloud, MN","POP2010":189093,"lon":-94.4732,"lat":45.5863},{"CBSA_Code":"41100","CBSA_Title":"St. George, UT","POP2010":138115,"lon":-113.5064,"lat":37.2813},{"CBSA_Code":"41140","CBSA_Title":"St. Joseph, MO-KS","POP2010":127329,"lon":-94.7857,"lat":39.8348},{"CBSA_Code":"41420","CBSA_Title":"Salem, OR","POP2010":390738,"lon":-122.8964,"lat":44.9034},{"CBSA_Code":"41500","CBSA_Title":"Salinas, CA","POP2010":415057,"lon":-121.2399,"lat":36.2178},{"CBSA_Code":"41540","CBSA_Title":"Salisbury, MD-DE","POP2010":373802,"lon":-75.4681,"lat":38.4177},{"CBSA_Code":"41660","CBSA_Title":"San Angelo, TX","POP2010":111823,"lon":-100.6719,"lat":31.3627},{"CBSA_Code":"42020","CBSA_Title":"San Luis Obispo-Paso Robles-Arroyo Grande, CA","POP2010":269637,"lon":-120.4039,"lat":35.3876},{"CBSA_Code":"42100","CBSA_Title":"Santa Cruz-Watsonville, CA","POP2010":262382,"lon":-122.0099,"lat":37.0576},{"CBSA_Code":"42140","CBSA_Title":"Santa Fe, NM","POP2010":144170,"lon":-105.976,"lat":35.5073},{"CBSA_Code":"42200","CBSA_Title":"Santa Maria-Santa Barbara, CA","POP2010":423895,"lon":-120.0219,"lat":34.7247},{"CBSA_Code":"42220","CBSA_Title":"Santa Rosa, CA","POP2010":483878,"lon":-122.8896,"lat":38.5298},{"CBSA_Code":"42340","CBSA_Title":"Savannah, GA","POP2010":347611,"lon":-81.3016,"lat":32.1312},{"CBSA_Code":"42680","CBSA_Title":"Sebastian-Vero Beach, FL","POP2010":138028,"lon":-80.6067,"lat":27.6934},{"CBSA_Code":"42700","CBSA_Title":"Sebring, FL","POP2010":98786,"lon":-81.344,"lat":27.3437},{"CBSA_Code":"43100","CBSA_Title":"Sheboygan, WI","POP2010":115507,"lon":-87.9457,"lat":43.7211},{"CBSA_Code":"43300","CBSA_Title":"Sherman-Denison, TX","POP2010":120877,"lon":-96.6773,"lat":33.627},{"CBSA_Code":"43340","CBSA_Title":"Shreveport-Bossier City, LA","POP2010":439811,"lon":-93.6692,"lat":32.4889},{"CBSA_Code":"43420","CBSA_Title":"Sierra Vista-Douglas, AZ","POP2010":131346,"lon":-109.7519,"lat":31.8791},{"CBSA_Code":"43580","CBSA_Title":"Sioux City, IA-NE-SD","POP2010":168563,"lon":-96.373,"lat":42.5792},{"CBSA_Code":"43620","CBSA_Title":"Sioux Falls, SD","POP2010":228261,"lon":-96.9893,"lat":43.4994},{"CBSA_Code":"43780","CBSA_Title":"South Bend-Mishawaka, IN-MI","POP2010":319224,"lon":-86.1315,"lat":41.775},{"CBSA_Code":"43900","CBSA_Title":"Spartanburg, SC","POP2010":313268,"lon":-81.8488,"lat":34.8381},{"CBSA_Code":"44100","CBSA_Title":"Springfield, IL","POP2010":210170,"lon":-89.698,"lat":39.8287},{"CBSA_Code":"44180","CBSA_Title":"Springfield, MO","POP2010":436712,"lon":-93.1754,"lat":37.3641},{"CBSA_Code":"44220","CBSA_Title":"Springfield, OH","POP2010":138333,"lon":-83.7844,"lat":39.9189},{"CBSA_Code":"44300","CBSA_Title":"State College, PA","POP2010":153990,"lon":-77.8185,"lat":40.919},{"CBSA_Code":"44420","CBSA_Title":"Staunton-Waynesboro, VA","POP2010":118502,"lon":-79.1275,"lat":38.165},{"CBSA_Code":"44940","CBSA_Title":"Sumter, SC","POP2010":107456,"lon":-80.38,"lat":33.9154},{"CBSA_Code":"45220","CBSA_Title":"Tallahassee, FL","POP2010":367413,"lon":-84.2887,"lat":30.4055},{"CBSA_Code":"45460","CBSA_Title":"Terre Haute, IN","POP2010":172425,"lon":-87.3438,"lat":39.3962},{"CBSA_Code":"45500","CBSA_Title":"Texarkana, TX-AR","POP2010":149198,"lon":-94.2092,"lat":33.4706},{"CBSA_Code":"45540","CBSA_Title":"The Villages, FL","POP2010":93420,"lon":-82.0795,"lat":28.7047},{"CBSA_Code":"45820","CBSA_Title":"Topeka, KS","POP2010":233870,"lon":-95.8021,"lat":39.0438},{"CBSA_Code":"45940","CBSA_Title":"Trenton, NJ","POP2010":366513,"lon":-74.6996,"lat":40.2823},{"CBSA_Code":"46220","CBSA_Title":"Tuscaloosa, AL","POP2010":230162,"lon":-87.7205,"lat":33.1659},{"CBSA_Code":"46340","CBSA_Title":"Tyler, TX","POP2010":209714,"lon":-95.2691,"lat":32.3742},{"CBSA_Code":"46540","CBSA_Title":"Utica-Rome, NY","POP2010":299397,"lon":-75.1761,"lat":43.3356},{"CBSA_Code":"46660","CBSA_Title":"Valdosta, GA","POP2010":139588,"lon":-83.2365,"lat":30.8286},{"CBSA_Code":"46700","CBSA_Title":"Vallejo-Fairfield, CA","POP2010":413344,"lon":-121.9384,"lat":38.2695},{"CBSA_Code":"47020","CBSA_Title":"Victoria, TX","POP2010":94003,"lon":-97.1974,"lat":28.7271},{"CBSA_Code":"47220","CBSA_Title":"Vineland-Bridgeton, NJ","POP2010":156898,"lon":-75.1098,"lat":39.3724},{"CBSA_Code":"47300","CBSA_Title":"Visalia-Porterville, CA","POP2010":442179,"lon":-118.7993,"lat":36.2206},{"CBSA_Code":"47380","CBSA_Title":"Waco, TX","POP2010":252772,"lon":-97.0901,"lat":31.4265},{"CBSA_Code":"47460","CBSA_Title":"Walla Walla, WA","POP2010":62859,"lon":-118.252,"lat":46.2575},{"CBSA_Code":"47580","CBSA_Title":"Warner Robins, GA","POP2010":179605,"lon":-83.64,"lat":32.4093},{"CBSA_Code":"47940","CBSA_Title":"Waterloo-Cedar Falls, IA","POP2010":167819,"lon":-92.4685,"lat":42.5363},{"CBSA_Code":"48060","CBSA_Title":"Watertown-Fort Drum, NY","POP2010":116229,"lon":-75.9206,"lat":44.053},{"CBSA_Code":"48140","CBSA_Title":"Wausau, WI","POP2010":134063,"lon":-89.7586,"lat":44.8979},{"CBSA_Code":"48260","CBSA_Title":"Weirton-Steubenville, WV-OH","POP2010":124454,"lon":-80.7031,"lat":40.388},{"CBSA_Code":"48300","CBSA_Title":"Wenatchee, WA","POP2010":110884,"lon":-120.2636,"lat":47.8181},{"CBSA_Code":"48540","CBSA_Title":"Wheeling, WV-OH","POP2010":147950,"lon":-80.842,"lat":39.976},{"CBSA_Code":"48660","CBSA_Title":"Wichita Falls, TX","POP2010":151306,"lon":-98.4906,"lat":33.775},{"CBSA_Code":"48700","CBSA_Title":"Williamsport, PA","POP2010":116111,"lon":-77.0663,"lat":41.3431},{"CBSA_Code":"48900","CBSA_Title":"Wilmington, NC","POP2010":254884,"lon":-77.9007,"lat":34.4688},{"CBSA_Code":"49020","CBSA_Title":"Winchester, VA-WV","POP2010":128472,"lon":-78.4658,"lat":39.2699},{"CBSA_Code":"49420","CBSA_Title":"Yakima, WA","POP2010":243231,"lon":-120.7401,"lat":46.4594},{"CBSA_Code":"49620","CBSA_Title":"York-Hanover, PA","POP2010":434972,"lon":-76.7307,"lat":39.9232},{"CBSA_Code":"49700","CBSA_Title":"Yuba City, CA","POP2010":166892,"lon":-121.5223,"lat":39.1526},{"CBSA_Code":"49740","CBSA_Title":"Yuma, AZ","POP2010":195751,"lon":-113.9063,"lat":32.769}]};
+
+	//create a lookup table and add in a short name for each metro area
+	var lookup = {};
+	(function(){
+		var large = sel.metros.large;
+		var small = sel.metros.small;
+
+		//large metro areas
+		for(var i=0; i<large.length; i++){
+			//add in a short name
+			large[i].CBSA_Title_Short = nameshort(large[i].CBSA_Title);
+			lookup[large[i].CBSA_Code] = large[i];
+		}
+
+		//small metro areas
+		for(var j=0; j<small.length; j++){
+			//add in a short name
+			small[j].CBSA_Title_Short = nameshort(small[j].CBSA_Title);
+			lookup[small[j].CBSA_Code] = small[j];
+		}
+
+	})();
+
+	sel.lookup = function(cbsa_code){
+		var m = lookup[cbsa_code];
+
+		//create a copy of the data to prevent data mutation by user
+		var r = {};
+		try{
+			r.code = m.CBSA_Code;
+			r.name = m.CBSA_Title;
+			r.nameshort = m.CBSA_Title_Short;
+			r.lonlat = [m.lon, m.lat];
+		}
+		catch(e){
+			r = null;
+		}
+		finally{
+			return r;
+		}
+	};
+
+	//return an array of metro areas
+	//optionally provide a lookup_table to determine if a metro area is in it -- could be used to limit metro areas in menu
+	sel.list = function(lookup_table){
+		//make a deep copy of the data to avoid mutating the module's data
+		var lookup = !!lookup_table;
+		var cbsa_mapper = function(m){
+			var r = {};
+			r.code = m.CBSA_Code;
+			r.name = m.CBSA_Title;
+			r.nameshort = m.CBSA_Title_Short;
+			r.lonlat = [m.lon, m.lat];
+			if(lookup){
+				r.in_lookup = lookup_table.hasOwnProperty(r.code);
+			}
+			return r;
+		};
+
+		var large = sel.metros.large.map(cbsa_mapper);
+		var small = sel.metros.small.map(cbsa_mapper);
+
+		return {large:large, small:small};
+	};
+
+	var light_theme = false;
+	sel.light = function(){
+		light_theme = true;
+		return sel;
+	};
+
+	sel.setup = function(container, t100){
+		if(arguments.length < 2 || !!t100){
+			var odata = sel.metros.large.slice(0);
+		}
+		else{
+			var odata = sel.metros.large.concat(sel.metros.small).sort(function(a,b){
+				return a.CBSA_Title < b.CBSA_Title ? -1 : (a.CBSA_Title > b.CBSA_Title ? 1 : 0);
+			});
+		}
+
+		var wrap = d3.select(container).classed("makesans",true);
+			wrap.selectAll("*").remove(); //there's no updating here
+
+		var instruction = wrap.append("p").html("Select a metropolitan area: ")
+										  .style("display","inline-block")
+										  .style("margin","0em")
+										  .style("line-height","1em")
+										  .style("font-size","0.8em")
+										  .style("padding","0px 0px 0px 6px")
+										  .style("text-transform","uppercase");
+
+		var select = wrap.append("select").style("display","block")
+										  .style("margin","0px 0px 0px 0px")
+										  .style("line-height","1.65em")
+										  .style("font-size","1em")
+										  .style("padding","2px 5px 2px 5px")
+										  .style("background","transparent")
+										  .style("max-width","100%")
+										  .style("outline","none");
+
+		this.node = select.node();
+
+		var options = select.selectAll("option").data(odata).enter().append("option");
+			options.attr("value", function(d,i){return d.CBSA_Code})
+				   .text(function(d,i){return d.CBSA_Title})
+				   .style("color","#333333");
+
+		 if(light_theme){
+				instruction.style("color","#ffffff");
+				select.style("color","#ffffff");
+				options.style("color","#333333");
+			}
+
+		select.on("change", function(d,i){
+			var val = this.value;
+			try{
+				var m = odata[this.selectedIndex];
+
+				if(m.CBSA_Code!==val){
+					throw "ERROR";
+				}
+			}
+			catch(e){
+				var m = odata[0];
+				sel.update(m.CBSA_Code);
+			}
+
+			if(!!sel.onchg){
+				sel.onchg(m);
+			}
+		});
+		return sel;
+	};
+
+	//update the selection, but don't trigger change event
+	sel.update = function(val){
+		if(this.node){
+			this.node.value = val;
+		}
+
+		return sel;
+	};
+	//the callback executes with the sel object as this
+	sel.onchange = function(callback){
+		sel.onchg = callback;
+
+		return sel;
+	};
+
+	return sel;
+}
+
+//metro data-join module v1.0
+//metzipper and metro_select.missing() passed all unit tests - 1/18/2017
+//code refactored on 1/19/2017 -- need to re-test
+//currently handles 0ne-to-one joins, need to handle other cases
+//cbsa_Var name refers to the var that holds codes, while cbsa_name_var holds names
+function metroData(){
+	var md = {};
+	var ms = metro_select();
+	
+	//return an array of metro areas not in metro_list
+	//metro_list should be (1) an array of cbsa_codes, or 
+	//  				   (2) an array of objects passed to accessor (which should return the cbsa code)
+	//this is useful, given some metro data, for determining which metros aren't in the data
+	md.missing = function(metro_list, accessor){
+		var list = arguments.length < 2 ? metro_list : metro_list.map(accessor);
+		
+		//create a lookup table from metro_list
+		var lookup = {};
+		for(var i=0; i<list.length; i++){
+			lookup[list[i]] = 1;
+		}
+
+		var allmet = ms.list(lookup);
+
+		//what large metro areas are missing from metro_list?
+		var large_not_in_list = allmet.large	
+								.filter(function(d){
+									return !d.in_lookup;
+								});
+
+		//what small metro areas are missing from metro_list?
+		var small_not_in_list = allmet.small
+								.filter(function(d){
+									return !d.in_lookup;
+								});
+
+		return {large: large_not_in_list, small: small_not_in_list};
+	};
+
+	//join metro area data to official id data, including lon/lat
+	//cbsa_var is the property name in each element of data that contains the cbsa code
+	//optionally provide cbsa_name_var to compare the name in data to official cbsa name
+	//data should look like: [{cbsa:xxxxx, var1:xx.x, var2:xx.x, ..., varn: xx.x}, 
+	//						  {...}, 
+	//						   ...]
+	md.zip = function(data, cbsa_var, cbsa_name_var){
+		//keep track of join quality
+		var num_matches = 0;
+		var mismatches = [];
+		var in_data_not_in_metros = [];
+		
+		if(arguments.length < 2){cbsa_var = "cbsa";}
+
+		var zipped = data.map(function(d,i,a){
+		  var o = {};
+
+		  o.id = ms.lookup(d[cbsa_var]);
+		  o.obs = d;
+
+		  if(!!cbsa_name_var && o.id !== null){
+		  	if(o.id.name != o.obs[cbsa_name_var]){
+		  		var message = o.id.name + " != " + o.obs[cbsa_name_var];
+		  		mismatches.push(message);
+		  	}
+		  	else{
+		  		num_matches++;
+		  	}
+		  }
+
+		  if(o.id === null){
+		  	in_data_not_in_metros.push(d);
+		  }
+
+		  return o;
+		}).filter(function(d,i,a){
+			return d.id !== null;
+		});
+
+		zipped.merge_details = {};
+		if(!!cbsa_name_var){
+			zipped.merge_details.mismatches = {summary: "Of the records that matched, " + num_matches + "/" + zipped.length + " matched exactly, based on CBSA name."};
+			zipped.merge_details.mismatches.list = mismatches;
+		}
+		zipped.merge_details.in_data_not_in_metros = in_data_not_in_metros;
+		zipped.merge_details.in_metros_not_in_data = md.missing(data, function(d,i){return d[cbsa_var]});
+
+		return zipped;
+	};
+
+	return md;
+
+}
+
+//v1.0 developed for congressional district poverty, gig economy, and gci summit
+
+var format = {};
+format.rank = function(r){
+	try{
+	    if(r == null){
+	        throw "badInput";
+	    }
+	    else{
+	        
+	        var c = r + "";
+	        var f = +(c.substring(c.length-1)); //take last letter and coerce to an integer
+	         
+	        var e = ["th","st","nd","rd","th","th","th","th","th","th"];
+	 
+	        var m = (+r)%100; 
+	        var r_ = (m>10 && m<20) ? c + "th" : (c + e[f]); //exceptions: X11th, X12th, X13th, X14th
+	    }
+	}
+	catch(e){
+	    var r_ = r+"";
+	}
+
+	return r_; 
+};
+
+//percent change
+format.pct0 = d3.format("+,.0%");
+format.pct1 = d3.format("+,.1%");
+
+//percent change
+format.ch0 = d3.format("+,.0f");
+format.ch1 = d3.format("+,.1f");
+
+//shares
+format.sh0 = d3.format(",.0%");
+format.sh1 = d3.format(",.1%");
+
+//numeric
+format.num0 = d3.format(",.0f");
+format.num1 = d3.format(",.1f");
+format.num2 = d3.format(",.2f");
+format.num3 = d3.format(",.3f");
+
+//USD
+format.doll0 = function(v){return "$" + format.num0(v)};
+format.doll1 = function(v){return "$" + format.num1(v)};
+format.doll2 = function(v){return "$" + format.num2(v)};
+
+format.dolle30 = function(v){return "$" + format.num0(v*1000)};
+
+//id
+format.id = function(v){return v};
+
+//possessive
+format.possessive = function(v){
+	var s = v+"";
+	var last = s.slice(-1).toLowerCase();
+	return last=="s" ? s+"'" : s+"'s";
+};
+
+//wrapper that handles missings/nulls
+format.fn = function(v, fmt){
+	if(format.hasOwnProperty(fmt)){
+		var fn = format[fmt];
+	}
+	else{
+		var fn = format.id;
+	}
+	return v==null ? "N/A" : fn(v);
+};
+
+//similar to fn above, but returns a decorated function instead of a value
+format.fn0 = function(fmt){
+	if(format.hasOwnProperty(fmt)){
+		var fn = format[fmt];
+	}
+	else{
+		var fn = format.id;
+	}
+	return function(v){
+		return v==null ? "N/A" : fn(v);
+	}
+};
+
+//version 1.0 for generic mapping
+//uses the generic code from metro-maps.js (metro monitor 2017)
+
+//DEPENDS: d3, topjson
+function met_map(container){
+  var state_topo = {"type":"Topology","objects":{"states":{"type":"GeometryCollection","bbox":[-179.148909,-14.548699,179.77847,71.365162],"geometries":[{"type":"Polygon","properties":{"STATEFP":"31","STATENS":"01779792","AFFGEOID":"0400000US31","GEOID":"31","STUSPS":"NE","NAME":"Nebraska","LSAD":"00","ALAND":198972429772,"AWATER":1356294775},"arcs":[[0,1,2,3,4,5]]},{"type":"MultiPolygon","properties":{"STATEFP":"53","STATENS":"01779804","AFFGEOID":"0400000US53","GEOID":"53","STUSPS":"WA","NAME":"Washington","LSAD":"00","ALAND":172121026344,"AWATER":12540093192},"arcs":[[[6]],[[7]],[[8]],[[9]],[[10]],[[11]],[[12]],[[13]],[[14]],[[15]],[[16]],[[17]],[[18]],[[19]],[[20]],[[21,22,23]]]},{"type":"Polygon","properties":{"STATEFP":"35","STATENS":"00897535","AFFGEOID":"0400000US35","GEOID":"35","STUSPS":"NM","NAME":"New Mexico","LSAD":"00","ALAND":314161426332,"AWATER":755674004},"arcs":[[24,25,26,27,28]]},{"type":"Polygon","properties":{"STATEFP":"46","STATENS":"01785534","AFFGEOID":"0400000US46","GEOID":"46","STUSPS":"SD","NAME":"South Dakota","LSAD":"00","ALAND":196349394266,"AWATER":3379810671},"arcs":[[29,30,31,32,-1,33]]},{"type":"MultiPolygon","properties":{"STATEFP":"21","STATENS":"01779786","AFFGEOID":"0400000US21","GEOID":"21","STUSPS":"KY","NAME":"Kentucky","LSAD":"00","ALAND":102266253024,"AWATER":2389483091},"arcs":[[[34,35,36,37,38,39,40]],[[41,42]]]},{"type":"MultiPolygon","properties":{"STATEFP":"13","STATENS":"01705317","AFFGEOID":"0400000US13","GEOID":"13","STUSPS":"GA","NAME":"Georgia","LSAD":"00","ALAND":149169759045,"AWATER":4740824950},"arcs":[[[43,44,45,46,47,48]]]},{"type":"Polygon","properties":{"STATEFP":"05","STATENS":"00068085","AFFGEOID":"0400000US05","GEOID":"05","STUSPS":"AR","NAME":"Arkansas","LSAD":"00","ALAND":134769279101,"AWATER":2962525273},"arcs":[[49,50,51,52,53,54]]},{"type":"Polygon","properties":{"STATEFP":"42","STATENS":"01779798","AFFGEOID":"0400000US42","GEOID":"42","STUSPS":"PA","NAME":"Pennsylvania","LSAD":"00","ALAND":115883499352,"AWATER":3396643587},"arcs":[[55,56,57,58,59,60,61]]},{"type":"MultiPolygon","properties":{"STATEFP":"28","STATENS":"01779790","AFFGEOID":"0400000US28","GEOID":"28","STUSPS":"MS","NAME":"Mississippi","LSAD":"00","ALAND":121531969224,"AWATER":3928386321},"arcs":[[[-51,62,63,64,65]]]},{"type":"Polygon","properties":{"STATEFP":"08","STATENS":"01779779","AFFGEOID":"0400000US08","GEOID":"08","STUSPS":"CO","NAME":"Colorado","LSAD":"00","ALAND":268428431772,"AWATER":1175462574},"arcs":[[66,-5,67,68,-25,69]]},{"type":"Polygon","properties":{"STATEFP":"49","STATENS":"01455989","AFFGEOID":"0400000US49","GEOID":"49","STUSPS":"UT","NAME":"Utah","LSAD":"00","ALAND":212885012434,"AWATER":6999936465},"arcs":[[70,71,-70,72,73]]},{"type":"Polygon","properties":{"STATEFP":"47","STATENS":"01325873","AFFGEOID":"0400000US47","GEOID":"47","STUSPS":"TN","NAME":"Tennessee","LSAD":"00","ALAND":106800181941,"AWATER":2352826875},"arcs":[[74,-42,75,-40,76,77,-44,78,-63,-50]]},{"type":"Polygon","properties":{"STATEFP":"56","STATENS":"01779807","AFFGEOID":"0400000US56","GEOID":"56","STUSPS":"WY","NAME":"Wyoming","LSAD":"00","ALAND":251465042238,"AWATER":1861255811},"arcs":[[-34,-6,-67,-72,79,80]]},{"type":"Polygon","properties":{"STATEFP":"18","STATENS":"00448508","AFFGEOID":"0400000US18","GEOID":"18","STUSPS":"IN","NAME":"Indiana","LSAD":"00","ALAND":92790537698,"AWATER":1535887357},"arcs":[[81,82,83,-36,84]]},{"type":"MultiPolygon","properties":{"STATEFP":"02","STATENS":"01785533","AFFGEOID":"0400000US02","GEOID":"02","STUSPS":"AK","NAME":"Alaska","LSAD":"00","ALAND":1477946338495,"AWATER":245391672906},"arcs":[[[85]],[[86]],[[87]],[[88]],[[89]],[[90]],[[91]],[[92]],[[93]],[[94]],[[95]],[[96]],[[97]],[[98]],[[99]],[[100]],[[101]],[[102]],[[103]],[[104]],[[105]],[[106]],[[107]],[[108]],[[109]],[[110]],[[111]],[[112]],[[113]],[[114]],[[115]],[[116]],[[117]],[[118]],[[119]],[[120]],[[121]],[[122]],[[123]],[[124]],[[125]],[[126]],[[127]],[[128]],[[129]],[[130]],[[131]],[[132]],[[133]],[[134]],[[135]],[[136]],[[137]],[[138]],[[139]],[[140]],[[141]],[[142]],[[143]],[[144]],[[145]],[[146]],[[147]],[[148]],[[149]],[[150]],[[151]],[[152]],[[153]],[[154]],[[155]],[[156]],[[157]],[[158]],[[159]],[[160]],[[161]],[[162]],[[163]],[[164]],[[165]],[[166]],[[167]],[[168]],[[169]],[[170]],[[171]],[[172]],[[173]],[[174]],[[175]],[[176]],[[177]],[[178]],[[179]],[[180]],[[181]],[[182]],[[183]],[[184]],[[185]],[[186]],[[187]],[[188]],[[189]],[[190]],[[191]],[[192]],[[193]],[[194]],[[195]],[[196]],[[197]],[[198]],[[199]],[[200]],[[201]],[[202]],[[203]],[[204]],[[205]],[[206]],[[207]],[[208]],[[209]],[[210]],[[211]],[[212]],[[213]],[[214]],[[215]],[[216]],[[217]],[[218]],[[219]],[[220]],[[221]],[[222]],[[223]],[[224]],[[225]],[[226]],[[227]],[[228]],[[229]],[[230]],[[231]],[[232]],[[233]],[[234]],[[235]],[[236]],[[237]],[[238]],[[239]],[[240]],[[241]],[[242]],[[243]],[[244]],[[245]],[[246]],[[247]],[[248]],[[249]],[[250]],[[251]],[[252]],[[253]],[[254]],[[255]],[[256]],[[257]],[[258]],[[259]],[[260]]]},{"type":"Polygon","properties":{"STATEFP":"32","STATENS":"01779793","AFFGEOID":"0400000US32","GEOID":"32","STUSPS":"NV","NAME":"Nevada","LSAD":"00","ALAND":284332114099,"AWATER":2047841189},"arcs":[[261,262,-74,263,264]]},{"type":"Polygon","properties":{"STATEFP":"17","STATENS":"01779784","AFFGEOID":"0400000US17","GEOID":"17","STUSPS":"IL","NAME":"Illinois","LSAD":"00","ALAND":143794894211,"AWATER":6200606440},"arcs":[[265,266,267,-85,-35,268]]},{"type":"Polygon","properties":{"STATEFP":"50","STATENS":"01779802","AFFGEOID":"0400000US50","GEOID":"50","STUSPS":"VT","NAME":"Vermont","LSAD":"00","ALAND":23872224593,"AWATER":1034382802},"arcs":[[269,270,271,272]]},{"type":"Polygon","properties":{"STATEFP":"30","STATENS":"00767982","AFFGEOID":"0400000US30","GEOID":"30","STUSPS":"MT","NAME":"Montana","LSAD":"00","ALAND":376964776680,"AWATER":3868193267},"arcs":[[273,274,-30,-81,275]]},{"type":"Polygon","properties":{"STATEFP":"19","STATENS":"01779785","AFFGEOID":"0400000US19","GEOID":"19","STUSPS":"IA","NAME":"Iowa","LSAD":"00","ALAND":144667481633,"AWATER":1077969087},"arcs":[[276,277,-266,278,-2,-33]]},{"type":"MultiPolygon","properties":{"STATEFP":"45","STATENS":"01779799","AFFGEOID":"0400000US45","GEOID":"45","STUSPS":"SC","NAME":"South Carolina","LSAD":"00","ALAND":77858297564,"AWATER":5074366056},"arcs":[[[279,280,-46]]]},{"type":"Polygon","properties":{"STATEFP":"04","STATENS":"01779777","AFFGEOID":"0400000US04","GEOID":"04","STUSPS":"AZ","NAME":"Arizona","LSAD":"00","ALAND":294204474990,"AWATER":1027559124},"arcs":[[281,-264,-73,-29,282]]},{"type":"MultiPolygon","properties":{"STATEFP":"60","STATENS":"01802701","AFFGEOID":"0400000US60","GEOID":"60","STUSPS":"AS","NAME":"American Samoa","LSAD":"00","ALAND":197749662,"AWATER":1307107436},"arcs":[[[283]],[[284]]]},{"type":"MultiPolygon","properties":{"STATEFP":"39","STATENS":"01085497","AFFGEOID":"0400000US39","GEOID":"39","STUSPS":"OH","NAME":"Ohio","LSAD":"00","ALAND":105831379985,"AWATER":10266305761},"arcs":[[[285,286,-62,287,-37,-84]]]},{"type":"MultiPolygon","properties":{"STATEFP":"01","STATENS":"01779775","AFFGEOID":"0400000US01","GEOID":"01","STUSPS":"AL","NAME":"Alabama","LSAD":"00","ALAND":131173369432,"AWATER":4593984687},"arcs":[[[-79,-49,288,289,-64]]]},{"type":"MultiPolygon","properties":{"STATEFP":"55","STATENS":"01779806","AFFGEOID":"0400000US55","GEOID":"55","STUSPS":"WI","NAME":"Wisconsin","LSAD":"00","ALAND":140269484183,"AWATER":29365442607},"arcs":[[[290]],[[291]],[[292]],[[293]],[[294]],[[295]],[[296]],[[297,298,299,-267,-278,300]]]},{"type":"MultiPolygon","properties":{"STATEFP":"41","STATENS":"01155107","AFFGEOID":"0400000US41","GEOID":"41","STUSPS":"OR","NAME":"Oregon","LSAD":"00","ALAND":248608778890,"AWATER":6190771822},"arcs":[[[-23,301,-262,302,303]]]},{"type":"Polygon","properties":{"STATEFP":"29","STATENS":"01779791","AFFGEOID":"0400000US29","GEOID":"29","STUSPS":"MO","NAME":"Missouri","LSAD":"00","ALAND":178052626882,"AWATER":2487589369},"arcs":[[-279,-269,-41,-76,-43,-75,-55,304,305,-3]]},{"type":"MultiPolygon","properties":{"STATEFP":"37","STATENS":"01027616","AFFGEOID":"0400000US37","GEOID":"37","STUSPS":"NC","NAME":"North Carolina","LSAD":"00","ALAND":125918092834,"AWATER":13472548815},"arcs":[[[306]],[[307]],[[308]],[[309]],[[310]],[[311,312,-280,-45,-78]]]},{"type":"Polygon","properties":{"STATEFP":"40","STATENS":"01102857","AFFGEOID":"0400000US40","GEOID":"40","STUSPS":"OK","NAME":"Oklahoma","LSAD":"00","ALAND":177663043025,"AWATER":3374050771},"arcs":[[-69,313,-305,-54,314,-26]]},{"type":"MultiPolygon","properties":{"STATEFP":"51","STATENS":"01779803","AFFGEOID":"0400000US51","GEOID":"51","STUSPS":"VA","NAME":"Virginia","LSAD":"00","ALAND":102282988386,"AWATER":8503553482},"arcs":[[[315,316]],[[317,318]],[[-39,319,320,321,322,323,-312,-77]]]},{"type":"Polygon","properties":{"STATEFP":"54","STATENS":"01779805","AFFGEOID":"0400000US54","GEOID":"54","STUSPS":"WV","NAME":"West Virginia","LSAD":"00","ALAND":62266577599,"AWATER":489469489},"arcs":[[-288,-61,324,-320,-38]]},{"type":"MultiPolygon","properties":{"STATEFP":"22","STATENS":"01629543","AFFGEOID":"0400000US22","GEOID":"22","STUSPS":"LA","NAME":"Louisiana","LSAD":"00","ALAND":111903220951,"AWATER":23747902252},"arcs":[[[325]],[[-52,-66,326,327]],[[328]]]},{"type":"MultiPolygon","properties":{"STATEFP":"26","STATENS":"01779789","AFFGEOID":"0400000US26","GEOID":"26","STUSPS":"MI","NAME":"Michigan","LSAD":"00","ALAND":146455475554,"AWATER":104031185771},"arcs":[[[329]],[[330]],[[331]],[[332]],[[333]],[[334]],[[335]],[[336]],[[337]],[[338,-286,-83]],[[339]],[[340,-299]],[[341]]]},{"type":"MultiPolygon","properties":{"STATEFP":"25","STATENS":"00606926","AFFGEOID":"0400000US25","GEOID":"25","STUSPS":"MA","NAME":"Massachusetts","LSAD":"00","ALAND":20205425910,"AWATER":7130316321},"arcs":[[[342]],[[343]],[[344]],[[-272,345,346,347,348,349,350,351]]]},{"type":"Polygon","properties":{"STATEFP":"16","STATENS":"01779783","AFFGEOID":"0400000US16","GEOID":"16","STUSPS":"ID","NAME":"Idaho","LSAD":"00","ALAND":214042831252,"AWATER":2397619893},"arcs":[[-22,352,-276,-80,-71,-263,-302]]},{"type":"MultiPolygon","properties":{"STATEFP":"72","STATENS":"01779808","AFFGEOID":"0400000US72","GEOID":"72","STUSPS":"PR","NAME":"Puerto Rico","LSAD":"00","ALAND":8867867645,"AWATER":4923406204},"arcs":[[[353]],[[354]],[[355]],[[356]]]},{"type":"MultiPolygon","properties":{"STATEFP":"12","STATENS":"00294478","AFFGEOID":"0400000US12","GEOID":"12","STUSPS":"FL","NAME":"Florida","LSAD":"00","ALAND":138904831800,"AWATER":31406193924},"arcs":[[[357]],[[358]],[[359]],[[360]],[[361]],[[-48,362,-289]]]},{"type":"Polygon","properties":{"STATEFP":"20","STATENS":"00481813","AFFGEOID":"0400000US20","GEOID":"20","STUSPS":"KS","NAME":"Kansas","LSAD":"00","ALAND":211752682810,"AWATER":1346896791},"arcs":[[-4,-306,-314,-68]]},{"type":"MultiPolygon","properties":{"STATEFP":"33","STATENS":"01779794","AFFGEOID":"0400000US33","GEOID":"33","STUSPS":"NH","NAME":"New Hampshire","LSAD":"00","ALAND":23188026108,"AWATER":1026190438},"arcs":[[[363,364,365,-346,-271]]]},{"type":"MultiPolygon","properties":{"STATEFP":"10","STATENS":"01779781","AFFGEOID":"0400000US10","GEOID":"10","STUSPS":"DE","NAME":"Delaware","LSAD":"00","ALAND":5047105127,"AWATER":1398742998},"arcs":[[[366,367]],[[-59,368,369,370]]]},{"type":"MultiPolygon","properties":{"STATEFP":"48","STATENS":"01779801","AFFGEOID":"0400000US48","GEOID":"48","STUSPS":"TX","NAME":"Texas","LSAD":"00","ALAND":676634395761,"AWATER":19027462392},"arcs":[[[371]],[[372]],[[373]],[[374]],[[-315,-53,-328,375,-27]]]},{"type":"MultiPolygon","properties":{"STATEFP":"27","STATENS":"00662849","AFFGEOID":"0400000US27","GEOID":"27","STUSPS":"MN","NAME":"Minnesota","LSAD":"00","ALAND":206236191895,"AWATER":18924724649},"arcs":[[[376,-301,-277,-32,377]]]},{"type":"MultiPolygon","properties":{"STATEFP":"78","STATENS":"01802710","AFFGEOID":"0400000US78","GEOID":"78","STUSPS":"VI","NAME":"United States Virgin Islands","LSAD":"00","ALAND":347962916,"AWATER":1550265400},"arcs":[[[378]],[[379]]]},{"type":"MultiPolygon","properties":{"STATEFP":"09","STATENS":"01779780","AFFGEOID":"0400000US09","GEOID":"09","STUSPS":"CT","NAME":"Connecticut","LSAD":"00","ALAND":12542452026,"AWATER":1814924099},"arcs":[[[-351,380,381,382]]]},{"type":"Polygon","properties":{"STATEFP":"34","STATENS":"01779795","AFFGEOID":"0400000US34","GEOID":"34","STUSPS":"NJ","NAME":"New Jersey","LSAD":"00","ALAND":19048075783,"AWATER":3543447118},"arcs":[[383,-369,-58,384,385,386,387,-367]]},{"type":"Polygon","properties":{"STATEFP":"38","STATENS":"01779797","AFFGEOID":"0400000US38","GEOID":"38","STUSPS":"ND","NAME":"North Dakota","LSAD":"00","ALAND":178711991307,"AWATER":4398999691},"arcs":[[388,-378,-31,-275]]},{"type":"MultiPolygon","properties":{"STATEFP":"24","STATENS":"01714934","AFFGEOID":"0400000US24","GEOID":"24","STUSPS":"MD","NAME":"Maryland","LSAD":"00","ALAND":25147417568,"AWATER":6983598596},"arcs":[[[-318,389]],[[390]],[[391]],[[-60,-371,392,-316,393,-323,394,-321,-325]]]},{"type":"MultiPolygon","properties":{"STATEFP":"23","STATENS":"01779787","AFFGEOID":"0400000US23","GEOID":"23","STUSPS":"ME","NAME":"Maine","LSAD":"00","ALAND":79885774936,"AWATER":11748561064},"arcs":[[[395]],[[396]],[[397]],[[398]],[[399]],[[400]],[[401]],[[-365,402]],[[403]],[[404]]]},{"type":"MultiPolygon","properties":{"STATEFP":"15","STATENS":"01779782","AFFGEOID":"0400000US15","GEOID":"15","STUSPS":"HI","NAME":"Hawaii","LSAD":"00","ALAND":16634133472,"AWATER":11777724416},"arcs":[[[405]],[[406]],[[407]],[[408]],[[409]],[[410]],[[411]],[[412]]]},{"type":"MultiPolygon","properties":{"STATEFP":"66","STATENS":"01802705","AFFGEOID":"0400000US66","GEOID":"66","STUSPS":"GU","NAME":"Guam","LSAD":"00","ALAND":543558314,"AWATER":934345914},"arcs":[[[413]]]},{"type":"MultiPolygon","properties":{"STATEFP":"69","STATENS":"01779809","AFFGEOID":"0400000US69","GEOID":"69","STUSPS":"MP","NAME":"Commonwealth of the Northern Mariana Islands","LSAD":"00","ALAND":472262566,"AWATER":4644320317},"arcs":[[[414]],[[415]],[[416]],[[417]]]},{"type":"MultiPolygon","properties":{"STATEFP":"44","STATENS":"01219835","AFFGEOID":"0400000US44","GEOID":"44","STUSPS":"RI","NAME":"Rhode Island","LSAD":"00","ALAND":2677759613,"AWATER":1323474145},"arcs":[[[-348,418]],[[419]],[[420]],[[-381,-350,421]]]},{"type":"MultiPolygon","properties":{"STATEFP":"06","STATENS":"01779778","AFFGEOID":"0400000US06","GEOID":"06","STUSPS":"CA","NAME":"California","LSAD":"00","ALAND":403488955894,"AWATER":20477992907},"arcs":[[[422]],[[423]],[[424]],[[425]],[[426]],[[427]],[[-303,-265,-282,428]]]},{"type":"MultiPolygon","properties":{"STATEFP":"36","STATENS":"01779796","AFFGEOID":"0400000US36","GEOID":"36","STUSPS":"NY","NAME":"New York","LSAD":"00","ALAND":122054140553,"AWATER":19242497698},"arcs":[[[429]],[[-387,430]],[[431]],[[432,-273,-352,-383,433,-385,-57]]]},{"type":"Polygon","properties":{"STATEFP":"11","STATENS":"01702382","AFFGEOID":"0400000US11","GEOID":"11","STUSPS":"DC","NAME":"District of Columbia","LSAD":"00","ALAND":158364990,"AWATER":18633403},"arcs":[[-395,-322]]}]}},"arcs":[[[20922,66984],[257,0],[216,-1],[141,0],[384,0],[365,-1],[185,0],[8,-60],[59,-85],[36,-62],[26,-66],[23,6],[18,56],[3,48],[13,12],[40,-31],[23,19],[45,-14],[7,22],[31,2],[24,-25],[3,-42],[22,-44],[41,-13],[5,-47],[16,16],[28,-35],[1,-37],[32,-33],[-6,-31],[30,-131],[12,18],[16,-44],[16,10]],[[23042,66391],[13,-8],[5,-44],[-9,-41],[1,-86],[11,-31],[13,-94],[-10,-17],[3,-56],[22,-66],[-1,-76],[13,-11],[-1,-48],[28,-26],[-9,-82],[26,-131],[-14,-110],[6,-55],[-4,-59],[5,-73],[28,-25],[-4,-47],[20,-10],[1,-115],[-7,-18],[20,-38],[-12,-141],[24,-24],[-12,-23],[6,-77],[-5,-41],[19,-197],[-10,-23],[3,-103],[-14,-51],[13,-64],[14,-21],[7,-86]],[[23231,64173],[2,-69],[27,-10],[-9,-56],[19,-157],[-9,-17],[29,-33],[0,-34],[21,-23],[1,-70],[23,-83],[-6,-85],[29,-44]],[[23358,63492],[-321,1],[-253,1],[-229,1],[-139,0],[-204,-1],[-269,0],[-261,1],[-202,0]],[[21480,63495],[0,1163],[-265,1],[-293,-2]],[[20922,64657],[0,2327]],[[15775,72057],[4,105],[10,72],[12,-52],[2,-75],[15,-15],[-29,-44],[-14,9]],[[15740,73442],[0,40],[21,-41],[-21,1]],[[15735,71959],[23,-44],[-4,-23],[-19,67]],[[15721,73655],[2,20],[27,-91],[2,-35],[-31,106]],[[15719,71881],[7,27],[15,-18],[-8,-28],[-14,19]],[[15716,73484],[8,28],[11,-52],[-14,-28],[-5,52]],[[15715,71820],[13,39],[6,-54],[-19,15]],[[15707,73068],[27,148],[3,55],[15,11],[3,-63],[26,-55],[-7,-32],[-19,18],[-18,-28],[4,-55],[12,-24],[14,-103],[5,-118],[8,28],[-4,66],[41,-73],[7,-94],[-8,-57],[-14,12],[-13,87],[-19,-26],[1,30],[-18,44],[2,93],[-4,53],[-18,-2],[-26,85]],[[15690,73470],[17,-11],[-10,-37],[-7,48]],[[15658,73359],[8,85],[15,6],[-2,-66],[17,-91],[-37,43],[-1,23]],[[15639,73490],[27,-3],[-7,-46],[-20,49]],[[15635,73536],[25,93],[17,4],[38,-59],[-25,-70],[-14,68],[-7,-8],[13,-58],[-6,-18],[-29,7],[-12,41]],[[15624,73618],[17,26],[1,-33],[-18,7]],[[15618,73969],[19,-29],[-17,-6],[-2,35]],[[15587,73496],[6,31],[21,1],[1,-28],[30,-73],[-3,-76],[-8,-12],[-28,44],[-10,90],[-9,23]],[[17306,73966],[-1,-731],[-1,-286],[0,-1978],[-5,-93],[20,-62],[6,-108],[11,-34],[-10,-83],[12,-121]],[[17338,70470],[-83,3],[-218,3],[-179,1],[-97,-2],[-38,-78],[-37,8],[-74,-36],[-13,20],[-15,-23],[-13,-57],[-82,-38],[-57,-73],[-12,-42],[-53,-31],[-29,1],[-15,45],[-21,9],[-15,-35],[-46,-52],[-11,-33],[-14,15],[-39,-9],[-13,-45],[-15,-4],[-9,76],[-34,39],[-17,-14],[-37,39],[-56,-38],[-21,15],[-16,-16],[-11,-45],[-54,-82],[-23,-7],[-18,-35],[-23,1],[-14,32],[-26,3],[-56,46],[-25,45],[-1,144],[-8,34],[3,67],[-8,109],[-25,143],[-59,118],[-14,4],[-32,-51],[-25,2],[-17,41],[1,55],[-14,47],[-19,-12]],[[15491,70777],[-34,9],[-15,40],[-20,-20],[-23,-52],[-9,7],[-21,74],[-10,8],[-15,-52],[5,134],[-3,304],[12,-76],[-2,-100],[7,-145],[15,8],[-11,82],[1,56],[13,-11],[13,31],[0,42],[-18,100],[12,49],[24,31],[-16,53],[-31,-52],[-27,47],[-3,105],[-9,80],[14,-44],[29,63],[41,38],[-30,17],[-20,29],[-3,42],[-26,14],[-8,-24],[6,-88],[-13,-21],[0,193],[-17,226],[-12,22],[-16,115],[-8,206],[-18,191],[-19,89],[-37,81],[-12,84],[-4,149],[-12,90],[11,50],[9,138],[-20,58],[27,8],[19,-24],[52,-96],[32,-35],[4,11],[33,-51],[23,-50],[21,-15],[55,-11],[19,14],[33,-38],[11,19],[35,-38],[49,-3],[24,58],[27,-53],[8,-45],[34,15],[-4,-32],[25,-76],[3,53],[-17,35],[16,67],[20,10],[3,-31],[-14,-34],[18,-61],[-4,43],[14,36],[8,-100],[-16,3],[13,-55],[12,-96],[-3,-30],[-27,-69],[-9,-93],[2,-38],[-16,-4],[11,134],[-6,43],[-3,-60],[-12,-24],[-4,-91],[-34,-123],[-28,-143],[-16,-123],[39,-2],[30,40],[6,41],[-34,-53],[-3,-20],[-27,35],[25,140],[31,127],[47,57],[0,55],[18,95],[22,67],[9,1],[-6,73],[20,-9],[10,-196],[-18,2],[14,-60],[-4,-49],[11,-79],[-18,-32],[13,-54],[-10,-48],[-12,-166],[7,-48],[-10,-36],[-31,35],[19,114],[-29,-52],[-5,-91],[8,-45],[-14,-62],[-17,89],[12,66],[0,71],[-8,50],[0,-87],[-10,-23],[-4,-74],[8,-43],[-7,-45],[9,-65],[5,75],[8,-61],[30,-28],[24,85],[8,79],[14,74],[20,-53],[3,67],[29,34],[-10,155],[-16,110],[21,38],[-20,36],[12,104],[-6,90],[15,47],[9,119],[22,25],[3,58],[-35,90],[-7,43],[3,55],[-9,57],[-17,-2],[-7,-48],[10,-66],[17,-51],[1,-35],[-25,85],[-13,4],[-7,58],[2,77],[18,23],[17,-21],[0,84],[-36,60],[-7,53],[-27,-15],[-3,91],[-10,7],[29,34],[4,-64],[7,39],[6,-38],[19,6],[-10,108],[10,-9],[12,49],[-23,76],[-3,61],[8,29],[-12,40],[-20,-16],[-13,-54],[-6,25],[8,55],[-17,20],[-3,52],[-21,54],[12,21],[-19,52],[17,54],[184,0],[96,-6],[146,5],[237,-1],[256,-1],[173,1],[179,0],[164,0],[160,-2]],[[19531,59999],[291,1],[313,0],[2,-9],[244,4],[153,0],[477,3],[204,2]],[[21215,60000],[0,-582]],[[21215,59418],[-11,0],[0,-518],[-1,-2388],[-6,-1168],[1,-1163],[-226,0],[-335,0],[-292,2],[-138,-2],[2,-94],[-9,-25],[11,-82],[21,-52]],[[20232,53928],[-214,0],[-254,0],[0,-524],[-234,-1]],[[19530,53403],[1,1682],[0,2540],[0,470],[0,1904]],[[20921,69308],[5,5],[0,434],[-2,665]],[[20924,70412],[278,0],[159,0],[222,-1],[195,-1],[191,-1],[335,-3],[285,-5],[269,0],[151,-1]],[[23009,70400],[-5,-127],[-20,-92],[-53,-119],[-4,-45],[25,-99],[10,-75],[14,-54],[18,-3],[35,-59],[10,-69],[1,-674],[-1,-1418]],[[23039,67566],[-40,0],[1,-77],[20,-46],[-2,-110],[-14,-6],[6,-83],[23,-2],[3,-84],[8,-34],[-7,-66],[-13,-16],[2,-106],[-11,-40],[4,-40],[-11,-70],[-19,-72],[1,-73],[32,-88],[11,-86],[-4,-51],[13,-25]],[[20922,66984],[-1,2324]],[[25079,59979],[-14,64],[8,60],[35,143],[27,19],[35,-46],[21,-52],[33,-36],[25,-55],[18,10],[9,91],[-25,153],[11,120],[19,45],[13,-26],[22,58],[56,23],[3,61],[-18,57],[-7,105],[27,87],[10,70]],[[25387,60930],[23,-28],[11,38],[-9,97],[9,39],[21,-56],[41,31],[3,-86],[16,3],[6,64],[-10,40],[8,60],[25,-77],[17,41],[19,-7],[45,-101],[17,-13],[9,-61],[15,19],[11,122],[32,35],[17,59],[17,2],[22,-112],[19,21],[-4,-63],[18,12],[3,63],[22,18],[-2,123],[18,10],[5,42],[30,78],[-6,48],[21,-67],[1,-94],[25,-53],[20,2],[19,-63],[2,36],[22,18],[13,94],[-1,87],[33,149],[15,-23],[23,68],[9,111],[10,32],[24,21],[24,111],[-11,169],[12,33],[42,0],[19,-57],[16,16],[43,90],[24,17],[22,-11],[-4,54],[11,39],[-25,65],[12,79],[-17,75],[21,62]],[[26280,62451],[19,47],[34,-81],[52,44],[4,-65],[35,-61],[20,-132],[6,-101],[39,-41],[26,19],[33,-35],[21,-72],[3,-43],[29,-35],[12,60],[29,27],[15,-32],[28,-20],[21,-72],[15,37],[27,-4],[30,115],[39,38],[7,-33],[6,-154],[13,-38],[21,-6],[31,-97],[6,-61]],[[26901,61655],[-1,-90],[6,-94],[-10,-34],[-7,-111],[24,-80],[22,-130],[-7,-37],[21,-48],[2,-48],[21,-79],[12,-115],[45,-98],[0,-47],[46,-18]],[[27075,60626],[-107,-315],[-41,-47],[-62,-124],[0,-88],[-41,-78],[-3,-103],[-35,-48],[-19,8],[-17,-83],[0,-47],[-17,-4],[-53,-62],[-30,-19],[-43,-55],[-8,-26]],[[26599,59535],[-4,-21],[-83,8],[-154,8],[-84,10],[-98,24],[-82,-12],[-95,8],[-140,31],[-72,4],[-229,-13],[-123,-9],[1,35],[-61,17],[10,-160],[-5,-50],[-78,3],[-270,8],[-32,-9]],[[25000,59417],[11,136],[14,19],[19,-79],[9,6],[19,112],[-12,58],[23,70],[-16,37],[11,46],[10,137],[-9,20]],[[24981,59415],[-15,0]],[[24966,59415],[-9,58],[7,38],[17,-10],[0,-86]],[[26062,57654],[185,4],[172,0]],[[26419,57658],[160,0],[178,15]],[[26757,57673],[-1,-58],[-26,-83],[-10,-3],[-9,-70],[-14,-32],[-8,-105],[34,-102],[15,-4],[30,-124],[19,-34],[28,17],[12,-37],[7,-104],[24,-116],[8,-135],[11,-22],[23,-117],[11,-100],[72,-168],[12,-48],[16,-150],[42,-78],[17,-90],[20,-52],[-8,-39],[7,-78],[24,-79],[-6,-25],[24,-42],[7,-86],[70,-157],[-3,-79],[6,-67],[17,-58],[4,-104],[-4,-131],[15,-61],[18,-17],[32,-115],[-5,-47],[23,-158],[-10,-49],[11,-70],[0,-79],[14,-32],[17,13],[34,-78]],[[27377,54220],[10,-54],[-22,-57],[-18,-95],[-20,23],[8,-78],[-27,-102],[1,-106],[-9,-71],[-26,-17],[-1,-31],[23,-16],[-33,-171],[7,-128],[-39,-160],[-3,-121],[-20,-37],[18,-33],[6,-62],[-12,-109],[1,-117]],[[27221,52678],[-13,19],[-33,-11],[-43,69],[-55,53],[-22,-85],[-3,-108],[11,-72],[-2,-138],[-8,-130],[-34,-5],[-11,76],[2,71],[-11,61],[7,36],[-98,26],[-260,64],[-209,45],[-171,31],[-14,49],[-6,153],[-18,135]],[[26230,53017],[-10,125],[-18,67],[-4,130],[21,307],[-5,90],[-19,89],[-4,191],[17,94],[10,171],[-5,53],[48,150],[-31,71],[6,105],[-6,119],[-29,152],[-5,149],[-17,103],[-33,723],[-47,984],[-25,491],[-12,273]],[[24912,58837],[21,-87],[-3,-50],[-13,27],[-16,-48],[18,-55],[-21,-15],[-9,-53],[-38,-24],[6,-92],[18,12],[2,-42],[-28,-51],[11,-89],[-20,54],[-14,-14],[6,-97],[-10,-71],[-4,73],[-11,12],[-20,-107],[18,31],[11,-32],[-9,-92],[-14,-49],[22,-41],[-10,-46],[14,-61],[-30,-21],[-10,-106],[-23,18],[-5,-54]],[[24751,57667],[17,-52],[0,-51],[-46,-88],[-6,59],[-13,-24],[9,-133],[-20,-18],[2,81],[-9,-20],[0,-96],[22,-7],[-14,-76],[-6,60],[-14,-13],[1,-64],[11,-91],[-12,-62],[7,-64],[-26,-63],[-27,-10],[4,-70],[-26,-46],[-4,-71],[-16,45],[-8,-35],[13,-38],[20,1],[-2,-45],[-24,25],[-10,-66],[21,-31],[-5,-61],[-28,-13],[-28,-51],[22,-58],[-17,-68],[7,-60],[16,-36],[-11,-24],[-30,22],[-3,-65],[32,-45],[-15,-36],[-21,58],[-16,-53],[24,-72],[-27,-41],[13,-77],[-15,-69],[29,-10],[-22,-31],[27,-12],[-8,-109],[14,-92],[1,-88],[-26,-4],[-5,-37],[21,-53],[-12,-70]],[[24512,55349],[-93,3],[-374,11],[-245,4],[-89,-1]],[[23711,55366],[0,621],[-11,27],[-76,-38],[-33,71],[-3,40]],[[23588,56087],[7,1169],[8,873],[-52,1288]],[[23551,59417],[309,0],[276,-1],[235,1],[199,-1],[225,-1],[2,-85],[22,-49],[1,-92],[-22,-88],[-22,-50],[-4,-53],[-16,-29],[-24,-138],[180,6]],[[27479,65793],[52,69],[49,91],[16,67],[10,-32],[53,102],[31,44]],[[27690,66134],[0,-316],[162,1],[294,1],[383,2],[387,-3],[19,-52],[10,-108],[24,11],[26,-85],[-7,-34],[14,-19],[2,-157],[-8,-12],[15,-65],[11,-84],[19,-5],[6,-43],[28,-20],[14,11],[12,-85]],[[29101,65072],[-16,-14],[-24,-80],[-12,-112],[-28,-84],[4,-27],[-16,-53],[-29,-57],[-1,-23],[22,-113],[-22,-117],[-10,5],[-9,-100],[2,-135],[26,-9],[9,-30],[4,-147],[25,-24],[7,-67],[20,-50],[7,-52],[20,-42],[14,-62],[-26,-39],[-14,-53],[-19,-16],[-55,-127],[-3,-82],[-36,-46],[-17,0],[-23,-55]],[[28901,63261],[-24,37],[-33,0],[-23,-36],[-24,-94]],[[28797,63168],[-259,-1],[-322,1],[-128,1],[-199,0],[-120,-2]],[[27769,63167],[-290,0],[0,1068]],[[27479,64235],[0,1558]],[[24751,57667],[358,-1],[230,1]],[[25339,57667],[12,-85],[16,-36],[-16,-499],[-27,-865],[-22,-753],[-39,-1372],[15,-1196],[6,-579]],[[25284,52282],[-23,-59],[-30,58],[-45,-24],[-34,89],[4,-42],[-40,-1],[-81,-98],[-5,82],[-16,-24],[10,-58],[-25,-57],[-7,-77],[-22,-8]],[[24970,52063],[-13,-1],[-21,129],[5,56],[-16,78],[1,53],[-24,74],[-23,170],[5,120],[17,105],[11,175],[-324,-6],[-207,-1],[20,47],[-17,90],[10,90],[-13,86],[33,9],[3,48],[-19,96],[10,37],[7,-71],[12,30],[-11,56],[-1,101],[30,45],[-21,19],[-4,69],[27,-29],[1,106],[9,43],[25,-3],[-3,31],[-22,-12],[7,104],[20,13],[24,65],[-2,50],[32,65],[-7,36],[27,133],[-16,22],[2,-66],[-31,10],[0,74],[33,52],[17,-36],[2,100],[18,50],[-26,34],[11,76],[-36,29],[1,105],[15,-68],[12,21],[-24,56],[21,62],[-31,-29],[-10,65],[26,101],[-27,18],[3,116],[21,53],[-4,102],[-14,4],[-7,-92],[-15,25],[13,96]],[[19530,64656],[279,2],[292,2],[152,-2],[66,-5],[268,1],[211,4],[124,-1]],[[21480,63495],[2,-1552],[0,-1151],[0,-800]],[[21482,59992],[-267,8]],[[19531,59999],[1,619],[0,737],[-5,129],[0,518],[2,473],[1,2181]],[[18139,65812],[42,-6],[179,9],[150,5],[144,1],[51,-3],[269,3]],[[18974,65821],[0,-1168],[152,-3],[146,3],[258,3]],[[19531,59999],[-125,0],[-272,-1],[-8,7],[-380,-4],[-208,0],[-223,-1],[-178,0]],[[18137,60000],[-1,690],[1,269],[0,787],[1,1164],[0,1045],[1,435],[1,1296],[-1,126]],[[24912,58837],[7,0],[7,95],[24,52],[-3,51],[-28,76],[33,4],[15,36],[-22,45],[1,36],[22,-1],[6,40],[-10,71],[2,73]],[[24981,59415],[6,-47],[13,49]],[[26599,59535],[116,-8],[268,2],[102,-1],[3,25],[77,-5],[-9,-28]],[[27156,59520],[-8,-72],[3,-67],[-13,-64],[10,-91],[-24,31],[-32,-70],[-35,-211],[-27,-16],[-5,50],[-21,9],[-52,-86],[-14,-88],[-27,-63],[-15,16],[6,75],[-12,39],[-40,-76],[-13,-91],[-8,32],[-17,-29],[-1,-97],[-21,-78],[-24,18],[-45,-73],[-16,-80],[-11,9],[-31,-63],[-14,-57],[-76,-1],[-31,-52],[-8,-48],[-23,-44],[-13,-105],[4,-61],[-20,-56],[-29,-4],[-6,29],[-19,-50],[-9,-277]],[[26062,57654],[-221,8],[-129,1],[-158,12],[-216,6],[1,-14]],[[18974,65821],[0,840],[-1,2038]],[[18973,68699],[-2,176],[0,438],[76,2],[22,-13],[141,5],[25,9],[100,-3],[180,5],[6,-7],[302,2],[180,0],[74,-6],[323,-3],[4,8],[249,0],[268,-4]],[[25527,65480],[43,-91],[23,-11],[35,17],[67,90],[27,56]],[[25722,65541],[194,0],[229,-1],[139,0],[0,-74]],[[26284,65466],[1,-1042],[0,-571],[-3,-578],[-2,-824]],[[25387,60930],[-20,112],[24,-2],[-7,73],[8,85],[-9,22],[21,22],[10,104],[-15,62],[17,104],[20,-28],[13,102],[17,54],[0,81],[27,42],[-6,31],[16,54],[3,87],[22,40],[6,109],[-14,80],[10,113],[-18,33],[2,84],[-23,63],[-1,29],[23,96],[-9,108],[21,45],[0,621],[2,708],[-1,939],[1,477]],[[402,77118],[18,40],[35,-19],[20,40],[43,26],[23,41],[3,133],[30,-2],[9,-24],[-3,-54],[-18,-37],[5,-54],[-9,-91],[-30,3],[-7,-35],[-24,63],[-22,-9],[-17,-31],[-29,8],[-17,-54],[-10,56]],[[257,77317],[9,35],[19,12],[48,-4],[14,-45],[-6,-22],[18,-33],[21,17],[14,-21],[33,34],[-10,-44],[-17,-2],[-29,-30],[-6,-78],[8,-23],[-22,-15],[-11,-50],[8,-56],[-10,-3],[-5,52],[-36,22],[-8,57],[41,11],[1,63],[-27,9],[-11,44],[-23,28],[-13,42]],[[129,76996],[12,15],[21,-15],[-2,-22],[-28,5],[-3,17]],[[80,76965],[34,-23],[-22,-18],[-12,41]],[[78,77209],[3,40],[18,17],[13,-29],[-1,-63],[-17,-10],[-16,45]],[[41,76744],[21,-2],[5,-52],[-14,8],[-12,46]],[[0,76609],[10,36],[12,-52],[-17,-49],[-5,65]],[[6963,82910],[5,26],[33,14],[0,-36],[-29,10],[-9,-14]],[[6905,82746],[14,51],[26,36],[35,3],[20,-78],[42,12],[-3,-36],[-19,-31],[-43,-5],[-15,10],[-20,-19],[-30,17],[-7,40]],[[6785,82617],[30,111],[36,70],[24,17],[20,-17],[2,-38],[-21,-47],[-47,-53],[-25,-73],[-19,30]],[[6785,83684],[16,12],[11,39],[-6,36],[15,39],[10,61],[28,38],[2,38],[28,8],[23,62],[22,9],[8,25],[70,-16],[-1,-123],[31,-35],[-1,36],[20,48],[-21,54],[4,20],[57,-10],[-4,33],[-52,42],[-16,-5],[-3,125],[29,65],[32,24],[26,-5],[-1,-44],[14,-13],[11,-58],[-5,-70],[8,-13],[9,75],[14,-8],[-11,87],[50,-48],[-8,56],[-35,33],[-22,57],[15,50],[23,-28],[39,-71],[7,15],[37,-66],[2,30],[-60,139],[15,12],[37,-56],[17,14],[11,-18],[24,4],[39,-52],[-20,-36],[-10,-52],[-4,-63],[20,-45],[-1,104],[17,39],[16,-47],[7,60],[33,63],[13,-22],[29,78],[4,-41],[27,-25],[-11,-37],[-24,23],[-2,-37],[16,-20],[-6,-44],[27,14],[-17,-64],[-24,-7],[-6,-53],[1,-88],[26,49],[7,-11],[-28,-91],[12,-7],[23,69],[8,-40],[45,10],[-1,-42],[-38,-87],[-13,-110],[-27,17],[-14,36],[-8,-40],[-19,15],[-11,34],[-26,3],[-6,30],[-50,-3],[5,-40],[23,5],[16,-16],[10,-42],[27,-18],[7,-26],[-9,-75],[-17,-46],[-14,38],[-18,-54],[-8,36],[-46,50],[-46,-34],[20,-27],[23,16],[21,-49],[-37,-54],[-36,10],[11,-74],[28,37],[-2,-24],[35,21],[21,-43],[-12,-28],[-31,-3],[-28,-38],[-23,-13],[3,-46],[-11,-43],[-30,5],[7,88],[-22,-23],[11,43],[-5,25],[27,76],[-3,30],[-23,-22],[-2,-31],[-20,-65],[-18,20],[5,-74],[-22,32],[-26,-8],[-9,-34],[30,-1],[-4,-41],[19,-24],[-17,-78],[-28,9],[3,-28],[-21,-42],[2,-25],[22,19],[-29,-50],[-4,19],[-27,-68],[-2,-26],[-20,-28],[-17,23],[-31,-20],[23,120],[16,13],[7,42],[30,35],[10,33],[-11,24],[-25,-24],[0,48],[27,107],[34,54],[-16,28],[-4,-35],[-17,-13],[-27,-72],[-27,-100],[-12,-2],[-13,-57],[-13,-12],[-5,-40],[-21,-38],[1,52],[-8,48],[-20,44],[-34,30],[2,99],[-4,124],[-17,86],[-26,11],[-18,31],[2,37],[-15,27]],[[6518,81908],[21,29],[12,62],[21,-6],[-7,-50],[6,-71],[-6,-33],[-39,14],[-8,55]],[[6240,82158],[15,10],[8,61],[10,-58],[-13,-10],[3,-50],[-23,47]],[[6225,82310],[3,65],[12,-37],[-6,-53],[-9,25]],[[6079,82741],[17,50],[53,0],[17,-38],[-28,5],[-9,-28],[-50,11]],[[5919,82518],[20,24],[11,-49],[-10,-18],[-21,43]],[[5642,81913],[7,60],[20,18],[15,-21],[-4,-46],[-24,24],[-6,-48],[-8,13]],[[5562,81931],[11,41],[14,-25],[-6,-36],[-19,20]],[[5518,80835],[17,32],[21,0],[-8,-58],[-21,-11],[-9,37]],[[5512,81874],[14,26],[11,-48],[-25,22]],[[5502,81787],[8,63],[13,-8],[-21,-55]],[[5480,80974],[8,31],[21,19],[-6,-44],[19,-55],[-27,-42],[-4,48],[12,-7],[-8,72],[-15,-22]],[[5445,80735],[11,10],[15,-39],[-5,-39],[-18,1],[-3,67]],[[5431,81095],[31,21],[-12,82],[21,-3],[5,-84],[-11,-63],[-12,-2],[2,-42],[-23,2],[15,55],[-16,34]],[[5384,80737],[24,30],[12,-9],[-21,-47],[-15,26]],[[5304,81339],[14,11],[6,-42],[-20,31]],[[5263,80839],[8,41],[40,110],[-7,40],[-22,40],[9,22],[22,-33],[-12,48],[3,30],[26,-66],[5,59],[-10,13],[2,45],[23,-39],[-5,52],[10,-9],[11,94],[11,-24],[-3,-47],[-11,3],[-2,-100],[9,-16],[4,53],[13,5],[-4,-60],[-13,-38],[-17,39],[1,-72],[-20,10],[4,-34],[-33,-69],[-4,-45],[-18,-20],[-1,-62],[-9,-17],[-10,47]],[[5246,85246],[12,31],[2,-65],[-14,34]],[[5238,81446],[24,45],[17,-29],[18,10],[-5,-82],[-22,41],[-24,-22],[-8,37]],[[5212,85245],[11,70],[5,-52],[-16,-18]],[[5188,81324],[7,33],[23,-12],[24,24],[7,-65],[-8,-71],[-14,52],[-24,3],[-15,36]],[[5094,81325],[18,69],[20,31],[18,-12],[5,-46],[-6,-65],[28,104],[14,-39],[-17,-60],[14,-70],[-11,-19],[20,-7],[3,-54],[-11,-53],[-4,30],[-21,-11],[-19,53],[-21,2],[-10,-72],[-16,85],[4,108],[-8,26]],[[5074,81995],[19,14],[14,52],[5,-60],[-38,-6]],[[5033,85131],[7,127],[39,53],[14,-1],[52,84],[-47,-218],[-9,-59],[-23,-33],[-31,-5],[-2,52]],[[4933,81185],[12,27],[20,-7],[-5,-70],[-27,50]],[[4886,81035],[3,46],[15,-34],[-18,-12]],[[4863,81195],[11,40],[33,18],[-7,-64],[-19,-12],[-18,18]],[[4805,81118],[21,44],[28,-49],[25,-17],[1,-23],[-29,-60],[-17,33],[12,68],[-7,25],[-10,-73],[-24,52]],[[4656,80869],[11,6],[21,57],[17,-8],[8,-42],[-1,-69],[-22,-62],[-31,64],[-3,54]],[[4643,80268],[23,-7],[3,-46],[-11,4],[-15,49]],[[4577,90939],[27,47],[18,13],[22,-14],[13,18],[17,-14],[8,-39],[-3,-58],[-15,20],[-11,-21],[-49,0],[-27,48]],[[4539,80282],[7,62],[9,15],[51,-42],[16,-45],[4,-44],[-52,26],[-15,-29],[-20,57]],[[4451,81436],[16,7],[-6,-32],[-10,25]],[[3958,89864],[6,19],[22,-21],[7,-61],[-17,-9],[-15,21],[-3,51]],[[3957,80459],[40,75],[25,18],[20,90],[24,135],[1,44],[33,50],[26,-42],[29,25],[30,61],[13,-12],[34,46],[18,43],[32,19],[33,-14],[34,13],[-1,-16],[32,-100],[9,-66],[-2,-59],[9,-68],[14,-41],[44,20],[17,-44],[10,-80],[-25,7],[11,35],[-47,-1],[-11,56],[-12,7],[-16,-35],[0,-74],[-22,-4],[-23,-47],[-63,28],[-80,-20],[-30,-28],[-32,-60],[-3,-70],[-33,-73],[-55,-37],[-40,15],[-14,21],[-25,119],[-4,64]],[[3934,87743],[7,47],[31,-45],[-30,-24],[-8,22]],[[3934,89811],[5,30],[18,-47],[-19,-11],[-4,28]],[[3881,79904],[19,31],[65,-18],[-11,-45],[-23,-9],[-50,41]],[[3808,79873],[61,20],[8,-32],[-15,-29],[-13,36],[-41,5]],[[3782,79835],[16,30],[10,-27],[-21,-24],[-5,21]],[[3751,80072],[22,58],[37,-2],[-23,-43],[4,-45],[44,-24],[-5,-26],[-22,6],[1,-23],[-36,-53],[-9,29],[11,29],[-11,36],[16,35],[-29,23]],[[3632,79930],[8,63],[28,50],[31,-8],[-2,-39],[13,-21],[8,24],[19,-40],[-19,-24],[19,-17],[15,13],[1,-38],[-26,-30],[-21,18],[-7,-51],[-7,25],[-42,-16],[-1,34],[-17,57]],[[3608,79771],[26,3],[9,-22],[-34,-12],[-1,31]],[[3577,79541],[10,-6],[17,54],[27,28],[-6,-40],[6,-52],[-22,-7],[10,-26],[-25,-36],[-12,26],[-5,59]],[[3257,87017],[13,-14],[32,39],[40,-15],[14,17],[21,-25],[24,10],[0,-20],[25,-2],[16,40],[-10,41],[26,46],[28,17],[13,-22],[3,51],[24,39],[32,-37],[19,27],[49,16],[0,38],[16,-116],[43,-2],[11,25],[55,-60],[-12,-52],[13,-57],[-12,-42],[13,-8],[5,-65],[-13,-36],[8,-44],[12,-13],[-5,-37],[13,-27],[16,14],[-12,-40],[0,-42],[-36,-19],[-12,15],[-31,-34],[-20,4],[-55,-63],[17,-56],[-8,-27],[-22,-1],[-7,36],[-22,44],[-38,42],[-15,-12],[-36,4],[-17,37],[-23,13],[-40,79],[-40,39],[-17,-5],[-33,61],[-7,28],[-16,-5],[-10,77],[-32,99]],[[3147,78985],[29,46],[15,42],[41,17],[24,52],[21,-35],[-3,37],[19,-49],[-1,62],[10,-28],[3,51],[24,-19],[14,16],[-11,56],[33,-20],[-18,51],[-7,78],[15,19],[16,-41],[-1,41],[13,10],[-18,48],[19,37],[30,1],[14,-86],[16,-19],[-13,95],[40,9],[-46,34],[-30,38],[-13,-25],[-23,41],[0,33],[-17,11],[-1,35],[15,23],[8,53],[19,42],[34,33],[14,-10],[24,40],[13,-18],[21,8],[10,-49],[-16,-48],[8,-63],[12,13],[-10,-59],[50,103],[6,78],[15,10],[-4,-58],[25,46],[9,-49],[12,-9],[-9,-59],[-13,-16],[-18,20],[-2,-34],[-29,-78],[-14,4],[3,-38],[-29,-25],[6,-30],[29,10],[18,48],[10,-31],[2,43],[14,-5],[-3,-43],[13,1],[3,-54],[-25,-23],[-14,9],[-9,-45],[-17,19],[-13,-32],[-7,-110],[-22,72],[5,-83],[-7,-43],[-20,28],[-11,54],[0,-68],[8,-61],[-17,-10],[-16,34],[-4,-41],[-12,39],[-35,-16],[-3,-24],[-22,-3],[-9,-32],[-35,-33],[-3,-41],[-40,-16],[-15,-72],[-29,29],[-4,-36],[-47,28],[-17,40]],[[3073,93344],[9,48],[29,41],[121,108],[49,58],[74,105],[90,121],[92,112],[59,61],[21,8],[9,25],[58,69],[61,64],[89,83],[66,53],[108,75],[101,56],[85,13],[72,0],[47,-19],[5,-26],[-52,27],[-3,-15],[27,-15],[6,-70],[-9,-42],[-25,-47],[-8,-112],[15,-47],[-28,-71],[-30,-9],[17,-42],[22,19],[14,-78],[19,-46],[44,-30],[33,34],[48,-1],[15,-22],[47,-6],[43,35],[23,-12],[30,17],[37,-69],[50,26],[21,-36],[28,14],[38,45],[27,-10],[43,-61],[-4,-54],[32,4],[-13,28],[11,39],[-10,10],[38,81],[39,154],[15,20],[41,-6],[9,-40],[38,-11],[25,24],[-2,-55],[22,2],[8,56],[-42,121],[-62,44],[-49,25],[-45,-2],[-59,-52],[-1,-34],[26,-59],[-23,-5],[1,51],[-11,13],[18,121],[2,72],[-9,49],[-20,44],[-35,49],[-7,48],[-20,52],[-40,33],[-45,14],[-5,54],[-29,87],[6,48],[26,11],[12,50],[14,-38],[24,31],[12,-19],[17,-72],[30,-79],[29,-21],[-8,-69],[-8,-20],[1,-68],[31,-69],[8,-38],[37,-58],[32,-32],[29,-43],[16,3],[53,42],[10,51],[-53,4],[-30,72],[-32,45],[-7,26],[-43,81],[10,44],[-4,56],[13,21],[7,74],[17,26],[4,31],[21,25],[19,-20],[24,2],[-1,36],[-27,14],[-29,47],[-9,-29],[-19,52],[-21,7],[-72,-32],[-30,-34],[-36,1],[-39,-19],[-34,17],[-34,61],[-54,-13],[0,-17],[29,-11],[-2,-21],[-57,51],[-117,56],[-55,20],[-23,34],[2,63],[-5,75],[-30,184],[-41,158],[-23,63],[-25,42],[-97,107],[-94,155],[-130,194],[-38,38],[-52,35],[-59,27],[-31,39],[-17,67],[-25,48],[-29,36],[-48,42],[-78,39],[-40,-3],[7,14],[122,86],[18,44],[1,60],[18,52],[13,269],[-10,99],[49,-5],[135,-24],[78,11],[188,64],[35,0],[76,22],[83,75],[25,44],[40,45],[35,62],[25,71],[31,61],[36,91],[22,115],[1,254],[33,190],[14,38],[78,167],[61,171],[40,82],[110,133],[16,24],[71,-27],[50,-13],[44,2],[65,37],[79,66],[65,72],[92,137],[29,63],[59,96],[26,35],[42,74],[28,26],[105,68],[41,12],[52,26],[-46,-32],[-32,-3],[-55,-32],[32,-3],[7,11],[17,-47],[-64,-14],[12,-55],[12,20],[38,-19],[21,20],[22,-8],[4,20],[-32,20],[0,16],[33,-24],[78,-13],[75,16],[8,26],[44,-4],[51,16],[73,51],[74,85],[60,97],[90,210],[43,87],[46,59],[21,17],[10,-66],[25,-6],[10,-27],[32,-3],[59,-30],[-3,-19],[17,-25],[-11,-38],[32,21],[9,27],[9,-27],[41,7],[49,-35],[-1,-30],[16,-47],[-9,-41],[-40,-45],[-12,-46],[-16,0],[-8,-26],[-12,11],[-42,-12],[25,-119],[-3,-25],[45,-7],[30,16],[16,-23],[-2,43],[11,-20],[24,15],[-7,101],[12,2],[30,60],[30,22],[13,-42],[15,29],[-8,32],[-23,37],[34,48],[7,-37],[12,-3],[2,39],[-12,26],[11,31],[44,-42],[43,-54],[51,-84],[-11,-63],[4,-102],[11,-41],[60,11],[34,-32],[-9,-25],[21,-16],[29,25],[22,33],[15,68],[53,14],[79,-4],[61,39],[59,-10],[32,-23],[16,-45],[15,-4],[9,39],[14,-10],[42,10],[50,-28],[48,-36],[9,-31],[-30,-24],[-22,-75],[-27,-28],[4,-64],[11,-30],[22,-16],[9,13],[37,-26],[15,6],[17,-30],[-41,21],[-57,-17],[-27,16],[-12,-20],[11,-29],[49,14],[33,-14],[13,14],[35,-7],[19,22],[45,-20],[28,11],[-21,-61],[5,-21],[-38,-13],[-10,-19],[21,-33],[48,1],[37,9],[77,-45],[14,-32],[28,6],[27,58],[27,37],[27,-9],[19,13],[24,-18],[11,35],[39,6],[30,-27],[14,-59],[48,30],[23,-6],[68,95],[24,-28],[32,26],[23,-16],[33,24],[21,-34],[17,18],[12,-16],[34,-1],[28,-28],[28,-47],[21,9],[27,-34],[19,12],[36,-14],[31,-45],[7,-56],[27,-13],[31,42],[12,-52],[18,51],[33,-34],[33,-15],[1,-16],[32,4],[-7,-47],[-14,-8],[49,-44],[41,5],[64,-32],[12,30],[25,-58],[56,-3],[34,36],[52,-8],[40,17],[74,-18],[106,-50],[5,37],[64,-91],[21,-5],[31,-52],[46,-27],[17,14],[8,-38],[75,-34],[21,23],[56,-18],[17,15],[34,65],[45,6],[11,21],[84,48],[13,24],[19,-13],[18,18],[62,23],[29,-23],[19,5],[29,29],[77,-80],[69,-50],[34,-35],[35,-51],[-2,-16],[29,-29],[3,-23],[26,2],[44,-55],[51,-48],[59,-34],[47,-50],[35,-57],[7,-52],[17,-29],[33,-2],[14,61],[55,-42],[0,-10872],[130,-95],[18,100],[134,-146],[81,181],[171,20],[1,-40],[-33,-271],[47,-113],[66,-75],[26,-22],[11,-112],[11,-50],[173,-371],[111,-243],[29,-299],[-8,-93],[22,3],[51,108],[112,159],[10,23],[68,8],[32,138],[-2,210],[31,-19],[17,19],[19,70],[-1,40],[-31,47],[44,47],[69,28],[130,158],[62,-114],[28,-89],[11,-2],[24,-69],[1,-104],[-20,-54],[29,-47],[-10,-49],[19,-76],[72,-38],[6,-66],[32,-73],[24,0],[28,-109],[-6,-68],[26,-20],[-6,-46],[22,-72],[114,-151],[39,-140],[39,-99],[50,-110],[-22,-50],[33,-133],[46,-141],[28,-175],[58,-182],[31,-161],[28,-99],[27,-135],[53,-180],[33,-155],[-34,-140],[90,-52],[-21,-205],[71,-81],[-9,-61],[11,-57],[8,-119],[71,14],[33,-76],[82,-116],[23,-49],[84,-45],[45,-116],[43,-33],[12,-115],[50,-51],[40,23],[23,-116],[-2,-118],[-16,-107],[-19,-66],[1,-61],[10,-38],[-4,-118],[11,-104],[12,-46],[6,-132],[12,-63],[-33,-101],[-24,-122],[-1,-33],[-42,-167],[-38,-97],[-26,-55],[-25,-33],[8,-27],[-16,-24],[-15,35],[1,69],[-14,18],[-1,-42],[-18,-31],[-22,47],[-6,118],[1,63],[-18,50],[5,71],[36,45],[5,24],[16,-54],[21,24],[-21,11],[-6,48],[-23,-47],[-27,-22],[-22,45],[-6,79],[30,66],[17,61],[20,-8],[-17,157],[12,86],[-9,214],[3,20],[-20,94],[5,31],[-15,-6],[-25,103],[-24,61],[-10,49],[34,63],[-11,13],[-27,-57],[-23,-17],[-13,-40],[29,17],[50,-163],[9,-74],[23,-86],[5,-86],[-2,-77],[-9,24],[2,-60],[-6,-58],[6,-99],[-17,14],[3,-64],[-8,-19],[-3,-79],[-34,-80],[-13,5],[-27,57],[25,49],[12,84],[-1,38],[-25,-7],[10,-63],[-13,-64],[-15,-20],[-34,28],[22,82],[-43,-71],[-41,72],[23,-71],[-21,12],[6,-52],[-6,-42],[-16,-1],[11,-34],[-15,-77],[-19,81],[-11,141],[-2,75],[12,0],[0,48],[30,-67],[-3,31],[-26,64],[31,82],[22,100],[-23,35],[7,66],[-10,43],[15,48],[53,20],[-13,22],[-22,-24],[-24,6],[-3,54],[49,-2],[-17,76],[7,34],[-12,13],[-40,-72],[-41,-10],[4,-29],[34,-24],[1,-35],[-16,-88],[-14,14],[15,-72],[-28,-72],[-30,85],[26,-103],[0,-65],[-9,-45],[-22,44],[-21,18],[-18,44],[-12,130],[-16,72],[21,-31],[7,80],[31,8],[12,-15],[-18,62],[15,47],[-8,38],[8,42],[23,15],[-6,104],[2,129],[57,37],[34,-24],[0,18],[-30,28],[-14,-8],[-35,22],[-2,-50],[-22,-12],[-3,-57],[-13,-20],[-14,58],[-16,-9],[23,-64],[-13,-34],[-22,7],[13,-26],[3,-74],[12,-57],[-12,-33],[-11,51],[-12,-46],[-7,17],[-18,-52],[9,-33],[-17,-15],[-8,38],[10,53],[-20,23],[-6,60],[15,19],[-23,11],[6,41],[-34,21],[-16,-53],[-18,87],[-3,125],[7,28],[25,0],[20,116],[27,16],[16,-51],[-6,-82],[22,-54],[22,1],[-25,51],[-10,54],[7,69],[-7,37],[8,26],[-16,102],[39,-40],[5,-60],[18,-34],[-11,103],[-22,31],[-19,51],[-2,78],[13,50],[-45,-40],[-24,29],[9,80],[-9,48],[11,12],[-32,38],[-41,72],[-7,56],[-20,35],[-19,84],[29,13],[11,-39],[6,42],[-13,63],[3,54],[-13,-35],[0,-54],[-37,22],[-21,38],[-30,8],[-3,56],[-18,-3],[-9,-33],[-47,50],[-21,38],[12,50],[-10,41],[16,55],[14,-25],[26,15],[17,-12],[22,26],[-26,27],[-20,-2],[-27,25],[-6,31],[15,27],[-29,84],[2,79],[11,47],[-23,-26],[-16,19],[-16,58],[8,103],[21,7],[12,-41],[40,-35],[59,-89],[16,-56],[17,-29],[-37,123],[-26,56],[-13,2],[-27,69],[-28,45],[-17,0],[8,48],[-6,35],[1,98],[-8,-9],[1,-52],[-12,26],[5,-57],[-3,-58],[-21,8],[-20,98],[-18,64],[4,39],[20,33],[10,-55],[7,41],[-19,85],[-11,-13],[6,-42],[-28,-42],[-11,13],[-35,90],[-8,69],[-1,107],[8,14],[-7,63],[32,45],[-11,30],[-2,70],[-8,-2],[-4,-81],[-24,-32],[-1,-40],[12,-30],[-12,-52],[-50,-6],[-44,40],[-7,-15],[-23,16],[-27,82],[24,29],[-17,14],[5,55],[-22,-9],[-7,18],[-13,115],[-36,135],[-18,80],[19,5],[-7,25],[3,92],[-15,37],[-10,-27],[0,-68],[-36,145],[-6,166],[-8,91],[-19,104],[-14,37],[-14,82],[4,122],[11,86],[-12,0],[-10,-129],[2,-46],[-14,-3],[-25,35],[-4,-16],[28,-38],[2,-58],[22,-31],[4,-66],[14,-63],[-21,26],[-4,71],[-30,72],[-21,9],[27,-80],[8,-71],[17,-14],[-6,-149],[9,-49],[13,-19],[-4,-30],[27,-125],[3,-74],[25,-114],[-18,6],[24,-156],[18,-167],[2,-52],[-15,-11],[-2,-34],[13,-77],[-10,-6],[-36,50],[-24,11],[-24,92],[-21,183],[-11,15],[3,-51],[12,-50],[-4,-38],[-40,58],[-16,-32],[-29,-3],[-38,-19],[4,102],[-12,-19],[-15,22],[19,55],[-13,63],[11,28],[9,-23],[16,24],[-21,37],[-11,78],[-15,24],[4,31],[-24,80],[20,39],[-15,50],[3,48],[-27,60],[13,-76],[-8,-13],[9,-46],[-14,-101],[1,-31],[-28,4],[-40,76],[-26,22],[-12,99],[-10,41],[-7,-57],[-18,78],[-15,30],[23,-96],[0,-35],[-69,86],[-42,112],[-11,-16],[34,-84],[8,-46],[-36,-23],[-18,-95],[26,83],[76,-31],[23,-40],[29,-14],[33,-83],[-26,6],[40,-54],[11,-37],[-39,-91],[27,12],[22,61],[30,-66],[0,-41],[17,-27],[13,-50],[4,-77],[13,-88],[-19,-32],[-14,1],[-35,-34],[1,58],[-29,0],[2,-77],[-19,19],[-17,-15],[-16,18],[-7,36],[-14,-23],[14,-32],[6,-66],[-15,-41],[-18,1],[-13,69],[13,14],[-30,11],[-3,35],[-14,-2],[3,46],[-18,-20],[4,49],[-34,30],[-22,-33],[-19,50],[-63,94],[-20,44],[-61,90],[-2,48],[-31,73],[-37,70],[2,66],[-6,46],[-36,91],[-46,91],[-28,35],[-76,65],[-77,132],[-44,51],[-77,77],[-77,109],[-67,102],[38,65],[8,32],[2,-52],[22,93],[29,72],[-18,38],[-22,122],[0,66],[22,30],[17,78],[-12,54],[-23,-58],[0,-50],[-30,-34],[-15,-57],[-2,-51],[-111,-106],[-12,-31],[-26,-19],[-101,24],[-59,33],[-25,32],[-130,135],[18,51],[26,3],[8,78],[-18,65],[29,60],[18,18],[1,59],[-9,-55],[-47,-45],[-9,87],[-13,-33],[-25,42],[-10,-7],[52,-151],[-8,-30],[-29,-19],[-25,-34],[-40,0],[-40,44],[-116,66],[-38,8],[-29,24],[-45,11],[-58,-3],[-62,-29],[-137,-31],[-77,-62],[-25,32],[-74,12],[10,19],[49,4],[-19,65],[-53,53],[-3,22],[22,20],[-68,-18],[-24,9],[-50,47],[-47,9],[12,30],[37,16],[-13,23],[-49,9],[-3,25],[45,177],[-23,-7],[-9,-35],[-26,-15],[-19,-41],[-12,-94],[-26,5],[-80,108],[3,28],[-28,34],[-43,20],[-35,-22],[-24,25],[46,65],[27,82],[20,85],[-62,-63],[-14,20],[16,71],[-22,-44],[-4,-32],[-19,-11],[7,62],[14,38],[-61,-81],[-31,-6],[-3,27],[59,101],[4,59],[-32,-74],[-18,25],[-2,-30],[-24,4],[3,43],[-20,-65],[-33,-27],[-29,16],[-6,-15],[-21,60],[31,5],[10,38],[60,21],[23,35],[2,24],[21,11],[-1,23],[-19,15],[-13,-50],[-32,-30],[-4,25],[-16,-27],[-25,9],[-3,42],[-18,-41],[7,54],[-6,25],[-11,-31],[-17,57],[-4,61],[14,-36],[31,-4],[-13,31],[-23,15],[15,79],[27,-19],[-26,52],[11,23],[52,-2],[7,11],[40,-7],[-8,49],[-33,9],[-65,-31],[-13,-60],[-25,-12],[-22,-83],[-32,-52],[-20,13],[20,39],[-6,36],[-17,-60],[3,42],[17,52],[-20,98],[17,34],[-23,8],[-13,-26],[9,-27],[3,-107],[-24,-99],[-15,36],[4,40],[-20,-29],[9,-52],[-32,-51],[-24,12],[0,129],[-14,-63],[-4,-68],[-9,89],[7,79],[12,38],[-18,76],[-2,-42],[-14,-81],[-6,-76],[7,-133],[-18,-13],[-5,37],[-16,27],[6,46],[-27,-76],[20,-30],[-1,-36],[-31,11],[-15,35],[-3,45],[-7,-44],[8,-48],[-32,-33],[-31,17],[-2,25],[15,85],[-2,24],[44,121],[11,62],[-12,3],[52,132],[35,39],[3,17],[-37,-33],[17,71],[-9,9],[-75,-218],[0,-38],[-25,-57],[-9,74],[-16,54],[-43,-67],[-12,-53],[-18,-32],[18,-1],[18,62],[40,40],[2,-30],[-21,-125],[-18,21],[10,-48],[-12,-56],[1,-37],[-21,29],[-6,-16],[20,-35],[-16,-14],[-11,29],[-24,8],[-25,-12],[-32,-45],[15,-10],[26,33],[1,-21],[22,22],[6,-29],[-18,1],[-24,-37],[-15,-41],[-3,-81],[22,59],[9,48],[18,35],[16,-19],[15,32],[9,-15],[-10,-54],[5,-44],[-19,-36],[5,-41],[45,164],[35,0],[11,-23],[4,-89],[-13,-44],[-36,-44],[-16,-70],[-43,55],[-13,-10],[-35,-71],[-18,-51],[7,-22],[36,79],[29,43],[36,-54],[-9,-28],[26,12],[-4,-63],[11,17],[3,87],[12,46],[4,-72],[7,98],[18,16],[20,-92],[14,-19],[-13,-36],[20,-37],[-65,-120],[-14,12],[4,-48],[-38,-68],[-1,48],[-19,-22],[21,-37],[-19,-57],[36,73],[19,11],[-22,-65],[17,26],[11,-14],[-5,-79],[16,105],[17,-25],[-14,-61],[13,-28],[2,63],[11,6],[-13,-113],[-17,-75],[-32,-28],[-14,19],[34,8],[-26,8],[8,27],[21,5],[-31,29],[3,85],[-18,-2],[-11,-74],[6,-15],[-9,-92],[-13,-78],[-27,102],[-1,-71],[-20,-57],[-16,3],[-20,39],[-35,-36],[-13,53],[-20,-20],[-37,13],[0,18],[24,75],[-7,12],[-29,-33],[-29,-129],[-4,-47],[-3,121],[-7,-8],[-6,123],[-7,50],[-19,-8],[-2,-94],[15,-44],[-11,-20],[-10,-70],[-19,5],[-25,-125],[11,-58],[13,-6],[-11,-50],[-2,52],[-15,0],[-9,58],[4,118],[-9,43],[-15,-8],[7,-70],[-10,-23],[-1,-51],[-13,37],[-19,2],[30,-67],[-7,-16],[18,-98],[-33,21],[-21,64],[-13,-1],[-14,36],[-7,-28],[30,-55],[0,-71],[-32,-23],[-25,49],[14,-47],[-11,-70],[12,-15],[-21,-20],[-14,23],[9,-48],[-8,-22],[-18,10],[-1,-36],[-19,-94],[-24,-31],[21,83],[-14,-1],[21,120],[12,89],[16,75],[1,47],[-44,-207],[-8,-9],[-19,-118],[-12,9],[6,37],[-20,38],[22,54],[-9,34],[-10,-12],[-16,-67],[-13,3],[23,-56],[0,-28],[-21,2],[21,-29],[-7,-26],[-37,1],[-9,-57],[-20,-20],[-18,-66],[7,-40],[-15,-38],[-15,-1],[-15,70],[-11,-27],[-36,42],[-26,0],[57,-60],[1,-35],[-18,-25],[-15,23],[-7,-23],[-17,45],[0,-37],[-31,57],[-27,-40],[-1,-37],[-16,14],[-17,-23],[16,-14],[-41,-20],[-12,25],[0,53],[-16,-23],[-26,30],[9,25],[-26,4],[-4,69],[19,53],[25,-6],[16,-38],[-7,43],[-27,45],[7,32],[62,71],[23,-19],[13,19],[26,-24],[-12,45],[9,46],[15,1],[31,62],[24,10],[-5,42],[24,39],[19,85],[35,53],[-46,-8],[-31,-60],[-38,-59],[-24,-16],[-18,-43],[-42,18],[-46,69],[-18,75],[20,127],[10,34],[12,115],[29,99],[27,58],[27,79],[7,43],[5,131],[23,35],[4,140],[5,40],[-20,48],[-8,76],[-13,78],[39,36],[14,33],[43,9],[67,113],[41,86],[84,94],[51,-160],[48,-20],[20,16],[27,81],[24,1],[27,-28],[7,-24],[22,13],[60,-47],[50,-9],[26,-25],[20,-39],[-1,26],[-24,68],[-28,37],[-47,-22],[-4,24],[-32,43],[-33,3],[-36,38],[-31,80],[-32,53],[-27,21],[13,62],[25,3],[32,126],[27,26],[-1,41],[50,40],[33,56],[-32,49],[-30,-12],[-31,-46],[-17,-59],[-18,-16],[-8,-50],[-2,-84],[-19,-35],[-25,19],[-36,7],[-74,-18],[-23,59],[-19,-20],[-11,17],[-9,-37],[-53,-59],[-16,-1],[-36,-75],[-26,-114],[-41,-18],[-9,-23],[-40,1],[-38,-63],[-41,-95],[-8,-46],[26,-122],[-3,-26],[-37,30],[-19,-21],[-36,-66],[-15,-78],[-45,-63],[-19,-77],[6,-66],[19,-28],[-18,-37],[-19,-11],[-12,-75],[-24,-21],[-15,-54],[-20,-4],[-9,26],[-31,-19],[-32,20],[9,-28],[47,-67],[-1,-24],[32,-72],[-7,-72],[-23,-62],[-8,-59],[-27,-41],[-64,7],[-44,-36],[-11,-29],[24,-22],[16,29],[19,1],[9,-28],[-16,-134],[-28,-27],[-2,-19],[-26,-27],[-9,44],[-11,-7],[5,-38],[-11,-11],[-22,33],[9,16],[2,79],[-15,50],[-8,-13],[6,-55],[-7,-75],[-26,-34],[-14,60],[-4,-34],[-21,-6],[6,-22],[18,9],[15,-27],[-7,-60],[-38,-3],[-15,-31],[20,-71],[-6,-34],[-49,-20],[-32,-50],[-11,15],[-11,-51],[41,16],[-45,-64],[-16,-145],[-27,-43],[3,-30],[22,6],[-7,-62],[16,-53],[30,62],[50,-24],[19,28],[23,-3],[27,-81],[24,-27],[10,19],[22,-31],[12,-55],[9,0],[6,-84],[-12,-11],[-12,-110],[-10,-39],[-35,-35],[-10,-61],[-49,-34],[-34,4],[-11,-131],[-34,-5],[-7,-21],[8,-70],[18,-23],[-17,-43],[-37,3],[5,-27],[-18,-5],[-35,-60],[6,-21],[20,13],[-9,23],[39,28],[14,-44],[-29,-29],[15,-20],[-4,-46],[-28,-23],[13,-40],[-14,-16],[-19,33],[7,-80],[-31,54],[-13,49],[6,-95],[-24,-22],[-9,-62],[-21,10],[-1,30],[-22,-8],[-4,-45],[-20,-16],[-22,31],[-36,-41],[-8,-44],[-20,-7],[16,-47],[-6,-38],[-43,-54],[-26,3],[8,-122],[-26,-23],[-3,40],[-18,9],[-21,48],[-15,-5],[-10,-92],[16,-30],[-5,-23],[-41,-31],[2,-104],[-17,2],[-6,36],[-25,-48],[-38,35],[0,-78],[6,-74],[-18,2],[-26,53],[-11,-42],[-29,-25],[-46,-108],[-14,-6],[-2,-44],[54,42],[11,-35],[-7,-51],[-18,-34],[24,-39],[-26,-76],[-15,3],[7,-49],[-21,-40],[-27,-6],[16,-41],[-1,-36],[-33,33],[-12,39],[-18,-15],[10,-32],[-10,-33],[-4,-70],[-8,-15],[-17,79],[-13,-12],[-5,-49],[-21,-25],[-17,-84],[-13,17],[-1,-51],[-17,-30],[-51,114],[-24,-33],[19,-71],[-33,-16],[-12,-61],[5,-36],[18,-4],[8,-36],[-11,-27],[-50,-7],[-18,74],[-14,1],[-16,-35],[-19,-2],[-21,-55],[-11,7],[-21,-41],[-9,-40],[65,42],[17,-4],[5,-75],[-19,-34],[-39,45],[-30,12],[3,-69],[-14,-7],[-42,31],[-22,-36],[-28,-90],[5,-48],[16,12],[16,-34],[12,12],[36,-39],[-4,-27],[-26,-37],[-26,7],[9,-28],[20,-7],[1,-35],[33,63],[-3,-52],[-18,-8],[-34,-57],[-3,61],[-6,-65],[3,-51],[-9,-22],[-6,57],[-12,-6],[9,-52],[-9,-22],[23,-7],[-8,-60],[-18,53],[-3,-65],[-19,72],[-4,76],[21,92],[-28,16],[20,-29],[-25,-75],[-3,42],[-9,-48],[6,-55],[-18,-13],[17,-15],[6,-53],[-15,-28],[-10,56],[-11,4],[-10,-37],[-11,32],[-19,-100],[-24,1],[-2,-45],[-17,39],[-59,-40],[-9,-38],[-9,25],[-15,-24],[0,-68],[-17,20],[-9,98],[-15,-40],[9,-19],[6,-93],[-17,-69],[4,-69],[-16,-27],[-7,-53],[-31,-15],[8,45],[26,31],[-27,28],[22,47],[-14,47],[15,74],[-4,29],[-24,26],[-26,6],[-11,-79],[-11,-2],[-17,39],[-25,-69],[9,-48],[-21,3],[11,-30],[-24,9],[4,-45],[-43,-31],[-37,30],[-6,-28],[22,-32],[-25,-45],[-7,-93],[-19,-23],[-19,153],[-1,-32],[-16,-39],[-14,16],[-14,-34],[30,-12],[-1,-63],[-37,-10],[-11,18],[3,45],[-20,18],[-12,-17],[-16,-83],[-68,-98],[-22,7],[-5,25],[-32,-30],[-14,4],[7,151],[33,118],[-8,41],[-43,1],[-20,-24],[-5,-48],[-18,-53],[3,-136],[-48,-155],[-12,-77],[-35,37],[24,-130],[-30,-62],[-25,48],[8,41],[-19,6],[-14,-57],[10,-54],[-8,-34],[-16,-8],[-9,43],[-27,-32],[-24,42],[-7,56],[33,0],[-28,82],[-3,76],[-32,34],[18,20],[-28,1],[-13,-53],[-3,-49],[20,-16],[17,-65],[-10,-48],[15,-94],[-4,-67],[-10,35],[-17,7],[-11,-53],[-16,-20],[-29,-1],[-20,59],[3,46],[-18,66],[-17,31],[-32,-11],[-9,-81],[19,-17],[27,-50],[-3,-53],[-38,-66],[-6,-32],[-38,-35],[-9,54],[18,21],[-3,92],[32,-24],[-20,38],[2,99],[-9,35],[5,33],[27,60],[33,23],[36,-22],[23,20],[6,72],[-17,9],[31,72],[18,-4],[26,71],[19,-24],[20,48],[-2,81],[-23,-7],[21,50],[37,109],[32,112],[34,55],[27,67],[32,34],[35,84],[65,54],[84,54],[-2,-30],[57,-18],[30,31],[6,27],[23,1],[0,-73],[-8,25],[-33,-44],[2,-47],[13,-10],[1,-47],[34,-87],[36,-20],[5,-43],[9,49],[-30,55],[-2,80],[-7,36],[40,-33],[43,8],[10,-31],[-4,-50],[21,15],[5,-29],[36,-17],[-19,57],[27,20],[-19,22],[-36,66],[-16,10],[-13,68],[-18,3],[25,98],[32,215],[9,41],[34,68],[22,63],[25,24],[33,66],[35,86],[75,86],[44,80],[31,30],[68,107],[25,59],[9,-52],[38,-32],[35,19],[0,49],[-12,51],[-1,58],[10,88],[34,129],[44,142],[21,50],[34,54],[28,24],[23,59],[20,77],[39,80],[25,27],[13,-79],[18,-5],[5,32],[-9,103],[-27,4],[-2,114],[13,102],[13,259],[7,103],[16,65],[27,0],[13,47],[-15,2],[-27,75],[1,137],[23,135],[32,49],[21,80],[25,61],[33,50],[-3,68],[20,60],[-7,55],[10,38],[3,95],[-21,-48],[-10,-78],[-36,-36],[-33,-12],[-28,-47],[-35,-43],[-42,-31],[-31,-46],[-72,-75],[-38,-12],[-33,56],[-4,68],[-9,36],[-52,60],[3,47],[12,21],[8,159],[-13,-2],[-24,-97],[-30,-48],[-12,8],[-8,-89],[5,-36],[-7,-43],[-21,-8],[13,-124],[21,-132],[15,-16],[-28,-101],[-28,-18],[-45,37],[-16,76],[-62,265],[-18,64],[-26,57],[-42,21],[19,64],[-9,43],[-35,-7],[-1,-81],[-19,-16],[5,-43],[-31,-35],[-28,121],[-43,-20],[3,67],[-26,-37],[-4,64],[-19,11],[19,49],[-27,91],[-44,-70],[-67,-124],[-19,-87],[-9,50],[-31,1],[-7,-24],[-54,-86],[-21,-3],[-28,-64],[-1,-71],[-46,-39],[-9,-31],[-19,-3],[-16,-45],[-23,-11],[4,31],[-22,60],[-41,3],[-26,-12],[-28,30],[16,25],[17,-6],[20,21],[11,-37],[16,5],[14,45],[-8,24],[17,28],[15,80],[-9,90],[-1,103],[-15,66],[5,25],[-15,21],[-29,93],[-21,136],[28,133],[21,19],[17,41],[8,54],[14,-11],[11,36],[-47,163],[-3,74],[-13,42],[-11,71],[-26,70],[-14,79],[2,27],[-20,45],[-14,83],[-27,61],[-14,65],[-22,7],[-13,-54],[6,-114],[-19,-57],[-24,-9],[-25,21],[-12,-49],[-33,-31],[-57,-72],[-30,-25],[-70,-37],[-72,-15],[-33,0],[-39,14],[-49,41],[-23,119],[29,29],[-1,22],[-23,47],[-51,55],[-30,104],[2,19],[-43,76],[-8,70],[-12,-17],[-34,10],[-51,73],[-34,94],[24,17],[25,58],[-2,36],[-25,5],[-38,-55],[-20,-5],[-30,21],[-12,52],[10,26],[25,-4],[18,50],[10,-1],[12,38],[14,6],[37,83],[-19,71],[41,38],[7,29],[-26,68],[10,32],[-10,21],[-19,-43],[-37,21],[-10,57],[22,44],[26,-6],[20,18],[-1,50],[-17,-18],[-30,29],[-18,47],[4,28],[-20,10],[-16,34],[-26,-119],[-47,17],[-10,19],[-12,138],[13,72],[-27,3],[-52,41],[-12,72],[1,35],[42,47],[4,32],[-20,52],[-26,24],[-46,-27],[-5,-43],[-13,22],[-11,94],[7,50],[30,3],[83,51],[-25,6],[-44,37],[-26,89],[1,23],[48,16],[33,-2],[53,30],[-19,48],[-20,106],[-2,63],[8,59],[20,83],[8,7],[77,222],[43,133],[29,56],[34,50],[34,8],[23,25],[-14,52],[-6,74],[-8,21],[0,82],[14,14],[-11,18],[20,149],[22,76],[15,23],[34,2],[4,26],[-17,21],[8,27],[-10,36],[49,105],[25,31],[39,18],[36,5],[63,-59],[26,0],[32,-83],[24,-7],[-2,-34],[33,-25],[27,-55],[60,17],[18,14],[20,54],[34,52],[8,61],[43,22],[23,56],[41,120],[21,83],[25,44],[-12,66],[69,-48],[14,-22],[-8,-35],[-29,-25],[50,3],[25,21],[20,-12],[29,27],[34,-19],[21,26],[21,-15],[34,16],[47,37],[8,59],[21,31],[36,86],[30,96],[10,60],[-1,56],[-22,132],[-14,47],[-15,116],[0,130],[-14,57],[-72,160],[-40,40],[-36,-8],[17,40],[1,67],[27,31],[7,-17],[35,-26],[41,-3],[18,11],[-22,44],[35,3],[19,45],[28,41],[3,117],[-33,122],[-24,12],[-25,41],[-30,66],[-4,-37],[-26,-46],[-21,-63],[0,-24],[-42,-29],[-47,30],[-41,-27],[-26,-46],[5,-17],[-51,-12],[-24,-16],[-15,-68],[-87,-103],[-13,-56],[-11,-114],[-30,-33],[-14,-38],[-4,91],[-15,55],[7,35],[-30,73],[-25,0],[-2,50],[-29,30],[2,43],[-18,-3],[-32,-63],[-11,-4],[26,-53],[22,-2],[6,-33],[36,-5],[1,-35],[-21,-23],[-2,-58],[-19,-11],[-21,82],[-37,55],[-59,54],[-78,12],[-33,-25],[-49,15],[-63,-17],[-40,-36],[-82,-86],[-48,-13],[-48,35],[-62,37],[-74,37],[-153,62],[-48,67],[-25,112],[1,71],[14,12],[6,61],[-14,51],[-24,46],[-42,50],[2,41],[-16,42],[-33,42],[-26,85],[14,93],[17,37],[-2,-37],[-16,-20],[-9,-56],[5,-39],[25,-30],[34,-15],[39,18],[29,61],[-3,55],[36,62],[-20,44],[-28,25],[-29,-10],[-51,16],[-67,52],[-100,20],[-48,54],[-36,60],[-34,29],[-5,17],[-62,43],[-14,82]],[[2841,93473],[15,12],[1,-29],[-16,17]],[[2795,78416],[14,17],[0,34],[21,7],[11,32],[-2,43],[12,-8],[17,28],[-2,72],[17,16],[9,71],[-10,17],[3,65],[50,131],[22,-27],[23,28],[4,-23],[26,10],[-7,63],[-17,9],[13,67],[-6,47],[17,57],[31,65],[63,46],[28,-52],[32,-1],[-3,-53],[-16,-43],[5,-62],[-75,-128],[-44,-40],[-16,-39],[-4,-61],[-15,-37],[-29,-103],[-25,-9],[-18,-62],[-32,-21],[-79,-146],[-18,-10]],[[2615,78602],[4,45],[19,17],[5,-44],[-10,-47],[-13,-6],[-5,35]],[[2608,82830],[37,-13],[36,5],[17,-13],[-31,-75],[-26,24],[-2,27],[-20,13],[-11,32]],[[2605,78689],[9,30],[5,-42],[-14,12]],[[2546,78427],[6,30],[28,-9],[5,29],[47,11],[8,-17],[0,-57],[-18,-54],[-10,41],[-23,21],[-29,-47],[-14,52]],[[2515,78506],[9,27],[26,-13],[-2,-42],[-13,-20],[-20,48]],[[2498,78302],[4,71],[32,-19],[-7,-56],[-29,4]],[[2432,83467],[1,35],[32,32],[19,-10],[28,18],[-12,-76],[-22,-24],[-7,-27],[-6,42],[-33,10]],[[2314,78113],[7,85],[18,16],[8,39],[17,22],[28,-31],[2,-26],[-15,-59],[-21,0],[-31,-68],[-13,22]],[[2221,78114],[10,28],[7,-32],[-17,4]],[[2183,78021],[17,55],[16,-42],[-13,-48],[-18,-3],[-2,38]],[[2034,90829],[3,77],[14,94],[14,34],[-5,28],[9,47],[-5,65],[28,-16],[2,-90],[24,-32],[50,-40],[91,-57],[38,-10],[71,110],[29,-1],[19,36],[16,-12],[36,1],[60,-118],[13,-121],[26,-15],[20,-31],[60,-16],[22,-33],[6,-33],[17,-13],[63,-20],[58,-2],[48,-14],[19,-23],[32,-12],[-8,-82],[-28,-82],[-14,-17],[-24,25],[-41,14],[-30,-5],[-45,-29],[-4,-25],[-40,-63],[-12,-52],[14,-58],[-20,-7],[-12,-41],[-34,31],[6,24],[-23,107],[-38,76],[-46,49],[-46,4],[4,25],[-21,82],[-22,45],[-38,50],[-83,62],[-66,8],[-15,-23],[-35,-25],[1,-25],[-44,-60],[-21,23],[-9,-10],[-43,54],[-9,0],[-25,84],[-7,58]],[[1816,77775],[15,89],[47,51],[23,-30],[7,-43],[-65,-96],[-27,29]],[[1695,87356],[7,69],[35,50],[-5,-50],[14,-70],[29,-58],[47,-64],[22,-17],[42,3],[11,-34],[34,-50],[-21,-21],[-9,38],[-49,8],[-27,-21],[-36,52],[-12,34],[-45,100],[-37,31]],[[1679,87540],[16,41],[5,-83],[-21,42]],[[1420,77611],[30,-4],[18,26],[-5,-44],[75,47],[32,-11],[-8,-26],[18,-2],[34,-32],[23,21],[56,-15],[33,0],[-55,-42],[-51,-6],[-15,-21],[-25,10],[-20,-24],[-4,32],[-33,16],[-43,-29],[-26,14],[-15,63],[-19,27]],[[1061,77486],[21,24],[16,-9],[22,27],[0,-35],[27,58],[12,-22],[24,64],[36,-38],[40,37],[7,30],[25,-4],[-14,45],[22,9],[20,-17],[-13,57],[18,2],[16,-25],[31,65],[-4,27],[-31,3],[-26,27],[2,29],[26,-10],[4,64],[41,50],[31,-28],[18,-37],[4,-81],[-19,-78],[-31,12],[-9,-24],[35,-98],[-5,-36],[-9,34],[-24,-40],[-31,33],[-19,-35],[-5,-74],[-13,50],[-29,1],[5,-40],[-44,1],[-8,-36],[-12,25],[-27,16],[-40,-11],[1,-21],[-55,-11],[-36,20]],[[948,77403],[4,27],[22,-16],[-26,-11]],[[912,77394],[22,18],[4,-52],[-26,34]],[[888,77441],[14,13],[8,-37],[-22,24]],[[845,77329],[35,27],[9,-20],[-2,-56],[-42,49]],[[818,77531],[18,65],[26,-14],[15,-43],[-2,-42],[-12,-17],[6,-50],[-44,29],[-7,72]],[[812,77260],[8,61],[21,-36],[28,-8],[-7,-31],[-18,13],[-11,-69],[-3,39],[-18,31]],[[601,77027],[17,85],[8,-6],[7,64],[-13,45],[10,43],[11,-25],[14,27],[10,62],[-13,55],[10,41],[29,-14],[15,48],[16,-1],[-1,-100],[-16,-7],[-6,-55],[35,-31],[5,28],[21,-16],[6,35],[33,-8],[3,-47],[-13,-99],[-44,13],[-39,-81],[-31,3],[0,-64],[-10,15],[-13,-33],[-8,84],[2,45],[-31,-150],[-14,44]],[[12321,84999],[6,5],[27,-125],[-9,-6],[-24,126]],[[12309,84875],[4,46],[19,-105],[2,44],[21,-43],[26,-109],[4,-78],[36,21],[41,-10],[24,-32],[36,28],[10,-46],[-14,-6],[8,-45],[24,-73],[4,-53],[27,-74],[-4,-21],[30,-101],[7,-86],[-5,-57],[23,-64],[2,-52],[-10,-9],[-5,51],[-40,115],[-5,83],[-36,108],[-4,87],[-18,65],[-26,22],[23,-77],[-27,39],[15,-97],[-8,-100],[16,50],[41,-180],[16,-50],[-14,-19],[23,-4],[20,-44],[-1,-58],[30,-152],[-18,54],[-8,-22],[15,-50],[4,-65],[-32,-73],[-22,32],[-7,36],[-7,-48],[-9,54],[-7,-42],[19,-56],[-6,-49],[-9,4],[-2,-46],[-16,-37],[-14,6],[-4,-43],[-32,-17],[6,-36],[-31,-56],[3,-26],[-35,8],[-11,86],[10,58],[-12,36],[-2,51],[23,-13],[-13,61],[30,52],[-20,31],[0,66],[15,6],[11,-38],[21,0],[-15,23],[-31,105],[-10,94],[-17,63],[-16,122],[7,126],[-10,80],[-7,115],[-10,35],[0,89],[-15,83],[-12,21],[-16,136],[-3,70]],[[12288,85065],[21,-39],[-8,-24],[-13,63]],[[12202,85625],[15,-61],[0,-48],[-9,18],[-6,91]],[[12176,83205],[16,-7],[-3,-31],[-13,38]],[[12162,83393],[14,19],[3,-33],[-17,14]],[[12156,83545],[10,27],[19,-4],[5,-34],[-15,-43],[-19,54]],[[12140,83120],[15,-15],[-6,-24],[-9,39]],[[12107,83700],[9,14],[48,-22],[2,13],[-40,25],[18,70],[7,2],[-4,70],[28,56],[19,0],[25,-56],[-5,-21],[-30,-38],[6,-24],[13,41],[35,18],[16,-51],[30,-41],[38,21],[25,-30],[8,-72],[-8,-55],[-20,57],[-13,-17],[1,-66],[19,22],[10,-49],[-5,-39],[17,-59],[4,-98],[13,-86],[-1,-61],[13,-63],[-3,-64],[9,-28],[12,-111],[4,-104],[-3,-90],[-13,8],[10,-102],[1,-202],[-11,-56],[6,-27],[-4,-76],[-13,17],[2,40],[-22,11],[-10,61],[-23,51],[-10,99],[-33,138],[0,50],[20,75],[-30,-42],[-14,-1],[2,104],[-21,-26],[-11,38],[-11,1],[-8,59],[13,17],[-12,26],[-10,-39],[-5,36],[-36,7],[1,51],[25,-4],[8,42],[-1,60],[17,-23],[-17,67],[1,41],[48,61],[-18,-9],[-25,26],[-12,53],[7,53],[-13,26],[22,91],[-36,13],[-25,-18],[-11,56],[-25,83]],[[12096,84873],[22,19],[32,-48],[-4,-19],[-36,3],[-14,45]],[[12056,83542],[13,96],[-9,25],[27,24],[42,-68],[12,-52],[-7,-23],[-17,27],[15,-60],[-1,-30],[16,17],[5,46],[21,-55],[-31,-29],[-1,-76],[-18,-94],[-13,6],[-39,-29],[-10,23],[4,94],[23,27],[1,65],[-22,7],[9,71],[-20,-12]],[[11979,85137],[12,13],[2,-56],[-14,43]],[[11978,84770],[33,44],[0,-54],[-26,-11],[-7,21]],[[11909,84758],[34,-3],[-7,-42],[-27,45]],[[11861,84480],[11,76],[19,2],[28,59],[27,-53],[-24,104],[0,32],[17,3],[17,-77],[26,78],[28,-7],[8,-34],[52,108],[13,3],[13,-54],[66,-78],[-7,-60],[-29,-82],[-2,-72],[11,3],[14,85],[26,45],[-5,35],[13,14],[35,-62],[50,1],[2,-36],[44,-25],[10,-72],[-2,-62],[-22,-42],[-54,66],[17,-67],[25,-21],[3,-30],[22,-33],[-18,-41],[-28,-2],[27,-39],[26,15],[9,-110],[13,-96],[-2,-58],[8,-59],[-15,31],[4,-49],[-44,-10],[-17,11],[-11,37],[-62,107],[-36,49],[-25,46],[-24,-45],[40,-44],[-29,-37],[14,-17],[-5,-36],[8,-75],[-45,-99],[-38,33],[-3,37],[-29,41],[-24,61],[-11,54],[5,45],[-19,-31],[-24,21],[12,22],[-12,22],[-9,59],[24,49],[-9,53],[-15,5],[-2,-46],[-15,24],[-13,88],[-15,-11],[-21,60],[3,33],[-16,6],[-9,33],[4,65],[-4,51]],[[11781,85535],[15,4],[6,-42],[-21,38]],[[11019,86442],[10,24],[13,-24],[-23,0]],[[10961,86290],[16,33],[-5,-67],[-11,34]],[[9672,86952],[27,-15],[-4,-60],[-23,75]],[[9624,86529],[11,70],[47,104],[15,46],[42,23],[-61,-113],[-12,-38],[-42,-92]],[[9327,87194],[30,-4],[15,-49],[-26,-12],[-19,65]],[[9232,87232],[17,13],[37,-24],[19,2],[-1,-34],[-22,-11],[-16,27],[-34,27]],[[9142,87311],[13,61],[18,2],[58,42],[21,35],[40,14],[-8,-53],[-56,-56],[-18,-30],[-34,-29],[-34,14]],[[9032,87215],[32,118],[21,4],[27,-22],[26,0],[-4,-70],[67,28],[9,-23],[3,-56],[-19,4],[-29,-38],[-24,3],[-41,-50],[-35,-68],[-12,2],[-13,48],[47,64],[4,31],[-26,-8],[-12,-30],[-19,17],[-2,46]],[[9008,87723],[6,55],[13,16],[13,-36],[-7,-43],[-25,8]],[[8866,87791],[27,38],[32,2],[-11,-44],[21,31],[-16,-54],[-53,27]],[[8840,87587],[16,15],[-4,-35],[-12,20]],[[8822,87620],[28,9],[-8,-23],[-20,14]],[[8817,87533],[18,5],[-12,20],[10,25],[18,-54],[14,28],[8,-16],[-12,-39],[-40,-12],[14,36],[-18,7]],[[8817,87070],[31,55],[13,0],[1,-32],[-38,-58],[-7,35]],[[8698,86522],[4,59],[15,40],[22,3],[-7,55],[19,39],[20,15],[-11,18],[26,36],[16,44],[34,50],[40,153],[11,-2],[17,54],[-8,41],[2,49],[27,38],[7,-20],[-14,-28],[38,5],[-31,-94],[14,8],[31,46],[10,-22],[-14,-49],[-65,-113],[-44,-124],[-7,-48],[3,-59],[-13,15],[-21,-32],[14,-41],[3,-37],[-21,-34],[-30,10],[-20,-59],[-15,2],[-37,-44],[-15,26]],[[8687,87062],[17,56],[18,-4],[28,35],[-5,19],[-24,-32],[-13,2],[18,144],[27,6],[3,74],[21,0],[1,38],[21,47],[-3,-104],[-17,-4],[-2,-48],[10,-27],[-22,-21],[17,-16],[3,-30],[-28,-114],[5,-30],[-17,-102],[-29,69],[-25,16],[-4,26]],[[8672,87613],[11,20],[22,-7],[16,-50],[-25,-42],[-18,36],[-6,43]],[[8662,86712],[32,82],[3,24],[23,45],[9,-33],[-23,-88],[-37,-44],[-7,14]],[[8635,87135],[15,49],[25,34],[7,-16],[-11,-110],[-28,5],[-8,38]],[[8636,86768],[21,109],[16,28],[13,51],[4,-42],[13,9],[6,-32],[-49,-85],[-16,-52],[-8,14]],[[8609,86699],[29,45],[7,-13],[30,85],[5,-13],[-28,-85],[-15,-20],[-28,1]],[[8041,88082],[17,48],[16,-16],[-20,-36],[-13,4]],[[7998,86039],[21,15],[-5,-33],[-16,18]],[[7905,85978],[24,84],[-2,31],[16,-12],[8,-48],[-20,-72],[-11,-18],[-15,35]],[[7695,85778],[28,-18],[-2,-27],[-25,26],[-1,19]],[[7640,85742],[24,2],[-6,-26],[-18,24]],[[7596,85788],[17,26],[8,-48],[-25,22]],[[7593,84673],[5,54],[11,26],[14,-18],[-6,-75],[-13,-23],[-11,36]],[[7540,87172],[21,31],[15,106],[-6,32],[15,29],[25,-37],[-19,-29],[-22,-74],[7,-28],[-36,-30]],[[7477,84157],[20,45],[6,-15],[-26,-30]],[[7475,83702],[8,36],[10,-16],[-18,-20]],[[7464,85509],[9,-4],[8,45],[18,-17],[-3,-29],[-32,5]],[[7385,86963],[6,22],[15,-27],[0,-77],[-21,82]],[[7324,84393],[3,16],[36,18],[-5,-53],[-12,-23],[-22,42]],[[7168,84513],[24,52],[11,48],[10,-2],[25,-63],[21,0],[15,26],[-30,-8],[-20,62],[12,67],[33,-26],[14,31],[-26,46],[15,52],[36,-37],[29,17],[-26,22],[-8,31],[11,13],[35,-32],[-33,104],[22,-3],[19,65],[22,24],[33,-25],[-31,56],[-4,72],[27,60],[15,-36],[18,51],[11,-29],[10,33],[17,-9],[-25,-157],[-20,-29],[-15,-66],[18,-15],[-5,-55],[26,-13],[19,80],[11,16],[28,-77],[17,46],[8,-40],[-12,-81],[0,-89],[16,106],[3,-42],[10,19],[13,76],[7,-25],[0,-85],[-10,-62],[-9,2],[-14,-63],[-33,26],[-2,42],[-13,39],[-16,-5],[6,-75],[-10,-17],[17,-32],[-36,-18],[-12,21],[-37,-37],[2,84],[-9,11],[-3,-75],[-14,-71],[-22,-13],[-13,28],[7,-57],[-7,-38],[-24,-2],[-6,-25],[-44,21],[-23,36],[-47,37],[-19,-14],[-15,26]],[[7125,86044],[43,45],[8,-4],[14,-63],[-6,-22],[-42,-21],[-17,65]],[[99917,77439],[15,3],[13,37],[22,7],[31,-61],[-11,-74],[-34,-41],[-25,29],[-13,47],[2,53]],[[99678,77037],[5,24],[26,-29],[19,2],[27,-23],[5,-34],[23,-39],[21,-63],[31,-41],[11,-58],[44,-10],[21,-33],[-56,-22],[-12,35],[-44,79],[-30,101],[-30,43],[-17,-8],[-22,25],[-22,51]],[[99628,77434],[9,11],[31,-41],[-14,-58],[-10,-4],[-16,92]],[[99570,77259],[19,-7],[18,-56],[-19,4],[-18,59]],[[99530,77498],[7,21],[17,-21],[3,-35],[-17,-19],[-10,54]],[[99282,77339],[24,26],[15,51],[42,35],[3,53],[16,97],[11,18],[20,-53],[-20,-88],[-18,-44],[19,-28],[-13,-44],[-42,16],[-17,-30],[-4,-70],[-36,42],[0,19]],[[98911,77891],[26,-13],[-15,-29],[-11,42]],[[98408,78314],[22,-7],[3,-26],[-25,33]],[[98210,77931],[25,58],[23,-6],[26,66],[41,6],[-22,-77],[10,-104],[-21,0],[-17,52],[-35,-19],[-30,24]],[[97961,78538],[46,87],[33,10],[100,-20],[29,-62],[24,-15],[35,-95],[-2,-20],[-31,-6],[-21,39],[-17,-71],[-13,-13],[-34,15],[-26,-41],[-27,32],[-12,40],[-3,62],[-32,56],[-35,-23],[-14,25]],[[13419,81377],[10,19],[5,-48],[-9,-29],[-6,58]],[[13346,81038],[10,44],[10,-30],[-6,-51],[-14,37]],[[13276,80875],[6,33],[40,20],[25,27],[-1,-82],[15,-22],[-30,-61],[-12,-7],[-43,92]],[[13242,80890],[9,26],[15,-17],[-15,-29],[-9,20]],[[13234,81005],[16,49],[-2,43],[13,-9],[4,36],[-12,41],[-8,64],[10,55],[35,-80],[14,-9],[20,-46],[-11,-8],[-2,-87],[4,-56],[-9,-34],[-29,1],[-6,52],[-26,-73],[-11,61]],[[13215,81948],[21,65],[14,-70],[-35,5]],[[13177,81562],[28,21],[-2,-32],[-22,-27],[-4,38]],[[13117,82158],[10,67],[14,-93],[-19,-36],[-5,62]],[[13001,82778],[22,43],[-1,-25],[-21,-18]],[[12979,82565],[16,59],[28,-38],[-25,-58],[-19,37]],[[12905,80859],[27,23],[30,-72],[-18,-34],[21,-72],[-6,-45],[-12,20],[-8,57],[-27,61],[-7,62]],[[12888,80921],[19,6],[-4,-52],[-15,46]],[[12875,81031],[11,33],[-6,-64],[-5,31]],[[12874,82265],[5,23],[21,-40],[-14,-17],[-12,34]],[[12856,82345],[12,1],[19,-46],[-15,6],[-16,39]],[[12855,82376],[1,22],[20,-13],[-2,-31],[-19,22]],[[12838,82528],[27,109],[28,9],[13,-17],[30,17],[25,-44],[1,-35],[-15,-44],[6,-85],[-20,-25],[-40,-28],[-24,74],[-30,41],[-1,28]],[[12834,82223],[21,35],[7,-72],[-22,-4],[-6,41]],[[12767,81438],[22,37],[-2,-52],[-20,15]],[[12731,81575],[0,21],[23,24],[16,-8],[9,-50],[-22,-89],[-14,26],[-12,76]],[[12703,80773],[12,-63],[-2,-49],[-8,35],[-2,77]],[[12684,81475],[23,51],[3,41],[26,-49],[-5,-60],[-29,-9],[-18,26]],[[12675,81679],[8,23],[4,66],[19,-39],[-22,-100],[-9,50]],[[12665,81308],[13,20],[6,46],[-16,15],[29,63],[3,-20],[40,13],[1,-45],[-42,-49],[-13,-126],[-21,83]],[[12630,82062],[32,130],[11,21],[40,12],[-30,13],[-3,49],[15,-22],[13,31],[-27,73],[-8,77],[2,51],[14,-19],[-6,54],[58,-35],[4,10],[56,-1],[36,-105],[10,-82],[-10,-77],[-18,-5],[12,-68],[22,11],[12,-22],[11,27],[2,-43],[24,12],[62,-145],[41,-146],[-6,-26],[13,-49],[-3,-122],[18,65],[10,-31],[16,-125],[28,-26],[13,-45],[-7,-29],[-15,40],[-65,83],[-8,36],[-25,-18],[13,-12],[-14,-73],[-25,-48],[30,22],[2,35],[40,11],[5,-47],[22,5],[11,-41],[-39,-13],[11,-47],[8,25],[23,13],[6,-34],[28,-69],[15,-80],[-18,-37],[-21,14],[-9,-52],[21,24],[24,-30],[16,88],[15,-17],[4,-99],[-17,-67],[10,-17],[-23,-27],[-2,-45],[-38,-45],[24,-16],[27,52],[15,8],[7,-92],[-1,-111],[-22,35],[2,-28],[19,-24],[6,-55],[-14,-24],[-3,-106],[-43,0],[-9,39],[-33,-7],[-16,43],[2,31],[-38,-8],[18,62],[22,-13],[11,18],[-38,90],[-18,-17],[-2,42],[-24,45],[13,117],[11,34],[-12,30],[-14,-86],[-1,68],[12,65],[-25,83],[12,-75],[-11,-37],[-15,12],[-30,56],[26,-74],[16,-104],[-4,-41],[-17,-28],[-38,56],[8,61],[-20,55],[10,46],[-13,0],[2,41],[-21,-9],[-9,20],[13,26],[-33,15],[17,-100],[-8,-9],[21,-45],[1,-44],[-15,-6],[30,-75],[8,-97],[20,-41],[29,-90],[18,-105],[-10,-42],[13,-20],[-15,-14],[-5,26],[-27,5],[-17,100],[-27,54],[-8,57],[-38,90],[-3,118],[-17,42],[10,58],[-11,37],[7,88],[26,31],[-31,-4],[-6,-55],[-24,-18],[-13,28],[-20,-4],[-3,48],[14,6],[-12,55],[31,32],[13,-21],[1,-46],[14,-14],[4,38],[-15,51],[18,34],[18,-24],[0,37],[20,4],[-14,86],[2,47],[-17,25],[11,48],[-12,16],[-29,-3],[-38,68],[12,24],[-9,51],[24,46],[-23,-9],[-26,26],[9,-35],[-12,-46],[-32,42],[-16,64],[12,46],[21,16],[26,-28],[1,-27],[32,-7],[14,35],[-12,37],[3,45],[-40,65],[9,62],[-6,40],[-15,-55],[-15,-15],[-13,-55],[-45,0],[-4,40]],[[12628,81468],[15,65],[15,25],[-12,14],[26,28],[23,-24],[-1,-39],[-13,-15],[-10,-61],[-17,37],[-26,-30]],[[12613,83594],[6,46],[18,-13],[-24,-33]],[[12594,82000],[18,43],[7,-9],[3,-74],[-8,-27],[-16,28],[-4,39]],[[12518,84319],[7,-2],[24,-108],[-2,-33],[-21,74],[-8,69]],[[12500,84392],[23,-20],[7,-35],[-17,-5],[-13,60]],[[12476,82011],[28,22],[2,-43],[23,30],[16,-1],[-54,-106],[-9,30],[8,29],[-14,39]],[[12461,83089],[29,82],[7,0],[37,-71],[2,42],[-18,22],[-12,43],[28,-27],[5,47],[27,-41],[13,-111],[8,7],[12,-81],[-4,-31],[16,-24],[6,44],[-3,68],[31,-23],[-16,73],[-15,7],[-8,53],[4,46],[-39,97],[4,51],[37,33],[77,-47],[54,-60],[61,4],[32,-24],[23,-59],[22,-158],[26,-13],[16,-44],[7,-50],[33,-51],[6,-60],[16,-39],[-30,-35],[-25,-55],[-22,-14],[-49,19],[-25,22],[-12,-61],[-22,-34],[-14,34],[-28,-4],[-5,25],[-18,-8],[7,-32],[-26,-28],[-41,-1],[-9,92],[6,45],[-13,26],[13,16],[-5,34],[-15,-69],[-16,-3],[-11,57],[-19,9],[17,-52],[-13,-70],[-11,-17],[19,-20],[7,-55],[-20,11],[9,-50],[-16,-24],[23,-30],[5,-31],[-13,-55],[-21,82],[-7,-36],[11,-15],[16,-96],[-21,-17],[8,-69],[-9,-64],[-16,-6],[-8,37],[6,63],[-10,53],[5,41],[-7,74],[-8,-160],[-13,-18],[-15,21],[8,-49],[16,7],[0,-112],[-6,-55],[-13,25],[3,38],[-19,16],[7,40],[-14,31],[15,20],[-16,18],[-3,119],[16,21],[-23,7],[8,30],[-6,45],[16,64],[-5,38],[11,40],[19,-107],[-3,61],[9,25],[-21,97],[-26,41],[-2,84],[-17,24],[-11,67],[3,38],[-9,90]],[[16479,65813],[59,4],[304,-7],[55,4],[175,4],[236,1]],[[17308,65819],[275,-2],[280,-2],[63,7],[58,-9],[155,-1]],[[18137,60000],[2,-939],[-7,-18],[-24,-180],[-24,-10],[-37,149],[-38,-15],[0,23],[-34,-8],[-34,-68],[8,-66],[-5,-60],[22,-119],[-12,-29],[5,-230],[10,-47],[-7,-141],[23,-191],[6,-218],[-20,-42],[11,-32],[-8,-85]],[[17974,57674],[-114,384],[-174,576],[-162,524],[-66,212],[-143,453],[-139,433],[-105,323],[-154,464],[-145,434],[-107,313],[-186,537],[-1,263],[2,851],[0,633],[-1,434],[0,1305]],[[24442,63932],[12,16],[2,140],[-10,35],[16,78],[28,34],[17,-2],[17,38],[8,165],[27,113],[10,19],[6,128],[-1,72],[-12,69],[-15,12],[-20,88],[10,70],[8,127],[21,27],[12,-15],[20,37],[57,11],[17,56],[37,15],[13,49],[20,26],[8,170],[35,80],[10,121],[3,112],[-6,46],[0,86],[-13,42],[-51,85],[-11,61],[4,52],[-17,71],[-49,111],[3,34]],[[24658,66411],[159,0],[113,-4],[188,-10],[244,0],[88,-4]],[[25450,66393],[-1,-119],[-8,-103],[9,-109],[33,-154],[20,-269],[24,-159]],[[25079,59979],[-17,-2],[-18,97],[-14,7],[14,-63],[-9,-27],[-24,55],[0,54],[-24,132],[1,60],[-16,40],[7,54],[15,15],[4,61],[-26,161],[0,57],[11,2],[-11,64],[1,52],[-20,32],[-43,156],[-29,68],[-16,-42],[-20,58],[8,59],[-15,-8],[-37,115],[-31,59],[-31,118],[-6,79],[7,111],[15,58],[10,118],[19,82],[2,77],[-8,54],[25,101],[3,59],[-38,82],[-17,5],[-39,51],[-26,-108],[-11,-7],[-22,65],[-14,154],[8,37],[-12,189],[-19,68],[-68,162],[-17,105],[-14,8],[-10,69],[-15,29],[-36,119],[2,62],[-24,108],[7,43],[-20,141],[-4,107],[1,126],[12,123],[12,42]],[[29478,69324],[139,7],[149,-15],[225,11]],[[29991,69327],[-10,-34],[12,-88],[-17,-70],[-5,-66],[-16,-45],[12,-109],[15,-83],[-18,-38],[6,-59],[-20,-38],[-16,-70],[-30,-35],[0,-31],[-61,-41],[-10,-57],[1,-95],[9,-67],[0,-63],[-23,-97],[-1,-88],[-19,-73],[1,-60],[-14,-66],[-19,-53],[-7,-118],[-13,-25],[-7,-77],[5,-23],[-9,-152],[5,-58],[-11,-64],[-6,-130],[6,-70],[-9,-39],[6,-49],[-8,-45],[-17,-26],[3,-36],[-9,-77],[12,-103],[15,-43]],[[29724,66666],[-97,11],[-127,11]],[[29500,66688],[-4,102],[6,495],[3,310],[-16,115],[-19,0],[-7,-65],[-9,77],[22,160],[-12,59],[5,60],[-9,68],[-1,110],[-7,21],[13,168],[22,99],[-6,114],[10,65],[-3,84],[-21,103],[5,178],[8,73],[-12,39],[11,89],[-1,112]],[[17580,73968],[153,0],[313,1],[329,-3],[333,0],[310,-1],[125,1],[261,2],[353,-1],[294,0],[224,0],[151,0],[158,0],[201,0],[138,0]],[[20923,73967],[0,-466],[2,-858],[-1,-604],[0,-1627]],[[18973,68699],[-21,23],[-3,43],[-25,54],[1,53],[-31,127],[-14,27],[-9,-51],[-20,-4],[5,-33],[-16,-86],[3,-79],[-20,30],[-32,-2],[-35,-59],[-11,61],[-31,-31],[-15,12],[-21,-30],[-50,55],[-20,-46],[-8,-94],[-24,37],[-52,7],[-16,21],[-18,-22],[-15,-73],[6,-51],[-8,-24],[-45,108],[-1,88],[-22,86],[9,22],[-21,179],[-32,58],[-27,-44],[-10,58],[-21,34],[-12,96],[15,16],[-2,115],[-30,65],[-9,78],[-26,84],[1,27],[-16,61],[1,73],[-12,25],[3,124],[-19,-1],[8,96],[-25,49],[-11,59],[-15,12],[-7,-54],[-15,-36],[-19,-82],[-16,-24],[-15,11],[-9,-76],[-18,-24],[-7,38],[-44,91],[-10,71],[18,42],[-2,63],[-17,60],[16,84],[28,7],[6,35],[-12,64],[7,35],[-23,43],[4,127],[-13,14],[1,47],[19,2],[-1,86],[11,110],[-3,60],[15,58],[-9,72],[14,11],[8,161],[-11,26],[-29,-43],[-21,21],[-14,-20],[-12,31],[4,56],[-21,38],[-16,-50],[-10,19],[7,52],[-28,65],[-16,16],[0,102],[-22,66],[-13,-3],[-7,66],[-33,122],[-31,66],[-5,79],[-58,51],[-6,59],[-48,86],[2,33],[24,32],[-16,7],[-3,51],[-16,20],[18,55],[-13,70],[4,47],[-29,67],[-7,88],[-14,18],[-41,156],[0,1191]],[[23039,67566],[284,0],[106,0],[268,0],[241,-1],[313,1],[247,0]],[[24498,67566],[-4,-47],[10,-75],[-5,-35],[30,-60],[14,-70],[-33,-139],[0,-111],[9,-156],[12,-26],[13,-170],[28,-58],[65,-54],[16,-84],[5,-70]],[[24442,63932],[-29,38],[-2,56],[-24,53],[-2,45],[-16,11],[-13,71],[-61,-10],[-446,-29],[-275,-11],[-191,9],[-152,8]],[[26757,57673],[91,99],[7,-21],[33,75],[50,53],[19,44],[6,-40],[27,22],[155,-25],[188,-34],[0,-122],[30,73],[43,-200],[-5,-135],[83,-3],[230,-14],[88,-302],[135,-479],[93,-328]],[[28030,56336],[-48,-61],[-28,-66],[-35,-120],[-41,-182],[-17,-123],[-13,-242],[-38,-97],[-9,-90],[-34,0],[-13,30],[-24,-105],[10,-45],[-33,-64],[-7,-53],[-34,-61],[-11,40],[0,-122],[-32,-90],[-33,-18],[-35,-63],[-24,-67],[-23,-9],[-8,40],[-12,-51],[18,-70],[-9,-92],[-53,-71],[0,35],[-22,39],[-12,-37],[27,-84],[-22,-92],[-26,-28],[-18,-81],[6,-16]],[[17950,55017],[5,31],[24,-20],[25,33],[-1,40],[17,63],[1,79],[-15,136],[-42,9],[-10,59],[8,87],[0,125],[-15,37],[9,40],[-7,72],[26,34],[2,33],[28,112],[-2,137],[9,31],[-9,176],[8,23],[-9,68],[27,112],[6,99],[45,77],[34,104],[-12,101],[-14,19],[-31,98],[-14,9],[2,84],[-16,78],[-10,135],[-22,63],[-22,115],[-1,158]],[[19530,53403],[-304,2],[-260,-2],[-135,181],[-234,307],[-385,498],[-131,168],[-157,198],[6,86],[-5,57],[13,30],[12,89]],[[2683,382],[25,11],[-18,-69],[-7,58]],[[2313,265],[49,100],[16,-38],[-36,-114],[-29,52]],[[26284,65466],[377,42]],[[26661,65508],[5,-45],[28,14],[30,-70],[45,-58],[27,-83],[28,11],[10,63],[13,-55],[19,1],[-2,-35],[-65,-27],[-5,-40],[15,-40],[26,40],[18,-10],[22,55],[22,-84],[35,-46],[33,55],[30,7],[22,44],[46,51],[19,-27],[55,-6],[33,66],[52,152],[44,103],[15,5],[63,99],[29,19],[106,126]],[[27479,64235],[-30,-22],[-11,-54],[20,-119],[-5,-78],[3,-101],[-17,-102],[-21,-179],[-1,-122],[-6,-72],[-13,-7],[4,-46],[-20,-129],[10,-39],[-14,-115],[-15,-7],[-25,-72],[-31,-125],[-25,-69],[-13,0],[-21,-47],[-14,12],[-16,62],[-29,-82],[-3,-83],[-30,7],[-4,-53],[-18,-59],[1,-102],[-15,-7],[12,-79],[-3,-108],[-11,27],[-21,-84],[-10,32],[7,42],[-9,58],[-21,49],[-23,-62],[-15,-91],[0,-67],[-20,-52],[9,-101],[-1,-133],[-29,-18],[-9,-151],[-57,-52],[-18,20]],[[26230,53017],[-68,0],[-210,-9],[-318,8],[-128,-3],[3,-38],[-13,-115],[29,-142],[35,-80],[4,-51],[-16,-141],[22,-93],[-17,-28],[-24,-146]],[[25529,52179],[-39,-36],[-50,-26],[-16,14],[35,27],[4,33],[-23,99],[-19,39],[-9,86],[9,63],[-6,130],[-24,42],[-25,-204],[-1,-155],[-9,-76],[-15,6],[1,53],[-47,50],[-11,-42]],[[25685,69725],[9,49],[28,10],[-12,-82],[-12,-15],[-13,38]],[[25568,69525],[12,33],[-1,-49],[-11,16]],[[24708,71642],[4,74],[15,13],[-2,-60],[-17,-27]],[[24655,71549],[5,23],[30,31],[1,-42],[-32,-31],[-4,19]],[[24624,71578],[14,13],[7,-48],[-13,-4],[-8,39]],[[24617,71389],[16,18],[33,86],[13,-31],[-29,-33],[4,-36],[-16,-3],[-20,-38],[-1,37]],[[24564,71623],[14,19],[0,-46],[-14,27]],[[24276,71298],[20,-31],[43,17],[60,73],[17,0],[40,42],[38,77],[18,-17],[36,51],[21,64],[9,-13],[19,35],[20,-34],[11,-53],[-23,-114],[-14,-39],[8,-74],[-16,-35],[-10,-70],[9,-23],[62,95],[30,-75],[47,-40]],[[24721,71134],[7,-39],[22,14],[0,-33],[23,-9],[15,-59],[16,-141],[163,-131],[123,-99],[87,-142],[14,11],[18,-41],[17,29],[27,4],[25,-51],[11,19],[24,-48],[40,-15],[15,-26],[7,-48],[-18,-60],[18,-50],[21,18],[9,-43],[16,1],[26,-56],[8,-44],[-11,-30],[12,-38],[-5,-61],[-10,7],[11,-80],[-19,-76],[-6,-83],[36,-16],[17,47],[13,-59],[-11,-48],[-14,-145],[21,-76],[19,-16]],[[25508,69421],[-9,-57],[-1,-80],[-53,-30],[-3,-65],[-20,-79],[-23,-124],[-9,-157],[-7,-27],[20,-37],[11,6],[5,49],[16,49],[25,26],[12,96],[31,132],[35,19],[14,45],[15,-68],[-7,81],[24,156],[10,10],[13,139],[18,-17],[15,46],[3,77],[11,45],[24,-1],[0,-90],[-15,14],[-3,-165],[-21,-26],[-5,-62],[-14,-51],[4,-48],[-8,-60],[-16,-29],[-16,-73],[-20,-172],[-13,-41],[-13,-109],[-9,-158],[-8,-63],[11,-107],[-4,-58],[-35,-88],[-25,-261],[11,-137],[-2,-87],[-24,-145],[-4,-116],[-17,-81],[-13,-167],[9,-93],[-6,-43],[10,-73],[-8,-34],[12,-83],[1,-101],[7,-56],[18,-62],[-16,-171],[4,-166]],[[24498,67566],[-4,95],[-10,39],[0,110],[7,75],[-11,84],[-44,180],[-40,30],[-35,109],[-46,93],[-11,129],[-13,56],[-26,49],[-45,43],[-17,41],[-20,97],[-56,14],[-6,40],[-46,132],[-20,40],[12,104],[-3,61],[7,51],[-4,107],[-7,59],[13,33],[-7,90],[3,123],[30,125],[1,50],[-34,146],[-32,10],[4,166],[24,54],[21,152],[19,45],[24,21],[9,38],[13,-13],[9,50],[26,1],[15,67],[1,689],[22,-19],[6,79],[28,36],[21,-49]],[[17338,70470],[14,-91],[24,-107],[23,-5],[9,-45],[20,-4],[13,-33],[3,-68],[20,-89],[-25,-127],[-33,-215],[-16,-212],[-33,-136],[5,-106],[-18,-88],[-11,-84],[-30,-45],[-15,-94],[-13,-138],[-23,-78],[3,-60],[-8,-36],[15,-70],[-9,-45],[15,-45],[18,24],[16,-58],[20,15],[1,-53],[22,-43],[-14,-77],[-10,-10],[12,-75],[-12,-123],[-2,-57],[-10,-9],[-1,-59],[0,-2105]],[[16479,65813],[-288,-1],[-314,16],[-60,3],[-186,-8],[-28,7],[-56,-11],[-241,-1]],[[15306,65818],[-40,122],[-2,90],[-15,83],[-6,215],[13,161],[-6,96],[-11,21],[-6,66],[-11,1],[-13,118],[22,136],[9,94],[18,277],[-5,42],[13,42],[19,109],[15,147],[18,287],[12,346],[11,377],[0,83],[8,183],[-5,131],[12,151],[16,285],[3,157],[-3,86],[9,358],[0,76],[-12,47],[6,81],[-1,82],[-7,45],[15,36],[1,110],[-21,177],[43,-78],[-3,36],[30,29],[11,-28],[28,31],[20,51]],[[23551,59417],[0,582]],[[23551,59999],[0,901],[3,1208],[-1,407],[-22,26],[-13,-16],[-25,47],[-6,68],[-15,37],[-6,98],[-31,89],[-19,85],[-2,47],[14,7],[9,99],[16,32],[4,62],[14,-25],[12,45],[-18,31],[14,20],[-19,58],[4,34],[-25,13],[-5,-37],[-47,50],[-29,107]],[[28814,58761],[10,1],[18,-62],[3,-79],[-17,17],[4,38],[-18,85]],[[28806,57893],[44,78],[20,15],[8,139],[7,271],[-16,174],[12,-85],[7,-123],[-7,-224],[-12,-209],[-14,17],[-49,-53]],[[28646,57495],[68,236],[-3,-31],[-65,-205]],[[28584,57233],[6,-14],[16,117],[38,146],[-42,-193],[-13,-92],[-5,36]],[[28432,57261],[27,29],[74,46],[-101,-75]],[[27156,59520],[234,-33],[37,3],[114,-21],[369,-2],[202,3],[138,1],[233,-2],[0,10],[292,-2]],[[28775,59477],[13,-225],[28,-284],[17,-108],[35,-272],[-8,14],[-15,148],[-19,81],[-12,9],[-5,164],[-8,85],[-10,37],[-11,150],[1,49],[-15,72],[-25,14],[-4,50],[-11,-31],[6,-60],[27,-106],[35,-344],[-19,65],[1,37],[-17,98],[-11,12],[2,-66],[13,-39],[-30,26],[-31,115],[-18,14],[31,-114],[6,-58],[-30,-30],[-23,71],[10,-103],[-44,49],[19,-51],[-30,-16],[-13,-66],[-34,-16],[-7,51],[-20,-12],[-12,121],[1,62],[13,82],[-22,-70],[-1,-74],[20,-184],[-13,-54],[49,-4],[42,49],[9,-55],[55,70],[30,-5],[14,-80],[-14,-80],[13,-232],[10,138],[-1,136],[18,54],[-8,28],[22,22],[24,-53],[14,-111],[-1,-103],[6,-65],[-18,-10],[13,-65],[-29,-68],[-9,39],[-33,-139],[-9,-85],[-10,26],[-4,-74],[-24,-38],[-31,3],[-16,54],[-12,-30],[-7,82],[-21,-67],[-20,43],[-13,114],[27,-5],[10,56],[-23,-28],[-17,13],[-11,-31],[18,-145],[-24,40],[-28,-4],[-61,75],[-18,62],[3,-51],[19,-69],[11,17],[29,-57],[47,-69],[47,-31],[-3,-112],[-17,19],[-22,-69],[26,-34],[-8,-54],[-39,-110],[-31,-39],[-49,123],[-18,75],[35,-195],[49,-67],[36,85],[37,-4],[10,106],[7,-22],[4,-124],[11,32],[16,-21],[-11,89],[32,-42],[-13,-90],[-32,-106],[-28,-131],[-18,2],[-11,77],[-1,-97],[-32,19],[-44,5],[-40,-50],[-22,6],[-25,-63],[-29,-104],[-51,-102],[-55,-158],[-24,-101],[-27,-175],[-22,-218],[-2,-62],[-11,44],[-31,33],[-36,8],[-39,-14],[-45,-60]],[[21482,59992],[232,4],[281,6],[230,-2],[232,-1],[253,0],[250,0],[293,0],[298,0]],[[23588,56087],[-30,55],[-34,2],[-5,42],[-40,34],[-22,74],[-4,52],[-22,2],[-3,46],[-43,70],[-11,-79],[-31,-32],[-51,16],[-2,55],[-56,-41],[-4,-55],[-21,-7],[-23,53],[-4,-27],[-30,-29],[-28,1],[-5,-79],[-17,-25],[-19,20],[-7,-82],[-9,-9],[-19,103],[-22,-4],[-7,57],[-29,36],[13,43],[-25,27],[-5,-73],[-19,-29],[-10,51],[-24,-1],[-11,107],[-21,-14],[3,-71],[-30,-102],[-1,-83],[-15,-7],[-15,95],[11,43],[-13,88],[-18,-67],[-9,35],[-18,-80],[-25,26],[1,72],[-26,-7],[-10,63],[-23,46],[-54,-165],[-33,59],[11,103],[-39,16],[-10,81],[8,58],[-9,38],[-13,-47],[-54,50],[-16,-87],[-18,-23],[-32,114],[-25,-32],[-21,4],[-43,55],[-17,39],[-17,-22],[-41,18],[-6,144],[-23,90],[-24,49],[-5,-90],[-10,-11],[-18,46],[-23,8],[-5,-49],[-27,4],[-53,199],[-17,35],[-15,-22],[0,2258],[-293,-1],[-244,1],[-299,0]],[[28836,61125],[6,32],[107,38]],[[28949,61195],[-30,-174],[-17,23],[-22,-75],[-20,-112],[-15,-148],[4,-44],[-23,-126],[6,0],[-20,-138],[-13,-55],[-10,-121],[-23,-88],[-19,0],[-16,162],[3,89],[13,77],[-4,45],[11,146],[32,191],[3,72],[27,4],[13,67],[-11,102],[19,-2],[-1,35]],[[28725,61110],[15,0]],[[28740,61110],[-15,0]],[[27075,60626],[12,-28],[-19,-62],[12,-17],[6,-99],[21,-85],[26,-14],[23,-87],[33,6],[40,78],[15,75],[38,-120],[31,51],[59,42],[15,38],[-10,43],[7,53],[25,-67],[61,118],[11,9],[10,-68],[49,99],[-8,66],[30,74],[-21,74],[37,213],[45,137],[21,134],[3,94],[35,92],[-6,44],[19,57],[15,90],[-2,65],[13,121],[31,-47],[17,-109],[46,-53],[28,95],[22,186],[11,7],[6,103],[22,119],[34,-101],[23,142],[20,59],[0,-36],[27,90],[5,-20],[14,62],[-6,16],[47,158],[-10,35],[6,69],[22,108],[-8,11],[6,124],[144,-388],[23,189],[8,31]],[[28259,62702],[42,-18],[7,-46],[24,-48],[-20,-92],[18,-82],[34,-15],[27,-50],[0,-44],[27,-21],[8,-35]],[[28426,62251],[24,-97],[-2,-69]],[[28448,62085],[0,-76],[-26,-61],[1,-45]],[[28423,61903],[-20,-20],[-10,49],[-5,-115],[-20,-137],[13,-121],[11,-10],[44,43],[12,38],[8,-30],[-5,-73],[19,-65],[0,-49],[34,-59],[22,4],[9,-41],[11,33],[43,-101],[17,-103],[36,-43],[30,-67],[-8,-85],[-12,6],[1,-140],[-10,-54],[17,-44],[-34,11],[-20,45],[-10,-28],[-21,151],[-39,75],[-35,160],[-18,0],[33,-91],[17,-113],[33,-66],[8,-88],[17,-64],[27,0],[4,-35],[32,-22],[-17,-32],[29,-95],[3,-86],[-8,-76],[-39,111],[0,-81],[15,-83],[-41,-33],[10,-28],[24,12],[8,-67],[24,-94],[-9,-101],[-10,17],[-20,-61],[-15,75],[-45,114],[6,37],[-12,74],[-30,-34],[-10,46],[-22,37],[-21,-41],[12,-33],[29,8],[24,-68],[8,57],[11,-187],[16,-9],[28,-84],[-1,-88],[38,49],[9,-43],[-1,90],[66,-64],[26,16],[13,-187],[23,-245]],[[27769,63167],[-3,-600],[18,26],[22,77],[15,6],[10,68],[11,7],[37,125],[35,-36],[43,218],[41,-108],[52,-21],[4,67],[16,19],[13,58],[24,-24],[23,88],[21,-15],[26,-91],[49,2],[-12,-49],[10,-76],[14,-10],[0,-69],[11,-9],[0,-104],[10,-14]],[[24271,51361],[29,66],[24,-8],[11,-46],[26,-22],[-16,-92],[-22,-13],[-52,115]],[[24970,52063],[-28,-28],[-27,-103],[-3,-54],[-24,27],[-11,-48],[5,-68],[31,14],[-5,-58],[11,-39],[31,6],[4,129],[25,55],[2,48],[31,-49],[-24,-45],[18,-40],[5,-67],[16,18],[13,84],[8,-73],[-23,-49],[24,-4],[-24,-72],[-16,19],[22,-95],[-25,37],[-8,-108],[-28,34],[-2,-62],[-43,-56],[12,-58],[-12,-14],[13,-70],[19,-11],[16,-130],[12,23],[42,-15],[23,-99],[10,47],[24,-106],[5,-76],[20,32],[6,-41],[-30,-24],[20,-28],[-8,-52],[-10,30],[-12,-53],[1,-92],[-21,35],[-9,71],[-43,-176],[3,64],[21,82],[11,93],[-4,72],[-16,-81],[-13,-7],[-24,107],[-34,45],[-9,42],[-57,33],[5,43],[18,-6],[42,43],[-44,2],[-55,86],[-20,-152],[1,-59],[-21,-19],[19,-70],[-51,-137],[-10,131],[-26,123],[-12,-56],[-12,107],[-11,-67],[-27,25],[-10,-115],[-31,-91],[-36,-72],[-5,51],[-25,79],[-29,-2],[-18,42],[-45,41],[-14,63],[21,59],[18,-65],[8,24],[0,-102],[15,24],[-4,96],[-35,113],[-21,-54],[-7,141],[-29,-50],[-18,89],[-8,104],[-23,7],[3,116],[-41,5],[-23,-46],[-6,59],[13,85],[-14,7],[-56,-89],[-34,-7],[26,-157],[21,0],[-2,-39],[-29,1],[-49,-63],[-83,65],[-33,40],[-63,110],[-59,63],[-82,-1],[-75,-39],[-27,-53]],[[23768,51492],[-24,149],[19,53],[19,147],[21,88],[5,100],[-7,66],[4,95],[-11,16],[-3,102],[15,46],[-7,166],[13,24],[-1,54],[15,46],[13,143],[3,95],[11,86],[-13,48],[20,38],[-12,54],[4,124],[-14,-23],[-8,111],[-19,47],[5,74],[-7,88],[-16,33],[10,53],[-21,15],[-14,83],[12,120],[-8,85],[-29,159],[-13,12],[-19,90],[0,1187]],[[25021,51921],[43,114],[-16,-66],[19,-46],[-15,-70],[-3,61],[-28,7]],[[26345,70257],[22,-1],[43,-48],[-18,-58],[-23,19],[-24,88]],[[26112,70220],[21,26],[-7,-40],[-14,14]],[[26082,70243],[1,32],[21,-38],[-6,-26],[-16,32]],[[26055,70012],[18,184],[18,-39],[2,-138],[-19,-42],[-19,35]],[[26035,70171],[13,2],[-7,-51],[-6,49]],[[25984,69829],[15,-28],[0,-42],[-15,70]],[[25934,69474],[5,23],[19,-25],[-6,-98],[-17,55],[-1,45]],[[25908,69328],[20,29],[-8,-47],[-12,18]],[[25754,71110],[16,18],[7,-30],[-5,-55],[6,-36],[-18,-1],[-6,104]],[[25722,65541],[39,93],[18,60],[38,263],[36,158],[16,122],[14,154],[11,254],[-1,175],[-4,150],[-8,111],[-47,330],[-16,172],[-16,119],[2,71],[19,80],[8,126],[-8,135],[-15,101],[29,94],[19,129],[21,111],[12,291],[-9,80],[7,49],[40,42],[6,91],[-1,75],[8,35],[14,-17],[17,80],[17,-35],[17,13],[19,123],[17,43],[17,110],[22,28],[2,-39],[-23,-58],[14,-80],[-19,-71],[9,-9],[-14,-185],[3,-65],[13,-8],[19,149],[1,90],[13,21],[-7,-158],[-16,-44],[-5,-68],[13,-14],[37,213],[9,210],[-7,93],[5,93],[20,59],[45,60],[26,-14],[36,37],[-2,33],[-32,16],[-16,54],[-7,102],[12,70],[17,26],[20,67],[-23,69],[52,-28],[33,27],[81,-143],[5,29],[23,-6],[32,-35],[22,-72],[7,-75],[56,-26],[19,-59],[20,-33],[15,9],[33,-73],[17,7],[20,-32],[23,-71],[-9,-16],[15,-108],[11,-34],[15,-129],[-20,22],[-10,40],[-22,-59],[3,-85],[14,-57],[22,-27],[6,-167],[5,-27],[-11,-138],[2,-61],[-7,-235],[-30,-89],[-19,11],[-11,-54],[-9,-207],[-28,-15],[0,-58],[-43,2],[-21,-85],[-2,-122],[-10,-58],[11,-97],[17,-37],[52,-64],[40,147],[9,-11],[20,119],[-13,-8],[34,81],[1,37],[21,83],[31,14],[30,33],[5,35],[27,27],[32,-43],[21,-50],[17,-123],[10,-36],[8,-85],[8,-274],[14,-129],[-1,-93],[15,-292],[19,-113],[-11,-92],[-7,-137],[4,-55],[-16,-181],[-18,-64],[-28,10],[9,38],[-15,6],[24,79],[-21,28],[-33,-73],[10,-64],[-14,-4],[-11,-52],[1,-81],[-15,-119],[-39,-41],[-18,-91],[-2,-175],[-16,-27],[6,-50],[-22,-57],[-1,-33],[-19,-14],[-33,-144],[-4,-89]],[[25043,72652],[23,76],[52,78],[60,76],[31,79],[33,46],[6,-11],[29,30],[1,-24],[-41,-90],[-3,-36],[-26,-59],[-51,-54],[-42,-66],[1,-21],[25,1],[-70,-79],[-28,54]],[[24721,71134],[71,93],[37,33],[51,142],[16,26],[32,17],[12,-17],[33,27],[27,3],[52,80],[31,95],[37,3],[10,20],[17,100],[35,66],[30,80],[22,22],[21,57],[21,87],[57,94],[48,30],[69,-2],[24,-39],[1,-44],[-29,-20],[-39,3],[5,-52],[-33,-52],[-31,-96],[-20,-34],[-3,-58],[-28,-70],[-5,-66],[-21,-55],[-11,-170],[9,-73],[19,87],[38,106],[32,36],[-31,-87],[45,41],[23,-18],[28,4],[44,-51],[4,-43],[14,11],[22,-73],[4,-51],[17,-47],[5,-50],[30,-73],[0,-60],[24,-48],[49,2],[32,40],[12,-2],[13,-72],[15,-32],[16,1],[18,49],[32,-79],[24,97],[23,66],[33,30],[59,111],[14,-21],[59,42],[81,-19],[29,6],[63,85],[27,14],[21,-8],[36,11],[-20,-82],[0,-180],[-8,-33],[11,-40],[23,9],[26,-48],[20,8],[25,40],[13,-3],[10,-81],[15,7],[34,93],[46,-1],[8,39],[27,-5],[5,-30],[-10,-100],[11,-112],[-4,-109],[-25,4],[-17,-35],[21,-41],[23,9],[24,-46],[-12,-48],[26,-86],[12,12],[11,-50],[-5,-25],[-29,-7],[-28,28],[-22,-13],[-21,19],[4,-36],[-46,1],[9,31],[-15,25],[-5,-44],[-12,34],[-7,-33],[-4,62],[-31,35],[-9,-21],[0,-74],[-14,-34],[11,-104],[-14,-15],[-25,67],[-21,33],[-25,93],[-52,49],[-43,53],[-49,-2],[-36,-143],[-44,13],[-23,-15],[-6,-55],[-42,52],[-37,-2],[-22,-22],[-14,-44],[0,-59],[-13,-79],[-45,-48],[-1,-44],[-12,4],[-10,-111],[-26,37],[-2,41],[14,22],[12,72],[27,104],[-15,49],[-19,-72],[-37,31],[1,-71],[-25,-104],[-21,-9],[-6,-35],[-11,185],[16,53],[-9,33],[-22,-108],[6,-80],[-38,-98],[-22,-107],[-39,-231],[-41,-204],[-17,-50],[2,-66]],[[26542,70447],[10,59],[12,-48],[10,48],[26,33],[-13,54],[39,-13],[13,-97],[17,-26],[-16,-77],[-15,-3],[-21,35],[-16,-18],[-11,29],[-8,-26],[-27,50]],[[30344,64988],[43,16],[17,81],[17,-105],[-5,-37],[-40,-5],[-32,50]],[[30185,65189],[27,71],[9,-8],[-36,-63]],[[30176,65060],[19,7],[19,94],[27,56],[12,-15],[4,-62],[16,-38],[11,43],[1,-78],[-80,-20],[-12,-41],[-17,54]],[[29724,66666],[325,-35],[13,53],[18,-6],[-1,62],[15,36],[19,-18],[9,62],[28,29],[32,-14]],[[30182,66835],[11,-211],[24,-41],[17,43],[10,-67],[-17,-62],[-6,30],[-17,-36],[-34,-37],[-8,-42],[11,-18],[-26,-43],[-14,-58],[5,-56],[-19,-42],[14,-66],[21,8],[42,-21],[35,-193],[-8,-89],[-12,-6],[16,-64],[31,-30],[5,-79],[-4,-50],[19,-63],[50,-32],[9,-23],[12,33],[54,52],[6,116],[-12,50],[-7,-52],[-7,172],[-17,34],[-15,-37],[-10,39],[16,21],[20,-17],[23,-58],[13,-79],[12,-122],[3,-193],[-9,-78],[-9,64],[-55,-22],[-20,-45],[-20,31],[-27,-36],[-16,-62],[-54,-36],[13,72],[-6,114],[10,21],[-26,43],[-14,-105],[-11,-24],[-32,-12],[-7,-41],[6,-46],[-16,-36],[-38,-13]],[[30097,65235],[-3,189],[-18,17]],[[30076,65441],[-8,42]],[[30068,65483],[-10,48],[-19,33],[-5,50],[2,87],[-12,-6],[1,146],[-117,-12]],[[29908,65829],[0,18],[-94,8],[-172,7],[-17,-45],[1,45],[-188,15]],[[29438,65877],[-6,43],[68,768]],[[17306,73966],[185,3],[89,-1]],[[31706,38292],[28,-53],[-11,-32],[-17,85]],[[31642,38010],[39,60],[45,-28],[-43,-48],[-41,16]],[[31170,38311],[32,68],[5,97],[120,-41],[40,21],[27,-25],[19,27],[105,-56],[8,20],[57,-50],[43,-83],[12,-138],[-49,-92],[-18,-151],[-30,-56],[-22,10],[-58,-79],[-25,77],[-20,-48],[-22,62],[-31,-34],[-42,35],[-64,-70],[-7,41],[-64,-16],[8,246],[8,40],[-32,195]],[[30982,37983],[23,44],[-10,-80],[-13,36]],[[27310,45692],[54,76],[-42,-94],[-12,18]],[[27118,45524],[26,51],[-9,55],[86,185],[20,-40],[21,-144],[-27,-39],[-31,38],[-2,-33],[-48,-78],[-36,5]],[[27004,47898],[13,-117],[25,-55],[-3,-35],[-21,50],[-14,157]],[[26203,51417],[20,-34],[44,86],[18,15],[-67,-112],[-15,45]],[[26168,51479],[42,-6],[-19,-47],[-23,53]],[[27221,52678],[5,-10],[-4,-235],[7,-9],[7,-217],[23,-390],[9,-77],[6,-148],[25,-257],[55,-474],[72,-456],[37,-199],[14,-147],[-18,-60],[-5,-130],[10,-215],[18,-164],[35,-268],[34,-403],[27,-234],[19,-203],[18,-259],[-2,-225],[-20,-597],[-6,-379],[-7,-48],[-15,26],[-34,-253],[1,-153],[-26,-215],[19,-5],[-2,83],[30,72],[-41,-273],[-9,2],[-9,121],[-32,0],[-21,-55],[-59,13],[-10,-42],[-51,-27],[-24,123],[5,120],[9,16],[-13,152],[-34,254],[-25,102],[-74,142],[-12,-52],[-32,278],[-8,236],[-10,98],[-41,175],[-15,8],[-10,-60],[-11,186],[-10,44],[15,21],[8,-63],[12,182],[-11,104],[11,56],[-17,28],[-18,-49],[10,-154],[-29,-31],[-55,347],[-21,195],[-62,362],[16,-49],[30,119],[27,167],[13,25],[12,85],[-19,117],[-8,-21],[0,-113],[-18,29],[7,35],[-7,104],[-31,71],[-15,-107],[20,-30],[17,-106],[-15,-134],[-20,1],[2,-93],[-9,-16],[0,111],[-26,134],[-6,75],[9,189],[4,-96],[7,188],[-7,56],[13,61],[16,215],[8,42],[6,156],[-15,153],[3,87],[-13,41],[14,71],[-2,53],[-30,143],[-8,118],[-46,22],[-15,-55],[-10,162],[-23,28],[-13,152],[-51,112],[-2,155],[-38,91],[-12,105],[-26,120],[-68,131],[-28,80],[-37,-35],[-32,23],[1,-29],[-27,-69],[7,-44],[-26,23],[-1,-35],[28,-21],[-2,-50],[-30,35],[-23,-22],[-35,-91],[-12,-9],[-50,-106],[-9,58],[-17,-72],[-40,-6],[-31,-45],[-23,17],[4,124],[-29,163],[-29,39],[-25,91],[-29,56],[-21,67],[-48,108],[-39,64],[-77,82],[-72,26],[-32,-4],[-60,-33],[-56,-43],[-44,-8],[-57,-47]],[[29991,69327],[1,65],[19,64],[7,106],[34,101],[15,-61],[27,-5],[13,70]],[[30107,69667],[15,-757],[6,-411],[6,-539],[4,-313],[7,-22],[-10,-159],[8,-93],[39,-113],[-3,-129],[34,-78]],[[30213,67053],[-25,-139],[-6,-79]],[[28861,63061],[1,-28]],[[28862,63033],[-1,28]],[[28901,63261],[-27,-135]],[[28874,63126],[-21,-41],[-7,-62],[14,-41],[-9,-97],[28,-154],[15,-39],[12,-141],[-5,-45],[5,-111],[15,-44],[11,-124],[31,-124],[31,-40],[9,-374]],[[29003,61689],[-96,1],[-84,9],[-26,1395],[0,74]],[[23410,50792],[69,234],[42,49],[-111,-283]],[[22852,49339],[20,72],[-2,-66],[-18,-6]],[[22782,47846],[30,5],[14,-224],[-19,209],[-25,10]],[[22776,48207],[5,440],[5,131],[34,320],[12,59],[20,167],[23,8],[-43,-247],[-34,-294],[-10,-150],[-7,-226],[5,-211],[24,-349],[-15,94],[-19,258]],[[23768,51492],[-45,-11],[-27,-24],[-110,-174],[-39,-69],[-41,-105],[1,44],[31,91],[28,62],[19,-20],[-14,68],[-61,-56],[18,134],[1,124],[-16,41],[-17,-26],[-16,-101],[-20,30],[-20,-76],[9,-36],[-9,-71],[29,-51],[-12,-28],[17,-45],[0,-140],[-22,-39],[-36,-123],[-15,24],[-3,-86],[12,-58],[-73,-234],[-28,-39],[-80,-174],[-87,-154],[-52,-108],[-33,-93],[-15,-75],[-32,-62],[-54,-143],[-27,-92],[-58,-248],[19,116],[18,162],[32,44],[-4,48],[34,38],[28,108],[45,59],[-3,88],[-48,-120],[-17,-2],[-7,108],[-41,2],[18,-60],[-5,-78],[7,-54],[-17,-74],[-34,-66],[16,164],[-16,-52],[-2,-101],[-11,82],[-37,-72],[-21,-75],[23,-58],[8,48],[24,52],[0,-94],[-17,-72],[-29,-171],[-16,61],[-60,-1],[-14,-28],[14,-32],[22,19],[7,-122],[32,-49],[-22,-144],[-13,-185],[-12,-103],[-23,-13],[-1,72],[-30,-100],[-28,115],[21,-167],[29,-15],[29,38],[-10,-482],[-5,-48],[4,-131],[16,-226],[7,-22],[26,-248],[-8,-51],[10,-153],[36,-33],[1,-129],[-8,14],[-41,-54],[-14,-92],[-41,54],[-37,151],[-31,13],[-31,44],[-25,-15],[-31,19],[-19,-22],[-29,26],[-37,99],[-21,80],[-59,13],[-22,109],[-20,47],[-21,-20],[-22,55],[-30,-5],[-3,94],[-21,68],[-11,220],[-17,138],[-33,117],[3,35],[-19,58],[5,178],[-4,85],[-27,79],[9,26],[7,162],[-13,23],[4,76],[-23,87],[-30,19],[-31,138],[-18,31],[-15,210],[-16,14],[-8,84],[-18,92],[-36,61],[-23,102],[2,38],[-17,100],[-14,214],[-27,85],[-11,170],[-32,159],[-7,183],[-28,86],[-6,86],[-57,137],[-16,109],[-26,21],[-6,44],[-24,26],[-2,109],[-27,26],[-3,57],[-21,94],[-25,-24],[-47,0],[-39,54],[-56,-26],[-18,8],[-52,99],[-11,-10],[-13,-124],[-36,25],[-9,-46],[-33,2],[-7,-81],[-32,-180],[-9,-190],[-11,-5],[-7,-108],[10,-45],[-23,-58],[-13,3],[-11,-90],[-17,-44],[-5,-88],[-11,-16],[-64,58],[-46,157],[-47,29],[-18,98],[-66,54],[-41,99],[-11,98],[-36,45],[-48,144],[-11,113],[-37,210],[-7,151],[6,149],[-21,142],[-28,105],[-7,178],[-9,63],[-14,12],[-11,91],[-15,3],[-16,71],[-27,65],[-12,-13],[-83,226],[-14,112],[-46,95],[-27,142],[-18,29],[-5,60],[-34,38],[-41,98],[-44,291],[-42,60]],[[22823,73968],[230,-1],[120,0],[228,-1],[1,449],[26,-37],[28,20],[29,-54],[8,-34],[14,-202],[7,-25],[0,-116],[9,0],[9,-135],[-3,-118],[30,-75],[42,-27],[6,19],[43,-17],[5,-50],[66,-12],[45,-16],[14,-132],[42,1],[49,33],[1,54],[33,41],[39,18],[8,-22],[54,0],[71,-98],[26,4],[0,-50],[-18,-6],[-3,-37],[15,-30],[42,13],[14,-55],[-4,-57],[28,-153],[28,32],[-10,80],[12,44],[16,-11],[42,16],[15,-44],[-2,-65],[14,-38],[18,6],[8,-36],[42,-9],[4,-67],[16,-52],[23,13],[-2,-75],[22,28],[16,-22],[16,24],[34,17],[47,113],[55,75],[13,-7],[1,-77],[20,-87],[34,6],[16,23],[7,-32],[118,18],[31,-31],[8,-66],[27,-47],[36,41],[19,-20],[23,6],[-18,-77],[-31,-62],[-38,-39],[-12,-32],[-117,-104],[-40,-44],[-54,-88],[-37,-79],[-74,-187],[-31,-110],[-63,-202],[-30,-48],[-58,-171],[-17,-21],[-70,-160],[22,-94]],[[23009,70400],[-4,107],[6,66],[-7,78],[-6,210],[-18,50],[-18,126],[-4,103],[-15,104],[5,73],[-4,63],[9,183],[-17,42],[2,226],[-7,149],[3,53],[-10,164],[6,44],[-3,109],[-55,391],[-6,124],[-19,127],[0,98],[8,88],[-13,85],[10,33],[-10,66],[5,66],[-4,53],[18,121],[-12,46],[-6,99],[-9,6],[3,71],[-11,52],[-3,92]],[[31859,38270],[27,28],[0,-65],[-27,37]],[[31829,37513],[3,72],[41,48],[11,-43],[35,18],[-45,-78],[-45,-17]],[[29908,65829],[4,-410],[-3,-278],[-13,-13],[4,-74],[-9,-26]],[[29891,65028],[-5,19],[-29,-7],[-42,-36],[-12,27],[-7,-40],[-37,-6],[-14,-25],[-19,20],[-25,-35],[-21,27],[-26,-32],[-32,22],[-22,-17],[-1,55],[-30,-107],[-8,7],[-24,-74],[-11,15],[-65,-85],[-50,-99],[-21,-19]],[[29390,64638],[1,31],[-20,104],[68,130],[-19,96],[8,378],[10,500]],[[28861,63061],[13,65]],[[29101,65072],[110,-215],[111,-205],[-7,-125],[-24,-155],[-3,-55]],[[29288,64317],[-19,-70],[-18,-5]],[[29251,64242],[-1,1]],[[29250,64243],[-11,-17],[-4,-77],[-11,-19],[-2,-97],[19,-28],[17,18],[35,-53],[7,44],[1,-174],[-14,-205],[-13,-247],[-6,-166],[-40,-248],[-17,-64],[-8,-73],[-26,-96],[-19,-29],[-34,-99],[-28,-152],[2,-13],[-44,-190],[-30,0],[19,172],[5,83],[-40,71],[-23,-9],[-7,-36],[-9,62],[-33,66],[-13,63],[-8,-5],[-28,114],[-20,25],[7,136],[-12,33]],[[20923,73967],[193,0],[141,0],[231,-1],[145,1],[294,0],[174,-1],[229,1],[221,1],[272,0]],[[28725,61110],[1,91],[17,-32],[-3,-59]],[[28723,61274],[11,40],[0,-66],[-11,26]],[[28713,61354],[11,47],[8,-35],[-19,-12]],[[29003,61689],[-41,-413],[-13,-81]],[[28836,61125],[-21,20],[-27,-19],[-18,-65],[-4,73],[35,119],[-28,-19],[10,105],[-34,-16],[5,59],[22,16],[11,60],[-27,14],[20,117],[-25,-68],[-1,-70],[-21,73],[14,15],[-11,60],[-15,-80],[9,-28],[-8,-63],[-6,47],[-29,107],[-14,7],[3,-60],[-17,88],[-13,126],[18,0],[12,49],[-22,41],[17,61],[18,0],[17,-52],[24,-18],[-23,62],[-21,87],[-31,63],[-13,-82],[0,82],[22,119],[14,-76],[5,127],[-16,81],[-24,-62],[-6,-72],[0,104],[16,101],[8,-51],[20,-11],[11,31],[-6,55],[11,54],[-18,-27],[0,-71],[-9,142],[-9,18],[15,130],[15,43],[16,90],[24,-12],[-2,48],[14,37],[-4,48],[13,136],[-18,-63],[-23,-2],[-7,-56],[17,-46],[-46,-116],[-4,130],[-9,-99],[4,-45],[-11,-42],[-4,101],[-5,-86],[-14,-19],[-6,-71],[-26,-41],[-22,73],[22,-128],[18,-26],[-2,-93],[12,-47],[-16,-40],[-2,-82],[-22,-69],[11,-39],[-17,-55],[9,-50],[3,-227],[7,-54],[30,-112],[-21,-108],[23,6],[-3,-95],[19,-92],[-1,-103],[-28,65],[-4,64],[-11,-66],[-15,35],[-17,93],[-39,37],[-6,-28],[-15,35],[-6,111],[-12,-18],[8,-90],[-23,46],[-15,56],[-10,120],[-54,-99],[-11,26],[-7,116],[10,81],[30,97]],[[28448,62085],[36,118],[-36,119],[-22,-71]],[[30827,68327],[14,44],[19,-42],[-16,-46],[-5,51],[-12,-7]],[[30819,68536],[8,56],[6,-73],[-14,17]],[[30780,68236],[19,12],[-3,-77],[-14,-4],[-2,69]],[[30762,68405],[16,69],[31,-87],[-28,-82],[-15,42],[-4,58]],[[30713,68260],[29,23],[10,-44],[-12,-54],[-17,8],[-10,67]],[[30704,68478],[11,110],[12,-16],[-15,-140],[-8,46]],[[30704,68279],[7,42],[26,43],[5,-44],[-38,-41]],[[30107,69667],[37,39],[19,-121],[20,78],[3,73],[-7,41],[13,36],[36,-63],[8,34],[-16,54],[-12,73],[22,107],[22,65],[51,84],[-10,70],[21,66],[23,45],[0,80],[-15,3],[8,39],[-9,28],[18,93],[4,59],[-15,48],[24,163],[31,91],[11,7],[16,326],[120,500],[96,389],[44,-31],[9,-28],[-6,-36],[3,-154],[40,-79],[51,74],[29,4],[9,50],[29,12],[26,-14],[1,67],[27,20],[36,-45],[4,-30],[52,-116],[18,-101],[27,-49],[1,-542],[1,-375],[1,-392],[8,-29],[-15,-41],[14,-69],[-13,-23],[-1,-147],[24,-11],[12,-43],[44,-50],[17,19],[6,-88],[-19,-46],[9,-77],[12,-38],[0,-54],[-17,-73],[24,-141],[18,-40],[14,73],[36,-32],[19,-108],[16,-150],[14,-31],[2,-122],[-27,-77],[-33,-112],[-23,21],[-4,-46],[-3,95],[-23,-31],[5,-45],[-12,-54],[-24,40],[-14,-2],[-6,-110],[-37,2],[-13,-43],[-10,46],[-19,31],[-1,-91],[-13,-106],[-7,81],[-4,-62],[-6,51],[-19,33],[19,-97],[-12,14],[-13,-94],[-15,57],[-5,116],[-14,-10],[-11,58],[-5,-66],[-15,-14],[22,-69],[8,-74],[-14,-45],[-27,-2],[9,-49],[-21,-23],[-12,35],[-6,65],[17,126],[-17,-27],[1,117],[-11,-9],[-10,-88],[-18,-23],[6,-46],[-5,-55],[11,-93],[-60,122],[-25,-24],[2,110],[10,47],[0,76],[-7,-54],[-21,-44],[-10,33],[-20,-40],[12,-77],[-1,-37],[-33,-163],[-7,-118],[15,11],[-33,-109],[-15,-79],[-62,52],[-7,-90],[-11,-70],[-13,49],[-1,-53],[-24,15],[-5,-77],[-8,33],[-2,125],[-4,-113],[-13,-89],[-28,-45],[-4,84],[-18,8],[-26,-64],[-5,22],[26,134],[-19,-5],[-33,-75],[-32,-139],[13,-60],[3,-68],[-41,-28],[-12,-52],[4,-48],[12,4],[-28,-80],[3,-33],[-28,-20],[-12,-39],[-9,-71],[5,-32],[-27,-177],[-9,-12]],[[31088,68742],[15,-17],[-9,-26],[-6,43]],[[31072,68739],[17,-42],[-8,-29],[-9,71]],[[6432,39899],[5,62],[30,77],[29,144],[3,63],[-17,92],[-6,105],[18,83],[70,-173],[42,-31],[44,-85],[28,-82],[28,-118],[-3,-132],[24,2],[7,-115],[47,-129],[-3,-56],[-42,-150],[-61,-109],[-29,9],[-58,-150],[-42,-247],[-63,129],[-11,94],[9,269],[-18,164],[-8,142],[-23,142]],[[6255,41279],[9,106],[21,28],[31,-155],[44,57],[26,-37],[33,-105],[28,-33],[7,-87],[-18,-81],[-40,-28],[-51,-62],[-18,34],[-6,203],[-44,34],[-22,126]],[[6254,40827],[37,88],[4,-100],[-31,-19],[-10,31]],[[6154,41263],[20,31],[30,-28],[21,-97],[-7,-64],[-37,-40],[-12,137],[-15,61]],[[6085,41503],[13,129],[88,-54],[66,-17],[-23,-100],[-23,-31],[-62,67],[-44,-18],[-15,24]],[[5815,42048],[43,8],[32,136],[11,12],[37,-214],[-2,-78],[18,-56],[4,58],[31,-189],[-45,-50],[-20,59],[-63,-6],[-8,87],[-25,124],[-13,109]],[[5394,42576],[16,128],[42,97],[64,-10],[16,-82],[-11,-109],[1,-106],[-32,-106],[-44,27],[-19,72],[-25,30],[-8,59]],[[5266,42343],[6,70],[48,119],[-6,-114],[-23,-34],[-13,-100],[-12,59]],[[90203,32586],[42,39],[25,202],[27,-64],[-8,-90],[-34,-111],[-20,-203],[-20,22],[1,149],[-13,56]],[[90472,34413],[17,97],[4,-176],[-21,79]],[[90343,33370],[34,92],[11,-46],[-45,-46]],[[90507,37942],[13,125],[14,1],[-27,-126]],[[90502,34533],[10,113],[24,85],[-17,-227],[-17,29]],[[30097,65235],[-20,-48],[-6,197],[-7,-8],[-2,-145],[-23,16],[15,130],[22,64]],[[30019,65192],[5,112],[7,-1],[0,-92],[-12,-19]],[[29960,64842],[10,59],[8,-66],[-18,7]],[[30068,65483],[-9,-79],[-14,92],[-23,69],[7,-81],[-12,-56],[-11,-104],[8,-118],[-18,-118],[-37,-10],[-28,-37],[-39,-29],[-1,16]],[[16868,55901],[17,-5],[45,-75],[20,-87],[-4,-42],[-32,23],[-13,37],[-1,81],[-21,17],[-11,51]],[[16866,55382],[9,2],[25,-129],[38,-119],[-22,-23],[-21,60],[-29,209]],[[16597,55668],[13,8],[27,-63],[-31,2],[-9,53]],[[16499,56578],[47,-2],[21,-45],[18,-4],[16,45],[12,-24],[-11,-45],[-43,-40],[-29,-2],[-16,24],[0,60],[-15,33]],[[16410,56511],[57,39],[-1,-42],[19,-22],[3,-44],[-43,-55],[-35,124]],[[16354,56548],[24,45],[16,-51],[-15,-16],[-25,22]],[[17950,55017],[-207,-60],[-162,-51],[-138,-46],[-163,-58],[-12,160],[-21,-8],[-5,161],[3,83],[-8,160],[-13,128],[-50,246],[-25,62],[-24,88],[-9,-3],[-20,95],[-40,77],[-44,144],[-26,38],[-1,-47],[-22,-21],[-46,81],[11,70],[-17,140],[-26,97],[-53,-7],[-20,-38],[-11,36],[-26,15],[-78,119],[-20,150],[-28,50],[-20,65],[-28,48],[-30,1],[-11,-24],[-23,27],[-24,-13],[-36,62],[-77,9],[-52,-24],[-11,88],[-37,63],[12,154],[-10,54],[7,101],[-16,68],[11,187],[-2,72],[-18,55],[-15,-12],[-28,53],[-12,48],[9,93],[-1,88],[-11,54],[-26,13],[-28,103],[-18,101],[-33,35],[-13,136],[-37,123],[-13,138],[-18,21],[-16,108],[-23,90],[-31,55],[-20,76],[-4,138],[-11,112],[6,44],[-12,23],[11,66],[18,-37],[13,61],[10,171],[-21,148],[-19,54],[-11,-28],[-38,3],[-32,81],[-17,88],[-13,13],[-21,97],[-4,61],[5,129],[-16,155],[-16,34],[6,192],[-5,110],[29,35],[15,-95],[-11,-26],[5,-118],[32,-37],[48,-139],[13,3],[-19,50],[-14,195],[-23,98],[-25,34],[10,55],[-7,90],[-19,4],[-11,66],[18,14],[29,86],[-11,60],[-26,47],[-25,-35],[-4,-110],[14,-40],[-13,-17],[-2,-48],[18,-56],[-18,15],[6,-79],[-13,-8],[-32,91],[-17,-4],[-33,120],[-33,41],[-20,-33],[17,187],[-12,87],[7,15],[-15,68],[-11,-9],[-2,67],[-17,105],[-33,70],[-25,72],[-29,148],[-57,170],[-22,86],[-2,41],[12,112],[-13,130],[-10,37],[-8,144],[-7,35],[7,161],[10,77],[-8,160],[-8,33],[-8,135],[-16,33],[-6,55],[-29,120],[-13,19],[-8,86],[-22,32],[-48,151],[4,63],[-17,150],[22,201],[48,302],[13,176],[-14,54],[15,182],[12,244],[-5,126],[-23,224],[-25,44],[10,80],[2,177]],[[29842,64946],[5,31],[20,10],[-25,-41]],[[29251,64242],[-1,1]],[[29224,64083],[12,62],[3,82],[32,20],[9,-53],[-23,-85],[-33,-26]],[[27690,66134],[53,94],[40,94],[20,73],[60,82],[21,93],[5,54],[36,54],[14,40],[2,74],[-20,140],[-22,34],[1,94],[-19,14],[9,70],[-4,135],[69,81],[49,40],[40,20],[87,-5],[20,6],[96,-40],[51,-114],[14,-9],[32,39],[74,23],[29,-21],[28,2],[13,27],[30,18],[26,41],[18,78],[40,72],[21,55],[34,-10],[15,18],[9,53],[2,102],[-9,164],[-19,61],[19,36],[7,-26],[21,39],[-1,41],[13,72],[-23,-43],[-10,36],[23,57],[-9,30],[-26,0],[-8,-55],[21,10],[-15,-69],[-15,69],[4,39],[-19,14],[-2,34],[16,115],[18,6],[23,41],[1,48],[45,78],[24,24],[26,75],[15,97],[72,220],[38,91],[18,62],[46,70],[47,101],[18,0],[20,36],[29,-28],[13,11],[150,-9],[76,11],[148,11]],[[29390,64638],[-44,-153],[16,-98],[-2,48],[15,69],[18,-47],[-2,57],[25,44],[17,-47],[5,82],[30,-51],[-6,60],[13,-32],[35,-24],[22,27],[-3,46],[108,-4],[38,20],[67,133],[12,51],[34,24],[-30,-54],[22,-84],[27,13],[15,-69],[23,31],[18,59],[16,17],[8,-40],[-67,-93],[-99,-150],[-83,-95],[-68,-95],[-54,-57],[-33,3],[-69,-65],[-56,15],[-46,-55],[2,38],[-22,-2],[-9,59],[12,89],[-7,9]]],"bbox":[-179.148909,-14.548699,179.77847,71.365162],"transform":{"scale":[0.0035893096830968306,0.0008591472014720147],"translate":[-179.148909,-14.548699]}};
+  
+  var map = {};
+  map.json = topojson.feature(state_topo, state_topo.objects.states);
+
+  map.container = container;
+ 
+  //keep track of the current map size, set in proj.dims
+  map.size = null;
+
+  map.metroData = metroData();
+  
+  //dom selections
+  map.sel = {wrap: d3.select(map.container)};
+  
+  map.sel.mapwrap = map.sel.wrap.insert("div",":first-child").style("padding","0px").style("position","relative");
+  map.sel.svg = map.sel.mapwrap.append("svg").style("width","100%").style("height","100%");
+  map.sel.g_state = map.sel.svg.append("g").attr("transform","translate(0,0)");
+  map.sel.g_bubble = map.sel.svg.append("g").attr("transform","translate(0,0)");
+  map.sel.g_anno = map.sel.svg.append("g").attr("transform","translate(0,0)");
+  map.sel.g_legend = map.sel.svg.append("g").attr("transform","translate(0,0)");
+  	map.sel.g_legend_size = map.sel.g_legend.append("g");
+  	map.sel.g_legend_color = map.sel.g_legend.append("g");
+ 
+  map.sel.tooltip = map.sel.mapwrap.append("div")
+      .style("position","absolute")
+      .style("display","block")
+      .style("visibility","hidden")
+      .style("width","auto")
+      .style("height","auto")
+      .style("pointer-events","none")
+      .style("top","0px")
+      .style("left","0px")
+      .style("padding","5px")
+      .style("border","1px solid #dddddd")
+      .style("background-color","#ffffff")
+      .style("z-index",100)
+      ;
+
+  //create a non-visible area to test tooltip width without worrying about (browser-forced) text wrapping (when tooltip overflows window)
+  var tiptest = map.sel.mapwrap.append("div")
+      .style("position","absolute")
+      .style("display","block")
+      .style("visibility","hidden")
+      .style("width","auto")
+      .style("height","auto")
+      .style("pointer-events","none")
+      .style("top","0px")
+      .style("left","0px")
+      .style("padding",map.sel.tooltip.style("padding"))
+      .style("border",map.sel.tooltip.style("border"))
+      .style("background-color","#ffffff");
+
+  //handle map data and state
+  var map_data = {
+  	metro:{
+  		geo_id:null, 
+  		data:null, 
+  		color:null,
+  		size:null,
+  		max_radius:25, 
+  		min_radius:2,
+  		smaller_better:false
+  	}, 
+  	state:{}, 
+  	county:{},
+  	store:{},
+  	padding:[0,0,0,0],
+  	format:format.fn0("id")
+  };
+
+  map.format = function(fmt){
+  	if(arguments.length > 0){
+  		map_data.format = format.fn0(fmt);
+  		return map;
+  	}
+  	else{
+  		return map_data.format;
+  	}
+  };
+
+  map.store = function(data, name){
+  	if(arguments.length==0){
+  		return map_data.store;
+  	}
+  	else if(arguments.length==1){
+  		return map_data.store[data];
+  	}
+  	else{
+  		map_data.store[name] = data;
+  		return map;
+  	}
+  };
+
+  //get, set data
+  //accepts data in the format: [{cbsa:aaaaa, indicator1:xx.x, indicator2:yy.y}, {...}, ...]
+  map.data = function(data, geo_id, geo_type){
+  	if(arguments.length==0){return map_data}
+  	else if(arguments.length < 3 || geo_type.toLowerCase() in {metro:1, met:1, cbsa:1, metropolitan:1}){
+  		//metro data
+  		if(!!geo_id){map_data.metro.geo_id = geo_id;}
+      	map_data.metro.data = map.metroData.zip(data, map_data.metro.geo_id);
+  	}	
+  	return map;
+  };      
+
+  var proj = {};
+  proj.aspect = 0.66; //determines the height of the svg container
+  proj.scale = 1.35; //scalar (of width) to be used for the Albers projection
+  proj.fn = d3.geoAlbersUsa();
+  proj.path = d3.geoPath().projection(proj.fn);
+  proj.init = false;
+
+  //get dimensions, update projection info
+  proj.dims = function(){
+    var box = map.sel.mapwrap.node().getBoundingClientRect();
+    var width = box.right-box.left-map_data.padding[1]-map_data.padding[3];
+    var d = {width: width < 320 ? 320 : width};
+    d.height = Math.round(proj.aspect*d.width);
+    
+    //set height of svg container
+    map.sel.svg.style("height",d.height+"px");
+
+    //set scale of projection
+    proj.fn.scale(proj.scale*d.width).translate([d.width/2, d.height/2]);
+
+    proj.init = true;
+
+    map.size = d; //keep track of current size
+    
+    return d;
+  };
+  
+	//hold redraw methods for the various layers in each map
+	var redraw = {};
+
+	var redraw_layers = function(){
+		for(var p in redraw){
+			if(redraw.hasOwnProperty(p)){
+	  			redraw[p]();
+			}
+		}  	
+	};
+
+	//make map responsive -- redraw each layer
+	map.responsive = function(){
+		function resize(){
+		  var dims = proj.dims();
+		  redraw_layers();
+		}
+
+		var resize_timer;
+		window.addEventListener("resize", function(){
+		  clearTimeout(resize_timer);
+		  resize_timer = setTimeout(resize, 200);
+		});
+
+		return map;
+	};
+
+	//TOOLTIPS
+	//textAccessor is a function that returns an array of data based from each element of data -- it shouldn't include name
+	map.showTooltips = function(bubbles, textAccessor){
+	  	var self = this;
+
+	  	var DOTU = map.sel.g_anno.selectAll("circle").data([1]);
+	  	DOTU.exit().remove();
+	  	var DOT = DOTU.enter().append("circle").merge(DOTU)
+	  					.attr("cx","-100")
+	  					.attr("cy","-100")
+	  					.attr("r","0")
+	  					.style("pointer-events","none");
+
+	    var timer;
+
+	    var tipPos = function(cx, cy, r){
+	      try{
+	        var tipBox = tiptest.node().getBoundingClientRect(); //this is not reliable with variable-width tooltips especially when width of tooltip is compressed by browser at edge of viewport
+	        var tipWidth = tipBox.right - tipBox.left;
+	        var x_pct = parseInt(cx) / map.size.width;
+	        var x_pos = x_pct < 0.65 ? (parseInt(cx) + parseInt(r) + 8) + "px" : (parseInt(cx) - parseInt(r) - tipWidth - 8) + "px";
+	        var y_pos = (parseInt(cy) - parseInt(r)) + "px";
+	      }
+	      catch(e){
+	        console.log(e);
+	        var x_pos = (cx+"px");
+	        var y_pos = (cy+"px");
+	      }
+
+	      return {"left":x_pos, "top":y_pos}
+	    };
+
+	    var showTip = function(d, i){
+	      clearTimeout(timer);
+
+	      //get dot attributes
+	      var thisDot = d3.select(this);
+	      var cx = thisDot.attr("cx");
+	      var cy = thisDot.attr("cy");
+	      var r = thisDot.attr("r");
+	      var sw = thisDot.attr("stroke-width");
+	      var stroke = thisDot.attr("stroke");
+	      var col = thisDot.attr("fill");
+	      //show hover dot immediately
+	      DOT.attr("cx",cx)
+	      	 .attr("cy",cy)
+	      	 .attr("r",r)
+	      	 .attr("stroke-width",sw)
+	      	 .attr("stroke",stroke)
+	      	 .attr("fill",col);
+	      //get text
+	      var tdata = [d.id.name];
+	      if(!!textAccessor){
+	        tdata = tdata.concat(textAccessor(d));
+	      }
+
+	      //append text to tooltip
+	      var text = map.sel.tooltip.selectAll("p").data(tdata);
+	      text.exit().remove();
+	      text.enter().append("p")
+	      		.merge(text)
+	      		.text(function(d,i){return d})
+	      		.style("margin","0em 0.5em")
+	          	.style("font-weight", function(d,i){return i===0 ? "bold" : "normal"});
+
+	      //append text to "test"/invisible tooltip
+	      var _text = tiptest.selectAll("p").data(tdata);
+	      		_text.exit().remove();
+	      		_text.enter().append("p")
+	      		.merge(_text)
+	      		.text(function(d,i){return d})
+	      		.style("margin","0em 0.5em")
+	          	.style("font-weight", function(d,i){return i===0 ? "bold" : "normal"});
+
+	      var pos = tipPos(cx, cy, r);
+	      map.sel.tooltip.style("left", pos.left).style("top", pos.top);
+
+	      //reveal tooltip on a timer -- no effect if already shown
+	      timer = setTimeout(function(){
+	        map.sel.tooltip.style("visibility","visible");
+	      }, 250);
+
+	    };
+
+	    var hideTip = function(){
+	      clearTimeout(timer);
+
+	      DOT.attr("cx","-100")
+	      	.attr("stroke","#ffffff")
+	      	.attr("fill","#ffffff")
+	      	.attr("stroke-width","0")
+			.attr("cy","-100")
+			.attr("r","0")
+			.style("pointer-events","none");
+
+	      //hide tooltip on a timer
+	      timer = setTimeout(function(){
+	        map.sel.tooltip.style("visibility","hidden");
+	      }, 1000);
+	    };
+
+	    bubbles.on("mouseenter", showTip);
+	    bubbles.on("mouseleave", hideTip);
+
+	    window.addEventListener("resize", hideTip);
+	};
+	//END TOOLTIPS
+
+	var maximum_value = null;
+	map.maxval = function(v){
+		if(arguments.length==0){
+			return maximum_value;
+		}
+		else{
+			maximum_value = v;
+		}
+		return map;
+	};
+
+	//default bubble size function factory
+    var s_default = function(s){
+    	if(Number(s)==s){
+    		//if s is a number, assign a constant radius of s
+    		var sizer = function(obs){
+    			return s;
+    		};
+    		sizer.domain = null;
+    		sizer.var = null;
+    	}
+    	else{
+	    	var v = map_data.metro.data.map(function(d){
+	    		return d.obs[s];
+	    	});
+	    	var extent = d3.extent(v);
+	    	var absmax = maximum_value === null ? d3.max([Math.abs(extent[0]), extent[1]]) : maximum_value;
+
+	    	var max_radius = map_data.metro.max_radius;
+	    	var min_radius = map_data.metro.min_radius;
+	    	
+	    	//interpolators
+	    	var i3 = d3.scaleSqrt().domain([0, absmax]).range([min_radius, max_radius]);
+	    	var i2 = d3.scaleSqrt().domain([0, absmax]).range([min_radius*0.6, max_radius*0.6]);
+	    	var i1 = d3.scaleSqrt().domain([0, absmax]).range([min_radius*0.3, max_radius*0.3]);
+
+	    	var p = function(v){
+	    		var w = map.size.width;
+	    		var i = w > 900 ? i3 : (w > 500 ? i2 : i1);
+	    		return i(v); 
+	    	};
+
+	    	//value to size
+	    	var sizer = function(obs){
+	    		var d = obs[s];
+	    		if(obs.hasOwnProperty(s) && d !== null){
+	    			return d >= 0 ? p(d) : p(Math.abs(d));
+	    		}
+	    		else{
+	    			return p(0);
+	    		}
+	    	};
+	    	sizer.domain = v;
+	    	sizer.var = s;
+
+	    }
+    	return sizer;
+    };
+
+    //default bubble fill color function factory
+    var c_default = function(c, flip){
+    	if(c.search(/^#/) > -1){
+    		var filler = function(obs){
+    			return c;
+    		};
+    		filler.domain = null;
+    		filler.var = null;
+    	}
+    	else{
+	    	var v = map_data.metro.data.map(function(d){
+	    		return d.obs[c];
+	    	});
+	    	var extent = d3.extent(v);
+	    	var absmax = maximum_value === null ? d3.max([Math.abs(extent[0]), extent[1]]) : maximum_value;
+
+	    	console.log(absmax);
+
+	    	//interpolators
+	    	if(extent[0] < 0){
+	    		var p = d3.interpolateLab("#8ED7FF", "#0D73D6");
+	    		var n = d3.interpolateLab("#FF756F", "#DC2A2A");
+	    	}
+	    	else{
+	    		var p = d3.interpolateLab("#8ED7FF", "#0D73D6");
+	    		var n = null;
+	    	}
+
+	    	if(!!flip){
+	    		var temp = p;
+	    		p = n;
+	    		n = temp;
+	    	}
+
+	    	//value to color
+	    	var filler = function(obs){
+	    		var d = obs[c];
+	    		if(obs.hasOwnProperty(c) && d !== null){
+	    			return d >= 0 ? p(d/absmax) : n(Math.abs(d)/absmax);
+	    		}
+	    		else{
+	    			return "#999999";
+	    		}
+	    	};
+	    	filler.domain = v;
+	    	filler.var = c;
+	    }
+
+    	return filler;
+    };
+
+     //update legend
+	var bubble_legend = function(){
+		if(map_data.metro.size.domain !== null && map_data.metro.color.domain !== null){
+			var prop = map_data.metro.size.var;
+			var absdomain = map_data.metro.size.domain.map(function(d,i){return Math.abs(d)}).sort(d3.ascending);
+			var sizeticks = ([d3.quantile(absdomain, 0.05), d3.quantile(absdomain, 0.5), d3.quantile(absdomain, 0.95)])
+							.map(function(d,i){
+								var obs = {};
+								obs[prop] = d;
+								return obs;
+							});
+
+			var extent = d3.extent(map_data.metro.size.domain);
+			var dist = extent[1]-extent[0];
+			var numticks = 100;
+			var ticks = [extent[0]];
+			if(extent[0] < 0 && extent[1] > 0){
+				//how many positive and negative ticks should their be?
+				var nticks = Math.round(((0-extent[0])/dist)*numticks);
+				var pticks = numticks - nticks;
+				//add in ticks below 0 based on their share of the range
+				var nstep = (0-extent[0])/nticks;
+				var pstep = extent[1]/pticks;
+				//the min val has already been added, hence n = 0
+				var n = 0;
+				while(++n < nticks){
+					ticks.push(extent[0]+(n*nstep));
+				}
+				ticks.push(0);
+				
+				var p = 0;
+				while(++p < pticks-1){
+					ticks.push(p*pstep);
+				}
+				var gradient_labels = [{val:extent[0], tick:0}, {val:0, tick:nticks}, {val:extent[1], tick:numticks-1}];
+			}
+			else{
+				var i = 0;
+				while(++i<numticks-1){
+					ticks.push(extent[0]+(i*(dist/numticks)));
+				}
+				var gradient_labels = [{val:extent[0], tick:0}, {val:extent[1], tick:numticks-1}];
+			}
+			ticks.push(extent[1]);
+
+			var ticksm = ticks.map(function(d,i){
+				var obs = {};
+				obs[prop] = d;
+				return obs;
+			}); 
+
+			var bubs = map.sel.g_legend_size.selectAll("circle")
+				.data(sizeticks);
+
+			var leaders = map.sel.g_legend_size.selectAll("path").data(sizeticks);
+			leaders.exit().remove();
+			leaders.enter().append("path").merge(leaders)
+				.attr("d", function(d,i){
+					var start = "M" + map_data.metro.max_radius + "," + ((map_data.metro.max_radius*2) - (2*map_data.metro.size(d)));
+					var xdist = map_data.metro.max_radius <= 5 ? 5 : map_data.metro.max_radius + 1;
+					var end = start + " l" + (xdist-5) + ",0" + (i==0 ? " l5,5" : (i==2 ? " l5,-5" : " l5,0"));
+					return end;
+				})
+				.attr("stroke","#999999")
+				.attr("fill","none")
+				;
+
+			var leader_labels = map.sel.g_legend_size.selectAll("text").data(sizeticks);
+			leader_labels.exit().remove();
+			leader_labels.enter().append("text").merge(leader_labels)
+				.attr("x", map_data.metro.max_radius*2)
+				.attr("dx", 2)
+				.attr("y", function(d){
+					return (map_data.metro.max_radius*2) - (2*map_data.metro.size(d));
+				})
+				.attr("dy", function(d,i){
+					return i==0 ? 12 : (i==1 ? 5 : -4); 
+				})
+				.text(function(d,i){
+					var t = map_data.format(d[prop]);
+					return extent[0] < 0 && extent[1] > 0 ? t.replace(/-|\+/g, "+/-") : t; 
+				})
+				.style("font-size","13px")
+				;
+
+			bubs.exit().remove();
+			bubs.enter().append("circle").merge(bubs)
+						.attr("cx", map_data.metro.max_radius)
+						.attr("cy", function(d,i){
+							return (map_data.metro.max_radius*2) - map_data.metro.size(d);
+						})
+						.attr("r", function(d,i){
+							return map_data.metro.size(d);
+						})
+						.attr("fill","none")
+						.attr("stroke","#333333")
+						;
+
+			var gstep = 1;
+			var gradient = map.sel.g_legend_color.attr("transform", "translate(5,"+((map_data.metro.max_radius*2)+28)+")")
+								.selectAll("rect").data(ticksm);
+			gradient.exit().remove();
+			gradient.enter().append("rect").merge(gradient)
+				.attr("x", function(d,i){
+					return i*gstep;
+				})
+				.attr("y","0")
+				.attr("height","10")
+				.attr("width",gstep)
+				.attr("fill", function(d,i){return map_data.metro.color(d)})
+				.style("shape-rendering","crispEdges");
+
+			var gradient_text = map.sel.g_legend_color.selectAll("text").data(gradient_labels);
+			gradient_text.exit().remove();
+			gradient_text.enter().append("text")
+								 .merge(gradient_text)
+								 .attr("x", function(d,i){
+								 	return d.tick*gstep;
+								 })
+								 .attr("y", function(d,i){
+								 	return i==1 ? -4 : 25;
+								 })
+								 .attr("text-anchor", function(d,i){
+								 	return "middle";
+								 })
+								 .text(function(d,i){
+								 	return map_data.format(d.val);
+								 })
+								 .style("font-size","13px")
+								 ;
+
+			var gradient_marks = map.sel.g_legend_color.selectAll("path").data(gradient_labels);
+				gradient_marks.exit().remove();
+				gradient_marks.enter().append("path").merge(gradient_marks)
+					.attr("d", function(d,i){
+						return "M" + ((d.tick*gstep)+(i==0 ? -1 : (i==1 ? 0 : 1))) + "," + (i==1 ? -3 : 0) + " l0,13";  
+					})
+					.attr("fill","none")
+					.attr("stroke","#999999")
+					.style("shape-rendering","crispEdges")
+					;
+
+		}
+	};
+
+	function legend_width(){
+		var box = map.sel.g_legend.node().getBoundingClientRect();
+		return Math.round(box.right - box.left);	
+	}
+
+	//update metro bubbles
+	var bubble_update = function(){
+	    //update bubbles
+	
+	    var sorted_data = map_data.metro.data
+	    								.slice(0)
+	    								.sort(function(a,b){
+	    									var a_size = map_data.metro.size(a.obs);
+	    									var b_size = map_data.metro.size(b.obs);
+	    									return b_size-a_size;
+	    								});
+
+	    var bub_update = map.sel.g_bubble.selectAll("circle").data(sorted_data, function(d){return d.id.code});
+	   	bub_update.exit().remove();
+	    var bub_merge = bub_update.enter()
+	    			   .append("circle")
+	    			   .attr("stroke-width","1")
+	    			   .merge(bub_update)
+	    			   .attr("cx", function(d,i){return d.xy[0]})
+	    			   .attr("cy", function(d,i){return d.xy[1]});
+	    			   
+	    			   bub_merge
+	    			   .transition()
+	    			   .attr("r", function(d,i){return map_data.metro.size(d.obs)})
+	    			   .attr("fill", function(d,i){return map_data.metro.color(d.obs)})
+	    			   .attr("fill-opacity","0.9")
+					   .attr("stroke", function(d,i){
+					   		return d3.color(map_data.metro.color(d.obs)).darker();
+					   })
+					   ;
+
+		map.showTooltips(bub_merge);
+	};
+
+
+  //drawing functions 
+  //these drawing functions shold execute with no arguments, in which case they redraw with the existing state
+  //these may be called as methods of the redraw object, so be careful with use of this ref
+  
+  map.smaller_better = function(torf){
+  	map_data.metro.smaller_better = !!torf;
+  	return map;
+  };
+
+  //TO DO - ADD VORONOI LAYOUT
+  map.bubbles = map.bubble = function(size, color, max_bubble_size, min_bubble_size){
+    //initialize dimensions, if first run (of any layer) -- only reset dims on resize -- calling proj.dims sets proj.init == true;
+    if(!proj.init){proj.dims();}
+    var vals = map_data.metro.data;
+
+
+    for(var i=0; i<vals.length; i++){
+    	vals[i].xy = proj.fn(vals[i].id.lonlat);
+    }
+
+    //flag to determine whether recalculate projection dimensions and layout
+    var redraw_dims = false;
+
+    //set min/max bubble radii values
+    if(arguments.length > 2){
+    	map_data.metro.max_radius = max_bubble_size;
+    	redraw_dims = true; //max bubble size determines legend size
+    }
+
+    if(arguments.length > 3){
+    	map_data.metro.min_radius = min_bubble_size;
+    }
+
+    //set bubble sizing, if applicable
+    if(arguments.length > 0){
+    	map_data.metro.size = s_default(size);
+    }
+    else if(map_data.metro.size === null){
+    	map_data.metro.size = s_default(5);
+    }
+
+    //set bubble fill, if applicable
+    if(arguments.length > 1){
+    	map_data.metro.color = c_default(color, map_data.metro.smaller_better);
+    }
+    else if(map_data.metro.color === null){
+    	map_data.metro.color = c_default("#0d73d6");
+    }
+    
+
+    //draw legend
+    bubble_legend();
+
+    //update bubbles
+    bubble_update();
+
+    //register
+    if(!redraw.hasOwnProperty("bubble")){
+    	redraw.bubble = map.bubble;
+    	redraw_dims = true;
+    }
+
+    if(redraw_dims){
+    	setTimeout(function(){
+    		var w = legend_width();
+    		var w25 = w*0.25;
+    		var w75 = w*0.75;
+    		map_data.padding[3] = w;
+    		proj.dims();
+    		redraw_layers();
+    		map.sel.g_legend.attr("transform","translate(" + (map.size.width) + "," + (map.size.height/2) + ")");
+    	},0);
+    }
+    else{
+    	var w = legend_width();
+    	var w50 = w/2;
+    	map.sel.g_legend.attr("transform","translate(" + (map.size.width) + "," + (map.size.height/2) + ")");
+    }
+
+    return map;
+  };
+
+  map.states = map.state = function(){
+    if(!proj.init){proj.dims();}
+    var states = map.sel.g_state.selectAll("path").data(map.json.features);
+	states.exit().remove();
+    states.enter().append("path").classed("state",true)
+                                 .merge(states)
+                                 .attr("fill","none")
+                                 .attr("stroke","#999999")
+                                 .attr("stroke-width","0.5px")
+                                 .attr("d", proj.path)
+                                 ;
+
+    //register
+    if(!redraw.hasOwnProperty("state")){redraw.states = map.states;} 
+
+    return map;
+  };
+
+  return map;
+
+}
+
+
+
+
+
+
+//-------------------------------------------------{5}
+
 //v2.0 developed for metro monitor
 //revised to be more modular - each event gets a window event listener, rather than a collection
 //the user registers scroll and activate listeners separately, scroll methods will not execute if there is an activation method yet to run
@@ -319,20 +1332,21 @@ function main(){
 	var pi2 = Math.PI*2;
 
 	var technodes = [
-		{name:"Green materials", var:"V13", i:3},
-		{name:"Efficiency", var:"V15", i:5},
-		{name:"Transportation", var:"V21", i:11},
-		{name:"Energy storage", var:"V22", i:12},
-		{name:"Solar", var:"V17", i:7},
-		{name:"Air", var:"V11", i:1},
-		{name:"Water/wastewater", var:"V18", i:8},
-		{name:"Bioenergy", var:"V12", i:2},
-		{name:"Wind", var:"V10", i:0},
-		{name:"Conventional fuel", var:"V14", i:4},
-		{name:"Recycling", var:"V16", i:6},
-		{name:"Nuclear", var:"V20", i:10},
-		{name:"Hydro power", var:"V23", i:13},
-		{name:"Geothermal", var:"V19", i:9}
+		{name:"Total cleantech patents", var:"V5", i:3},
+		{name:"Green materials", var:"V15", i:3},
+		{name:"Efficiency", var:"V17", i:5},
+		{name:"Transportation", var:"V23", i:11},
+		{name:"Energy storage", var:"V24", i:12},
+		{name:"Solar", var:"V19", i:7},
+		{name:"Air", var:"V13", i:1},
+		{name:"Water/wastewater", var:"V20", i:8},
+		{name:"Bioenergy", var:"V14", i:2},
+		{name:"Wind", var:"V12", i:0},
+		{name:"Conventional fuel", var:"V16", i:4},
+		{name:"Recycling", var:"V18", i:6},
+		{name:"Nuclear", var:"V22", i:10},
+		{name:"Hydro power", var:"V25", i:13},
+		{name:"Geothermal", var:"V21", i:9}
 	];
 
 	var techlookup = {};
@@ -342,13 +1356,13 @@ function main(){
 
 	var wrap = d3.select("#met-dash").style("width","100%").style("overflow","hidden");
 
-	var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
-	var svg = svg_wrap.append("svg");
+	//var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
+	//var svg = svg_wrap.append("svg");
 
-	var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
-	var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true);
+	//var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
+	//var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true)
 
-	var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
+	//var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
 	
 	//var title = wrap.append("p").style("text-align","center");
 
@@ -358,6 +1372,193 @@ function main(){
 			svg.style("visibility", "hidden");
 			return null;
 		}
+
+		var maxmax = d3.max(data.obs, function(d){
+			return d3.max(technodes.slice(1), function(t){
+				return d[t.var];
+			})
+		});
+
+		//build a metmap
+
+		var map_titlebox = wrap.append("div").style("padding","0em 1em");
+		var mapwrap = wrap.append("div").style("padding","0em 1em")
+										.append("div")
+										.style("margin","0em auto")
+										.style("max-width","1600px")
+										.style("min-width","400px")
+										.classed("c-fix",true);
+
+		var button_wrap = mapwrap.append("div").classed("button-wrap",true);
+		button_wrap.append("div").style("padding","4em 0em 0.25em 0em")
+								 .style("border-bottom","1px solid #aaaaaa")
+								 .style("margin-bottom","1em")
+								 .append("p")
+								 .text("Make a selection")
+								 .style("text-align","center");
+
+		var map_main = mapwrap.append("div").classed("map-wrap", true);
+
+		var map = met_map(map_main.node());
+
+		map.responsive().states();
+
+		map.store(data.obs, "all_data");
+		map.data(data.obs, "V2");
+
+		//title.html("Map: 100 largest metro areas" + '<br /><span style="font-size:0.8em">' + ind.title + ", " + periods[state.period] + '</span>') ;
+
+		var current_indicator = technodes[0].var;
+
+		map.format("num1")
+			.bubble(current_indicator, current_indicator, 30, 1);
+
+		var buttons = button_wrap.append("div").classed("buttons",true).selectAll("p.cleancat").data(technodes)
+			.enter()
+			.append("p")
+			.classed("cleancat",true)
+			.text(function(d,i){return d.name});
+
+		function syncbuttons(){
+			buttons.classed("selected", function(d,i){return d.var == current_indicator});
+
+		}
+
+
+		syncbuttons();
+
+		buttons.on("mousedown", function(d, i){
+			if(d.var == "V5"){
+				map.maxval(null);
+			}
+			else{
+				map.maxval(maxmax);
+			}
+			current_indicator = d.var;
+			map.bubble(d.var, d.var);
+			syncbuttons();
+		});
+
+		console.log(current_indicator);
+
+		return;
+
+		//basic card creation, registration of methods
+		function met_map_deprecated(container, url, state, indicators){
+
+			//indicators should contain map titles and indicator keys
+			//e.g. [{key:"employment", title:string OR function}, {...}, ...]
+			
+			//setup
+			var outer_wrap = d3.select(container).classed("makesans",true);
+			var header_wrap = outer_wrap.append("div")
+				.style("border-bottom","1px solid #aaaaaa")
+				.append("div").classed("as-table",true)
+				.append("div").classed("row-of three-two", true);
+
+			var title_wrap = header_wrap.append("div").style("vertical-align","bottom");
+			var button_wrap = header_wrap.append("div")
+									.style("vertical-align","bottom")
+									.classed("c-fix","true")
+									.append("div")
+									.style("float","right")
+									.classed("c-fix",true)
+									.style("margin","0em 0em 1em 0em");
+
+			var title = title_wrap.append("div").style("margin","0em 0em 0.5em 0em").append("p").style("margin","0em").classed("chart-title",true);
+
+
+
+			button_wrap.append("p").style("font-size","0.8em").text("SELECT AN INDICATOR TO MAP").style("margin","0em 5px 0.25em 5px");
+			var select = button_wrap.append("select").style("display","block")
+											  .style("margin","0px 0px 0px 0px")
+											  .style("line-height","1.65em")
+											  .style("font-size","1em")
+											  .style("padding","2px 5px 2px 5px")
+											  .style("background","transparent")
+											  .style("max-width","100%")
+											  .style("outline","none");
+
+			var options = select.selectAll("option").data(indicators);
+
+			options.enter().append("option").merge(options)
+				.attr("value", function(d,i){
+					return d.key;
+				})
+				.text(function(d,i){
+					return d.title;
+				});
+
+			select.on("change", function(d,i){
+				var key = this.value;
+				var ind = {key:null, title:null};
+				var j = -1;
+				while(++j < indicators.length){
+					if(indicators[j].key==key){
+						ind = indicators[j];
+						break;
+					}
+				}
+
+				try{
+					var ind_test = indicators[this.selectedIndex].key;
+
+					if(ind_test!==key){
+						throw "ERROR";
+					}
+				}
+				catch(e){
+					//revert back
+					ind = indicators[0];
+					this.value = ind.key;
+				}
+				finally{
+					drawIndicator(ind);
+				}
+			});
+
+
+
+			function activate(){
+				d3.json(url, function(error, data){
+					if(!!error){
+
+					}
+					else{
+
+						init = true;
+
+						drawIndicator(indicators[0]);
+					}
+				});
+			}
+
+			function updateMetro(){
+
+			}
+
+			function updatePeriod(){
+				if(init){
+					var data = map.store("all_data");
+					map.data(data[state.period], "cbsa");
+					drawIndicator(current_indicator);
+				}
+			}
+
+			return {activate:activate, updateMetro:updateMetro, updatePeriod:updatePeriod}
+
+
+		}
+
+
+
+
+
+
+
+		return;
+
+		//old unused code
 
 		var forceSim = d3.forceSimulation().stop();
 
@@ -588,13 +1789,9 @@ function main(){
 			.append("p")
 			.text(function(d,i){return d.name});
 
-		function syncbuttons(){
-			buttons.classed("selected", function(d,i){
-								return d.var == current_vn;
-							});
-		}
 
-		syncbuttons();
+
+
 
 		window.addEventListener("scroll", function(){
 			var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));

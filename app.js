@@ -1552,8 +1552,8 @@ function catbar(url){
 //To do: review handling of missing values in all modules: both implicit and explicit missings
 
 //shared js-modules
-dir.local("./").add("data");
-//dir.add("data", "cleantech-patenting/data")
+//dir.local("./").add("data")
+dir.add("data", "cleantech-patenting/data");
 
 function main(){
 

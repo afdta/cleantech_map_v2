@@ -10,8 +10,8 @@ import met_map from '../../../js-modules/met-map.js';
 
 import catbar from './catbar.js';
 
-dir.local("./").add("data")
-//dir.add("data", "cleantech-patenting/data")
+//dir.local("./").add("data")
+dir.add("data", "cleantech-patenting/data")
 
 function main(){
 

@@ -38,27 +38,28 @@ img{
 
 
 
-#met-dash .views{
+#met-map .views{
   width:100vw;
   height:100vh;
 }
 
 
 
-#met-dash .view-name, svg text{
-  font-family: arial, helvetica, sans;
+#met-map .view-name{
   font-size:1.5em;
   font-weight:bold;
   text-align: center;
-  color:#111111;
+}
+
+.metro-interactive, .metro-interactive .makesans *, text{
+  font-family: franklin-gothic-urw, arial, helvetica, sans-serif;
+}
+
+text{
   fill:#111111;
 }
 
-.metro-interactive.makesans, .metro-interactive .makesans *{
-  font-family: franklin-gothic-urw,helvetica,sans-serif;
-}
-
-.makesans p{
+.metro-interactive p{
   margin:0em;
 }
 
@@ -79,7 +80,7 @@ img{
 }
 
 .buttons *.selected{
-  background-color:#0d73d6;
+  background-color:#31b244;
   color:#ffffff;
 }
 
@@ -88,10 +89,17 @@ img{
   min-height:100px;
 }
 
+
 @media (min-width:0px){
   .map-wrap, .button-wrap{
     float:none;
     width:auto;
+  }
+
+  .button-wrap > div{
+    padding: 0em;
+    border-bottom:0px solid #aaaaaa;
+    margin-bottom:0em;
   }
 
   .buttons > p{
@@ -99,10 +107,21 @@ img{
     padding:0.25em 0.5em;
     margin:0.25em 0.25em 0em 0.25em;
   }
+
+  #cat-bar text{
+    font-size:13px;
+  }
+
+}
+
+@media (min-width:600px){
+   #cat-bar text{
+    font-size:15px;
+  } 
 }
 
 
-@media (min-width:900px){
+@media (min-width:1200px){
   .map-wrap{
     float:right;
     width:80%;
@@ -113,9 +132,36 @@ img{
     width:20%;
   }
 
+  .button-wrap > div{
+    padding: 4em 0em 0.25em 0em;
+    border-bottom:1px solid #aaaaaa;
+    margin-bottom:1em;
+  }
+
+
   .buttons > p{
     display:block;
     padding:0em 0.25em;
     margin:0em;
   }
+
+  #cat-bar text{
+    font-size:16px;
+  }
+
+}
+
+.button-wrap > div.buttons{
+  padding:0em;
+  border-bottom:0px solid #aaaaaa;
+  margin-bottom:0em;
+}
+
+#cat-bar{
+  max-width:1400px;
+  margin:0px auto;
+}
+
+#cat-bar svg path, #cat-bar svg rect, #cat-bar svg line {
+  shape-rendering:crispEdges;
 }

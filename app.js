@@ -115,45 +115,6 @@ dir.url = function(name, file_name){
 	return path;
 };
 
-//v1.0 developed for congressional district poverty
-
-//viewport dimensions
-function dimensions(el, maxwidth, maxheight){
-	if(arguments.length > 0){
-		var element = el;
-	}
-	else{
-		var element = document.documentElement;
-	}
-
-	var floor = 50;
-	var err = false;
-
-	try{
-		var box = element.getBoundingClientRect();
-		var w = Math.floor(box.right - box.left);
-		var h = Math.floor(box.bottom - box.top);
-		if(w < floor || h < floor){throw "badWidth"}
-	}
-	catch(e){
-		var box = {};
-		var w = floor;
-		var h = floor;
-		err = true;
-	}
-
-	if(!!maxwidth && w > maxwidth){w = maxwidth;}
-	if(!!maxheight && h > maxheight){h = maxheight;}
-
-	var dim = {width:w, height:h, error:err, box:box};
-
-	return dim;
-}
-
-//v1.0 developed for congressional district poverty
-
-//the table function takes a container and an array of associative array objects.
-
 function metro_select(){
 	var sel = {};
 	sel.metros = {"large":[{"CBSA_Code":"10420","CBSA_Title":"Akron, OH","POP2010":703200,"lon":-81.3497,"lat":41.1482},{"CBSA_Code":"10580","CBSA_Title":"Albany-Schenectady-Troy, NY","POP2010":870716,"lon":-73.9377,"lat":42.7891},{"CBSA_Code":"10740","CBSA_Title":"Albuquerque, NM","POP2010":887077,"lon":-106.4708,"lat":35.1212},{"CBSA_Code":"10900","CBSA_Title":"Allentown-Bethlehem-Easton, PA-NJ","POP2010":821173,"lon":-75.4018,"lat":40.7883},{"CBSA_Code":"12060","CBSA_Title":"Atlanta-Sandy Springs-Roswell, GA","POP2010":5286728,"lon":-84.3966,"lat":33.6959},{"CBSA_Code":"12260","CBSA_Title":"Augusta-Richmond County, GA-SC","POP2010":564873,"lon":-81.9804,"lat":33.4571},{"CBSA_Code":"12420","CBSA_Title":"Austin-Round Rock, TX","POP2010":1716289,"lon":-97.655,"lat":30.2628},{"CBSA_Code":"12540","CBSA_Title":"Bakersfield, CA","POP2010":839631,"lon":-118.7278,"lat":35.3433},{"CBSA_Code":"12580","CBSA_Title":"Baltimore-Columbia-Towson, MD","POP2010":2710489,"lon":-76.6722,"lat":39.3838},{"CBSA_Code":"12940","CBSA_Title":"Baton Rouge, LA","POP2010":802484,"lon":-91.1324,"lat":30.5709},{"CBSA_Code":"13820","CBSA_Title":"Birmingham-Hoover, AL","POP2010":1128047,"lon":-86.8144,"lat":33.464},{"CBSA_Code":"14260","CBSA_Title":"Boise City, ID","POP2010":616561,"lon":-116.1417,"lat":43.0153},{"CBSA_Code":"14460","CBSA_Title":"Boston-Cambridge-Newton, MA-NH","POP2010":4552402,"lon":-71.1034,"lat":42.5538},{"CBSA_Code":"14860","CBSA_Title":"Bridgeport-Stamford-Norwalk, CT","POP2010":916829,"lon":-73.3891,"lat":41.2683},{"CBSA_Code":"15380","CBSA_Title":"Buffalo-Cheektowaga-Niagara Falls, NY","POP2010":1135509,"lon":-78.7384,"lat":42.9121},{"CBSA_Code":"15980","CBSA_Title":"Cape Coral-Fort Myers, FL","POP2010":618754,"lon":-81.8207,"lat":26.5787},{"CBSA_Code":"16700","CBSA_Title":"Charleston-North Charleston, SC","POP2010":664607,"lon":-80.0441,"lat":33.0416},{"CBSA_Code":"16740","CBSA_Title":"Charlotte-Concord-Gastonia, NC-SC","POP2010":2217012,"lon":-80.8689,"lat":35.1871},{"CBSA_Code":"16860","CBSA_Title":"Chattanooga, TN-GA","POP2010":528143,"lon":-85.3589,"lat":35.0505},{"CBSA_Code":"16980","CBSA_Title":"Chicago-Naperville-Elgin, IL-IN-WI","POP2010":9461105,"lon":-87.964,"lat":41.7035},{"CBSA_Code":"17140","CBSA_Title":"Cincinnati, OH-KY-IN","POP2010":2114580,"lon":-84.4279,"lat":39.0708},{"CBSA_Code":"17460","CBSA_Title":"Cleveland-Elyria, OH","POP2010":2077240,"lon":-81.6839,"lat":41.3755},{"CBSA_Code":"17820","CBSA_Title":"Colorado Springs, CO","POP2010":645613,"lon":-104.6585,"lat":38.8427},{"CBSA_Code":"17900","CBSA_Title":"Columbia, SC","POP2010":767598,"lon":-81.0434,"lat":34.0902},{"CBSA_Code":"18140","CBSA_Title":"Columbus, OH","POP2010":1901974,"lon":-82.8385,"lat":39.9669},{"CBSA_Code":"19100","CBSA_Title":"Dallas-Fort Worth-Arlington, TX","POP2010":6426214,"lon":-97.0252,"lat":32.8182},{"CBSA_Code":"19380","CBSA_Title":"Dayton, OH","POP2010":799232,"lon":-84.14,"lat":39.8295},{"CBSA_Code":"19660","CBSA_Title":"Deltona-Daytona Beach-Ormond Beach, FL","POP2010":590289,"lon":-81.2182,"lat":29.1699},{"CBSA_Code":"19740","CBSA_Title":"Denver-Aurora-Lakewood, CO","POP2010":2543482,"lon":-104.8942,"lat":39.4342},{"CBSA_Code":"19780","CBSA_Title":"Des Moines-West Des Moines, IA","POP2010":569633,"lon":-93.9431,"lat":41.5479},{"CBSA_Code":"19820","CBSA_Title":"Detroit-Warren-Dearborn, MI","POP2010":4296250,"lon":-83.2333,"lat":42.7203},{"CBSA_Code":"21340","CBSA_Title":"El Paso, TX","POP2010":804123,"lon":-105.5386,"lat":31.5118},{"CBSA_Code":"23420","CBSA_Title":"Fresno, CA","POP2010":930450,"lon":-119.6492,"lat":36.7566},{"CBSA_Code":"24340","CBSA_Title":"Grand Rapids-Wyoming, MI","POP2010":988938,"lon":-85.4883,"lat":42.9988},{"CBSA_Code":"24660","CBSA_Title":"Greensboro-High Point, NC","POP2010":723801,"lon":-79.7913,"lat":36.0264},{"CBSA_Code":"24860","CBSA_Title":"Greenville-Anderson-Mauldin, SC","POP2010":824112,"lon":-82.4168,"lat":34.6889},{"CBSA_Code":"25420","CBSA_Title":"Harrisburg-Carlisle, PA","POP2010":549475,"lon":-77.0945,"lat":40.3278},{"CBSA_Code":"25540","CBSA_Title":"Hartford-West Hartford-East Hartford, CT","POP2010":1212381,"lon":-72.5789,"lat":41.7326},{"CBSA_Code":"26420","CBSA_Title":"Houston-The Woodlands-Sugar Land, TX","POP2010":5920416,"lon":-95.3965,"lat":29.7819},{"CBSA_Code":"26900","CBSA_Title":"Indianapolis-Carmel-Anderson, IN","POP2010":1887877,"lon":-86.2069,"lat":39.7468},{"CBSA_Code":"27140","CBSA_Title":"Jackson, MS","POP2010":567122,"lon":-90.2216,"lat":32.3171},{"CBSA_Code":"27260","CBSA_Title":"Jacksonville, FL","POP2010":1345596,"lon":-81.7926,"lat":30.2365},{"CBSA_Code":"28140","CBSA_Title":"Kansas City, MO-KS","POP2010":2009342,"lon":-94.4464,"lat":38.9368},{"CBSA_Code":"28940","CBSA_Title":"Knoxville, TN","POP2010":837571,"lon":-84.1358,"lat":36.0434},{"CBSA_Code":"29460","CBSA_Title":"Lakeland-Winter Haven, FL","POP2010":602095,"lon":-81.6991,"lat":27.9503},{"CBSA_Code":"29820","CBSA_Title":"Las Vegas-Henderson-Paradise, NV","POP2010":1951269,"lon":-115.0156,"lat":36.2149},{"CBSA_Code":"30780","CBSA_Title":"Little Rock-North Little Rock-Conway, AR","POP2010":699757,"lon":-92.396,"lat":34.7559},{"CBSA_Code":"31080","CBSA_Title":"Los Angeles-Long Beach-Anaheim, CA","POP2010":12828837,"lon":-118.1388,"lat":34.2474},{"CBSA_Code":"31140","CBSA_Title":"Louisville/Jefferson County, KY-IN","POP2010":1235708,"lon":-85.67,"lat":38.3371},{"CBSA_Code":"31540","CBSA_Title":"Madison, WI","POP2010":605435,"lon":-89.591,"lat":43.0794},{"CBSA_Code":"32580","CBSA_Title":"McAllen-Edinburg-Mission, TX","POP2010":774769,"lon":-98.1806,"lat":26.3964},{"CBSA_Code":"32820","CBSA_Title":"Memphis, TN-MS-AR","POP2010":1324829,"lon":-89.8152,"lat":35.0076},{"CBSA_Code":"33100","CBSA_Title":"Miami-Fort Lauderdale-West Palm Beach, FL","POP2010":5564635,"lon":-80.5059,"lat":26.1607},{"CBSA_Code":"33340","CBSA_Title":"Milwaukee-Waukesha-West Allis, WI","POP2010":1555908,"lon":-88.1734,"lat":43.1773},{"CBSA_Code":"33460","CBSA_Title":"Minneapolis-St. Paul-Bloomington, MN-WI","POP2010":3348859,"lon":-93.3463,"lat":45.0657},{"CBSA_Code":"34980","CBSA_Title":"Nashville-Davidson--Murfreesboro--Franklin, TN","POP2010":1670890,"lon":-86.7249,"lat":36.0881},{"CBSA_Code":"35300","CBSA_Title":"New Haven-Milford, CT","POP2010":862477,"lon":-72.9377,"lat":41.412},{"CBSA_Code":"35380","CBSA_Title":"New Orleans-Metairie, LA","POP2010":1189866,"lon":-89.9602,"lat":29.9184},{"CBSA_Code":"35620","CBSA_Title":"New York-Newark-Jersey City, NY-NJ-PA","POP2010":19567410,"lon":-74.0892,"lat":40.9223},{"CBSA_Code":"35840","CBSA_Title":"North Port-Sarasota-Bradenton, FL","POP2010":702281,"lon":-82.3224,"lat":27.3478},{"CBSA_Code":"36260","CBSA_Title":"Ogden-Clearfield, UT","POP2010":597159,"lon":-112.8181,"lat":41.4327},{"CBSA_Code":"36420","CBSA_Title":"Oklahoma City, OK","POP2010":1252987,"lon":-97.5049,"lat":35.4287},{"CBSA_Code":"36540","CBSA_Title":"Omaha-Council Bluffs, NE-IA","POP2010":865350,"lon":-95.9998,"lat":41.2904},{"CBSA_Code":"36740","CBSA_Title":"Orlando-Kissimmee-Sanford, FL","POP2010":2134411,"lon":-81.3636,"lat":28.4335},{"CBSA_Code":"37100","CBSA_Title":"Oxnard-Thousand Oaks-Ventura, CA","POP2010":823318,"lon":-119.0789,"lat":34.4731},{"CBSA_Code":"37340","CBSA_Title":"Palm Bay-Melbourne-Titusville, FL","POP2010":543376,"lon":-80.7325,"lat":28.2938},{"CBSA_Code":"37980","CBSA_Title":"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","POP2010":5965343,"lon":-75.3032,"lat":39.9046},{"CBSA_Code":"38060","CBSA_Title":"Phoenix-Mesa-Scottsdale, AZ","POP2010":4192887,"lon":-112.0707,"lat":33.1858},{"CBSA_Code":"38300","CBSA_Title":"Pittsburgh, PA","POP2010":2356285,"lon":-79.8309,"lat":40.4394},{"CBSA_Code":"38900","CBSA_Title":"Portland-Vancouver-Hillsboro, OR-WA","POP2010":2226009,"lon":-122.4783,"lat":45.5976},{"CBSA_Code":"39300","CBSA_Title":"Providence-Warwick, RI-MA","POP2010":1600852,"lon":-71.3998,"lat":41.7242},{"CBSA_Code":"39340","CBSA_Title":"Provo-Orem, UT","POP2010":526810,"lon":-112.3536,"lat":39.8642},{"CBSA_Code":"39580","CBSA_Title":"Raleigh, NC","POP2010":1130490,"lon":-78.4617,"lat":35.7539},{"CBSA_Code":"40060","CBSA_Title":"Richmond, VA","POP2010":1208101,"lon":-77.4725,"lat":37.4604},{"CBSA_Code":"40140","CBSA_Title":"Riverside-San Bernardino-Ontario, CA","POP2010":4224851,"lon":-116.1282,"lat":34.5522},{"CBSA_Code":"40380","CBSA_Title":"Rochester, NY","POP2010":1079671,"lon":-77.5095,"lat":42.9688},{"CBSA_Code":"40900","CBSA_Title":"Sacramento--Roseville--Arden-Arcade, CA","POP2010":2149127,"lon":-120.9985,"lat":38.7812},{"CBSA_Code":"41180","CBSA_Title":"St. Louis, MO-IL","POP2010":2787701,"lon":-90.3499,"lat":38.7336},{"CBSA_Code":"41620","CBSA_Title":"Salt Lake City, UT","POP2010":1087873,"lon":-113.0109,"lat":40.4709},{"CBSA_Code":"41700","CBSA_Title":"San Antonio-New Braunfels, TX","POP2010":2142508,"lon":-98.6015,"lat":29.4283},{"CBSA_Code":"41740","CBSA_Title":"San Diego-Carlsbad, CA","POP2010":3095313,"lon":-116.7319,"lat":33.0335},{"CBSA_Code":"41860","CBSA_Title":"San Francisco-Oakland-Hayward, CA","POP2010":4335391,"lon":-122.0149,"lat":37.7021},{"CBSA_Code":"41940","CBSA_Title":"San Jose-Sunnyvale-Santa Clara, CA","POP2010":1836911,"lon":-121.3745,"lat":36.909},{"CBSA_Code":"42540","CBSA_Title":"Scranton--Wilkes-Barre--Hazleton, PA","POP2010":563631,"lon":-75.8945,"lat":41.3231},{"CBSA_Code":"42660","CBSA_Title":"Seattle-Tacoma-Bellevue, WA","POP2010":3439809,"lon":-121.8656,"lat":47.5534},{"CBSA_Code":"44060","CBSA_Title":"Spokane-Spokane Valley, WA","POP2010":527753,"lon":-117.5722,"lat":48.1934},{"CBSA_Code":"44140","CBSA_Title":"Springfield, MA","POP2010":621570,"lon":-72.6448,"lat":42.2292},{"CBSA_Code":"44700","CBSA_Title":"Stockton-Lodi, CA","POP2010":685306,"lon":-121.2723,"lat":37.9323},{"CBSA_Code":"45060","CBSA_Title":"Syracuse, NY","POP2010":662577,"lon":-76.0338,"lat":43.1568},{"CBSA_Code":"45300","CBSA_Title":"Tampa-St. Petersburg-Clearwater, FL","POP2010":2783243,"lon":-82.4056,"lat":28.1543},{"CBSA_Code":"45780","CBSA_Title":"Toledo, OH","POP2010":610001,"lon":-83.7804,"lat":41.4986},{"CBSA_Code":"46060","CBSA_Title":"Tucson, AZ","POP2010":980263,"lon":-111.79,"lat":32.0974},{"CBSA_Code":"46140","CBSA_Title":"Tulsa, OK","POP2010":937478,"lon":-96.1654,"lat":36.2496},{"CBSA_Code":"46520","CBSA_Title":"Urban Honolulu, HI","POP2010":953207,"lon":-157.9757,"lat":21.4604},{"CBSA_Code":"47260","CBSA_Title":"Virginia Beach-Norfolk-Newport News, VA-NC","POP2010":1676822,"lon":-76.4147,"lat":36.6557},{"CBSA_Code":"47900","CBSA_Title":"Washington-Arlington-Alexandria, DC-VA-MD-WV","POP2010":5636232,"lon":-77.4724,"lat":38.8319},{"CBSA_Code":"48620","CBSA_Title":"Wichita, KS","POP2010":630919,"lon":-97.3981,"lat":37.625},{"CBSA_Code":"49180","CBSA_Title":"Winston-Salem, NC","POP2010":640595,"lon":-80.3451,"lat":36.0724},{"CBSA_Code":"49340","CBSA_Title":"Worcester, MA-CT","POP2010":916980,"lon":-71.9287,"lat":42.2188},{"CBSA_Code":"49660","CBSA_Title":"Youngstown-Warren-Boardman, OH-PA","POP2010":565773,"lon":-80.5642,"lat":41.2417}],"small":[{"CBSA_Code":"10180","CBSA_Title":"Abilene, TX","POP2010":165252,"lon":-99.7176,"lat":32.4498},{"CBSA_Code":"10500","CBSA_Title":"Albany, GA","POP2010":157308,"lon":-84.1702,"lat":31.5866},{"CBSA_Code":"10540","CBSA_Title":"Albany, OR","POP2010":116672,"lon":-122.5384,"lat":44.4886},{"CBSA_Code":"10780","CBSA_Title":"Alexandria, LA","POP2010":153922,"lon":-92.5438,"lat":31.3346},{"CBSA_Code":"11020","CBSA_Title":"Altoona, PA","POP2010":127089,"lon":-78.3472,"lat":40.4834},{"CBSA_Code":"11100","CBSA_Title":"Amarillo, TX","POP2010":251933,"lon":-101.9104,"lat":35.2488},{"CBSA_Code":"11180","CBSA_Title":"Ames, IA","POP2010":89542,"lon":-93.465,"lat":42.0362},{"CBSA_Code":"11260","CBSA_Title":"Anchorage, AK","POP2010":380821,"lon":-149.5429,"lat":62.237},{"CBSA_Code":"11460","CBSA_Title":"Ann Arbor, MI","POP2010":344791,"lon":-83.8385,"lat":42.2531},{"CBSA_Code":"11500","CBSA_Title":"Anniston-Oxford-Jacksonville, AL","POP2010":118572,"lon":-85.8243,"lat":33.7738},{"CBSA_Code":"11540","CBSA_Title":"Appleton, WI","POP2010":225666,"lon":-88.3714,"lat":44.2887},{"CBSA_Code":"11700","CBSA_Title":"Asheville, NC","POP2010":424858,"lon":-82.6853,"lat":35.6016},{"CBSA_Code":"12020","CBSA_Title":"Athens-Clarke County, GA","POP2010":192541,"lon":-83.2169,"lat":33.9503},{"CBSA_Code":"12100","CBSA_Title":"Atlantic City-Hammonton, NJ","POP2010":274549,"lon":-74.6609,"lat":39.4777},{"CBSA_Code":"12220","CBSA_Title":"Auburn-Opelika, AL","POP2010":140247,"lon":-85.3593,"lat":32.6077},{"CBSA_Code":"12620","CBSA_Title":"Bangor, ME","POP2010":153923,"lon":-68.6504,"lat":45.4015},{"CBSA_Code":"12700","CBSA_Title":"Barnstable Town, MA","POP2010":215888,"lon":-70.2921,"lat":41.7237},{"CBSA_Code":"12980","CBSA_Title":"Battle Creek, MI","POP2010":136146,"lon":-85.0049,"lat":42.2463},{"CBSA_Code":"13020","CBSA_Title":"Bay City, MI","POP2010":107771,"lon":-83.9916,"lat":43.7014},{"CBSA_Code":"13140","CBSA_Title":"Beaumont-Port Arthur, TX","POP2010":403190,"lon":-94.0707,"lat":30.305},{"CBSA_Code":"13220","CBSA_Title":"Beckley, WV","POP2010":124898,"lon":-81.1611,"lat":37.9103},{"CBSA_Code":"13380","CBSA_Title":"Bellingham, WA","POP2010":201140,"lon":-121.7125,"lat":48.8258},{"CBSA_Code":"13460","CBSA_Title":"Bend-Redmond, OR","POP2010":157733,"lon":-121.2277,"lat":43.9145},{"CBSA_Code":"13740","CBSA_Title":"Billings, MT","POP2010":158934,"lon":-108.7152,"lat":45.7811},{"CBSA_Code":"13780","CBSA_Title":"Binghamton, NY","POP2010":251725,"lon":-76.0265,"lat":42.1623},{"CBSA_Code":"13900","CBSA_Title":"Bismarck, ND","POP2010":114778,"lon":-100.9905,"lat":46.7286},{"CBSA_Code":"13980","CBSA_Title":"Blacksburg-Christiansburg-Radford, VA","POP2010":178237,"lon":-80.5332,"lat":37.1201},{"CBSA_Code":"14010","CBSA_Title":"Bloomington, IL","POP2010":186133,"lon":-88.8634,"lat":40.4122},{"CBSA_Code":"14020","CBSA_Title":"Bloomington, IN","POP2010":159549,"lon":-86.6768,"lat":39.2341},{"CBSA_Code":"14100","CBSA_Title":"Bloomsburg-Berwick, PA","POP2010":85562,"lon":-76.457,"lat":41.0392},{"CBSA_Code":"14500","CBSA_Title":"Boulder, CO","POP2010":294567,"lon":-105.3586,"lat":40.0934},{"CBSA_Code":"14540","CBSA_Title":"Bowling Green, KY","POP2010":158599,"lon":-86.4092,"lat":37.0426},{"CBSA_Code":"14740","CBSA_Title":"Bremerton-Silverdale, WA","POP2010":251133,"lon":-122.6769,"lat":47.6121},{"CBSA_Code":"15180","CBSA_Title":"Brownsville-Harlingen, TX","POP2010":406220,"lon":-97.5333,"lat":26.128},{"CBSA_Code":"15260","CBSA_Title":"Brunswick, GA","POP2010":112370,"lon":-81.6329,"lat":31.3194},{"CBSA_Code":"15500","CBSA_Title":"Burlington, NC","POP2010":151131,"lon":-79.3989,"lat":36.0436},{"CBSA_Code":"15540","CBSA_Title":"Burlington-South Burlington, VT","POP2010":211261,"lon":-73.0301,"lat":44.6905},{"CBSA_Code":"15680","CBSA_Title":"California-Lexington Park, MD","POP2010":105151,"lon":-76.609,"lat":38.3027},{"CBSA_Code":"15940","CBSA_Title":"Canton-Massillon, OH","POP2010":404422,"lon":-81.2498,"lat":40.7179},{"CBSA_Code":"16020","CBSA_Title":"Cape Girardeau, MO-IL","POP2010":96275,"lon":-89.7715,"lat":37.3235},{"CBSA_Code":"16060","CBSA_Title":"Carbondale-Marion, IL","POP2010":126575,"lon":-89.1905,"lat":37.7622},{"CBSA_Code":"16180","CBSA_Title":"Carson City, NV","POP2010":55274,"lon":-119.7423,"lat":39.1584},{"CBSA_Code":"16220","CBSA_Title":"Casper, WY","POP2010":75450,"lon":-106.798,"lat":42.9624},{"CBSA_Code":"16300","CBSA_Title":"Cedar Rapids, IA","POP2010":257940,"lon":-91.6314,"lat":42.0915},{"CBSA_Code":"16540","CBSA_Title":"Chambersburg-Waynesboro, PA","POP2010":149618,"lon":-77.7185,"lat":39.9289},{"CBSA_Code":"16580","CBSA_Title":"Champaign-Urbana, IL","POP2010":231891,"lon":-88.2963,"lat":40.226},{"CBSA_Code":"16620","CBSA_Title":"Charleston, WV","POP2010":227078,"lon":-81.495,"lat":38.2708},{"CBSA_Code":"16820","CBSA_Title":"Charlottesville, VA","POP2010":218705,"lon":-78.5765,"lat":37.8507},{"CBSA_Code":"16940","CBSA_Title":"Cheyenne, WY","POP2010":91738,"lon":-104.6888,"lat":41.3071},{"CBSA_Code":"17020","CBSA_Title":"Chico, CA","POP2010":220000,"lon":-121.5987,"lat":39.6692},{"CBSA_Code":"17300","CBSA_Title":"Clarksville, TN-KY","POP2010":260625,"lon":-87.5642,"lat":36.7475},{"CBSA_Code":"17420","CBSA_Title":"Cleveland, TN","POP2010":115788,"lon":-84.6643,"lat":35.1362},{"CBSA_Code":"17660","CBSA_Title":"Coeur d'Alene, ID","POP2010":138494,"lon":-116.7006,"lat":47.6732},{"CBSA_Code":"17780","CBSA_Title":"College Station-Bryan, TX","POP2010":228660,"lon":-96.491,"lat":30.7573},{"CBSA_Code":"17860","CBSA_Title":"Columbia, MO","POP2010":162642,"lon":-92.3056,"lat":38.9881},{"CBSA_Code":"17980","CBSA_Title":"Columbus, GA-AL","POP2010":294865,"lon":-84.9134,"lat":32.4419},{"CBSA_Code":"18020","CBSA_Title":"Columbus, IN","POP2010":76794,"lon":-85.8967,"lat":39.2091},{"CBSA_Code":"18580","CBSA_Title":"Corpus Christi, TX","POP2010":428185,"lon":-97.4954,"lat":27.9026},{"CBSA_Code":"18700","CBSA_Title":"Corvallis, OR","POP2010":85579,"lon":-123.4291,"lat":44.4911},{"CBSA_Code":"18880","CBSA_Title":"Crestview-Fort Walton Beach-Destin, FL","POP2010":235865,"lon":-86.3655,"lat":30.6655},{"CBSA_Code":"19060","CBSA_Title":"Cumberland, MD-WV","POP2010":103299,"lon":-78.8059,"lat":39.5294},{"CBSA_Code":"19140","CBSA_Title":"Dalton, GA","POP2010":142227,"lon":-84.8458,"lat":34.8014},{"CBSA_Code":"19180","CBSA_Title":"Danville, IL","POP2010":81625,"lon":-87.732,"lat":40.1818},{"CBSA_Code":"19300","CBSA_Title":"Daphne-Fairhope-Foley, AL","POP2010":182265,"lon":-87.7227,"lat":30.7294},{"CBSA_Code":"19340","CBSA_Title":"Davenport-Moline-Rock Island, IA-IL","POP2010":379690,"lon":-90.4685,"lat":41.3966},{"CBSA_Code":"19460","CBSA_Title":"Decatur, AL","POP2010":153829,"lon":-87.1009,"lat":34.4885},{"CBSA_Code":"19500","CBSA_Title":"Decatur, IL","POP2010":110768,"lon":-88.9634,"lat":39.8606},{"CBSA_Code":"20020","CBSA_Title":"Dothan, AL","POP2010":145639,"lon":-85.4551,"lat":31.2583},{"CBSA_Code":"20100","CBSA_Title":"Dover, DE","POP2010":162310,"lon":-75.5683,"lat":39.0857},{"CBSA_Code":"20220","CBSA_Title":"Dubuque, IA","POP2010":93653,"lon":-90.8809,"lat":42.4687},{"CBSA_Code":"20260","CBSA_Title":"Duluth, MN-WI","POP2010":279771,"lon":-92.407,"lat":47.3334},{"CBSA_Code":"20500","CBSA_Title":"Durham-Chapel Hill, NC","POP2010":504357,"lon":-79.1005,"lat":35.994},{"CBSA_Code":"20700","CBSA_Title":"East Stroudsburg, PA","POP2010":169842,"lon":-75.3433,"lat":41.0587},{"CBSA_Code":"20740","CBSA_Title":"Eau Claire, WI","POP2010":161151,"lon":-91.2827,"lat":44.9392},{"CBSA_Code":"20940","CBSA_Title":"El Centro, CA","POP2010":174528,"lon":-115.3627,"lat":33.0405},{"CBSA_Code":"21060","CBSA_Title":"Elizabethtown-Fort Knox, KY","POP2010":148338,"lon":-85.9718,"lat":37.7352},{"CBSA_Code":"21140","CBSA_Title":"Elkhart-Goshen, IN","POP2010":197559,"lon":-85.8588,"lat":41.5977},{"CBSA_Code":"21300","CBSA_Title":"Elmira, NY","POP2010":88830,"lon":-76.7638,"lat":42.1393},{"CBSA_Code":"21500","CBSA_Title":"Erie, PA","POP2010":280566,"lon":-80.033,"lat":41.9925},{"CBSA_Code":"21660","CBSA_Title":"Eugene, OR","POP2010":351715,"lon":-122.8454,"lat":43.938},{"CBSA_Code":"21780","CBSA_Title":"Evansville, IN-KY","POP2010":311552,"lon":-87.5767,"lat":37.9678},{"CBSA_Code":"21820","CBSA_Title":"Fairbanks, AK","POP2010":97581,"lon":-146.5673,"lat":64.8071},{"CBSA_Code":"22020","CBSA_Title":"Fargo, ND-MN","POP2010":208777,"lon":-96.9612,"lat":46.9175},{"CBSA_Code":"22140","CBSA_Title":"Farmington, NM","POP2010":130044,"lon":-108.3204,"lat":36.5082},{"CBSA_Code":"22180","CBSA_Title":"Fayetteville, NC","POP2010":366383,"lon":-78.9786,"lat":35.0347},{"CBSA_Code":"22220","CBSA_Title":"Fayetteville-Springdale-Rogers, AR-MO","POP2010":463204,"lon":-94.1206,"lat":36.1954},{"CBSA_Code":"22380","CBSA_Title":"Flagstaff, AZ","POP2010":134421,"lon":-111.7711,"lat":35.8392},{"CBSA_Code":"22420","CBSA_Title":"Flint, MI","POP2010":425790,"lon":-83.7059,"lat":43.0224},{"CBSA_Code":"22500","CBSA_Title":"Florence, SC","POP2010":205566,"lon":-79.8073,"lat":34.1537},{"CBSA_Code":"22520","CBSA_Title":"Florence-Muscle Shoals, AL","POP2010":147137,"lon":-87.7207,"lat":34.8082},{"CBSA_Code":"22540","CBSA_Title":"Fond du Lac, WI","POP2010":101633,"lon":-88.4889,"lat":43.7535},{"CBSA_Code":"22660","CBSA_Title":"Fort Collins, CO","POP2010":299630,"lon":-105.4614,"lat":40.6664},{"CBSA_Code":"22900","CBSA_Title":"Fort Smith, AR-OK","POP2010":280467,"lon":-94.5662,"lat":35.1873},{"CBSA_Code":"23060","CBSA_Title":"Fort Wayne, IN","POP2010":416257,"lon":-85.2165,"lat":41.0055},{"CBSA_Code":"23460","CBSA_Title":"Gadsden, AL","POP2010":104430,"lon":-86.0365,"lat":34.0425},{"CBSA_Code":"23540","CBSA_Title":"Gainesville, FL","POP2010":264275,"lon":-82.4723,"lat":29.6891},{"CBSA_Code":"23580","CBSA_Title":"Gainesville, GA","POP2010":179684,"lon":-83.8197,"lat":34.3217},{"CBSA_Code":"23900","CBSA_Title":"Gettysburg, PA","POP2010":101407,"lon":-77.2204,"lat":39.8677},{"CBSA_Code":"24020","CBSA_Title":"Glens Falls, NY","POP2010":128923,"lon":-73.6492,"lat":43.4454},{"CBSA_Code":"24140","CBSA_Title":"Goldsboro, NC","POP2010":122623,"lon":-77.9985,"lat":35.3583},{"CBSA_Code":"24220","CBSA_Title":"Grand Forks, ND-MN","POP2010":98461,"lon":-96.8452,"lat":47.8362},{"CBSA_Code":"24260","CBSA_Title":"Grand Island, NE","POP2010":81850,"lon":-98.2761,"lat":41.0339},{"CBSA_Code":"24300","CBSA_Title":"Grand Junction, CO","POP2010":146723,"lon":-108.4687,"lat":39.0175},{"CBSA_Code":"24420","CBSA_Title":"Grants Pass, OR","POP2010":82713,"lon":-123.5563,"lat":42.3642},{"CBSA_Code":"24500","CBSA_Title":"Great Falls, MT","POP2010":81327,"lon":-111.3472,"lat":47.3087},{"CBSA_Code":"24540","CBSA_Title":"Greeley, CO","POP2010":252825,"lon":-104.393,"lat":40.5551},{"CBSA_Code":"24580","CBSA_Title":"Green Bay, WI","POP2010":306241,"lon":-88.0775,"lat":44.7753},{"CBSA_Code":"24780","CBSA_Title":"Greenville, NC","POP2010":168148,"lon":-77.3716,"lat":35.5907},{"CBSA_Code":"25060","CBSA_Title":"Gulfport-Biloxi-Pascagoula, MS","POP2010":370702,"lon":-89.0197,"lat":30.5005},{"CBSA_Code":"25180","CBSA_Title":"Hagerstown-Martinsburg, MD-WV","POP2010":251599,"lon":-77.8997,"lat":39.5465},{"CBSA_Code":"25220","CBSA_Title":"Hammond, LA","POP2010":121097,"lon":-90.4062,"lat":30.629},{"CBSA_Code":"25260","CBSA_Title":"Hanford-Corcoran, CA","POP2010":152982,"lon":-119.8139,"lat":36.0761},{"CBSA_Code":"25500","CBSA_Title":"Harrisonburg, VA","POP2010":125228,"lon":-78.8717,"lat":38.5116},{"CBSA_Code":"25620","CBSA_Title":"Hattiesburg, MS","POP2010":142842,"lon":-89.2307,"lat":31.186},{"CBSA_Code":"25860","CBSA_Title":"Hickory-Lenoir-Morganton, NC","POP2010":365497,"lon":-81.4572,"lat":35.8141},{"CBSA_Code":"25940","CBSA_Title":"Hilton Head Island-Bluffton-Beaufort, SC","POP2010":187010,"lon":-80.8718,"lat":32.4067},{"CBSA_Code":"25980","CBSA_Title":"Hinesville, GA","POP2010":77917,"lon":-81.6045,"lat":31.798},{"CBSA_Code":"26140","CBSA_Title":"Homosassa Springs, FL","POP2010":141236,"lon":-82.4596,"lat":28.8547},{"CBSA_Code":"26300","CBSA_Title":"Hot Springs, AR","POP2010":96024,"lon":-93.1492,"lat":34.5769},{"CBSA_Code":"26380","CBSA_Title":"Houma-Thibodaux, LA","POP2010":208178,"lon":-90.662,"lat":29.4694},{"CBSA_Code":"26580","CBSA_Title":"Huntington-Ashland, WV-KY-OH","POP2010":364908,"lon":-82.3832,"lat":38.3789},{"CBSA_Code":"26620","CBSA_Title":"Huntsville, AL","POP2010":417593,"lon":-86.7352,"lat":34.7831},{"CBSA_Code":"26820","CBSA_Title":"Idaho Falls, ID","POP2010":133265,"lon":-112.4338,"lat":43.6242},{"CBSA_Code":"26980","CBSA_Title":"Iowa City, IA","POP2010":152586,"lon":-91.6495,"lat":41.5112},{"CBSA_Code":"27060","CBSA_Title":"Ithaca, NY","POP2010":101564,"lon":-76.4705,"lat":42.4487},{"CBSA_Code":"27100","CBSA_Title":"Jackson, MI","POP2010":160248,"lon":-84.4226,"lat":42.2481},{"CBSA_Code":"27180","CBSA_Title":"Jackson, TN","POP2010":130011,"lon":-88.8467,"lat":35.609},{"CBSA_Code":"27340","CBSA_Title":"Jacksonville, NC","POP2010":177772,"lon":-77.4262,"lat":34.7271},{"CBSA_Code":"27500","CBSA_Title":"Janesville-Beloit, WI","POP2010":160331,"lon":-89.0715,"lat":42.6713},{"CBSA_Code":"27620","CBSA_Title":"Jefferson City, MO","POP2010":149807,"lon":-92.0909,"lat":38.6398},{"CBSA_Code":"27740","CBSA_Title":"Johnson City, TN","POP2010":198716,"lon":-82.3373,"lat":36.2518},{"CBSA_Code":"27780","CBSA_Title":"Johnstown, PA","POP2010":143679,"lon":-78.7205,"lat":40.4911},{"CBSA_Code":"27860","CBSA_Title":"Jonesboro, AR","POP2010":121026,"lon":-90.648,"lat":35.6986},{"CBSA_Code":"27900","CBSA_Title":"Joplin, MO","POP2010":175518,"lon":-94.34,"lat":37.0568},{"CBSA_Code":"27980","CBSA_Title":"Kahului-Wailuku-Lahaina, HI","POP2010":154924,"lon":-156.3397,"lat":20.7937},{"CBSA_Code":"28020","CBSA_Title":"Kalamazoo-Portage, MI","POP2010":326589,"lon":-85.7836,"lat":42.2486},{"CBSA_Code":"28100","CBSA_Title":"Kankakee, IL","POP2010":113449,"lon":-87.8621,"lat":41.1375},{"CBSA_Code":"28420","CBSA_Title":"Kennewick-Richland, WA","POP2010":253340,"lon":-119.2565,"lat":46.3638},{"CBSA_Code":"28660","CBSA_Title":"Killeen-Temple, TX","POP2010":405300,"lon":-97.7876,"lat":31.2079},{"CBSA_Code":"28700","CBSA_Title":"Kingsport-Bristol-Bristol, TN-VA","POP2010":309544,"lon":-82.4389,"lat":36.6113},{"CBSA_Code":"28740","CBSA_Title":"Kingston, NY","POP2010":182493,"lon":-74.2626,"lat":41.8888},{"CBSA_Code":"29020","CBSA_Title":"Kokomo, IN","POP2010":82752,"lon":-86.1135,"lat":40.4853},{"CBSA_Code":"29100","CBSA_Title":"La Crosse-Onalaska, WI-MN","POP2010":133665,"lon":-91.32,"lat":43.7797},{"CBSA_Code":"29180","CBSA_Title":"Lafayette, LA","POP2010":466750,"lon":-92.0602,"lat":30.021},{"CBSA_Code":"29200","CBSA_Title":"Lafayette-West Lafayette, IN","POP2010":201789,"lon":-86.9275,"lat":40.5151},{"CBSA_Code":"29340","CBSA_Title":"Lake Charles, LA","POP2010":199607,"lon":-93.2577,"lat":30.0169},{"CBSA_Code":"29420","CBSA_Title":"Lake Havasu City-Kingman, AZ","POP2010":200186,"lon":-113.7596,"lat":35.7057},{"CBSA_Code":"29540","CBSA_Title":"Lancaster, PA","POP2010":519445,"lon":-76.2445,"lat":40.0401},{"CBSA_Code":"29620","CBSA_Title":"Lansing-East Lansing, MI","POP2010":464036,"lon":-84.6075,"lat":42.7137},{"CBSA_Code":"29700","CBSA_Title":"Laredo, TX","POP2010":250304,"lon":-99.3331,"lat":27.7619},{"CBSA_Code":"29740","CBSA_Title":"Las Cruces, NM","POP2010":209233,"lon":-106.8324,"lat":32.3518},{"CBSA_Code":"29940","CBSA_Title":"Lawrence, KS","POP2010":110826,"lon":-95.2907,"lat":38.8822},{"CBSA_Code":"30020","CBSA_Title":"Lawton, OK","POP2010":130291,"lon":-98.4339,"lat":34.5253},{"CBSA_Code":"30140","CBSA_Title":"Lebanon, PA","POP2010":133568,"lon":-76.4565,"lat":40.3668},{"CBSA_Code":"30300","CBSA_Title":"Lewiston, ID-WA","POP2010":60888,"lon":-116.9405,"lat":46.267},{"CBSA_Code":"30340","CBSA_Title":"Lewiston-Auburn, ME","POP2010":107702,"lon":-70.2029,"lat":44.1664},{"CBSA_Code":"30460","CBSA_Title":"Lexington-Fayette, KY","POP2010":472099,"lon":-84.4314,"lat":38.0925},{"CBSA_Code":"30620","CBSA_Title":"Lima, OH","POP2010":106331,"lon":-84.1124,"lat":40.7696},{"CBSA_Code":"30700","CBSA_Title":"Lincoln, NE","POP2010":302157,"lon":-96.8708,"lat":40.8199},{"CBSA_Code":"30860","CBSA_Title":"Logan, UT-ID","POP2010":125442,"lon":-111.7689,"lat":41.8869},{"CBSA_Code":"30980","CBSA_Title":"Longview, TX","POP2010":214369,"lon":-94.829,"lat":32.3731},{"CBSA_Code":"31020","CBSA_Title":"Longview, WA","POP2010":102410,"lon":-122.6795,"lat":46.193},{"CBSA_Code":"31180","CBSA_Title":"Lubbock, TX","POP2010":290805,"lon":-101.6448,"lat":33.4683},{"CBSA_Code":"31340","CBSA_Title":"Lynchburg, VA","POP2010":246412,"lon":-79.2213,"lat":37.3664},{"CBSA_Code":"31420","CBSA_Title":"Macon, GA","POP2010":232293,"lon":-83.7131,"lat":32.8605},{"CBSA_Code":"31460","CBSA_Title":"Madera, CA","POP2010":150865,"lon":-119.7598,"lat":37.2176},{"CBSA_Code":"31700","CBSA_Title":"Manchester-Nashua, NH","POP2010":400721,"lon":-71.7209,"lat":42.9174},{"CBSA_Code":"31740","CBSA_Title":"Manhattan, KS","POP2010":92719,"lon":-96.5088,"lat":39.341},{"CBSA_Code":"31860","CBSA_Title":"Mankato-North Mankato, MN","POP2010":96740,"lon":-94.1354,"lat":44.1542},{"CBSA_Code":"31900","CBSA_Title":"Mansfield, OH","POP2010":124475,"lon":-82.5425,"lat":40.7731},{"CBSA_Code":"32780","CBSA_Title":"Medford, OR","POP2010":203206,"lon":-122.7291,"lat":42.4314},{"CBSA_Code":"32900","CBSA_Title":"Merced, CA","POP2010":255793,"lon":-120.7137,"lat":37.1929},{"CBSA_Code":"33140","CBSA_Title":"Michigan City-La Porte, IN","POP2010":111467,"lon":-86.7376,"lat":41.5471},{"CBSA_Code":"33220","CBSA_Title":"Midland, MI","POP2010":83629,"lon":-84.388,"lat":43.6433},{"CBSA_Code":"33260","CBSA_Title":"Midland, TX","POP2010":141671,"lon":-101.9911,"lat":32.0897},{"CBSA_Code":"33540","CBSA_Title":"Missoula, MT","POP2010":109299,"lon":-113.9216,"lat":47.0375},{"CBSA_Code":"33660","CBSA_Title":"Mobile, AL","POP2010":412992,"lon":-88.2071,"lat":30.7944},{"CBSA_Code":"33700","CBSA_Title":"Modesto, CA","POP2010":514453,"lon":-120.9952,"lat":37.5581},{"CBSA_Code":"33740","CBSA_Title":"Monroe, LA","POP2010":176441,"lon":-92.2879,"lat":32.6831},{"CBSA_Code":"33780","CBSA_Title":"Monroe, MI","POP2010":152021,"lon":-83.5374,"lat":41.9285},{"CBSA_Code":"33860","CBSA_Title":"Montgomery, AL","POP2010":374536,"lon":-86.4015,"lat":32.3632},{"CBSA_Code":"34060","CBSA_Title":"Morgantown, WV","POP2010":129709,"lon":-79.8035,"lat":39.5264},{"CBSA_Code":"34100","CBSA_Title":"Morristown, TN","POP2010":113951,"lon":-83.3837,"lat":36.1079},{"CBSA_Code":"34580","CBSA_Title":"Mount Vernon-Anacortes, WA","POP2010":116901,"lon":-121.7224,"lat":48.4782},{"CBSA_Code":"34620","CBSA_Title":"Muncie, IN","POP2010":117671,"lon":-85.3973,"lat":40.2279},{"CBSA_Code":"34740","CBSA_Title":"Muskegon, MI","POP2010":172188,"lon":-86.152,"lat":43.2914},{"CBSA_Code":"34820","CBSA_Title":"Myrtle Beach-Conway-North Myrtle Beach, SC-NC","POP2010":376722,"lon":-78.6622,"lat":33.9876},{"CBSA_Code":"34900","CBSA_Title":"Napa, CA","POP2010":136484,"lon":-122.3324,"lat":38.5107},{"CBSA_Code":"34940","CBSA_Title":"Naples-Immokalee-Marco Island, FL","POP2010":321520,"lon":-81.3445,"lat":26.1169},{"CBSA_Code":"35100","CBSA_Title":"New Bern, NC","POP2010":126802,"lon":-77.0782,"lat":35.0938},{"CBSA_Code":"35660","CBSA_Title":"Niles-Benton Harbor, MI","POP2010":156813,"lon":-86.4125,"lat":41.9547},{"CBSA_Code":"35980","CBSA_Title":"Norwich-New London, CT","POP2010":274055,"lon":-72.1029,"lat":41.4876},{"CBSA_Code":"36100","CBSA_Title":"Ocala, FL","POP2010":331298,"lon":-82.0583,"lat":29.2076},{"CBSA_Code":"36140","CBSA_Title":"Ocean City, NJ","POP2010":97265,"lon":-74.8002,"lat":39.1482},{"CBSA_Code":"36220","CBSA_Title":"Odessa, TX","POP2010":137130,"lon":-102.5429,"lat":31.869},{"CBSA_Code":"36500","CBSA_Title":"Olympia-Tumwater, WA","POP2010":252264,"lon":-122.8298,"lat":46.9287},{"CBSA_Code":"36780","CBSA_Title":"Oshkosh-Neenah, WI","POP2010":166994,"lon":-88.6448,"lat":44.0689},{"CBSA_Code":"36980","CBSA_Title":"Owensboro, KY","POP2010":114752,"lon":-87.059,"lat":37.6992},{"CBSA_Code":"37460","CBSA_Title":"Panama City, FL","POP2010":184715,"lon":-85.4665,"lat":30.1439},{"CBSA_Code":"37620","CBSA_Title":"Parkersburg-Vienna, WV","POP2010":92673,"lon":-81.4635,"lat":39.1449},{"CBSA_Code":"37860","CBSA_Title":"Pensacola-Ferry Pass-Brent, FL","POP2010":448991,"lon":-87.1566,"lat":30.6879},{"CBSA_Code":"37900","CBSA_Title":"Peoria, IL","POP2010":379186,"lon":-89.5159,"lat":40.7889},{"CBSA_Code":"38220","CBSA_Title":"Pine Bluff, AR","POP2010":100258,"lon":-91.9476,"lat":34.0778},{"CBSA_Code":"38340","CBSA_Title":"Pittsfield, MA","POP2010":131219,"lon":-73.2062,"lat":42.3711},{"CBSA_Code":"38540","CBSA_Title":"Pocatello, ID","POP2010":82839,"lon":-112.226,"lat":42.6691},{"CBSA_Code":"38860","CBSA_Title":"Portland-South Portland, ME","POP2010":514098,"lon":-70.4695,"lat":43.694},{"CBSA_Code":"38940","CBSA_Title":"Port St. Lucie, FL","POP2010":424107,"lon":-80.4498,"lat":27.2198},{"CBSA_Code":"39140","CBSA_Title":"Prescott, AZ","POP2010":211033,"lon":-112.5548,"lat":34.5995},{"CBSA_Code":"39380","CBSA_Title":"Pueblo, CO","POP2010":159063,"lon":-104.5127,"lat":38.1736},{"CBSA_Code":"39460","CBSA_Title":"Punta Gorda, FL","POP2010":159978,"lon":-81.9139,"lat":26.9051},{"CBSA_Code":"39540","CBSA_Title":"Racine, WI","POP2010":195408,"lon":-88.0611,"lat":42.7473},{"CBSA_Code":"39660","CBSA_Title":"Rapid City, SD","POP2010":134598,"lon":-102.8997,"lat":44.1917},{"CBSA_Code":"39740","CBSA_Title":"Reading, PA","POP2010":411442,"lon":-75.9268,"lat":40.4142},{"CBSA_Code":"39820","CBSA_Title":"Redding, CA","POP2010":177223,"lon":-122.0423,"lat":40.7637},{"CBSA_Code":"39900","CBSA_Title":"Reno, NV","POP2010":425417,"lon":-119.6575,"lat":40.6182},{"CBSA_Code":"40220","CBSA_Title":"Roanoke, VA","POP2010":308707,"lon":-79.9461,"lat":37.2903},{"CBSA_Code":"40340","CBSA_Title":"Rochester, MN","POP2010":206877,"lon":-92.3378,"lat":43.9561},{"CBSA_Code":"40420","CBSA_Title":"Rockford, IL","POP2010":349431,"lon":-89.0413,"lat":42.3334},{"CBSA_Code":"40580","CBSA_Title":"Rocky Mount, NC","POP2010":152392,"lon":-77.7956,"lat":35.9407},{"CBSA_Code":"40660","CBSA_Title":"Rome, GA","POP2010":96317,"lon":-85.2122,"lat":34.2747},{"CBSA_Code":"40980","CBSA_Title":"Saginaw, MI","POP2010":200169,"lon":-84.0528,"lat":43.3303},{"CBSA_Code":"41060","CBSA_Title":"St. Cloud, MN","POP2010":189093,"lon":-94.4732,"lat":45.5863},{"CBSA_Code":"41100","CBSA_Title":"St. George, UT","POP2010":138115,"lon":-113.5064,"lat":37.2813},{"CBSA_Code":"41140","CBSA_Title":"St. Joseph, MO-KS","POP2010":127329,"lon":-94.7857,"lat":39.8348},{"CBSA_Code":"41420","CBSA_Title":"Salem, OR","POP2010":390738,"lon":-122.8964,"lat":44.9034},{"CBSA_Code":"41500","CBSA_Title":"Salinas, CA","POP2010":415057,"lon":-121.2399,"lat":36.2178},{"CBSA_Code":"41540","CBSA_Title":"Salisbury, MD-DE","POP2010":373802,"lon":-75.4681,"lat":38.4177},{"CBSA_Code":"41660","CBSA_Title":"San Angelo, TX","POP2010":111823,"lon":-100.6719,"lat":31.3627},{"CBSA_Code":"42020","CBSA_Title":"San Luis Obispo-Paso Robles-Arroyo Grande, CA","POP2010":269637,"lon":-120.4039,"lat":35.3876},{"CBSA_Code":"42100","CBSA_Title":"Santa Cruz-Watsonville, CA","POP2010":262382,"lon":-122.0099,"lat":37.0576},{"CBSA_Code":"42140","CBSA_Title":"Santa Fe, NM","POP2010":144170,"lon":-105.976,"lat":35.5073},{"CBSA_Code":"42200","CBSA_Title":"Santa Maria-Santa Barbara, CA","POP2010":423895,"lon":-120.0219,"lat":34.7247},{"CBSA_Code":"42220","CBSA_Title":"Santa Rosa, CA","POP2010":483878,"lon":-122.8896,"lat":38.5298},{"CBSA_Code":"42340","CBSA_Title":"Savannah, GA","POP2010":347611,"lon":-81.3016,"lat":32.1312},{"CBSA_Code":"42680","CBSA_Title":"Sebastian-Vero Beach, FL","POP2010":138028,"lon":-80.6067,"lat":27.6934},{"CBSA_Code":"42700","CBSA_Title":"Sebring, FL","POP2010":98786,"lon":-81.344,"lat":27.3437},{"CBSA_Code":"43100","CBSA_Title":"Sheboygan, WI","POP2010":115507,"lon":-87.9457,"lat":43.7211},{"CBSA_Code":"43300","CBSA_Title":"Sherman-Denison, TX","POP2010":120877,"lon":-96.6773,"lat":33.627},{"CBSA_Code":"43340","CBSA_Title":"Shreveport-Bossier City, LA","POP2010":439811,"lon":-93.6692,"lat":32.4889},{"CBSA_Code":"43420","CBSA_Title":"Sierra Vista-Douglas, AZ","POP2010":131346,"lon":-109.7519,"lat":31.8791},{"CBSA_Code":"43580","CBSA_Title":"Sioux City, IA-NE-SD","POP2010":168563,"lon":-96.373,"lat":42.5792},{"CBSA_Code":"43620","CBSA_Title":"Sioux Falls, SD","POP2010":228261,"lon":-96.9893,"lat":43.4994},{"CBSA_Code":"43780","CBSA_Title":"South Bend-Mishawaka, IN-MI","POP2010":319224,"lon":-86.1315,"lat":41.775},{"CBSA_Code":"43900","CBSA_Title":"Spartanburg, SC","POP2010":313268,"lon":-81.8488,"lat":34.8381},{"CBSA_Code":"44100","CBSA_Title":"Springfield, IL","POP2010":210170,"lon":-89.698,"lat":39.8287},{"CBSA_Code":"44180","CBSA_Title":"Springfield, MO","POP2010":436712,"lon":-93.1754,"lat":37.3641},{"CBSA_Code":"44220","CBSA_Title":"Springfield, OH","POP2010":138333,"lon":-83.7844,"lat":39.9189},{"CBSA_Code":"44300","CBSA_Title":"State College, PA","POP2010":153990,"lon":-77.8185,"lat":40.919},{"CBSA_Code":"44420","CBSA_Title":"Staunton-Waynesboro, VA","POP2010":118502,"lon":-79.1275,"lat":38.165},{"CBSA_Code":"44940","CBSA_Title":"Sumter, SC","POP2010":107456,"lon":-80.38,"lat":33.9154},{"CBSA_Code":"45220","CBSA_Title":"Tallahassee, FL","POP2010":367413,"lon":-84.2887,"lat":30.4055},{"CBSA_Code":"45460","CBSA_Title":"Terre Haute, IN","POP2010":172425,"lon":-87.3438,"lat":39.3962},{"CBSA_Code":"45500","CBSA_Title":"Texarkana, TX-AR","POP2010":149198,"lon":-94.2092,"lat":33.4706},{"CBSA_Code":"45540","CBSA_Title":"The Villages, FL","POP2010":93420,"lon":-82.0795,"lat":28.7047},{"CBSA_Code":"45820","CBSA_Title":"Topeka, KS","POP2010":233870,"lon":-95.8021,"lat":39.0438},{"CBSA_Code":"45940","CBSA_Title":"Trenton, NJ","POP2010":366513,"lon":-74.6996,"lat":40.2823},{"CBSA_Code":"46220","CBSA_Title":"Tuscaloosa, AL","POP2010":230162,"lon":-87.7205,"lat":33.1659},{"CBSA_Code":"46340","CBSA_Title":"Tyler, TX","POP2010":209714,"lon":-95.2691,"lat":32.3742},{"CBSA_Code":"46540","CBSA_Title":"Utica-Rome, NY","POP2010":299397,"lon":-75.1761,"lat":43.3356},{"CBSA_Code":"46660","CBSA_Title":"Valdosta, GA","POP2010":139588,"lon":-83.2365,"lat":30.8286},{"CBSA_Code":"46700","CBSA_Title":"Vallejo-Fairfield, CA","POP2010":413344,"lon":-121.9384,"lat":38.2695},{"CBSA_Code":"47020","CBSA_Title":"Victoria, TX","POP2010":94003,"lon":-97.1974,"lat":28.7271},{"CBSA_Code":"47220","CBSA_Title":"Vineland-Bridgeton, NJ","POP2010":156898,"lon":-75.1098,"lat":39.3724},{"CBSA_Code":"47300","CBSA_Title":"Visalia-Porterville, CA","POP2010":442179,"lon":-118.7993,"lat":36.2206},{"CBSA_Code":"47380","CBSA_Title":"Waco, TX","POP2010":252772,"lon":-97.0901,"lat":31.4265},{"CBSA_Code":"47460","CBSA_Title":"Walla Walla, WA","POP2010":62859,"lon":-118.252,"lat":46.2575},{"CBSA_Code":"47580","CBSA_Title":"Warner Robins, GA","POP2010":179605,"lon":-83.64,"lat":32.4093},{"CBSA_Code":"47940","CBSA_Title":"Waterloo-Cedar Falls, IA","POP2010":167819,"lon":-92.4685,"lat":42.5363},{"CBSA_Code":"48060","CBSA_Title":"Watertown-Fort Drum, NY","POP2010":116229,"lon":-75.9206,"lat":44.053},{"CBSA_Code":"48140","CBSA_Title":"Wausau, WI","POP2010":134063,"lon":-89.7586,"lat":44.8979},{"CBSA_Code":"48260","CBSA_Title":"Weirton-Steubenville, WV-OH","POP2010":124454,"lon":-80.7031,"lat":40.388},{"CBSA_Code":"48300","CBSA_Title":"Wenatchee, WA","POP2010":110884,"lon":-120.2636,"lat":47.8181},{"CBSA_Code":"48540","CBSA_Title":"Wheeling, WV-OH","POP2010":147950,"lon":-80.842,"lat":39.976},{"CBSA_Code":"48660","CBSA_Title":"Wichita Falls, TX","POP2010":151306,"lon":-98.4906,"lat":33.775},{"CBSA_Code":"48700","CBSA_Title":"Williamsport, PA","POP2010":116111,"lon":-77.0663,"lat":41.3431},{"CBSA_Code":"48900","CBSA_Title":"Wilmington, NC","POP2010":254884,"lon":-77.9007,"lat":34.4688},{"CBSA_Code":"49020","CBSA_Title":"Winchester, VA-WV","POP2010":128472,"lon":-78.4658,"lat":39.2699},{"CBSA_Code":"49420","CBSA_Title":"Yakima, WA","POP2010":243231,"lon":-120.7401,"lat":46.4594},{"CBSA_Code":"49620","CBSA_Title":"York-Hanover, PA","POP2010":434972,"lon":-76.7307,"lat":39.9232},{"CBSA_Code":"49700","CBSA_Title":"Yuba City, CA","POP2010":166892,"lon":-121.5223,"lat":39.1526},{"CBSA_Code":"49740","CBSA_Title":"Yuma, AZ","POP2010":195751,"lon":-113.9063,"lat":32.769}]};
@@ -820,6 +781,23 @@ function met_map(container){
     	return sizer;
     };
 
+    var color_ramp_bounds = {p:["#8ED7FF", "#0D73D6"], n:["#FF756F", "#DC2A2A"]};
+
+    map.colors = map.colors_positive = function(small, big){
+    	if(arguments.length > 1){
+    		color_ramp_bounds.p[0] = small;
+    		color_ramp_bounds.p[1] = big;
+    		return map;
+    	}
+    	else if(arguments.length == 1){
+    		color_ramp_bounds.p[0] = small;
+    		return map;
+    	}
+    	else{
+    		return color_ramp_bounds.p;
+    	}
+    };
+
     //default bubble fill color function factory
     var c_default = function(c, flip){
     	if(c.search(/^#/) > -1){
@@ -836,15 +814,13 @@ function met_map(container){
 	    	var extent = d3.extent(v);
 	    	var absmax = maximum_value === null ? d3.max([Math.abs(extent[0]), extent[1]]) : maximum_value;
 
-	    	console.log(absmax);
-
 	    	//interpolators
 	    	if(extent[0] < 0){
-	    		var p = d3.interpolateLab("#8ED7FF", "#0D73D6");
-	    		var n = d3.interpolateLab("#FF756F", "#DC2A2A");
+	    		var p = d3.interpolateLab(color_ramp_bounds.p[0], color_ramp_bounds.p[1]);
+	    		var n = d3.interpolateLab(color_ramp_bounds.n[0], color_ramp_bounds.n[1]);
 	    	}
 	    	else{
-	    		var p = d3.interpolateLab("#8ED7FF", "#0D73D6");
+	    		var p = d3.interpolateLab(color_ramp_bounds.p[0], color_ramp_bounds.p[1]);
 	    		var n = null;
 	    	}
 
@@ -1016,9 +992,30 @@ function met_map(container){
 		}
 	};
 
+	var last_legend_width = null;
 	function legend_width(){
 		var box = map.sel.g_legend.node().getBoundingClientRect();
-		return Math.round(box.right - box.left);	
+		var w = Math.round(box.right - box.left);	
+		var diff = Math.abs((w/last_legend_width)-1);
+
+		if(last_legend_width==null ||  diff > 0.1){
+			last_legend_width = w;
+		}
+		
+		return last_legend_width;
+	}
+
+	var last_legend_height = null;
+	function legend_height(){
+		var box = map.sel.g_legend.node().getBoundingClientRect();
+		var h = Math.round(box.bottom - box.top);	
+		var diff = Math.abs((h/last_legend_height)-1);
+
+		if(last_legend_height==null ||  diff > 0.1){
+			last_legend_height = h;
+		}
+		
+		return last_legend_height;
 	}
 
 	//update metro bubbles
@@ -1121,18 +1118,20 @@ function met_map(container){
     if(redraw_dims){
     	setTimeout(function(){
     		var w = legend_width();
+    		var h = legend_height();
     		var w25 = w*0.25;
     		var w75 = w*0.75;
     		map_data.padding[3] = w;
     		proj.dims();
     		redraw_layers();
-    		map.sel.g_legend.attr("transform","translate(" + (map.size.width) + "," + (map.size.height/2) + ")");
+    		map.sel.g_legend.attr("transform","translate(" + (map.size.width*0.94) + "," + ((map.size.height/2)-h/2.5) + ")");
     	},0);
     }
     else{
     	var w = legend_width();
+    	var h = legend_height();
     	var w50 = w/2;
-    	map.sel.g_legend.attr("transform","translate(" + (map.size.width) + "," + (map.size.height/2) + ")");
+    	map.sel.g_legend.attr("transform","translate(" + (map.size.width*0.94) + "," + ((map.size.height/2)-h/2.5) + ")");
     }
 
     return map;
@@ -1167,150 +1166,385 @@ function met_map(container){
 
 //-------------------------------------------------{5}
 
-//v2.0 developed for metro monitor
-//revised to be more modular - each event gets a window event listener, rather than a collection
-//the user registers scroll and activate listeners separately, scroll methods will not execute if there is an activation method yet to run
+//build the category bar chart
 
-//events: activate and scroll 
-
-//to do: address edge case where asynchronous load pushes unactivated element into view. no scroll takes place to activate it
-//consider appending a note to each container element, but should we change positioning of parent element?
-
-//scroll collection constructor
-function onScroll(element){
-	if(arguments.length > 0){
-		this.element = element;
-	}
-	this.on_activate = null;
-	this.on_scroll = null;
-
-	this.activated = false;
-
-	//determines activation zone. the default, 0.2, implies the middle 60% of the page is the "activation zone" 
-	//the activate method will not be called when the top of element is 
-	this.top_bot_buffer = 0.2;
-
-	var self = this;
-	var decorated_scroll_listener = function(){
-		self.scroll_listener();
-
-		//remove the scroll event if it is no longer necessary
-		try{
-			if(self.on_scroll === null && self.activated){
-				window.removeEventListener("scroll", decorated_scroll_listener);
-			}
-		}
-		catch(e){
-			//ho-op
-		}
-	};
-
-	//attach scroll listener with setTimeout 0 so that synchronous code, like registering activate/viewing listeners can execute first
-	setTimeout(function(){
-		window.addEventListener("scroll", decorated_scroll_listener);
-	}, 0);
-}
-
-onScroll.prototype.buffer = function(buffer){
-	if(arguments.length > 0){
-		this.top_bot_buffer = buffer;
-		return this;
-	}
-	else{
-		return this.top_bot_buffer;
-	}
-};
-
-onScroll.prototype.element = function(element){
-	if(arguments.length > 0){
-		this.element = element;
-		return this;
-	}
-	else{
-		return this.element;
-	}
-};
-
-onScroll.prototype.get_box = function(){
-	try{
-		var box = this.element.getBoundingClientRect();
-
-		var top = box.top;
-		var bottom = box.bottom;
-		var middle = top + ((bottom-top)/2);
-
-		var pos = {top:top, middle:middle, bottom:bottom};
-	}
-	catch(e){
-		var pos = null;
-	}
-	return pos;
-};
-
-//register activation function
-onScroll.prototype.activate = function(fn){
-	if(arguments.length > 0){
-		this.on_activate = fn;
-			var self = this;
-			setTimeout(function(){self.scroll_listener();}, 0); //try to immediately activate
-		return this;
-	}
-	else{
-		return this.on_activate;
-	}
-};
-
-//register scrolling function
-onScroll.prototype.scroll = function(fn, call_when_out_of_view){
-	if(arguments.length > 0){
-		this.on_scroll = fn;
-		this.call_scroll_when_out_of_view = !!call_when_out_of_view;
-		return this;
-	}
-	else{
-		return this.on_scroll;
-	}
-};
-onScroll.prototype.scrolling = onScroll.prototype.scroll;
-
-onScroll.prototype.scroll_listener = function(){
-	var box = this.get_box();
-	var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));
+function catbar(url){
 	
-	//first, attempt to execute activate method, then scroll method--never at the same time
-	if(!this.activated && this.on_activate !== null){
-		if(box==null || window_height==0){
-			this.on_activate({top:0, middle:0, bottom:0}, window_height);
-			this.activated = true;
+	var wrap = d3.select("#cat-bar").style("width","100%").style("min-height","100px").append("div").style("padding","1em").append("div");
+	var svg = wrap.append("svg").attr("width","100%").style("overflow","visible");
+
+	var g_share = svg.append("g");
+	var g_change = svg.append("g");
+	var g_accel = svg.append("g");
+
+	var title = svg.append("text").text("Which cleantech categories...").attr("x","50%").attr("y",20)
+	.style("font-weight","bold")
+	.style("font-style","italic")
+	.attr("text-anchor","middle");
+
+	var prompt_share = g_share.append("text").classed("prompt",true).text("Account for the most patents?");
+	var prompt_change = g_change.append("text").classed("prompt",true).text("Have had the fastest growth in patenting?");
+	var prompt_accel = g_accel.append("text").classed("prompt",true).text("Have seen an acceleration in patenting?");
+
+	g_share.append("rect").classed("underline",true);
+	g_change.append("rect").classed("underline",true);
+	g_accel.append("rect").classed("underline",true);
+
+	//plot dimensions (of each sub-plot)
+	var height = 450;
+	var width = 300;
+	var xpad = 50;
+	var ypad = 0;
+
+	var totwidth = 900;
+
+	var title_height = 140;
+
+	function setSize(){
+		var box = wrap.node().getBoundingClientRect();
+		var boxwidth = totwidth = box.right - box.left;
+		var landscape = boxwidth >= 1000;
+		if(landscape){
+			width = (boxwidth - (2*xpad))/3;
+			if(width < 300){width = 300;}
+			var translates = [[0,0], [width+xpad,0], [2*(width+xpad),0]];
+			var svgh = height;
 		}
 		else{
-			var activate_zone = [window_height*this.top_bot_buffer, window_height*(1-this.top_bot_buffer)];	
-			if(!(box.bottom < activate_zone[0] || box.top > activate_zone[1]) ){
-				//console.log(box);
-				this.on_activate(box, window_height);
-				this.activated = true;
-			}
+			width = boxwidth - xpad;
+			if(width < 300){width = 300;}
+			else if(width > 540){width = 540;}
+			var center = (boxwidth - width)/2;
+			if(center < 0){center = 0;}
+			var translates = [[center,0], [center,height+ypad], [center,height*2 + ypad*2]];
+			var svgh = height*3;
 		}
-	}
-	else if((this.on_scroll !== null) && !(box.bottom < 0 || box.top > window_height)){
-		this.on_scroll(box, window_height);
-	}
-	else if((this.on_scroll !== null) && this.call_scroll_when_out_of_view){
-		this.on_scroll(null, window_height);		
-	}
-};
 
-//simulate a croll event
-onScroll.prototype.tick = function(duration){
-	var self = this;
-	var dur = arguments.length > 0 ? duration : 0;
-	setTimeout(function(){self.scroll_listener();},0);
-	return this;
-};
+		svg.attr("height", svgh+"px");
 
-function waypoint(element){
-	var os = new onScroll(element);
-	return os;
+		return {translates:translates, landscape:landscape}
+	}
+
+	d3.json(url, function(err, data){
+		if(!!err){
+			return null
+		}
+
+		//hold sorted data -- don't change original data array
+		var sData = data.slice(0).sort(function(a,b){return b.share - a.share});
+
+		var share_scale = d3.scaleLinear().domain([0, d3.max(data, function(d){return d.share})]);
+		
+		var change_max = d3.max(data, function(d){return d3.max([d.a_01_10, d.b_11_16, d.c_diff])});
+		var change_min = d3.min(data, function(d){return d3.min([d.a_01_10, d.b_11_16, d.c_diff])});
+		var abs_change_max = d3.max([Math.abs(change_max), Math.abs(change_min)]);
+		var change_scale = d3.scaleLinear().domain([0-abs_change_max, abs_change_max]);
+
+		//initialize orientation
+		var orientation = setSize();
+
+		//height of each row computed based on plot height and title box height
+		var row_height = (height - title_height) / sData.length;
+		var bar_height = Math.round(row_height/2);
+		var text_width = 190;
+
+		var current_sort = {var: "share", descending:true};
+
+		function draw(){
+			orientation = setSize();
+			text_width = orientation.landscape ? 190 : 150;
+			//to do -- update depending on whether labels present
+			
+			//scales are set up to deliver bar value position
+			share_scale.range([0, width - text_width - 5]);
+
+			var change_width = !orientation.landscape ? (width-text_width-10)/2 : (width-10)/2;
+			change_scale.range([0, change_width]);
+
+			sData = data.slice(0).sort(function(a,b){
+				var aval = a[current_sort.var];
+				var bval = b[current_sort.var];
+
+				return current_sort.descending ? bval-aval : aval-bval;
+			});
+			
+			drawShare();
+			drawChange(change_width);
+			drawAccel(change_width);
+
+			//position text prompts
+			var prompts = svg.selectAll("text.prompt");
+
+			prompts.attr("x", function(d,i){
+					if(i==-1){
+						var x = text_width - 10;
+					}
+					else if(i==-2){
+						var x = text_width + 10;
+					}
+					else{
+						var x = width/2;
+					}
+					return x;
+				})
+				.attr("y", 52)
+				.attr("text-anchor", "middle")
+				.style("font-style","italic")
+				;
+
+			svg.selectAll("rect.underline").attr("height","1px").attr("width",width).attr("x",0).attr("y",60).attr("fill","#aaaaaa");
+
+			var sortbuttons = svg.selectAll("text.sortable").style("cursor","pointer");
+			sortbuttons.on("mousedown", function(d){
+				if(d.var==current_sort.var){
+					current_sort.descending = !current_sort.descending;
+				}
+				else{
+					current_sort.var = d.var;
+					current_sort.descending = true;
+				}
+				draw();
+			});
+			sortbuttons.style("font-weight", function(d){
+				return d.var == current_sort.var ? "bold" : "normal";
+			});
+		}
+
+		function drawShare(){
+			var t = orientation.translates[0];
+			g_share.transition().attr("transform", "translate("+t[0]+","+t[1]+")");
+
+			var rows_update = g_share.selectAll("g").data(sData, function(d){return d.category});
+			var rows_enter = rows_update.enter().append("g");
+				rows_enter.append("path");
+				rows_enter.append("text").classed("cat-name",true).attr("dy","11").attr("text-anchor","end");
+				rows_enter.append("text").classed("val-label",true).attr("dy","11").attr("text-anchor","start");
+				rows_enter.append("rect");
+
+			var rows = rows_enter.merge(rows_update);
+
+			rows.select("path")
+				.attr("d","M"+text_width+",5 l"+((orientation.landscape ? totwidth : width)-text_width)+",0")
+				.attr("stroke","#dddddd")
+				.style("shape-rendering","crispEdges")
+				//.style("visibility", orientation.landscape ? "visible" : "hidden")
+				;
+
+			rows.select("rect").attr("x", function(d){return text_width + 5})
+							   .attr("y","0")
+							   .attr("height",bar_height)
+							   .attr("width",function(d){return share_scale(d.share)})
+							   .attr("fill", "#31b244");
+
+			rows.select("text").attr("x", text_width).text(function(d){return d.category});
+
+			rows.transition().duration(1000).attr("transform", function(d,i){return "translate(0," + (title_height + (i*row_height)) + ")"});
+
+			//variable labels
+			var lab = g_share.selectAll("text.var-label").data([{lab:"Share of cleantech patents, 2011–16", var:"share"}]);
+			lab.enter().append("text").classed("var-label",true)
+			.merge(lab).attr("x",width/2).attr("y",118)
+			.text(function(d){return d.lab})
+			.attr("text-anchor","middle")
+			.classed("sortable","true")
+			.style("font-style","italic")
+			;
+		}
+
+
+		function drawChange(w){
+			var t = orientation.translates[1];
+			g_change.transition().attr("transform", "translate("+t[0]+","+t[1]+")");
+
+			var ch1 = sData.map(function(d){return {ch: d.a_01_10, cat:d.category} });
+			var ch2 = sData.map(function(d){return {ch: d.b_11_16, cat:d.category} });
+
+			ch1.title = "2001–10";
+			ch2.title = "2011–16";
+
+			var zero = change_scale(0);
+
+			var mains_update = g_change.selectAll("g.main").data([ch1, ch2]);
+			var mains_enter = mains_update.enter().append("g").classed("main",true);
+				mains_enter.append("g").classed("anno",true)
+									   .append("path")
+									   .attr("stroke","#aaaaaa")
+									   .style("shape-rendering","crispEdges")
+									   ;
+
+			var tw = !orientation.landscape ? text_width : 0;
+			var mains = mains_enter.merge(mains_update).attr("transform", function(d,i){
+				return "translate(" + (tw + (i*w)) + ",0)" ;
+			});
+
+			var rows_update = mains.selectAll("g.row").data(function(d){return d}, function(d){return d.cat});
+			var rows_enter = rows_update.enter().append("g").classed("row",true);
+				//rows_enter.append("path");
+				//rows_enter.append("text").classed("cat-name",true).attr("dy","11").attr("text-anchor","end");
+				rows_enter.append("text").classed("val-label",true).attr("dy","11").attr("text-anchor","start");
+				rows_enter.append("rect");
+
+			var rows = rows_enter.merge(rows_update);
+
+			//rows.select("path").attr("d","M0,5 l"+(width/2)+",0").attr("stroke","#dddddd").style("shape-rendering","crispEdges");
+			var vline = mains.select("g.anno").select("path").attr("d", "M"+zero+","+(title_height-5)+"l0,"+row_height*14);
+
+			rows.select("rect").attr("x", function(d){return d.ch >= 0 ? zero : change_scale(d.ch)})
+							   .attr("y","0")
+							   .attr("height",bar_height)
+							   .attr("width",function(d){return d.ch >= 0 ? change_scale(d.ch) - zero : zero - change_scale(d.ch)})
+							   .attr("fill", function(d){return d.ch >= 0 ? "#31b244" : "#ff495c"});
+
+			rows.transition().duration(1000).attr("transform", function(d,i){return "translate(0," + (title_height + (i*row_height)) + ")"});
+
+			var catlab = g_change.selectAll("text.cat-name").data(sData, function(d){return d.category});
+			catlab.enter().append("text").classed("cat-name",true).merge(catlab)
+				.attr("text-anchor","end")
+					.attr("x", text_width).attr("dy","11")
+					.text(function(d,i){return d.category})
+					.style("visibility", orientation.landscape ? "hidden" : "visible")
+					.transition().duration(1000)
+					.attr("y",function(d,i){
+						return title_height + (i*row_height);
+					})
+					;
+
+			var catline = g_change.selectAll("path.cat-line").data(sData);
+			catline.enter().append("path").classed("cat-line",true).merge(catline)
+				.attr("d", function(d,i){
+					return "M"+text_width+","+ (title_height + (i*row_height) + 5) + "l"+(width-text_width)+",0";
+				})
+				.attr("stroke","#dddddd")
+				.style("shape-rendering","crispEdges")
+				.style("visibility", !orientation.landscape ? "visible" : "hidden")
+				.lower()
+				;
+
+			vline.raise();
+
+			//variable labels
+			var lab = g_change.selectAll("text.var-label")
+				.data([{lab:"2001–10", var:"a_01_10"},
+					   {lab:"2011–16", var:"b_11_16"},
+					   {lab:"Annual average percent change", var:"b_11_16"}]);
+			lab.enter().append("text").classed("var-label",true)
+			.merge(lab).attr("x",function(d,i){
+				if(i==0){
+					var x = tw + change_scale(0);
+				}
+				else if(i==1){
+					var x = tw + w + change_scale(0);
+				}
+				else{
+					var x = tw + w;
+				}
+				return x;
+			})
+			.attr("y",function(d,i){
+				return i<2 ? 118 : 93;
+			}).text(function(d){return d.lab})
+			.classed("sortable", function(d){return d.var!==null})
+			.attr("text-anchor","middle")
+			.style("font-style","italic")
+			;
+
+		}
+
+
+		function drawAccel(w){
+			var t = orientation.translates[2];
+			g_accel.transition().attr("transform", "translate("+t[0]+","+t[1]+")");
+
+			var ch1 = sData.map(function(d){return {ch: d.c_diff, cat:d.category} });
+
+			var zero = change_scale(0);
+
+			var mains_update = g_accel.selectAll("g.main").data([ch1]);
+			var mains_enter = mains_update.enter().append("g").classed("main",true);
+				mains_enter.append("g").classed("anno",true)
+									   .append("path")
+									   .attr("stroke","#aaaaaa")
+									   .style("shape-rendering","crispEdges")
+									   ;
+			
+			var tw = !orientation.landscape ? text_width : 0;
+			var mains = mains_enter.merge(mains_update).attr("transform","translate("+((w/2)+tw)+",0)");
+
+			var rows_update = mains.selectAll("g.row").data(function(d){return d}, function(d){return d.cat});
+			var rows_enter = rows_update.enter().append("g").classed("row",true);
+				//rows_enter.append("path");
+				//rows_enter.append("text").classed("cat-name",true).attr("dy","11").attr("text-anchor","end");
+				rows_enter.append("text").classed("val-label",true).attr("dy","11").attr("text-anchor","start");
+				rows_enter.append("rect");
+
+			var rows = rows_enter.merge(rows_update);
+
+			//rows.select("path").attr("d","M0,5 l"+(width/2)+",0").attr("stroke","#dddddd").style("shape-rendering","crispEdges");
+			var vline = mains.select("g.anno").select("path").attr("d", "M"+zero+","+(title_height-5)+"l0,"+row_height*14);
+
+			rows.select("rect").attr("x", function(d){return d.ch >= 0 ? zero : change_scale(d.ch)})
+							   .attr("y","0")
+							   .attr("height",bar_height)
+							   .attr("width",function(d){return d.ch >= 0 ? change_scale(d.ch) - zero : zero - change_scale(d.ch)})
+							   .attr("fill", function(d){return d.ch >= 0 ? "#31b244" : "#ff495c"});
+
+			//rows.select("text").attr("x", text_width).text(function(d){return d.category});
+
+			rows.transition().duration(1000).attr("transform", function(d,i){return "translate(0," + (title_height + (i*row_height)) + ")"});
+
+
+			var catlab = g_accel.selectAll("text.cat-name").data(sData, function(d){return d.category});
+			catlab.enter().append("text").classed("cat-name",true).merge(catlab)
+				.attr("text-anchor","end").attr("x", text_width).attr("dy","11")
+					.text(function(d,i){return d.category})
+					.style("visibility", orientation.landscape ? "hidden" : "visible")
+					.transition().duration(1000)
+					.attr("y",function(d,i){
+						return title_height + (i*row_height);
+					})
+					;
+
+			var catline = g_accel.selectAll("path.cat-line").data(sData);
+			catline.enter().append("path").classed("cat-line",true).merge(catline)
+				.attr("d", function(d,i){
+					return "M"+text_width+","+ (title_height + (i*row_height) + 5) + "l"+(width-text_width)+",0";
+				})
+				.attr("stroke","#dddddd")
+				.style("shape-rendering","crispEdges")
+				.style("visibility", !orientation.landscape ? "visible" : "hidden")
+				.lower()
+				;
+
+			vline.raise();
+
+			//variable labels
+			var lab = g_accel.selectAll("text.var-label")
+			.data([{lab:"Difference between growth rates", var:"c_diff"}, 
+				   {lab:"during 2001–10 and 2011–16", var:"c_diff"}]);
+			lab.enter().append("text").classed("var-label",true)
+			.merge(lab).attr("x",(w/2)+tw+change_scale(0))
+			.attr("y",function(d,i){
+				return i==1 ? 118 : 93;
+			}).text(function(d){return d.lab})
+			.classed("sortable", function(d){return d.var!==null})
+			.attr("text-anchor","middle")
+			.style("font-style","italic")
+			;
+
+
+		}
+
+		draw();
+
+		var resizeTimer;
+		window.addEventListener("resize",function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function(){
+				draw();
+			}, 250);
+		});
+
+	});
 }
 
 //add browser compat message: test for svg, array.filter and map
@@ -1318,11 +1552,8 @@ function waypoint(element){
 //To do: review handling of missing values in all modules: both implicit and explicit missings
 
 //shared js-modules
-//import dimensions from '../../../js-modules/dimensions.js';
-//import metro_map from '../../../js-modules/metro-maps.js';
 dir.local("./").add("data");
-//dir.add("json17", "metro-monitor/data/2017/json")
-
+//dir.add("data", "cleantech-patenting/data")
 
 function main(){
 
@@ -1333,6 +1564,7 @@ function main(){
 
 	var technodes = [
 		{name:"Total cleantech patents", var:"V5", i:3},
+		{name:"Cleantech patents per capita", var:"V9", i:-1},
 		{name:"Green materials", var:"V15", i:3},
 		{name:"Efficiency", var:"V17", i:5},
 		{name:"Transportation", var:"V23", i:11},
@@ -1354,17 +1586,9 @@ function main(){
 		techlookup[technodes[tl].var] = technodes[tl].name;
 	}
 
-	var wrap = d3.select("#met-dash").style("width","100%").style("overflow","hidden");
+	var wrap = d3.select("#met-map").style("width","100%").style("overflow","hidden");
 
-	//var svg_wrap = wrap.append("div").style("width","100%").style("height","100vh").style("position","relative");
-	//var svg = svg_wrap.append("svg");
-
-	//var cat_label = svg_wrap.append("p").style("position","absolute").style("left","2em").style("top","1em");
-	//var views = wrap.selectAll("div.views").data(technodes).enter().append("div").classed("views",true)
-
-	//var button_wrap = wrap.append("div").classed("button-wrap",true).style("visibility","hidden");
-	
-	//var title = wrap.append("p").style("text-align","center");
+	catbar(dir.url("data","energy_innovation_cat.json"));
 
 	d3.json(dir.url("data", "energy_innovation.json"), function(err, data){
 
@@ -1373,15 +1597,21 @@ function main(){
 			return null;
 		}
 
+		var varlookup = {};
+		for(var vl=0; vl<data.vars.length; vl++){
+			varlookup[data.vars[vl].var] = data.vars[vl].name;
+		}
+
 		var maxmax = d3.max(data.obs, function(d){
-			return d3.max(technodes.slice(1), function(t){
+			return d3.max(technodes.slice(2), function(t){
 				return d[t.var];
 			})
 		});
 
 		//build a metmap
 
-		var map_titlebox = wrap.append("div").style("padding","0em 1em");
+		var map_titlebox = wrap.append("div").style("padding","0em 1em").style("border-bottom","1px solid #aaaaaa").style("margin","1em 1em 5px 1em");
+		var map_title = map_titlebox.append("p").style("text-align","center").style("font-weight","bold").style("margin","1em 0em 5px 0em");
 		var mapwrap = wrap.append("div").style("padding","0em 1em")
 										.append("div")
 										.style("margin","0em auto")
@@ -1390,18 +1620,17 @@ function main(){
 										.classed("c-fix",true);
 
 		var button_wrap = mapwrap.append("div").classed("button-wrap",true);
-		button_wrap.append("div").style("padding","4em 0em 0.25em 0em")
-								 .style("border-bottom","1px solid #aaaaaa")
-								 .style("margin-bottom","1em")
-								 .append("p")
+		button_wrap.append("div").append("p")
 								 .text("Make a selection")
-								 .style("text-align","center");
+								 .style("text-align","center")
+								 .style("font-style","italic")
+								 ;
 
 		var map_main = mapwrap.append("div").classed("map-wrap", true);
 
 		var map = met_map(map_main.node());
 
-		map.responsive().states();
+		map.responsive().states().colors("#cef2d3","#31b244");
 
 		map.store(data.obs, "all_data");
 		map.data(data.obs, "V2");
@@ -1410,7 +1639,7 @@ function main(){
 
 		var current_indicator = technodes[0].var;
 
-		map.format("num1")
+		map.format("num0")
 			.bubble(current_indicator, current_indicator, 30, 1);
 
 		var buttons = button_wrap.append("div").classed("buttons",true).selectAll("p.cleancat").data(technodes)
@@ -1421,7 +1650,7 @@ function main(){
 
 		function syncbuttons(){
 			buttons.classed("selected", function(d,i){return d.var == current_indicator});
-
+			map_title.text(varlookup[current_indicator]);
 		}
 
 
@@ -1429,418 +1658,17 @@ function main(){
 
 		buttons.on("mousedown", function(d, i){
 			if(d.var == "V5"){
-				map.maxval(null);
+				map.maxval(null).bubble(d.var,d.var,30);
+			}
+			else if(d.var == "V9"){
+				map.maxval(null).bubble(d.var,d.var,25);
 			}
 			else{
-				map.maxval(maxmax);
+				map.maxval(maxmax).bubble(d.var,d.var,35);
 			}
 			current_indicator = d.var;
-			map.bubble(d.var, d.var);
 			syncbuttons();
 		});
-
-		console.log(current_indicator);
-
-		return;
-
-		//basic card creation, registration of methods
-		function met_map_deprecated(container, url, state, indicators){
-
-			//indicators should contain map titles and indicator keys
-			//e.g. [{key:"employment", title:string OR function}, {...}, ...]
-			
-			//setup
-			var outer_wrap = d3.select(container).classed("makesans",true);
-			var header_wrap = outer_wrap.append("div")
-				.style("border-bottom","1px solid #aaaaaa")
-				.append("div").classed("as-table",true)
-				.append("div").classed("row-of three-two", true);
-
-			var title_wrap = header_wrap.append("div").style("vertical-align","bottom");
-			var button_wrap = header_wrap.append("div")
-									.style("vertical-align","bottom")
-									.classed("c-fix","true")
-									.append("div")
-									.style("float","right")
-									.classed("c-fix",true)
-									.style("margin","0em 0em 1em 0em");
-
-			var title = title_wrap.append("div").style("margin","0em 0em 0.5em 0em").append("p").style("margin","0em").classed("chart-title",true);
-
-
-
-			button_wrap.append("p").style("font-size","0.8em").text("SELECT AN INDICATOR TO MAP").style("margin","0em 5px 0.25em 5px");
-			var select = button_wrap.append("select").style("display","block")
-											  .style("margin","0px 0px 0px 0px")
-											  .style("line-height","1.65em")
-											  .style("font-size","1em")
-											  .style("padding","2px 5px 2px 5px")
-											  .style("background","transparent")
-											  .style("max-width","100%")
-											  .style("outline","none");
-
-			var options = select.selectAll("option").data(indicators);
-
-			options.enter().append("option").merge(options)
-				.attr("value", function(d,i){
-					return d.key;
-				})
-				.text(function(d,i){
-					return d.title;
-				});
-
-			select.on("change", function(d,i){
-				var key = this.value;
-				var ind = {key:null, title:null};
-				var j = -1;
-				while(++j < indicators.length){
-					if(indicators[j].key==key){
-						ind = indicators[j];
-						break;
-					}
-				}
-
-				try{
-					var ind_test = indicators[this.selectedIndex].key;
-
-					if(ind_test!==key){
-						throw "ERROR";
-					}
-				}
-				catch(e){
-					//revert back
-					ind = indicators[0];
-					this.value = ind.key;
-				}
-				finally{
-					drawIndicator(ind);
-				}
-			});
-
-
-
-			function activate(){
-				d3.json(url, function(error, data){
-					if(!!error){
-
-					}
-					else{
-
-						init = true;
-
-						drawIndicator(indicators[0]);
-					}
-				});
-			}
-
-			function updateMetro(){
-
-			}
-
-			function updatePeriod(){
-				if(init){
-					var data = map.store("all_data");
-					map.data(data[state.period], "cbsa");
-					drawIndicator(current_indicator);
-				}
-			}
-
-			return {activate:activate, updateMetro:updateMetro, updatePeriod:updatePeriod}
-
-
-		}
-
-
-
-
-
-
-
-		return;
-
-		//old unused code
-
-		var forceSim = d3.forceSimulation().stop();
-
-		/*ADAPTED FROM EXAMPLE BY M. BOSTOCK*/
-		function findSubject() {
-			return forceSim.find(d3.event.x, d3.event.y);
-		}
-
-		function dragStart() {
-			if (!d3.event.active) forceSim.alphaTarget(0.4).restart();
-			//forceSim.force("collision").strength(1);
-			//forceSim.force("link").strength(3);
-			d3.event.subject.fx = d3.event.subject.x;
-			d3.event.subject.fy = d3.event.subject.y;
-		}
-
-		function drag() {
-			d3.event.subject.fx = d3.event.x;
-			d3.event.subject.fy = d3.event.y;
-		}
-
-		function dragEnd() {
-			if (!d3.event.active) forceSim.alphaTarget(0);
-			d3.event.subject.fx = null;
-			d3.event.subject.fy = null;
-			//console.log(d3.event.subject);
-			//forceSim.force("collision").strength(0.5);
-		}
-
-		svg.call(d3.drag()
-						.container(svg.node())
-						.subject(findSubject)
-						.on("start", dragStart)
-						.on("drag", drag)
-						.on("end", dragEnd));
-		/*END BOSTOCK CREDIT*/
-
-
-
-
-
-		//maximum across all patent categories
-		var maxmax = d3.max(data.obs, function(d){
-			return d3.max(technodes, function(t){
-				return d[t.var];
-			})
-		});
-
-		var scale = d3.scaleSqrt().domain([0,maxmax]).range([1,40]);
-
-		var current_vn = "V13";
-
-		//take a variable name code (vn), return a function to map node data to starting state
-		function data_mapper(vn, nrays){
-			var extent = d3.extent(data.obs, function(d){return d[vn]});
-
-			if(arguments.length < 2){nrays = 10;}
-			var ray_len = 1;
-			var ray_increment = ray_len/nrays;
-
-			//actual data array mapper
-			function dmap(d, i, a){
-				var val = d[vn];
-				var share = val/extent[1];
-
-				var r = {center:[width/2, height/2]};
-				r.name = d.V1;
-
-				var ray = (i%nrays);
-
-				r.data = d;
-				r.val = val;
-				r.share = share;
-				r.rad = scale(val);
-				r.planet = true;
-
-				//initalize placement of nodes to avoid unstable start to
-				//simulation that could cause instability
-				//eliminate forces to see how this initial placement looks
-				if(ray==0){
-					ray_len = ray_len + r.rad;
-					ray_increment = (r.rad*2)/nrays;
-				}
-				else{
-					ray_len = ray_len + ray_increment;
-				}
-
-				var radians = 2*Math.PI*(ray/nrays) + Math.random()/3;
-				r.x = r.center[0] + (ray_len+r.rad)*Math.cos(radians);
-				r.y = r.center[1] + (ray_len+r.rad)*Math.sin(radians);
-
-				return r;
-			}
-			return dmap;
-		} //end data mapper closure
-
-
-		function build(vn){
-			if(arguments.length > 0){
-				current_vn = vn;
-			}
-			else{
-				vn = current_vn;
-			}
-
-			//set dimensions of layout
-			var rect = svg_wrap.node().getBoundingClientRect();
-			width = rect.right - rect.left;
-			//height = width*aspect;
-			height = rect.bottom - rect.top;
-
-			if(width < 320){width = 320;}
-			if(height < 600){height = 600;}
-			//else if(height > 600){height = 600}
-
-			svg.attr("width", width+"px").attr("height", height+"px");
-
-			var center = {};
-			center.name = techlookup[vn];
-			center.x = width/2;
-			center.y = height/2;
-			center.rad = 15;
-			center.planet = false; //it's the sun (center)
-			center.share = 0;
-			center.val = 0;
-
-			var nodes = data.obs.slice(0).sort(function(a,b){
-														return b[vn]-a[vn];
-												})
-												.map(data_mapper(vn, 20));
-
-			cat_label.text(techlookup[vn]);
-
-
-			nodes.unshift(center);
-
-			//build links to first node
-			//to do -- only link top 50 or so?
-			//skip the first element of nodes (it's the center node)
-			var links = nodes.slice(1).map(function(d,i,a){
-				return {source:0, target:i+1, strength:d.share}
-			});
-
-			forceSim.nodes(nodes)
-							.force("center", d3.forceCenter(width/2,height/2))
-							.force("link", d3.forceLink(links)
-								.distance(function(link){
-									return 55;
-									//return 15*(2-link.strength);
-								}).strength(function(link){
-									return 1.5*link.strength + 0.05;
-								}))
-							.force("x", d3.forceX(width/2).strength(function(node){
-									return !node.planet ? 0.75 : 0;
-								}))
-							.force("y", d3.forceY(height/2).strength(function(node){
-									return !node.planet ? 0.75 : 0;
-								}))
-							.force("collision", d3.forceCollide(function(node){
-									var buffer = 3;
-									return node.rad + buffer;
-								} ).strength(0.3) )
-							.force("gravity", d3.forceManyBody().strength(-5))
-							.alpha(0.8)
-							.restart()
-							;
-
-							//tick function
-							function tick(){
-								try{
-									bubbles.attr("cx", function(d){return d.x})
-												 .attr("cy", function(d){return d.y})
-												 ;
-								}
-								catch(e){
-									console.log(e);
-								}
-							}
-
-				forceSim.on("tick", tick);
-
-				var bub_update = svg.selectAll("circle")
-												 .data(nodes, function(d){
-													 return d.name;
-												 });
-
-				bub_update.exit().remove();
-
-				var nupdate = 0;
-				var bubbles = bub_update.enter()
-																.append("circle")
-																.merge(bub_update)
-																.attr("fill", function(d){return d.planet ? "#31a354" : "#84c899"})
-																.attr("stroke", function(d){return d.planet ? "#eeeeee" : "#31a354"})
-																.attr("stroke-width", "1px");
-
-																bubbles.transition()
-																			 .duration(1000)
-																				.attr("r", function(d){return d.rad+"px"})
-																				.on("end", function(){
-																					nupdate = nupdate + 1;
-																					if(nupdate == nodes.length){
-																						//forceSim.alpha(0.7)
-																						//				.restart();
-																						//console.log(nupdate);
-																					}
-																				})
-																				;
-
-
-
-
-
-		} //end build function
-
-
-		build(current_vn);
-
-		var resizeTimer;
-		window.addEventListener("resize", function(){
-			clearTimeout(resizeTimer);
-			resizeTimer = setTimeout(function(){build(current_vn);}, 500);
-		});
-
-
-		var buttons = button_wrap.selectAll("p").data(technodes)
-			.enter()
-			.append("p")
-			.text(function(d,i){return d.name});
-
-
-
-
-
-		window.addEventListener("scroll", function(){
-			var window_height = Math.max(document.documentElement.clientHeight, (window.innerHeight || 0));
-			var box = wrap.node().getBoundingClientRect();
-
-			if((box.top < 0 && box.bottom > 0)){
-				svg_wrap.style("position","fixed").style("top","0px").style("left","0px");
-			} 
-			else{
-				svg_wrap.style("position","relative");
-			}
-		});
-
-		views.each(function(d,i){
-			d3.select(this).append("p").html(d.name + "<br /> Say something unique about this category" + "<br/>" + "Are there aspects of the distribution we want to describe?" + "<br />Or metros worth calling out?" ).classed("view-name",true).style("position","relative").style("z-index","100");
-			waypoint(this)
-			.activate(function(){
-				if(d.var != current_vn){build(d.var);}
-			})
-			.scroll(function(box){
-				if(d.var != current_vn && box.top > 0){build(d.var);}
-			}).buffer(0.15);
-		});
-
-		var cycling = true;
-
-		function total_update(variable){
-			build(variable);
-			syncbuttons();
-		}
-
-		buttons.on("mousedown", function(d,i){
-			cycling = false;
-			total_update(d.var);
-		});
-
-		//run as a sequence
-		var ci = 0;
-		var timer;
-		function cycle(){
-			clearTimeout(timer);
-			if(cycling){
-				var n = ++ci % technodes.length;
-				var next = technodes[n].var;
-				total_update(next);
-				timer = setTimeout(cycle,2000);
-			}
-		}
-		//timer = setTimeout(cycle,2000);
 
 	}); //end d3.json callback
 

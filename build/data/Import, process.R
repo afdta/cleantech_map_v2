@@ -81,6 +81,9 @@ cdistro <- merge(shares, catgrowth, by="category", all=TRUE)
 cdistro$catfact <- factor(cdistro$category, cdistro[order(cdistro$share), ]$category)
 cdistro$catfact2 <- factor(cdistro$category, cdistro[order(cdistro$c_diff), ]$category)
 
+writeLines(toJSON(cdistro[1:5], digits=5, na="null"),
+           "~/Projects/Brookings/energy-innovation/data/energy_innovation_cat.json")
+
 filter(as.data.frame(table(cdistro$category, cdistro$catfact)), Freq==1)
 filter(as.data.frame(table(cdistro$category, cdistro$catfact2)), Freq==1)
 

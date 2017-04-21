@@ -469,7 +469,7 @@ function met_map(container){
   //dom selections
   map.sel = {wrap: d3.select(map.container)};
   
-  map.sel.mapwrap = map.sel.wrap.insert("div",":first-child").style("padding","0px").style("position","relative");
+  map.sel.mapwrap = map.sel.wrap.insert("div",":first-child").style("padding","0px").style("position","relative").style("z-index","100");
   map.sel.svg = map.sel.mapwrap.append("svg").style("width","100%").style("height","100%");
   map.sel.g_state = map.sel.svg.append("g").attr("transform","translate(0,0)");
   map.sel.g_bubble = map.sel.svg.append("g").attr("transform","translate(0,0)");
@@ -615,7 +615,19 @@ function met_map(container){
 	};
 
 	//TOOLTIPS
-	//textAccessor is a function that returns an array of data based from each element of data -- it shouldn't include name
+	//textAccessorFn is a function that returns an array of data based from each element of data -- it shouldn't include name
+	var textAccessorFn;
+
+	map.textAccessor = function(fn){
+		if(arguments.length > 0){
+			textAccessorFn = fn;
+			return map;
+		}
+		else{
+			return textAccessorFn;
+		}
+	};
+
 	map.showTooltips = function(bubbles, textAccessor){
 	  	var self = this;
 
@@ -633,9 +645,16 @@ function met_map(container){
 	      try{
 	        var tipBox = tiptest.node().getBoundingClientRect(); //this is not reliable with variable-width tooltips especially when width of tooltip is compressed by browser at edge of viewport
 	        var tipWidth = tipBox.right - tipBox.left;
+	        var tipHeight = tipBox.bottom - tipBox.top;
+
+	        var wrapBox = map.sel.mapwrap.node().getBoundingClientRect();
+	        var wrapHeight = wrapBox.bottom - wrapBox.top;
+
 	        var x_pct = parseInt(cx) / map.size.width;
 	        var x_pos = x_pct < 0.65 ? (parseInt(cx) + parseInt(r) + 8) + "px" : (parseInt(cx) - parseInt(r) - tipWidth - 8) + "px";
-	        var y_pos = (parseInt(cy) - parseInt(r)) + "px";
+	        
+	        var y_test = parseInt(cy) - parseInt(r);
+	        var y_pos = y_test + tipHeight >= (wrapHeight - 10) ? (wrapHeight - tipHeight - 10)+"px" : y_test+"px"; 
 	      }
 	      catch(e){
 	        console.log(e);
@@ -666,8 +685,8 @@ function met_map(container){
 	      	 .attr("fill",col);
 	      //get text
 	      var tdata = [d.id.name];
-	      if(!!textAccessor){
-	        tdata = tdata.concat(textAccessor(d));
+	      if(!!textAccessorFn){
+	        tdata = tdata.concat(textAccessorFn(d));
 	      }
 
 	      //append text to tooltip
@@ -675,18 +694,22 @@ function met_map(container){
 	      text.exit().remove();
 	      text.enter().append("p")
 	      		.merge(text)
-	      		.text(function(d,i){return d})
+	      		.html(function(d,i){return d})
 	      		.style("margin","0em 0.5em")
-	          	.style("font-weight", function(d,i){return i===0 ? "bold" : "normal"});
+	          	.style("font-weight", function(d,i){return i===0 ? "bold" : "normal"})
+	          	.style("font-size", function(d,i){return i===0 ? "1.1em" : "0.9em"})
+	          	;
 
 	      //append text to "test"/invisible tooltip
 	      var _text = tiptest.selectAll("p").data(tdata);
 	      		_text.exit().remove();
 	      		_text.enter().append("p")
 	      		.merge(_text)
-	      		.text(function(d,i){return d})
+	      		.html(function(d,i){return d})
 	      		.style("margin","0em 0.5em")
-	          	.style("font-weight", function(d,i){return i===0 ? "bold" : "normal"});
+	          	.style("font-weight", function(d,i){return i===0 ? "bold" : "normal"})
+	          	.style("font-size", function(d,i){return i===0 ? "1.1em" : "0.9em"})
+	          	;
 
 	      var pos = tipPos(cx, cy, r);
 	      map.sel.tooltip.style("left", pos.left).style("top", pos.top);
@@ -1562,23 +1585,24 @@ function main(){
 	var aspect = 9/16;
 	var pi2 = Math.PI*2;
 
+	//listing of the tech categories in the map menu -- map is labeled with the indicator names in the data, however
 	var technodes = [
-		{name:"Total cleantech patents", var:"V5", i:3},
-		{name:"Cleantech patents per capita", var:"V9", i:-1},
-		{name:"Green materials", var:"V15", i:3},
-		{name:"Efficiency", var:"V17", i:5},
-		{name:"Transportation", var:"V23", i:11},
-		{name:"Energy storage", var:"V24", i:12},
-		{name:"Solar", var:"V19", i:7},
-		{name:"Air", var:"V13", i:1},
-		{name:"Water/wastewater", var:"V20", i:8},
-		{name:"Bioenergy", var:"V14", i:2},
-		{name:"Wind", var:"V12", i:0},
-		{name:"Conventional fuel", var:"V16", i:4},
-		{name:"Recycling", var:"V18", i:6},
-		{name:"Nuclear", var:"V22", i:10},
-		{name:"Hydro power", var:"V25", i:13},
-		{name:"Geothermal", var:"V21", i:9}
+		{name:"Total cleantech patents", var:"V5"},
+		{name:"Cleantech patents per capita", var:"V9"},
+		{name:"Advanced green materials", var:"V15"},
+		{name:"Air", var:"V13"},
+		{name:"Conventional fuel", var:"V16"},
+		{name:"Bioenergy", var:"V14"},
+		{name:"Energy efficiency", var:"V17"},
+		{name:"Energy storage", var:"V24"},
+		{name:"Geothermal", var:"V21"},
+		{name:"Hydro/marine power", var:"V25"},
+		{name:"Nuclear", var:"V22"},
+		{name:"Recycling", var:"V18"},
+		{name:"Solar", var:"V19"},
+		{name:"Transportation", var:"V23"},
+		{name:"Water/wastewater", var:"V20"},	
+		{name:"Wind", var:"V12"}
 	];
 
 	var techlookup = {};
@@ -1597,9 +1621,11 @@ function main(){
 			return null;
 		}
 
+		//build a variable lookup
 		var varlookup = {};
 		for(var vl=0; vl<data.vars.length; vl++){
-			varlookup[data.vars[vl].var] = data.vars[vl].name;
+			//replace inconsistent spacing and use of commas with standard use
+			varlookup[data.vars[vl].var] = data.vars[vl].name.replace(/[\s,]*2011-2016/, ", 2011–2016");
 		}
 
 		var maxmax = d3.max(data.obs, function(d){
@@ -1635,22 +1661,55 @@ function main(){
 		map.store(data.obs, "all_data");
 		map.data(data.obs, "V2");
 
-		//title.html("Map: 100 largest metro areas" + '<br /><span style="font-size:0.8em">' + ind.title + ", " + periods[state.period] + '</span>') ;
-
 		var current_indicator = technodes[0].var;
 
+		var text_accessor = function(d){
+			var row = d.obs;
+
+			var tot = varlookup.V5 + ": <strong>" + format.num0(row.V5) + "</strong>";
+			var pc = varlookup.V9 + ": <strong>" + format.num0(row.V9) + "</strong>";
+
+			
+			
+			var selected = current_indicator in {V5:1, V9:1} ? null : varlookup[current_indicator] + ": <strong>" + format.num0(row[current_indicator]) + "</strong>";
+
+			if(selected !== null){
+				var text = [tot, pc, selected];
+			}
+			else{
+				var text = [tot, pc];
+			}
+
+			var top_owners = [];
+			if(!!row.V26){top_owners.push(row.V26);}
+			if(!!row.V27){top_owners.push(row.V27);}
+			if(!!row.V28){top_owners.push(row.V28);}
+
+			if(top_owners.length > 0){
+				var final_text = text.concat("<br /><strong>Top cleantech patent owners</strong>", top_owners);
+			}
+			else{
+				var final_text = text;
+			}
+
+			return final_text;
+		};
+
 		map.format("num0")
+			.textAccessor(text_accessor)
 			.bubble(current_indicator, current_indicator, 30, 1);
 
 		var buttons = button_wrap.append("div").classed("buttons",true).selectAll("p.cleancat").data(technodes)
 			.enter()
 			.append("p")
 			.classed("cleancat",true)
-			.text(function(d,i){return d.name});
+			.html(function(d,i){return d.name})
+			.style("margin-top",function(d){return d.name == "Advanced green materials" ? "1.5em" : null});
 
 		function syncbuttons(){
 			buttons.classed("selected", function(d,i){return d.var == current_indicator});
-			map_title.text(varlookup[current_indicator]);
+			var txt = varlookup[current_indicator];			
+			map_title.text(txt);
 		}
 
 

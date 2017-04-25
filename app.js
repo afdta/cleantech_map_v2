@@ -918,7 +918,6 @@ function met_map(container){
 
 		//build bubble legend
 		if(domain !== null && !color){
-			console.log("build size");
 			var absdomain = domain.map(function(d,i){return Math.abs(d)}).sort(d3.ascending);
 			var absextent = d3.extent(absdomain);
 			var tickRound = (Math.floor((absextent[1]-absextent[0])/10)/8)*10;
@@ -1005,7 +1004,6 @@ function met_map(container){
 		}
 		else if(domain !== null && color){
 			map.sel.g_legend_color.style("visibility","visible");
-			console.log("build color");
 			//build the gradient
 			var extent = d3.extent(domain);
 			var dist = extent[1]-extent[0];
@@ -1782,7 +1780,7 @@ function main(){
 
 		var map = met_map(map_main.node());
 
-		map.responsive().states().colors("#cef2d3","#31b244");
+		map.responsive().states().colors("#dcf5df","#268a35");
 
 		map.store(data.obs, "all_data");
 		map.data(data.obs, "V2");

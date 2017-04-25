@@ -91,7 +91,7 @@ function main(){
 
 		var map = met_map(map_main.node());
 
-		map.responsive().states().colors("#cef2d3","#31b244");
+		map.responsive().states().colors("#dcf5df","#268a35");
 
 		map.store(data.obs, "all_data");
 		map.data(data.obs, "V2");

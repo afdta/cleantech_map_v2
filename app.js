@@ -746,12 +746,17 @@ function met_map(container){
 	//END TOOLTIPS
 
 	var maximum_value = null;
-	map.maxval = function(v){
+	var maximum_col_value = null;
+	map.maxval = function(v, vc){
 		if(arguments.length==0){
 			return maximum_value;
 		}
+		else if(arguments.length==1){
+			maximum_value = v;
+		}
 		else{
 			maximum_value = v;
+			maximum_col_value = vc;
 		}
 		return map;
 	};
@@ -835,7 +840,7 @@ function met_map(container){
 	    		return d.obs[c];
 	    	});
 	    	var extent = d3.extent(v);
-	    	var absmax = maximum_value === null ? d3.max([Math.abs(extent[0]), extent[1]]) : maximum_value;
+	    	var absmax = maximum_col_value === null ? d3.max([Math.abs(extent[0]), extent[1]]) : maximum_col_value;
 
 	    	//interpolators
 	    	if(extent[0] < 0){
@@ -870,19 +875,139 @@ function met_map(container){
     	return filler;
     };
 
+
+    var size_varname = null;
+    var col_varname = null;
+
+    map.sizeName = function(name){
+    	if(arguments.length > 0){
+    		size_varname = name;
+    		return map;
+    	}
+    	else{
+    		return size_varname;
+    	}
+    };
+
+     map.colName = function(name){
+    	if(arguments.length > 0){
+    		col_varname = name;
+    		return map;
+    	}
+    	else{
+    		return col_varname;
+    	}
+    };
+
      //update legend
-	var bubble_legend = function(){
-		if(map_data.metro.size.domain !== null && map_data.metro.color.domain !== null){
+    var max_legend_radius = map_data.metro.max_radius;
+	var bubble_legend = function(color){
+		if(arguments.length == 0){
+			color = false;
+			var domain = map_data.metro.size.domain;
 			var prop = map_data.metro.size.var;
-			var absdomain = map_data.metro.size.domain.map(function(d,i){return Math.abs(d)}).sort(d3.ascending);
-			var sizeticks = ([d3.quantile(absdomain, 0.05), d3.quantile(absdomain, 0.5), d3.quantile(absdomain, 0.95)])
+		}
+		else{
+			color = true;
+			var domain = map_data.metro.color.domain;
+			var prop = map_data.metro.color.var;
+		}
+
+		//how far down to shift bubble legend	
+       var yshift = 25;
+
+		//build bubble legend
+		if(domain !== null && !color){
+			console.log("build size");
+			var absdomain = domain.map(function(d,i){return Math.abs(d)}).sort(d3.ascending);
+			var absextent = d3.extent(absdomain);
+			var tickRound = (Math.floor((absextent[1]-absextent[0])/10)/8)*10;
+
+			var sizeticks = ([d3.quantile(absdomain, 0.05), 
+							  d3.quantile(absdomain, 0.5),    
+							  d3.quantile(absdomain, 0.95)])
 							.map(function(d,i){
 								var obs = {};
 								obs[prop] = d;
 								return obs;
 							});
 
-			var extent = d3.extent(map_data.metro.size.domain);
+			var sizeticks0 = [tickRound, tickRound*4, tickRound*8];
+			var sizeticks = sizeticks0.map(function(d,i){
+								var obs = {};
+								obs[prop] = d;
+								return obs;
+							});
+
+			max_legend_radius = d3.max(sizeticks, function(d){return map_data.metro.size(d)});
+			
+
+			var extent = d3.extent(domain);
+
+			var bubs = map.sel.g_legend_size.selectAll("circle").data(sizeticks);
+
+			var leaders = map.sel.g_legend_size.selectAll("path").data(sizeticks);
+			leaders.exit().remove();
+			leaders.enter().append("path").merge(leaders)
+				.attr("d", function(d,i){
+					var start = "M" + max_legend_radius + "," + ((max_legend_radius*2) - (2*map_data.metro.size(d)) + yshift);
+					var xdist = max_legend_radius <= 5 ? 5 : max_legend_radius + 1;
+					var end = start + " l" + (xdist-5) + ",0" + (i==0 ? " l5,5" : (i==2 ? " l5,-5" : " l5,0"));
+					return end;
+				})
+				.attr("stroke","#999999")
+				.attr("fill","none")
+				;
+
+			var leader_labels = map.sel.g_legend_size.selectAll("text").data(sizeticks);
+			leader_labels.exit().remove();
+			leader_labels.enter().append("text").merge(leader_labels)
+				.attr("x", max_legend_radius*2)
+				.attr("dx", 2)
+				.attr("y", function(d){
+					return (max_legend_radius*2) - (2*map_data.metro.size(d)) + yshift;
+				})
+				.attr("dy", function(d,i){
+					return i==0 ? 12 : (i==1 ? 5 : -4); 
+				})
+				.text(function(d,i){
+					var t = map_data.format(d[prop]);
+					return extent[0] < 0 && extent[1] > 0 ? t.replace(/-|\+/g, "+/-") : t; 
+				})
+				.style("font-size","13px")
+				;
+
+			bubs.exit().remove();
+			bubs.enter().append("circle").merge(bubs)
+						.attr("cx", max_legend_radius)
+						.attr("cy", function(d,i){
+							return (max_legend_radius*2) - map_data.metro.size(d) + yshift;
+						})
+						.attr("r", function(d,i){
+							return map_data.metro.size(d);
+						})
+						.attr("fill","none")
+						.attr("stroke","#333333")
+						;
+
+    		if(size_varname !== null){
+    			var gradient_title = [size_varname];
+    		}
+    		else{
+    			var gradient_title = [];
+    		}
+
+			var gradient_title = map.sel.g_legend_size.selectAll("text.legend-title").data(gradient_title);
+			gradient_title.exit().remove();
+			gradient_title.enter().append("text").classed("legend-title",true).merge(gradient_title).text(function(d){return d})
+				.attr("x","-5").attr("y","0").style("font-size","13px").style("font-weight","bold");			
+
+		}
+		else if(domain !== null && color){
+			map.sel.g_legend_color.style("visibility","visible");
+			console.log("build color");
+			//build the gradient
+			var extent = d3.extent(domain);
 			var dist = extent[1]-extent[0];
 			var numticks = 100;
 			var ticks = [extent[0]];
@@ -919,57 +1044,20 @@ function met_map(container){
 				var obs = {};
 				obs[prop] = d;
 				return obs;
-			}); 
-
-			var bubs = map.sel.g_legend_size.selectAll("circle")
-				.data(sizeticks);
-
-			var leaders = map.sel.g_legend_size.selectAll("path").data(sizeticks);
-			leaders.exit().remove();
-			leaders.enter().append("path").merge(leaders)
-				.attr("d", function(d,i){
-					var start = "M" + map_data.metro.max_radius + "," + ((map_data.metro.max_radius*2) - (2*map_data.metro.size(d)));
-					var xdist = map_data.metro.max_radius <= 5 ? 5 : map_data.metro.max_radius + 1;
-					var end = start + " l" + (xdist-5) + ",0" + (i==0 ? " l5,5" : (i==2 ? " l5,-5" : " l5,0"));
-					return end;
-				})
-				.attr("stroke","#999999")
-				.attr("fill","none")
-				;
-
-			var leader_labels = map.sel.g_legend_size.selectAll("text").data(sizeticks);
-			leader_labels.exit().remove();
-			leader_labels.enter().append("text").merge(leader_labels)
-				.attr("x", map_data.metro.max_radius*2)
-				.attr("dx", 2)
-				.attr("y", function(d){
-					return (map_data.metro.max_radius*2) - (2*map_data.metro.size(d));
-				})
-				.attr("dy", function(d,i){
-					return i==0 ? 12 : (i==1 ? 5 : -4); 
-				})
-				.text(function(d,i){
-					var t = map_data.format(d[prop]);
-					return extent[0] < 0 && extent[1] > 0 ? t.replace(/-|\+/g, "+/-") : t; 
-				})
-				.style("font-size","13px")
-				;
-
-			bubs.exit().remove();
-			bubs.enter().append("circle").merge(bubs)
-						.attr("cx", map_data.metro.max_radius)
-						.attr("cy", function(d,i){
-							return (map_data.metro.max_radius*2) - map_data.metro.size(d);
-						})
-						.attr("r", function(d,i){
-							return map_data.metro.size(d);
-						})
-						.attr("fill","none")
-						.attr("stroke","#333333")
-						;
+			});
 
 			var gstep = 1;
-			var gradient = map.sel.g_legend_color.attr("transform", "translate(5,"+((map_data.metro.max_radius*2)+28)+")")
+
+    		var gradient_pad = 0;
+    		if(col_varname !== null){
+    			gradient_pad = 40;
+    			var gradient_title = [col_varname];
+    		}
+    		else{
+    			var gradient_title = [];
+    		}
+
+			var gradient = map.sel.g_legend_color.attr("transform", "translate(0,"+((max_legend_radius*2)+28+gradient_pad+yshift)+")")
 								.selectAll("rect").data(ticksm);
 			gradient.exit().remove();
 			gradient.enter().append("rect").merge(gradient)
@@ -982,9 +1070,15 @@ function met_map(container){
 				.attr("fill", function(d,i){return map_data.metro.color(d)})
 				.style("shape-rendering","crispEdges");
 
-			var gradient_text = map.sel.g_legend_color.selectAll("text").data(gradient_labels);
+			var gradient_title = map.sel.g_legend_color.selectAll("text.legend-title").data(gradient_title);
+			gradient_title.exit().remove();
+			gradient_title.enter().append("text").classed("legend-title",true).merge(gradient_title).text(function(d){return d})
+				.attr("x","-5").attr("y","-25").style("font-size","13px").style("font-weight","bold");
+
+			var gradient_text = map.sel.g_legend_color.selectAll("text.value-label").data(gradient_labels);
 			gradient_text.exit().remove();
 			gradient_text.enter().append("text")
+								 .classed("value-label",true)
 								 .merge(gradient_text)
 								 .attr("x", function(d,i){
 								 	return d.tick*gstep;
@@ -1010,8 +1104,14 @@ function met_map(container){
 					.attr("fill","none")
 					.attr("stroke","#999999")
 					.style("shape-rendering","crispEdges")
-					;
+					;				
 
+		}
+		else if(domain==null && color){
+			map.sel.g_legend_color.style("visibility","hidden");
+		}
+		else{
+			//hide legend
 		}
 	};
 
@@ -1128,6 +1228,7 @@ function met_map(container){
 
     //draw legend
     bubble_legend();
+    bubble_legend(true);
 
     //update bubbles
     bubble_update();
@@ -1147,14 +1248,14 @@ function met_map(container){
     		map_data.padding[3] = w;
     		proj.dims();
     		redraw_layers();
-    		map.sel.g_legend.attr("transform","translate(" + (map.size.width*0.94) + "," + ((map.size.height/2)-h/2.5) + ")");
+    		map.sel.g_legend.attr("transform","translate(" + (map.size.width*0.96) + "," + ((map.size.height/2)-(h/6)) + ")");
     	},0);
     }
     else{
     	var w = legend_width();
     	var h = legend_height();
     	var w50 = w/2;
-    	map.sel.g_legend.attr("transform","translate(" + (map.size.width*0.94) + "," + ((map.size.height/2)-h/2.5) + ")");
+    	map.sel.g_legend.attr("transform","translate(" + (map.size.width*0.96) + "," + ((map.size.height/2)-(h/6)) + ")");
     }
 
     return map;
@@ -1217,7 +1318,7 @@ function catbar(url){
 	var height = 450;
 	var width = 300;
 	var xpad = 50;
-	var ypad = 0;
+	var ypad = 30;
 
 	var totwidth = 900;
 
@@ -1231,7 +1332,7 @@ function catbar(url){
 			width = (boxwidth - (2*xpad))/3;
 			if(width < 300){width = 300;}
 			var translates = [[0,0], [width+xpad,0], [2*(width+xpad),0]];
-			var svgh = height;
+			var svgh = height + ypad;
 		}
 		else{
 			width = boxwidth - xpad;
@@ -1240,7 +1341,7 @@ function catbar(url){
 			var center = (boxwidth - width)/2;
 			if(center < 0){center = 0;}
 			var translates = [[center,0], [center,height+ypad], [center,height*2 + ypad*2]];
-			var svgh = height*3;
+			var svgh = (height*3) + (ypad*3);
 		}
 
 		svg.attr("height", svgh+"px");
@@ -1372,6 +1473,15 @@ function catbar(url){
 			.classed("sortable","true")
 			.style("font-style","italic")
 			;
+
+			//axes
+			var g_axis_u = g_share.selectAll("g.x-axis").data([0]);
+			var g_axis = g_axis_u.enter().append("g").classed("x-axis",true).merge(g_axis_u);
+				g_axis.attr("transform","translate(" + text_width + "," + height + ")");
+
+			var axis = d3.axisBottom(share_scale).tickValues([0,5,10,15]).tickFormat(function(v){return v+"%"});
+
+			g_axis.call(axis);
 		}
 
 
@@ -1471,6 +1581,15 @@ function catbar(url){
 			.style("font-style","italic")
 			;
 
+			//axes
+			var g_axis_u = mains.selectAll("g.x-axis").data([0]);
+			var g_axis = g_axis_u.enter().append("g").classed("x-axis",true).merge(g_axis_u);
+				g_axis.attr("transform","translate(0," + height + ")");
+
+			var axis = d3.axisBottom(change_scale).tickValues([-0.1, 0, 0.1]).tickFormat(d3.format("+.0%"));
+
+			g_axis.each(function(){d3.select(this).call(axis);});			
+
 		}
 
 
@@ -1542,7 +1661,7 @@ function catbar(url){
 
 			//variable labels
 			var lab = g_accel.selectAll("text.var-label")
-			.data([{lab:"Difference between growth rates", var:"c_diff"}, 
+			.data([{lab:"Percentage point difference b/n growth", var:"c_diff"}, 
 				   {lab:"during 2001–10 and 2011–16", var:"c_diff"}]);
 			lab.enter().append("text").classed("var-label",true)
 			.merge(lab).attr("x",(w/2)+tw+change_scale(0))
@@ -1554,6 +1673,14 @@ function catbar(url){
 			.style("font-style","italic")
 			;
 
+			//axes
+			var g_axis_u = mains.selectAll("g.x-axis").data([0]);
+			var g_axis = g_axis_u.enter().append("g").classed("x-axis",true).merge(g_axis_u);
+				g_axis.attr("transform","translate(0," + height + ")");
+
+			var axis = d3.axisBottom(change_scale).tickValues([-0.1, 0, 0.1]).tickFormat(d3.format("+.0%"));
+
+			g_axis.each(function(){d3.select(this).call(axis);});	
 
 		}
 
@@ -1588,7 +1715,6 @@ function main(){
 	//listing of the tech categories in the map menu -- map is labeled with the indicator names in the data, however
 	var technodes = [
 		{name:"Total cleantech patents", var:"V5"},
-		{name:"Cleantech patents per capita", var:"V9"},
 		{name:"Advanced green materials", var:"V15"},
 		{name:"Air", var:"V13"},
 		{name:"Conventional fuel", var:"V16"},
@@ -1661,7 +1787,7 @@ function main(){
 		map.store(data.obs, "all_data");
 		map.data(data.obs, "V2");
 
-		var current_indicator = technodes[0].var;
+		var current_indicator = "V5";
 
 		var text_accessor = function(d){
 			var row = d.obs;
@@ -1697,7 +1823,9 @@ function main(){
 
 		map.format("num0")
 			.textAccessor(text_accessor)
-			.bubble(current_indicator, current_indicator, 30, 1);
+			.sizeName("Number of patents")
+			.colName("Patents per capita")
+			.bubble(current_indicator, "V9", 30, 1);
 
 		var buttons = button_wrap.append("div").classed("buttons",true).selectAll("p.cleancat").data(technodes)
 			.enter()
@@ -1717,13 +1845,10 @@ function main(){
 
 		buttons.on("mousedown", function(d, i){
 			if(d.var == "V5"){
-				map.maxval(null).bubble(d.var,d.var,30);
-			}
-			else if(d.var == "V9"){
-				map.maxval(null).bubble(d.var,d.var,25);
+				map.maxval(null).bubble(d.var,"V9",30);
 			}
 			else{
-				map.maxval(maxmax).bubble(d.var,d.var,35);
+				map.maxval(maxmax).bubble(d.var,"#31b244",35);
 			}
 			current_indicator = d.var;
 			syncbuttons();

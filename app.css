@@ -30,6 +30,7 @@ text{
   font-family:arial, helvetica;
   text-align:center;
   line-height:1.5em;
+  font-size:0.9em;
 
   -ms-user-select: none;
   user-select: none;
@@ -43,6 +44,19 @@ text{
 
 .map-wrap, .button-wrap{
   min-height:100px;
+}
+
+g.x-axis line{
+  stroke:#aaaaaa;
+  shape-rendering:crispEdges;
+}
+
+g.x-axis path{
+  visibility:hidden;
+}
+
+#cat-bar g.x-axis text{
+  font-size:13px;
 }
 
 @media (min-width:0px){

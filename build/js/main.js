@@ -24,7 +24,6 @@ function main(){
 	//listing of the tech categories in the map menu -- map is labeled with the indicator names in the data, however
 	var technodes = [
 		{name:"Total cleantech patents", var:"V5"},
-		{name:"Cleantech patents per capita", var:"V9"},
 		{name:"Advanced green materials", var:"V15"},
 		{name:"Air", var:"V13"},
 		{name:"Conventional fuel", var:"V16"},
@@ -97,7 +96,7 @@ function main(){
 		map.store(data.obs, "all_data");
 		map.data(data.obs, "V2");
 
-		var current_indicator = technodes[0].var;
+		var current_indicator = "V5";
 
 		var text_accessor = function(d){
 			var row = d.obs;
@@ -133,7 +132,9 @@ function main(){
 
 		map.format("num0")
 			.textAccessor(text_accessor)
-			.bubble(current_indicator, current_indicator, 30, 1);
+			.sizeName("Number of patents")
+			.colName("Patents per capita")
+			.bubble(current_indicator, "V9", 30, 1);
 
 		var buttons = button_wrap.append("div").classed("buttons",true).selectAll("p.cleancat").data(technodes)
 			.enter()
@@ -154,13 +155,10 @@ function main(){
 
 		buttons.on("mousedown", function(d, i){
 			if(d.var == "V5"){
-				map.maxval(null).bubble(d.var,d.var,30);
-			}
-			else if(d.var == "V9"){
-				map.maxval(null).bubble(d.var,d.var,25);
+				map.maxval(null).bubble(d.var,"V9",30);
 			}
 			else{
-				map.maxval(maxmax).bubble(d.var,d.var,35);
+				map.maxval(maxmax).bubble(d.var,"#31b244",35);
 			}
 			current_indicator = d.var;
 			syncbuttons();

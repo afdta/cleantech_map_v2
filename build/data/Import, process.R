@@ -59,9 +59,8 @@ trends$clean_share <- 100*(trends$cleantech/trends$all)
 ggtrend <- ggplot(trends)
 ggtrend + geom_line(aes(x=year, y=all_idx), colour="#999999") + 
           geom_line(aes(x=year, y=cleantech_idx), colour="#31a354") + 
-          geom_point(aes(x=year, y=cleantech_idx), colour="#31a354") + 
-          scale_x_continuous(breaks=2001:2016) + 
-          scale_y_continuous(breaks=seq(80,240,20)) +
+          scale_x_continuous(breaks=2001:2016, labels=c(2001,rep("",4),2006,rep("",4),2011,rep("",4),2016)) + 
+          scale_y_continuous(breaks=seq(100,240,40)) +
           theme_bw()
 
 #pull in category shares

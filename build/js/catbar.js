@@ -26,7 +26,7 @@ export default function catbar(url){
 	var height = 450;
 	var width = 300;
 	var xpad = 50;
-	var ypad = 0;
+	var ypad = 30;
 
 	var totwidth = 900;
 
@@ -40,7 +40,7 @@ export default function catbar(url){
 			width = (boxwidth - (2*xpad))/3;
 			if(width < 300){width = 300}
 			var translates = [[0,0], [width+xpad,0], [2*(width+xpad),0]];
-			var svgh = height;
+			var svgh = height + ypad;
 		}
 		else{
 			width = boxwidth - xpad;
@@ -49,7 +49,7 @@ export default function catbar(url){
 			var center = (boxwidth - width)/2;
 			if(center < 0){center = 0;}
 			var translates = [[center,0], [center,height+ypad], [center,height*2 + ypad*2]];
-			var svgh = height*3;
+			var svgh = (height*3) + (ypad*3);
 		}
 
 		svg.attr("height", svgh+"px");
@@ -181,6 +181,15 @@ export default function catbar(url){
 			.classed("sortable","true")
 			.style("font-style","italic")
 			;
+
+			//axes
+			var g_axis_u = g_share.selectAll("g.x-axis").data([0]);
+			var g_axis = g_axis_u.enter().append("g").classed("x-axis",true).merge(g_axis_u);
+				g_axis.attr("transform","translate(" + text_width + "," + height + ")")
+
+			var axis = d3.axisBottom(share_scale).tickValues([0,5,10,15]).tickFormat(function(v){return v+"%"});
+
+			g_axis.call(axis);
 		}
 
 
@@ -280,6 +289,15 @@ export default function catbar(url){
 			.style("font-style","italic")
 			;
 
+			//axes
+			var g_axis_u = mains.selectAll("g.x-axis").data([0]);
+			var g_axis = g_axis_u.enter().append("g").classed("x-axis",true).merge(g_axis_u);
+				g_axis.attr("transform","translate(0," + height + ")")
+
+			var axis = d3.axisBottom(change_scale).tickValues([-0.1, 0, 0.1]).tickFormat(d3.format("+.0%"));
+
+			g_axis.each(function(){d3.select(this).call(axis)});			
+
 		}
 
 
@@ -351,7 +369,7 @@ export default function catbar(url){
 
 			//variable labels
 			var lab = g_accel.selectAll("text.var-label")
-			.data([{lab:"Difference between growth rates", var:"c_diff"}, 
+			.data([{lab:"Percentage point difference b/n growth", var:"c_diff"}, 
 				   {lab:"during 2001–10 and 2011–16", var:"c_diff"}]);
 			lab.enter().append("text").classed("var-label",true)
 			.merge(lab).attr("x",(w/2)+tw+change_scale(0))
@@ -363,6 +381,14 @@ export default function catbar(url){
 			.style("font-style","italic")
 			;
 
+			//axes
+			var g_axis_u = mains.selectAll("g.x-axis").data([0]);
+			var g_axis = g_axis_u.enter().append("g").classed("x-axis",true).merge(g_axis_u);
+				g_axis.attr("transform","translate(0," + height + ")")
+
+			var axis = d3.axisBottom(change_scale).tickValues([-0.1, 0, 0.1]).tickFormat(d3.format("+.0%"));
+
+			g_axis.each(function(){d3.select(this).call(axis)});	
 
 		}
 
